@@ -1,0 +1,42 @@
+package com.google.android.material.internal;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+@androidx.annotation.RestrictTo({androidx.annotation.RestrictTo.Scope.LIBRARY_GROUP})
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_9_sz8866584.dex */
+public class NavigationMenuView extends androidx.recyclerview.widget.RecyclerView implements androidx.appcompat.view.menu.MenuView {
+    public NavigationMenuView(android.content.Context r2) {
+            r1 = this;
+            r0 = 0
+            r1.<init>(r2, r0)
+            return
+    }
+
+    public NavigationMenuView(android.content.Context r2, android.util.AttributeSet r3) {
+            r1 = this;
+            r0 = 0
+            r1.<init>(r2, r3, r0)
+            return
+    }
+
+    public NavigationMenuView(android.content.Context r2, android.util.AttributeSet r3, int r4) {
+            r1 = this;
+            r1.<init>(r2, r3, r4)
+            androidx.recyclerview.widget.LinearLayoutManager r3 = new androidx.recyclerview.widget.LinearLayoutManager
+            r4 = 1
+            r0 = 0
+            r3.<init>(r2, r4, r0)
+            r1.setLayoutManager(r3)
+            return
+    }
+
+    public int getWindowAnimations() {
+            r1 = this;
+            r0 = 0
+            return r0
+    }
+
+    public void initialize(androidx.appcompat.view.menu.MenuBuilder r1) {
+            r0 = this;
+            return
+    }
+}

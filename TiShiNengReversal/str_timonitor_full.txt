@@ -1,0 +1,5 @@
+xhook_clear
+xhook_enable_sigsegv_protection
+xhook_refresh
+xhook_register
+ro.build.version.sdk

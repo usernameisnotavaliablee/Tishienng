@@ -1,0 +1,17 @@
+package ms.bz.bd.c.Pgl;
+
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_2_sz9469608.dex */
+final class c0 extends ms.bz.bd.c.Pgl.pbly.pgla {
+    c0() {
+            r0 = this;
+            r0.<init>()
+            return
+    }
+
+    @Override // ms.bz.bd.c.Pgl.pbly.pgla
+    protected final java.lang.Object b(long r1, java.lang.String r3, java.lang.Object r4) {
+            r0 = this;
+            java.lang.String r1 = ms.bz.bd.c.Pgl.pblg.a()
+            return r1
+    }
+}

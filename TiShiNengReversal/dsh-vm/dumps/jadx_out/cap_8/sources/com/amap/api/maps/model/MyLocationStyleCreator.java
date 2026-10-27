@@ -1,0 +1,66 @@
+package com.amap.api.maps.model;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_8_sz9482380.dex */
+public class MyLocationStyleCreator implements android.os.Parcelable.Creator<com.amap.api.maps.model.MyLocationStyle> {
+    public MyLocationStyleCreator() {
+            r0 = this;
+            r0.<init>()
+            return
+    }
+
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // android.os.Parcelable.Creator
+    public com.amap.api.maps.model.MyLocationStyle createFromParcel(android.os.Parcel r4) {
+            r3 = this;
+            com.amap.api.maps.model.MyLocationStyle r0 = new com.amap.api.maps.model.MyLocationStyle
+            r0.<init>()
+            java.lang.Class<com.amap.api.maps.model.BitmapDescriptor> r1 = com.amap.api.maps.model.BitmapDescriptor.class
+            java.lang.ClassLoader r1 = r1.getClassLoader()
+            android.os.Parcelable r1 = r4.readParcelable(r1)
+            com.amap.api.maps.model.BitmapDescriptor r1 = (com.amap.api.maps.model.BitmapDescriptor) r1
+            r0.myLocationIcon(r1)
+            float r1 = r4.readFloat()
+            float r2 = r4.readFloat()
+            r0.anchor(r1, r2)
+            int r1 = r4.readInt()
+            r0.radiusFillColor(r1)
+            int r1 = r4.readInt()
+            r0.strokeColor(r1)
+            float r1 = r4.readFloat()
+            r0.strokeWidth(r1)
+            int r1 = r4.readInt()
+            r0.myLocationType(r1)
+            long r1 = r4.readLong()
+            r0.interval(r1)
+            r1 = 1
+            boolean[] r1 = new boolean[r1]
+            r4.readBooleanArray(r1)
+            r4 = 0
+            boolean r4 = r1[r4]
+            r0.showMyLocation(r4)
+            return r0
+    }
+
+    @Override // android.os.Parcelable.Creator
+    public /* bridge */ /* synthetic */ com.amap.api.maps.model.MyLocationStyle createFromParcel(android.os.Parcel r1) {
+            r0 = this;
+            com.amap.api.maps.model.MyLocationStyle r1 = r0.createFromParcel(r1)
+            return r1
+    }
+
+    /* JADX WARN: Can't rename method to resolve collision */
+    @Override // android.os.Parcelable.Creator
+    public com.amap.api.maps.model.MyLocationStyle[] newArray(int r1) {
+            r0 = this;
+            com.amap.api.maps.model.MyLocationStyle[] r1 = new com.amap.api.maps.model.MyLocationStyle[r1]
+            return r1
+    }
+
+    @Override // android.os.Parcelable.Creator
+    public /* bridge */ /* synthetic */ com.amap.api.maps.model.MyLocationStyle[] newArray(int r1) {
+            r0 = this;
+            com.amap.api.maps.model.MyLocationStyle[] r1 = r0.newArray(r1)
+            return r1
+    }
+}

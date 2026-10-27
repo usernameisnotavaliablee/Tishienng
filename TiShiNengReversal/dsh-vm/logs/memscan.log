@@ -1,0 +1,6 @@
+[*] device ok: Device(id="emulator-5554", name="Android Emulator 5554", type='usb')
+[*] spawned pid=7676
+[MEMSCAN] hooked ClassLinker::DefineClass
+[MEMSCAN] armed
+[*] resumed, waiting 50s ...
+[*] killed pid=7676

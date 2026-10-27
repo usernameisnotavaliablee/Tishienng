@@ -1,0 +1,37 @@
+==============================================================================
+FILE: C:/Users/Administrator/Downloads/tishineng.apk/lib/arm64-v8a/libumeng-spy.so
+  arch = AArch64 | class = 64 | type = ET_DYN
+  exports total=138  imports total=66
+  -- 业务相关导出符号(名, 地址) --
+     0x0005f420  _ZNK10__cxxabiv120__si_class_type_info12__do_dyncastElNS_17__class_type_info10__sub_kindEPKS1_PKvS4_S6_RNS1_16__dyncast_resultE
+     0x00009b50  Java_com_umeng_umzid_Spy_getNativeTag
+     0x000080c0  Java_com_umeng_umzid_Spy_getNativeLibraryVersion
+     0x000084cc  Java_com_umeng_umzid_Spy_getNativeID
+     0x00061fc0  _ZNK10__cxxabiv117__class_type_info12__do_dyncastElNS0_10__sub_kindEPKS0_PKvS3_S5_RNS0_16__dyncast_resultE
+     0x00042124  Java_com_support_callhoo_NativeMethodDef_xpCy
+  -- 关注的导入(openssl/系统调用) --
+     __system_property_get, fopen, fork, fread, popen, pthread_create, pthread_getspecific, pthread_key_create, pthread_key_delete, pthread_mutex_lock, pthread_mutex_unlock, pthread_once, pthread_setspecific, read
+  -- 有意义字符串 23 条(去重，截前 120) --
+    | pthread_key_delete
+    | pthread_key_create
+    | /data/local/xbin/data/local/bin//system/sd/xbin//proc/self/statu/proc/self/maps
+    | XposedBridge.jarlibsubstrate.so
+    | /dev/socket/geny/dev/socket/qemu/sys/qemu_trace
+    | ibGLESv1_CM_tiansystem/lib/egl/linit.ttVM_x86.rcueventd.shamu.rcinit.svc.qemu-prqemu.sf.fake_camqemu.sf.lcd_densro.kernel.qemu.gro.product.modelro.product.name
+    | AES-128-ECB
+    | AES-192-ECB
+    | AES-256-ECB
+    | AES-128-GCM
+    | AES-192-GCM
+    | AES-256-GCM
+    | basic_string::assign
+    | not enough space for format expansion (Please submit full bug report at http://gcc.gnu.org/bugs.html):
+    | signed char
+    | unsigned char
+    | unsigned int
+    | unsigned
+    | unsigned long
+    | unsigned __int128
+    | unsigned short
+    | unsigned long long
+    | .comment

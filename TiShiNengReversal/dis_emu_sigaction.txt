@@ -1,0 +1,16 @@
+### my_sigaction  @0xb3c  size=44
+0x00000b3c  stp      x29, x30, [sp, #-0x10]!
+0x00000b40  mov      x29, sp
+0x00000b44  adrp     x1, #0
+0x00000b48  adrp     x2, #0
+0x00000b4c  mov      w3, w0
+0x00000b50  add      x1, x1, #0xef0   ; -> 0xef0 = 'lishang'
+0x00000b54  add      x2, x2, #0xef8   ; -> 0xef8 = 'Crash detect  signal %d'
+0x00000b58  mov      w0, #6
+0x00000b5c  bl       #0xa60   ; sub_a60
+0x00000b60  mov      w0, wzr
+0x00000b64  bl       #0xab0   ; sub_ab0
+
+--- 引用的字符串常量 ---
+   0xef0: 'lishang'
+   0xef8: 'Crash detect  signal %d'

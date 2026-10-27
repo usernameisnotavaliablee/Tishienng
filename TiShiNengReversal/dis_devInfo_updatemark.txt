@@ -1,0 +1,104 @@
+### Java_com_beizi_ad_internal_utilities_DeviceInfo_getUpdateMark  @0x143ac  size=400
+0x000143ac  sub      sp, sp, #0x160
+0x000143b0  str      x28, [sp, #0x140]
+0x000143b4  stp      x29, x30, [sp, #0x150]
+0x000143b8  add      x29, sp, #0x150
+0x000143bc  sub      x8, x29, #0x98
+0x000143c0  mrs      x9, tpidr_el0
+0x000143c4  ldr      x9, [x9, #0x28]
+0x000143c8  stur     x9, [x29, #-0x18]
+0x000143cc  str      x0, [sp, #0x50]
+0x000143d0  str      x1, [sp, #0x48]
+0x000143d4  adrp     x0, #0x35000
+0x000143d8  add      x0, x0, #0xac6   ; -> 0x35ac6 = '/data/data'
+0x000143dc  sub      x1, x29, #0x98
+0x000143e0  str      x8, [sp, #0x28]
+0x000143e4  bl       #0x13e10   ; sub_13e10
+0x000143e8  adds     w10, w0, #1
+0x000143ec  b.ne     #0x143f8
+0x000143f0  b        #0x143f4   ; sub_143f4
+0x000143f4  b        #0x14410   ; sub_14410
+0x000143f8  ldr      x8, [sp, #0x28]
+0x000143fc  ldr      x9, [x8, #0x50]
+0x00014400  str      w9, [sp, #0x40]
+0x00014404  ldr      x10, [x8, #0x48]
+0x00014408  str      w10, [sp, #0x44]
+0x0001440c  b        #0x14410   ; sub_14410
+0x00014410  ldr      w0, [sp, #0x44]
+0x00014414  add      x8, sp, #0x70
+0x00014418  str      x8, [sp, #0x20]
+0x0001441c  bl       #0x139b0   ; sub_139b0
+0x00014420  adrp     x1, #0x36000
+0x00014424  add      x1, x1, #0xb65   ; -> 0x36b65
+0x00014428  add      x8, sp, #0x88
+0x0001442c  ldr      x0, [sp, #0x20]
+0x00014430  bl       #0x14588   ; sub_14588
+0x00014434  b        #0x14438   ; sub_14438
+0x00014438  ldr      w0, [sp, #0x40]
+0x0001443c  add      x8, sp, #0x58
+0x00014440  bl       #0x139b0   ; sub_139b0
+0x00014444  b        #0x14448   ; sub_14448
+0x00014448  add      x8, sp, #0xa0
+0x0001444c  add      x0, sp, #0x88
+0x00014450  add      x1, sp, #0x58
+0x00014454  bl       #0x1453c   ; sub_1453c
+0x00014458  b        #0x1445c   ; sub_1445c
+0x0001445c  add      x0, sp, #0x58
+0x00014460  bl       #0x13b50   ; sub_13b50
+0x00014464  add      x0, sp, #0x88
+0x00014468  bl       #0x13b50   ; sub_13b50
+0x0001446c  add      x0, sp, #0x70
+0x00014470  bl       #0x13b50   ; sub_13b50
+0x00014474  ldr      x0, [sp, #0x50]
+0x00014478  add      x8, sp, #0xa0
+0x0001447c  str      x0, [sp, #0x18]
+0x00014480  mov      x0, x8
+0x00014484  bl       #0x14648   ; sub_14648
+0x00014488  ldr      x8, [sp, #0x18]
+0x0001448c  str      x0, [sp, #0x10]
+0x00014490  mov      x0, x8
+0x00014494  ldr      x1, [sp, #0x10]
+0x00014498  bl       #0x13970   ; sub_13970
+0x0001449c  str      x0, [sp, #8]
+0x000144a0  b        #0x144a4   ; sub_144a4
+0x000144a4  add      x0, sp, #0xa0
+0x000144a8  bl       #0x13b50   ; sub_13b50
+0x000144ac  mrs      x8, tpidr_el0
+0x000144b0  ldr      x8, [x8, #0x28]
+0x000144b4  ldur     x9, [x29, #-0x18]
+0x000144b8  subs     x8, x8, x9
+0x000144bc  b.ne     #0x14538
+0x000144c0  b        #0x144c4   ; sub_144c4
+0x000144c4  ldr      x0, [sp, #8]
+0x000144c8  ldp      x29, x30, [sp, #0x150]
+0x000144cc  ldr      x28, [sp, #0x140]
+0x000144d0  add      sp, sp, #0x160
+0x000144d4  ret      
+0x000144d8  str      x0, [sp, #0x38]
+0x000144dc  str      w1, [sp, #0x34]
+0x000144e0  b        #0x14510   ; sub_14510
+0x000144e4  str      x0, [sp, #0x38]
+0x000144e8  str      w1, [sp, #0x34]
+0x000144ec  b        #0x14504   ; sub_14504
+0x000144f0  str      x0, [sp, #0x38]
+0x000144f4  str      w1, [sp, #0x34]
+0x000144f8  add      x0, sp, #0x58
+0x000144fc  bl       #0x13b50   ; sub_13b50
+0x00014500  b        #0x14504   ; sub_14504
+0x00014504  add      x0, sp, #0x88
+0x00014508  bl       #0x13b50   ; sub_13b50
+0x0001450c  b        #0x14510   ; sub_14510
+0x00014510  add      x0, sp, #0x70
+0x00014514  bl       #0x13b50   ; sub_13b50
+0x00014518  b        #0x14530   ; sub_14530
+0x0001451c  str      x0, [sp, #0x38]
+0x00014520  str      w1, [sp, #0x34]
+0x00014524  add      x0, sp, #0xa0
+0x00014528  bl       #0x13b50   ; sub_13b50
+0x0001452c  b        #0x14530   ; sub_14530
+0x00014530  ldr      x0, [sp, #0x38]
+0x00014534  bl       #0x33f1c   ; sub_33f1c
+0x00014538  bl       #0x13b20   ; sub_13b20
+
+--- 引用的字符串常量 ---
+   0x35ac6: '/data/data'

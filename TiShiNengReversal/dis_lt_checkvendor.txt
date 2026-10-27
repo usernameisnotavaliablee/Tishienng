@@ -1,0 +1,238 @@
+### check_vendor  @0x134ac  size=864
+0x000134ac  stp      x24, x23, [sp, #-0x40]!
+0x000134b0  stp      x22, x21, [sp, #0x10]
+0x000134b4  stp      x20, x19, [sp, #0x20]
+0x000134b8  stp      x29, x30, [sp, #0x30]
+0x000134bc  add      x29, sp, #0x30
+0x000134c0  sub      sp, sp, #0x70
+0x000134c4  adrp     x22, #0x27000
+0x000134c8  adrp     x0, #0x16000
+0x000134cc  add      x0, x0, #0xd80   ; -> 0x16d80 = "vm -c 'chmod 0666 /dev/vmdrm0'"
+0x000134d0  ldr      x22, [x22, #0xff0]   ; -> [GOT] __stack_chk_guard
+0x000134d4  ldr      x22, [x22]   ; -> 0x27000
+0x000134d8  stur     x22, [x29, #-0x38]
+0x000134dc  strh     wzr, [sp, #6]
+0x000134e0  bl       #0x12e0   ; sub_12e0
+0x000134e4  adrp     x0, #0x16000
+0x000134e8  add      x0, x0, #0xd9f   ; -> 0x16d9f = '/dev/vmdrm0'
+0x000134ec  mov      w1, #2
+0x000134f0  bl       #0x12b0   ; sub_12b0
+0x000134f4  adrp     x23, #0x27000
+0x000134f8  mov      w19, w0
+0x000134fc  ldr      x23, [x23, #0xff8]   ; -> 0x27ff8
+0x00013500  tbz      w19, #0x1f, #0x1350c
+0x00013504  ldrb     w8, [x23]
+0x00013508  cbnz     w8, #0x1362c
+0x0001350c  tbnz     w19, #0x1f, #0x135d4
+0x00013510  mov      w1, #-0x3ffe0000
+0x00013514  movk     w1, #0xb503
+0x00013518  add      x2, sp, #6
+0x0001351c  mov      w0, w19
+0x00013520  bl       #0x13c0   ; sub_13c0
+0x00013524  ldrb     w8, [x23]
+0x00013528  mov      w20, w0
+0x0001352c  tbnz     w20, #0x1f, #0x135dc
+0x00013530  cbnz     w8, #0x13664
+0x00013534  ldrh     w8, [sp, #6]
+0x00013538  cmp      w8, #1
+0x0001353c  b.ne     #0x1355c
+0x00013540  mov      w1, #-0x3fff0000
+0x00013544  movk     w1, #0xb504
+0x00013548  add      x2, sp, #0x15
+0x0001354c  mov      w0, w19
+0x00013550  bl       #0x13c0   ; sub_13c0
+0x00013554  mov      w20, w0
+0x00013558  tbnz     w20, #0x1f, #0x1361c
+0x0001355c  ldrb     w8, [x23]
+0x00013560  cbz      w8, #0x13570
+0x00013564  mov      w1, #0xb
+0x00013568  add      x0, sp, #0x15
+0x0001356c  bl       #0x13390   ; sub_13390
+0x00013570  mov      w1, #-0x3ff80000
+0x00013574  movk     w1, #0xb502
+0x00013578  add      x2, sp, #8
+0x0001357c  mov      w0, w19
+0x00013580  bl       #0x13c0   ; sub_13c0
+0x00013584  ldrb     w8, [x23]
+0x00013588  mov      w20, w0
+0x0001358c  tbnz     w20, #0x1f, #0x135e8
+0x00013590  cbnz     w8, #0x136bc
+0x00013594  ldr      x0, [sp, #8]
+0x00013598  mov      w2, #0xb
+0x0001359c  add      x1, sp, #0x15
+0x000135a0  bl       #0x12cf4   ; vendor_decode_v1
+0x000135a4  mov      w20, w0
+0x000135a8  tbz      w20, #0x1f, #0x135f0
+0x000135ac  ldrb     w8, [x23]
+0x000135b0  cbz      w8, #0x13744
+0x000135b4  adrp     x8, #0x27000
+0x000135b8  adrp     x1, #0x16000
+0x000135bc  add      x1, x1, #0xe4f   ; -> 0x16e4f = 'drm: error: decode cpuid error(ret=%d)!\n'
+0x000135c0  ldr      x8, [x8, #0xfe8]   ; -> [GOT] __sF
+0x000135c4  mov      w2, w20
+0x000135c8  ldr      x0, [x8]   ; -> 0x27000
+0x000135cc  bl       #0x1480   ; sub_1480
+0x000135d0  b        #0x13744   ; sub_13744
+0x000135d4  mov      w20, #-0x14
+0x000135d8  b        #0x13744   ; sub_13744
+0x000135dc  cbnz     w8, #0x13684
+0x000135e0  mov      w20, #-0x15
+0x000135e4  b        #0x13744   ; sub_13744
+0x000135e8  cbnz     w8, #0x136dc
+0x000135ec  mov      w20, #-0x17
+0x000135f0  ldrb     w8, [x23]
+0x000135f4  cbz      w8, #0x1379c
+0x000135f8  adrp     x8, #0x27000
+0x000135fc  adrp     x0, #0x16000
+0x00013600  add      x0, x0, #0xe9f   ; -> 0x16e9f = 'drm: Vendor check success !\n'
+0x00013604  ldr      x8, [x8, #0xfe8]   ; -> [GOT] __sF
+0x00013608  mov      w1, #0x1c
+0x0001360c  mov      w2, #1
+0x00013610  ldr      x3, [x8]   ; -> 0x27000
+0x00013614  bl       #0x14d0   ; sub_14d0
+0x00013618  b        #0x1379c   ; sub_1379c
+0x0001361c  ldrb     w8, [x23]
+0x00013620  cbnz     w8, #0x13710
+0x00013624  mov      w20, #-0x16
+0x00013628  b        #0x13744   ; sub_13744
+0x0001362c  adrp     x8, #0x27000
+0x00013630  ldr      x8, [x8, #0xfe8]   ; -> [GOT] __sF
+0x00013634  ldr      x20, [x8]   ; -> 0x27000
+0x00013638  bl       #0x1330   ; sub_1330
+0x0001363c  ldr      w0, [x0]   ; -> 0x16000
+0x00013640  bl       #0x1320   ; sub_1320
+0x00013644  adrp     x1, #0x16000
+0x00013648  adrp     x2, #0x16000
+0x0001364c  mov      x3, x0
+0x00013650  add      x1, x1, #0xf0b   ; -> 0x16f0b = 'drm: error: Cannot open: %s: %s\n'
+0x00013654  add      x2, x2, #0xd9f   ; -> 0x16d9f = '/dev/vmdrm0'
+0x00013658  mov      x0, x20
+0x0001365c  bl       #0x1480   ; sub_1480
+0x00013660  b        #0x1350c   ; sub_1350c
+0x00013664  adrp     x8, #0x27000
+0x00013668  adrp     x1, #0x16000
+0x0001366c  add      x1, x1, #0xdd1   ; -> 0x16dd1 = 'drm: [version]: %d\n'
+0x00013670  ldr      x8, [x8, #0xfe8]   ; -> [GOT] __sF
+0x00013674  ldrh     w2, [sp, #6]
+0x00013678  ldr      x0, [x8]   ; -> 0x27000
+0x0001367c  bl       #0x1480   ; sub_1480
+0x00013680  b        #0x13534   ; sub_13534
+0x00013684  adrp     x8, #0x27000
+0x00013688  ldr      x8, [x8, #0xfe8]   ; -> [GOT] __sF
+0x0001368c  ldr      x21, [x8]   ; -> 0x27000
+0x00013690  bl       #0x1330   ; sub_1330
+0x00013694  ldr      w0, [x0]   ; -> 0x16000
+0x00013698  bl       #0x1320   ; sub_1320
+0x0001369c  adrp     x1, #0x16000
+0x000136a0  mov      x3, x0
+0x000136a4  add      x1, x1, #0xdab   ; -> 0x16dab = 'drm: error: ioctl ver failure %d: %s\n'
+0x000136a8  mov      x0, x21
+0x000136ac  mov      w2, w20
+0x000136b0  bl       #0x1480   ; sub_1480
+0x000136b4  mov      w20, #-0x15
+0x000136b8  b        #0x13744   ; sub_13744
+0x000136bc  adrp     x8, #0x27000
+0x000136c0  adrp     x1, #0x16000
+0x000136c4  add      x1, x1, #0xe36   ; -> 0x16e36 = 'drm: cpuid ( %08x%08x )\n'
+0x000136c8  ldr      x8, [x8, #0xfe8]   ; -> [GOT] __sF
+0x000136cc  ldp      w2, w3, [sp, #8]
+0x000136d0  ldr      x0, [x8]   ; -> 0x27000
+0x000136d4  bl       #0x1480   ; sub_1480
+0x000136d8  b        #0x13594   ; sub_13594
+0x000136dc  adrp     x8, #0x27000
+0x000136e0  ldr      x8, [x8, #0xfe8]   ; -> [GOT] __sF
+0x000136e4  ldr      x21, [x8]   ; -> 0x27000
+0x000136e8  bl       #0x1330   ; sub_1330
+0x000136ec  ldr      w0, [x0]   ; -> 0x16000
+0x000136f0  bl       #0x1320   ; sub_1320
+0x000136f4  adrp     x1, #0x16000
+0x000136f8  mov      x3, x0
+0x000136fc  add      x1, x1, #0xe14   ; -> 0x16e14 = 'drm: error: ioctl failure %d: %s\n'
+0x00013700  mov      x0, x21
+0x00013704  mov      w2, w20
+0x00013708  bl       #0x1480   ; sub_1480
+0x0001370c  b        #0x135ec   ; sub_135ec
+0x00013710  adrp     x8, #0x27000
+0x00013714  ldr      x8, [x8, #0xfe8]   ; -> [GOT] __sF
+0x00013718  ldr      x21, [x8]   ; -> 0x27000
+0x0001371c  bl       #0x1330   ; sub_1330
+0x00013720  ldr      w0, [x0]   ; -> 0x16000
+0x00013724  bl       #0x1320   ; sub_1320
+0x00013728  adrp     x1, #0x16000
+0x0001372c  mov      x3, x0
+0x00013730  add      x1, x1, #0xde5   ; -> 0x16de5 = 'drm: error: ioctl data failure %d: %s\n'
+0x00013734  mov      x0, x21
+0x00013738  mov      w2, w20
+0x0001373c  bl       #0x1480   ; sub_1480
+0x00013740  mov      w20, #-0x16
+0x00013744  adrp     x8, #0x16000
+0x00013748  strb     wzr, [sp, #0x65]
+0x0001374c  adrp     x9, #0x16000
+0x00013750  adrp     x10, #0x16000
+0x00013754  ldr      q0, [x8, #0xb50]   ; -> 0x16b50 = 'vm -c \'echo "[ffffffc04d114cc0] mali_fence: signaled" > /dev/tty[ERROR] encode vendor len(%d != 14) error!\n'
+0x00013758  adrp     x8, #0x16000
+0x0001375c  ldr      q1, [x9, #0xb60]   ; -> 0x16b60 = 'ffffc04d114cc0] mali_fence: signaled" > /dev/tty[ERROR] encode vendor len(%d != 14) error!\n'
+0x00013760  mov      w9, #0x4946
+0x00013764  ldr      q2, [x10, #0xb70]   ; -> 0x16b70 = 'mali_fence: signaled" > /dev/tty[ERROR] encode vendor len(%d != 14) error!\n'
+0x00013768  mov      w10, #0x51
+0x0001376c  add      x0, sp, #0x20
+0x00013770  stp      q0, q1, [sp, #0x20]
+0x00013774  ldr      q0, [x8, #0xb80]   ; -> 0x16b80 = 'aled" > /dev/tty[ERROR] encode vendor len(%d != 14) error!\n'
+0x00013778  mov      w8, #0x30
+0x0001377c  strh     w9, [sp, #0x60]
+0x00013780  mov      w9, #0x27
+0x00013784  str      q2, [sp, #0x40]
+0x00013788  strb     w10, [sp, #0x62]
+0x0001378c  strb     w8, [sp, #0x63]
+0x00013790  str      q0, [sp, #0x50]
+0x00013794  strb     w9, [sp, #0x64]
+0x00013798  bl       #0x12e0   ; sub_12e0
+0x0001379c  adrp     x0, #0x16000
+0x000137a0  add      x0, x0, #0xebc   ; -> 0x16ebc = "vm -c 'chmod 0600 /dev/vmdrm0'"
+0x000137a4  bl       #0x12e0   ; sub_12e0
+0x000137a8  ldrb     w8, [x23]
+0x000137ac  cbnz     w8, #0x137e8
+0x000137b0  cmp      w19, #2
+0x000137b4  b.lt     #0x137c0
+0x000137b8  mov      w0, w19
+0x000137bc  bl       #0x1470   ; sub_1470
+0x000137c0  ldur     x8, [x29, #-0x38]
+0x000137c4  sub      x8, x22, x8
+0x000137c8  cbnz     x8, #0x13808
+0x000137cc  mov      w0, w20
+0x000137d0  sub      sp, x29, #0x30
+0x000137d4  ldp      x29, x30, [sp, #0x30]
+0x000137d8  ldp      x20, x19, [sp, #0x20]
+0x000137dc  ldp      x22, x21, [sp, #0x10]
+0x000137e0  ldp      x24, x23, [sp], #0x40
+0x000137e4  ret      
+0x000137e8  adrp     x8, #0x27000
+0x000137ec  adrp     x1, #0x16000
+0x000137f0  add      x1, x1, #0xedb   ; -> 0x16edb = 'drm: ret = %d \n'
+0x000137f4  ldr      x8, [x8, #0xfe8]   ; -> [GOT] __sF
+0x000137f8  mov      w2, w20
+0x000137fc  ldr      x0, [x8]   ; -> 0x27000
+0x00013800  bl       #0x1480   ; sub_1480
+0x00013804  b        #0x137b0   ; sub_137b0
+0x00013808  bl       #0x1390   ; sub_1390
+
+--- 该函数调用的已命名符号(bl) ---
+     1x  vendor_decode_v1
+
+--- 引用的字符串常量 ---
+   0x16d80: "vm -c 'chmod 0666 /dev/vmdrm0'"
+   0x16d9f: '/dev/vmdrm0'
+   0x16e4f: 'drm: error: decode cpuid error(ret=%d)!\n'
+   0x16e9f: 'drm: Vendor check success !\n'
+   0x16f0b: 'drm: error: Cannot open: %s: %s\n'
+   0x16dd1: 'drm: [version]: %d\n'
+   0x16dab: 'drm: error: ioctl ver failure %d: %s\n'
+   0x16e36: 'drm: cpuid ( %08x%08x )\n'
+   0x16e14: 'drm: error: ioctl failure %d: %s\n'
+   0x16de5: 'drm: error: ioctl data failure %d: %s\n'
+   0x16b50: 'vm -c \'echo "[ffffffc04d114cc0] mali_fence: signaled" > /dev/tty[ERROR] encode vendor len(%d != 14) error!\n'
+   0x16b60: 'ffffc04d114cc0] mali_fence: signaled" > /dev/tty[ERROR] encode vendor len(%d != 14) error!\n'
+   0x16b70: 'mali_fence: signaled" > /dev/tty[ERROR] encode vendor len(%d != 14) error!\n'
+   0x16b80: 'aled" > /dev/tty[ERROR] encode vendor len(%d != 14) error!\n'
+   0x16ebc: "vm -c 'chmod 0600 /dev/vmdrm0'"
+   0x16edb: 'drm: ret = %d \n'

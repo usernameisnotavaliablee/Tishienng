@@ -1,0 +1,24 @@
+### Java_com_umeng_umzid_Spy_getNativeTag  @0x9b50  size=4404
+0x00009b50  stp      x28, x27, [sp, #-0x60]!
+0x00009b54  stp      x26, x25, [sp, #0x10]
+0x00009b58  stp      x24, x23, [sp, #0x20]
+0x00009b5c  stp      x22, x21, [sp, #0x30]
+0x00009b60  stp      x20, x19, [sp, #0x40]
+0x00009b64  stp      x29, x30, [sp, #0x50]
+0x00009b68  add      x29, sp, #0x50
+0x00009b6c  sub      sp, sp, #0x540
+0x00009b70  mrs      x25, tpidr_el0
+0x00009b74  ldr      x8, [x25, #0x28]
+0x00009b78  mov      w9, #0x1f
+0x00009b7c  add      x10, sp, #0x88
+0x00009b80  mov      x19, x0
+0x00009b84  stur     x8, [x29, #-0x58]
+0x00009b88  str      w9, [sp, #0x88]
+0x00009b8c  adr      x7, #0x9b90
+0x00009b90  ldrsw    x17, #0x9ba8
+0x00009b94  ldrsw    x9, [x10]
+0x00009b98  eor      x17, x17, x9
+0x00009b9c  add      x7, x7, x17
+0x00009ba0  mov      x8, #0x56
+0x00009ba4  br       x7
+0x00009ba8  udf      #0x33

@@ -1,0 +1,24 @@
+package com.beizi.ad.internal.i.b;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_8_sz9482380.dex */
+public class b implements com.beizi.ad.internal.i.b.c {
+    public b() {
+            r0 = this;
+            r0.<init>()
+            return
+    }
+
+    @Override // com.beizi.ad.internal.i.b.c
+    public com.beizi.ad.internal.i.p a(java.lang.String r1) {
+            r0 = this;
+            r1 = 0
+            return r1
+    }
+
+    @Override // com.beizi.ad.internal.i.b.c
+    public void a(java.lang.String r1, com.beizi.ad.internal.i.p r2) {
+            r0 = this;
+            return
+    }
+}

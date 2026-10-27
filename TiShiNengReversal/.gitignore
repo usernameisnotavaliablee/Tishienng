@@ -1,0 +1,36 @@
+# ===== macOS =====
+.DS_Store
+
+# ===== 可重建环境（不提交，留在本地磁盘） =====
+# Android SDK / 模拟器镜像（4.6G + 1.1G，可重装）
+sdk/
+avd-home/
+
+# ===== dsh-vm：只保留证据，忽略可重建环境 =====
+# 保留：dumps（脱壳 dex + jadx 反编译）、frida 脚本、logs、XIAOWEI 证书
+# 忽略：sdk / maven / pyvenv* / tools / base.apk（132MB 超 GitHub 100MB 单文件限制）等可重建环境
+dsh-vm/*
+!dsh-vm/dumps/
+!dsh-vm/frida/
+!dsh-vm/logs/
+!dsh-vm/cert_xiaowei.der
+!dsh-vm/cert_xiaowei.pem
+
+# dsh-vm 内仍忽略的可重建/超限文件
+dsh-vm/frida/frida-server*
+dsh-vm/base.apk
+
+# ===== 个人/机器相关 =====
+.claude/
+
+# ===== 损坏的工具残留（zip 校验失败不可用；完整 JADX 在 dsh-vm/tools/） =====
+tools/
+
+# ===== 构建产物与临时文件 =====
+unidbg_harness/target/
+__pycache__/
+*.pyc
+out/
+docx_render_check/
+
+# ===== 机器日志（emulator_apfs.log 已归入 dsh-vm/logs/ 作为证据提交） =====

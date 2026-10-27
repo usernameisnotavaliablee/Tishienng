@@ -1,0 +1,48 @@
+==============================================================================
+FILE: C:/Users/Administrator/Downloads/tishineng.apk/lib/arm64-v8a/libdevInfo.so
+  arch = AArch64 | class = 64 | type = ET_DYN
+  exports total=527  imports total=65
+  -- 业务相关导出符号(名, 地址) --
+     0x000143ac  Java_com_beizi_ad_internal_utilities_DeviceInfo_getUpdateMark
+     0x00017c48  _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignEPKwm
+     0x000185b0  _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignEmw
+     0x000160dc  _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKcm
+     0x00016790  _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEmc
+     0x00014d7c  _ZNSt6__ndk111char_traitsIcE6assignERcRKc
+     0x0001857c  _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignEPKw
+     0x00013ffc  Java_com_beizi_ad_internal_utilities_DeviceInfo_getBootMark
+     0x00018530  _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignERKS5_mm
+     0x000314c0  __dynamic_cast
+     0x0001675c  _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+     0x00016714  _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignERKS5_mm
+  -- 关注的导入(openssl/系统调用) --
+     fopen, openlog, pthread_create, pthread_getspecific, pthread_key_create, pthread_mutex_lock, pthread_mutex_unlock, pthread_once, pthread_setspecific
+  -- 有意义字符串 28 条(去重，截前 120) --
+    | Java_com_beizi_ad_internal_utilities_DeviceInfo_getBootMark
+    | Java_com_beizi_ad_internal_utilities_DeviceInfo_getUpdateMark
+    | _ZN7_JNIEnv11GetMethodIDEP7_jclassPKcS3_
+    | _ZN7_JNIEnv12NewByteArrayEi
+    | _ZN7_JNIEnv12NewStringUTFEPKc
+    | _ZN7_JNIEnv18SetByteArrayRegionEP11_jbyteArrayiiPKa
+    | _ZN7_JNIEnv9FindClassEPKc
+    | _ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+    | _ZNSt6__ndk111char_traitsIcE6assignERcRKc
+    | _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+    | _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKcm
+    | _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignERKS5_mm
+    | _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEmc
+    | _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignEPKw
+    | _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignEPKwm
+    | _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignERKS5_mm
+    | _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignEmw
+    | pthread_key_create
+    | /proc/sys/kernel/random/boot_id
+    | ([BLjava/lang/String;)V
+    | unsigned char
+    | unsigned short
+    | unsigned __int128
+    | unsigned int
+    | unsigned long
+    | unsigned long long
+    | Android (6454773 based on r365631c2) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project 98c855489587874b2a325e7a516b99d838599c6f) (based on LLVM 9.0.8svn)
+    | .comment

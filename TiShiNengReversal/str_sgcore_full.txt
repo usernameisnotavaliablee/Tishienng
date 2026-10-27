@@ -1,0 +1,2 @@
+Java_com_kwai_sgcore_SGCore_getMagic
+ro.build.version.sdk

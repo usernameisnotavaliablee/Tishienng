@@ -1,0 +1,11 @@
+package com.autonavi.base.amap.mapcore.interfaces;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_8_sz9482380.dex */
+public interface IAnimation {
+    void setAnimation(com.autonavi.amap.mapcore.animation.GLAnimation r1);
+
+    void setAnimationListener(com.amap.api.maps.model.animation.Animation.AnimationListener r1);
+
+    boolean startAnimation();
+}

@@ -1,0 +1,25 @@
+### Java_com_umeng_umzid_Spy_getNativeID  @0x84cc  size=5764
+0x000084cc  stp      x28, x27, [sp, #-0x60]!
+0x000084d0  stp      x26, x25, [sp, #0x10]
+0x000084d4  stp      x24, x23, [sp, #0x20]
+0x000084d8  stp      x22, x21, [sp, #0x30]
+0x000084dc  stp      x20, x19, [sp, #0x40]
+0x000084e0  stp      x29, x30, [sp, #0x50]
+0x000084e4  add      x29, sp, #0x50
+0x000084e8  sub      sp, sp, #0x5c0
+0x000084ec  mrs      x23, tpidr_el0
+0x000084f0  ldr      x8, [x23, #0x28]
+0x000084f4  mov      w9, #0xf7
+0x000084f8  add      x10, sp, #0xf8
+0x000084fc  mov      x19, x0
+0x00008500  stur     x8, [x29, #-0x58]
+0x00008504  str      w9, [sp, #0xf8]
+0x00008508  adr      x4, #0x850c
+0x0000850c  ldrsw    x27, #0x8524
+0x00008510  ldrsw    x1, [x10]
+0x00008514  eor      x27, x27, x1
+0x00008518  add      x4, x4, x27
+0x0000851c  mov      x8, #5
+0x00008520  br       x4
+0x00008524  udf      #0xdf
+0x00008528  add      w11, w30, w24, lsr #8

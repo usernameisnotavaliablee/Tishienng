@@ -1,0 +1,21 @@
+package cn.bluemobi.dylan.http;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_8_sz9482380.dex */
+public interface HttpResponse extends cn.bluemobi.dylan.http.download.ProgressResponseListener {
+    void netOnFailure(java.lang.Throwable r1);
+
+    void netOnFinish();
+
+    void netOnOtherStatus(int r1, java.lang.String r2);
+
+    void netOnOtherStatus(int r1, java.lang.String r2, java.util.Map<java.lang.String, java.lang.Object> r3);
+
+    void netOnStart();
+
+    void netOnSuccess(java.util.Map<java.lang.String, java.lang.Object> r1);
+
+    void netOnSuccess(java.util.Map<java.lang.String, java.lang.Object> r1, java.lang.String r2);
+
+    void netOnSuccessServerError(int r1, java.lang.String r2);
+}

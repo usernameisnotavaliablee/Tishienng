@@ -1,0 +1,17 @@
+package io.netty.util.internal.svm;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+@com.oracle.svm.core.annotate.TargetClass(className = "io.netty.util.internal.CleanerJava6")
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_2_sz9469608.dex */
+final class CleanerJava6Substitution {
+
+    @com.oracle.svm.core.annotate.RecomputeFieldValue(declClassName = "java.nio.DirectByteBuffer", kind = com.oracle.svm.core.annotate.RecomputeFieldValue.Kind.FieldOffset, name = "cleaner")
+    @com.oracle.svm.core.annotate.Alias
+    private static long CLEANER_FIELD_OFFSET;
+
+    private CleanerJava6Substitution() {
+            r0 = this;
+            r0.<init>()
+            return
+    }
+}

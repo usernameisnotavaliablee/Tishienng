@@ -1,0 +1,41 @@
+==============================================================================
+FILE: C:/Users/Administrator/Downloads/tishineng.apk/lib/arm64-v8a/libliantian.so
+  arch = AArch64 | class = 64 | type = ET_DYN
+  exports total=19  imports total=40
+  -- 业务相关导出符号(名, 地址) --
+     0x00013c9c  main
+     0x0000151c  _ac
+     0x0000238c  _ar
+     0x00000000  y
+     0x000134ac  check_vendor
+     0x00000004  x
+     0x00012b78  vendor_decode_v11
+     0x00012e78  vendor_do_fail
+     0x0001393c  check_vendor_v11
+     0x00003434  JNI_OnLoad
+     0x00013024  get_vendor_drm
+     0x00001d3c  _dc
+     0x00002ef4  _df
+     0x00002928  _dr
+     0x00012f90  test
+     0x0001380c  get_cpuid
+     0x00012cf4  vendor_decode_v1
+     0x000280a8  verbose
+     0x00012a98  vendor_encode_v11
+  -- 关注的导入(openssl/系统调用) --
+     __system_property_get, fopen, open, opendir, read, readdir, system
+  -- 有意义字符串 14 条(去重，截前 120) --
+    | JNI_OnLoad
+    | (Ljava/lang/String;Ljava/lang/String;[B)I
+    | (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    | com/baidu/liantian/jni/Asc
+    | /%s/deviss/block/sys/clack/platf/dev/blo0rush5jxAClnprtv13579;=?l,9y*rt*sq1twuk+12345678..
+    | /dev/block/platform
+    | /sys/class/block/mmcblk0/device/cid
+    | Serial
+    | vm -c 'echo "[ffffffc04d114cc0] mali_fence: signaled" > /dev/tty[ERROR] encode vendor len(%d != 14) error!
+    | open /dev/mem
+    | vm -c 'chmod 0666 /dev/vmdrm0'
+    | /dev/vmdrm0
+    | vm -c 'chmod 0600 /dev/vmdrm0'
+    | .comment

@@ -1,0 +1,290 @@
+--------- beginning of kernel
+08-14 22:52:59.557     0     0 D logd    : Skipping 18446744073709542707 entries from slow reader, pid 368, from LogBuffer::kickMe()
+--------- beginning of main
+08-14 22:53:00.007   739   739 D KeyguardClockSwitch: Updating clock: 1053
+08-14 22:53:00.249  1415  6083 I Vision  : Requesting optional module download of ocr.
+08-14 22:53:00.249  1415  6083 I Vision  : Checking for download completion for 147864 -- ocr
+--------- beginning of system
+08-14 22:53:00.646   506  4273 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.bxkj.student/.splash.SplashActivity} from uid 0
+08-14 22:53:00.646   506   545 D EventSequenceValidator: Transition from ACTIVITY_FINISHED to INTENT_STARTED
+08-14 22:53:00.663   394   394 I perfetto: ing_service_impl.cc:758 Configured tracing session 4, #sources:1, duration:5000 ms, #buffers:1, total buffer size:4096 KB, total sessions:1, uid:1071 session name: ""
+08-14 22:53:00.664   393   393 I perfetto: probes_producer.cc:230  Ftrace setup (target_buf=4)
+08-14 22:53:00.668   506   545 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10166; state: DISABLED
+08-14 22:53:00.668   506   545 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10166; state: ENABLED
+08-14 22:53:00.668   506   552 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10166; state: ENABLED
+08-14 22:53:00.668  6102  6104 I cmd     : oneway function results will be dropped but finished with status OK and parcel size 4
+08-14 22:53:00.669   506   545 D EventSequenceValidator: Transition from INTENT_STARTED to ACTIVITY_LAUNCHED
+08-14 22:53:00.717   304   304 D Zygote  : Forked child process 6110
+08-14 22:53:00.718   506   552 W ActivityManager: Slow operation: 51ms so far, now at startProcess: returned from zygote!
+08-14 22:53:00.719   506   552 W ActivityManager: Slow operation: 51ms so far, now at startProcess: done updating battery stats
+08-14 22:53:00.719   506   552 W ActivityManager: Slow operation: 51ms so far, now at startProcess: building log message
+08-14 22:53:00.719   506   552 I ActivityManager: Start proc 6110:com.bxkj.student/u0a166 for pre-top-activity {com.bxkj.student/com.bxkj.student.splash.SplashActivity}
+08-14 22:53:00.719   506   552 W ActivityManager: Slow operation: 51ms so far, now at startProcess: starting to update pids map
+08-14 22:53:00.719   506   552 W ActivityManager: Slow operation: 52ms so far, now at startProcess: done updating pids map
+08-14 22:53:00.726   393   393 I perfetto: ftrace_procfs.cc:176    enabled ftrace
+08-14 22:53:00.728     0     0 W perfetto: enabled ftrace
+08-14 22:53:00.741  5640  5646 I adbd    : jdwp connection from 6110
+08-14 22:53:00.800  6110  6110 E LoadedApk: Unable to instantiate appComponentFactory
+08-14 22:53:00.800  6110  6110 E LoadedApk: java.lang.ClassNotFoundException: Didn't find class "androidx.core.app.CoreComponentFactory" on path: DexPathList[[zip file "/data/app/~~q5oRDBRnYtl9FpQelmt-5A==/com.bxkj.student-hLXYAh59iNT2wHDgXcZsRA==/base.apk"],nativeLibraryDirectories=[/data/app/~~q5oRDBRnYtl9FpQelmt-5A==/com.bxkj.student-hLXYAh59iNT2wHDgXcZsRA==/lib/arm64, /data/app/~~q5oRDBRnYtl9FpQelmt-5A==/com.bxkj.student-hLXYAh59iNT2wHDgXcZsRA==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:207)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at android.app.LoadedApk.createAppFactory(LoadedApk.java:260)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at android.app.LoadedApk.createOrUpdateClassLoaderLocked(LoadedApk.java:905)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at android.app.LoadedApk.getClassLoader(LoadedApk.java:958)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at android.app.LoadedApk.getResources(LoadedApk.java:1190)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at android.app.ContextImpl.createAppContext(ContextImpl.java:2663)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at android.app.ContextImpl.createAppContext(ContextImpl.java:2655)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6595)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at android.app.ActivityThread.access$1300(ActivityThread.java:237)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1913)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at android.os.Looper.loop(Looper.java:223)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at android.app.ActivityThread.main(ActivityThread.java:7656)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at java.lang.reflect.Method.invoke(Native Method)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:592)
+08-14 22:53:00.800  6110  6110 E LoadedApk: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:947)
+08-14 22:53:00.809  6110  6110 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+08-14 22:53:00.810  6110  6110 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+08-14 22:53:00.824  6110  6110 W om.bxkj.student: type=1400 audit(0.0:88): avc: granted { execute } for path="/data/data/com.bxkj.student/.jiagu/libjiagu_64.so" dev="dm-4" ino=132511 scontext=u:r:untrusted_app:s0:c166,c256,c512,c768 tcontext=u:object_r:app_data_file:s0:c166,c256,c512,c768 tclass=file app=com.bxkj.student
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: Could not register for notifications with InnerTube: 
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: rff: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at rex.b(PG:18)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at uqp.f(PG:65)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at uqp.g(PG:134)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at uqp.b(PG:99)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at uqn.run(Unknown Source:1)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:462)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at ywx.run(Unknown Source:1)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at pqt.run(PG:13)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at java.lang.Thread.run(Thread.java:923)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: Caused by: java.util.concurrent.ExecutionException: qjl: Precondition check failed.
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at zsp.a(PG:135)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at zsp.get(PG:91)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at rex.b(PG:17)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	... 11 more
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: Caused by: qjl: Precondition check failed.
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at rdu.b(PG:106)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at pyo.a(PG:61)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at pxo.run(Unknown Source:17)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	... 4 more
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: Caused by: bjj
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	at pxo.run(Unknown Source:13)
+08-14 22:53:00.862  5649  5775 W YouTubeMusic: 	... 4 more
+08-14 22:53:01.472  6110  6110 W om.bxkj.student: type=1400 audit(0.0:89): avc: denied { ptrace } for scontext=u:r:zygote:s0 tcontext=u:r:untrusted_app:s0:c166,c256,c512,c768 tclass=process permissive=0 app=com.bxkj.student
+08-14 22:53:01.489     0     0 W audit   : audit_lost=3 audit_rate_limit=5 audit_backlog_limit=64
+08-14 22:53:01.489     0     0 E audit   : rate limit exceeded
+08-14 22:53:01.484  6110  6110 I chatty  : uid=10166(com.bxkj.student) identical 4 lines
+08-14 22:53:01.484  6110  6110 W om.bxkj.student: type=1400 audit(0.0:94): avc: denied { ptrace } for scontext=u:r:zygote:s0 tcontext=u:r:untrusted_app:s0:c166,c256,c512,c768 tclass=process permissive=0 app=com.bxkj.student
+08-14 22:53:01.666  6110  6110 W om.bxkj.studen: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+08-14 22:53:01.968  6110  6110 W System.err: Warning: Using deprecated Element constructor. Do not use internal APIs, this constructor will be removed in the future.
+08-14 22:53:01.972  6110  6110 I TetheringManager: registerTetheringEventCallback:com.bxkj.student
+08-14 22:53:02.037   506   806 D PackageManager: Instant App installer not found with android.intent.action.INSTALL_INSTANT_APP_PACKAGE
+08-14 22:53:02.037   506   806 D PackageManager: Clear ephemeral installer activity
+08-14 22:53:02.151   506   806 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10166; state: DISABLED
+08-14 22:53:02.151   506   806 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10166; state: ENABLED
+08-14 22:53:02.151   506   552 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10166; state: ENABLED
+08-14 22:53:02.156   304   304 D Zygote  : Forked child process 6199
+08-14 22:53:02.158   506   552 I ActivityManager: Start proc 6199:com.bxkj.student:pushcore/u0a166 for service {com.bxkj.student/com.bxkj.student.common.jpush.JPushService}
+08-14 22:53:02.166  5640  5646 I adbd    : jdwp connection from 6199
+08-14 22:53:02.171   506   806 D CompatibilityChangeReporter: Compat change id reported: 136274596; UID 10166; state: ENABLED
+08-14 22:53:02.176  6199  6199 E LoadedApk: Unable to instantiate appComponentFactory
+08-14 22:53:02.176  6199  6199 E LoadedApk: java.lang.ClassNotFoundException: Didn't find class "androidx.core.app.CoreComponentFactory" on path: DexPathList[[zip file "/data/app/~~q5oRDBRnYtl9FpQelmt-5A==/com.bxkj.student-hLXYAh59iNT2wHDgXcZsRA==/base.apk"],nativeLibraryDirectories=[/data/app/~~q5oRDBRnYtl9FpQelmt-5A==/com.bxkj.student-hLXYAh59iNT2wHDgXcZsRA==/lib/arm64, /data/app/~~q5oRDBRnYtl9FpQelmt-5A==/com.bxkj.student-hLXYAh59iNT2wHDgXcZsRA==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:207)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at android.app.LoadedApk.createAppFactory(LoadedApk.java:260)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at android.app.LoadedApk.createOrUpdateClassLoaderLocked(LoadedApk.java:905)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at android.app.LoadedApk.getClassLoader(LoadedApk.java:958)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at android.app.LoadedApk.getResources(LoadedApk.java:1190)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at android.app.ContextImpl.createAppContext(ContextImpl.java:2663)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at android.app.ContextImpl.createAppContext(ContextImpl.java:2655)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:6595)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at android.app.ActivityThread.access$1300(ActivityThread.java:237)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1913)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at android.os.Looper.loop(Looper.java:223)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at android.app.ActivityThread.main(ActivityThread.java:7656)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at java.lang.reflect.Method.invoke(Native Method)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:592)
+08-14 22:53:02.176  6199  6199 E LoadedApk: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:947)
+08-14 22:53:02.179  6199  6199 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+08-14 22:53:02.179  6199  6199 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+08-14 22:53:02.191  6110  6223 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+08-14 22:53:02.193  6110  6223 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+08-14 22:53:02.198  6110  6223 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+08-14 22:53:02.370   506   806 I ActivityTaskManager: START u0 {cmp=com.bxkj.student/.splash.OpenPrivacyAgreementActivity} from uid 10166
+08-14 22:53:02.420   506   806 W ActivityTaskManager: Tried to set launchTime (0) < mLastActivityLaunchTime (138401)
+08-14 22:53:02.659  6110  6221 D HostConnection: HostConnection::get() New Host Connection established 0xb4000074a156bf10, tid 6221
+08-14 22:53:02.666  6110  6221 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1 
+08-14 22:53:02.677   184   184 I SELinux : avc:  received policyload notice (seqno=2)
+08-14 22:53:02.678   184   184 I hwservicemanager: getTransport: Cannot find entry android.hardware.configstore@1.0::ISurfaceFlingerConfigs/default in either framework or device manifest.
+08-14 22:53:02.678  6110  6221 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+08-14 22:53:02.756  6110  6221 D EGL_emulation: eglCreateContext: 0xb40000749158e5b0: maj 3 min 1 rcv 4
+08-14 22:53:02.758  6110  6221 D EGL_emulation: eglMakeCurrent: 0xb40000749158e5b0: ver 3 1 (tinfo 0xb4000074315c02e0) (first time)
+08-14 22:53:02.842  6110  6124 I om.bxkj.studen: Background young concurrent copying GC freed 39263(3791KB) AllocSpace objects, 10(520KB) LOS objects, 86% free, 4000KB/27MB, paused 58us total 108.500ms
+08-14 22:53:02.844  6110  6126 W System  : A resource failed to call close. 
+08-14 22:53:02.844  6110  6126 W System  : A resource failed to call close. 
+08-14 22:53:02.844  6110  6126 W SQLiteConnectionPool: A SQLiteConnection object for database '/data/user/0/com.bxkj.student/databases/xiaowei' was leaked!  Please fix your application to end transactions in progress properly and to close the database when it is no longer needed.
+08-14 22:53:02.844  6110  6126 W System  : A resource failed to call close. 
+08-14 22:53:02.931   184   184 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device manifest.
+08-14 22:53:02.931  6110  6221 I Gralloc4: mapper 4.x is not supported
+08-14 22:53:02.931  6110  6221 D HostConnection: createUnique: call
+08-14 22:53:02.932  6110  6221 D HostConnection: HostConnection::get() New Host Connection established 0xb4000074a156e190, tid 6221
+08-14 22:53:02.941  6110  6221 D HostConnection: HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 ANDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_handles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_sync_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma ANDROID_EMU_hwc_color_transform GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1 
+08-14 22:53:03.090   506   542 I RoleManagerService: Granting default roles...
+08-14 22:53:03.108   506   601 I InputReader: Reconfiguring input devices, changes=KEYBOARD_LAYOUTS | 
+08-14 22:53:03.126   718   718 V AvrcpMediaPlayerList: mPackageChangedBroadcastReceiver: action: android.intent.action.PACKAGE_CHANGED
+08-14 22:53:03.126   718   718 D AvrcpMediaPlayerList: Name of package changed: com.bxkj.student
+08-14 22:53:03.212  6110  6221 I OpenGLRenderer: Davey! duration=700ms; Flags=1, IntendedVsync=140122472616, Vsync=140122472616, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=140131307149, AnimationStart=140131308024, PerformTraversalsStart=140131348274, DrawStart=140561364191, SyncQueued=140567093274, SyncStart=140570904607, IssueDrawCommandsStart=140570978107, SwapBuffers=140635818649, FrameCompleted=140827257816, DequeueBufferDuration=156625, QueueBufferDuration=1362834, GpuCompleted=12, 
+08-14 22:53:03.217  6110  6110 I Choreographer: Skipped 41 frames!  The application may be doing too much work on its main thread.
+08-14 22:53:03.222   341  1324 W ServiceManager: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10166 pid=6110
+08-14 22:53:03.222  1076  1076 D CarrierSvcBindHelper: No carrier app for: 0
+08-14 22:53:03.222   341  1324 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10166 => denied (4334 us)
+08-14 22:53:03.234   506   506 W Looper  : Slow dispatch took 101ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@569dcec m=0
+08-14 22:53:03.249  6110  6221 I OpenGLRenderer: Davey! duration=725ms; Flags=0, IntendedVsync=140139156066, Vsync=140822489372, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=140832290024, AnimationStart=140832291483, PerformTraversalsStart=140832348816, DrawStart=140832484691, SyncQueued=140832612108, SyncStart=140832778358, IssueDrawCommandsStart=140833338941, SwapBuffers=140835468399, FrameCompleted=140864606149, DequeueBufferDuration=40250, QueueBufferDuration=386750, GpuCompleted=32772522036388713, 
+08-14 22:53:03.311   506   545 D EventSequenceValidator: Transition from ACTIVITY_LAUNCHED to ACTIVITY_FINISHED
+08-14 22:53:03.351   762   780 I PermissionControllerServiceImpl: Updating user sensitive for uid 10166
+08-14 22:53:03.377   506   545 I ActivityManager: Killing 5081:com.google.android.apps.pixelmigrate/u0a113 (adj 985): empty #17
+08-14 22:53:03.439   506   506 W Looper  : Slow dispatch took 201ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@97c4d77 m=0
+08-14 22:53:03.439   506   506 I Telecom : DefaultDialerCache: Refreshing default dialer for user 0: now com.android.dialer: DDC.oR@AKM
+08-14 22:53:03.439   506   506 W Looper  : Slow delivery took 313ms main h=android.app.ActivityThread$H c=android.app.-$$Lambda$LoadedApk$ReceiverDispatcher$Args$_BumDX2UKsnxLVrE6UJsJZkotuA@a916de4 m=0
+08-14 22:53:03.525   506  2292 W system_server: Long monitor contention with owner Binder:506_1A (2542) at void com.android.server.am.ActivityManagerService.notifyPackageUse(java.lang.String, int)(ActivityManagerService.java:3134) waiters=0 in void com.android.server.am.ActivityManagerService.serviceDoneExecuting(android.os.IBinder, int, int, int) for 115ms
+08-14 22:53:03.590     0     0 W audit   : audit_lost=49 audit_rate_limit=5 audit_backlog_limit=64
+08-14 22:53:03.590     0     0 E audit   : rate limit exceeded
+08-14 22:53:03.584  6199  6199 W tudent:pushcore: type=1400 audit(0.0:141): avc: denied { ptrace } for scontext=u:r:zygote:s0 tcontext=u:r:untrusted_app:s0:c166,c256,c512,c768 tclass=process permissive=0 app=com.bxkj.student
+08-14 22:53:03.584  6199  6199 I chatty  : uid=10166 com.bxkj.student:pushcore identical 3 lines
+08-14 22:53:03.584  6199  6199 W tudent:pushcore: type=1400 audit(0.0:145): avc: denied { ptrace } for scontext=u:r:zygote:s0 tcontext=u:r:untrusted_app:s0:c166,c256,c512,c768 tclass=process permissive=0 app=com.bxkj.student
+08-14 22:53:03.727   506  4273 W system_server: Long monitor contention with owner Binder:506_1A (2542) at android.content.ComponentName com.android.server.am.ActivityManagerService.startService(android.app.IApplicationThread, android.content.Intent, java.lang.String, boolean, java.lang.String, java.lang.String, int)(ActivityManagerService.java:15036) waiters=3 in void com.android.server.am.ActivityManagerService.serviceDoneExecuting(android.os.IBinder, int, int, int) for 166ms
+08-14 22:53:03.760  1186  6256 I Fitness : OnPackageChangedOperation got intent: Intent { act=android.intent.action.PACKAGE_CHANGED dat=package:com.bxkj.student flg=0x45000010 cmp=com.google.android.gms/.chimera.PersistentIntentOperationService (has extras) } [CONTEXT service_id=17 ]
+08-14 22:53:03.780   304   304 I Zygote  : Process 5081 exited due to signal 9 (Killed)
+08-14 22:53:03.782   506   506 W Looper  : Slow dispatch took 253ms main h=com.android.server.job.JobSchedulerService$JobHandler c=null m=1
+08-14 22:53:03.835   506   553 I libprocessgroup: Successfully killed process cgroup uid 10113 pid 5081 in 455ms
+08-14 22:53:03.876  1186  6256 I Fitness : FitCleanupIntentOperation received Intent android.intent.action.PACKAGE_CHANGED [CONTEXT service_id=17 ]
+08-14 22:53:04.007  1912  2338 I PBSessionCacheImpl: Deleted sessionId[8410851648305436] from persistence.
+08-14 22:53:04.060   739  1151 I OpenGLRenderer: Davey! duration=718ms; Flags=0, IntendedVsync=140955773497, Vsync=140989106829, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=140991752233, AnimationStart=140991752524, PerformTraversalsStart=140994247649, DrawStart=140994276483, SyncQueued=140998647941, SyncStart=140999307024, IssueDrawCommandsStart=140999384108, SwapBuffers=141488955150, FrameCompleted=141674895483, DequeueBufferDuration=310041, QueueBufferDuration=26921042, GpuCompleted=0, 
+08-14 22:53:04.063   739   739 I Choreographer: Skipped 38 frames!  The application may be doing too much work on its main thread.
+08-14 22:53:04.154  1415  1708 W gle.android.gm: Long monitor contention with owner lowpool[21] (6096) at void acmh.a()(:com.google.android.gms@201817019@20.18.17 (040400-311416286):2) waiters=0 in void acmh.a(acmj, long) for 189ms
+08-14 22:53:04.232   739  1151 I OpenGLRenderer: Davey! duration=751ms; Flags=0, IntendedVsync=141039158175, Vsync=141672491483, OldestInputEvent=9223372036854775807, NewestInputEvent=0, HandleInputStart=141678163441, AnimationStart=141678164608, PerformTraversalsStart=141678484025, DrawStart=141709710108, SyncQueued=141710337150, SyncStart=141767278525, IssueDrawCommandsStart=141767337816, SwapBuffers=141780604400, FrameCompleted=141847247025, DequeueBufferDuration=62061250, QueueBufferDuration=141417, GpuCompleted=0, 
+08-14 22:53:04.299  1415  6096 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms [CONTEXT service_id=21 ]
+08-14 22:53:04.352  1912  2338 W SearchServiceCore: Abort, client detached.
+08-14 22:53:04.364  1912  2338 I MicroDetectionState: Should stop hotword detection immediately - false
+08-14 22:53:04.430  6199  6213 I tudent:pushcor: Background young concurrent copying GC freed 21444(1186KB) AllocSpace objects, 4(3200KB) LOS objects, 93% free, 1711KB/25MB, paused 31us total 268.222ms
+08-14 22:53:04.495  1415  6096 I Icing   : Indexing done com.google.android.gms-apps [CONTEXT service_id=21 ]
+08-14 22:53:04.496  1415  6096 I Icing   : Indexing com.google.android.gms-internal.3p:MobileApplication from com.google.android.gms [CONTEXT service_id=21 ]
+08-14 22:53:04.514  1076  1100 I m.android.phon: Background concurrent copying GC freed 42133(2726KB) AllocSpace objects, 0(0B) LOS objects, 49% free, 3365KB/6730KB, paused 35us total 261.114ms
+08-14 22:53:04.586   506   506 W system_server: Long monitor contention with owner android.bg (550) at boolean com.android.server.usage.AppStandbyController.isCarrierApp(java.lang.String)(AppStandbyController.java:1571) waiters=0 in int com.android.server.usage.AppStandbyController.getAppStandbyBucket(java.lang.String, int, long, boolean) for 804ms
+08-14 22:53:04.587   506   506 W Looper  : Slow dispatch took 805ms main h=com.android.server.job.controllers.QuotaController$QcHandler c=null m=3
+08-14 22:53:04.589  1415  6096 I Icing   : Indexing done com.google.android.gms-internal.3p:MobileApplication [CONTEXT service_id=21 ]
+08-14 22:53:04.622   506   506 W Looper  : Drained
+08-14 22:53:04.624   506   550 D ArtManagerInternalImpl: /data/misc/iorapd/com.bxkj.student/20220/com.bxkj.student.splash.OpenPrivacyAgreementActivity/compiled_traces/compiled_trace.pb doesn't exist
+08-14 22:53:04.626   506   550 I ActivityTaskManager: Displayed com.bxkj.student/.splash.OpenPrivacyAgreementActivity: +2s587ms
+08-14 22:53:04.681  6199  6199 W tudent:pushcor: Opening an oat file without a class loader. Are you using the deprecated DexFile APIs?
+08-14 22:53:05.094  6199  6199 W System.err: Warning: Using deprecated Element constructor. Do not use internal APIs, this constructor will be removed in the future.
+08-14 22:53:05.097  6199  6199 I TetheringManager: registerTetheringEventCallback:com.bxkj.student
+08-14 22:53:05.145   506   671 D ConnectivityService: NetReassign [no changes]
+08-14 22:53:05.666   393   393 I perfetto: probes_producer.cc:329  Producer stop (id=4)
+08-14 22:53:05.666   393   393 I perfetto: ftrace_procfs.cc:183    disabled ftrace
+08-14 22:53:05.668     0     0 W perfetto: disabled ftrace
+08-14 22:53:05.669   394   394 I perfetto: ng_service_impl.cc:1948 Tracing session 4 ended, total sessions:0
+08-14 22:53:05.708   408  6106 I iorapd  : Perfetto TraceBuffer saved to file: /data/misc/iorapd/com.bxkj.student/20220/com.bxkj.student.splash.SplashActivity/raw_traces/1786719185706678526.perfetto_trace.pb
+08-14 22:53:08.401  1635  1698 I PeriodicStatsRunner: PeriodicStatsRunner.call():180 call()
+08-14 22:53:08.401  1635  1698 I PeriodicStatsRunner: PeriodicStatsRunner.call():184 No submit PeriodicStats since input started.
+08-14 22:53:09.379   506  4671 I ActivityManager: Killing 5120:com.google.android.apps.docs/u0a136 (adj 985): empty #17
+08-14 22:53:09.388   304   304 I Zygote  : Process 5120 exited due to signal 9 (Killed)
+08-14 22:53:09.425   506   553 I libprocessgroup: Successfully killed process cgroup uid 10136 pid 5120 in 45ms
+08-14 22:53:10.255  1415  6254 I Vision  : Requesting optional module download of ocr.
+08-14 22:53:10.255  1415  6254 I Vision  : Checking for download completion for 157870 -- ocr
+08-14 22:53:17.636   506  2547 I ActivityManager: Killing 5211:com.google.android.apps.restore/u0a112 (adj 975): empty #17
+08-14 22:53:17.688   304   304 I Zygote  : Process 5211 exited due to signal 9 (Killed)
+08-14 22:53:17.690   506   631 I ActivityManager: Killing 3232:com.google.android.apps.messaging/u0a139 (adj 985): empty #17
+08-14 22:53:17.692   506   553 I libprocessgroup: Successfully killed process cgroup uid 10112 pid 5211 in 46ms
+08-14 22:53:17.715   304   304 I Zygote  : Process 3232 exited due to signal 9 (Killed)
+08-14 22:53:17.719   506  1025 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(NetworkRequest [ TRACK_DEFAULT id=30, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10139 AdministratorUids: [] RequestorUid: 10139 RequestorPackageName: com.google.android.apps.messaging] ], android.os.BinderProxy@3e2081c)
+08-14 22:53:17.719   506   671 D ConnectivityService: releasing NetworkRequest [ TRACK_DEFAULT id=30, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10139 AdministratorUids: [] RequestorUid: 10139 RequestorPackageName: com.google.android.apps.messaging] ] (release request)
+08-14 22:53:17.720   506   810 D ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(NetworkRequest [ LISTEN id=31, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED Uid: 10139 AdministratorUids: [] RequestorUid: 10139 RequestorPackageName: com.google.android.apps.messaging] ], android.os.BinderProxy@75e2c25)
+08-14 22:53:17.731  1076  1076 D Telephony: isEmergencyPreferredAccount: subId=1, activeData=1
+08-14 22:53:17.731  1076  1076 D Telephony: isEmergencyPreferredAccount: Device does not require preference.
+08-14 22:53:17.732   739   739 V KeyguardUpdateMonitor: onSubscriptionInfoChanged()
+08-14 22:53:17.734   739   739 V KeyguardUpdateMonitor: SubInfo:{id=1 iccId=89014103211118510720 simSlotIndex=0 carrierId=1 displayName=T-Mobile carrierName=T-Mobile nameSource=3 iconTint=-16746133 number=+15555215554 dataRoaming=0 iconBitmap=android.graphics.Bitmap@fa28150 mcc=310 mnc=260 countryIso=us isEmbedded=false nativeAccessRules=null cardString=89014103211118510720 cardId=-1 isOpportunistic=false groupUUID=null isGroupDisabled=false profileClass=-1 ehplmns=null hplmns=null subscriptionType=0 groupOwner=null carrierConfigAccessRules=null areUiccApplicationsEnabled=true}
+08-14 22:53:17.738   506   553 I libprocessgroup: Successfully killed process cgroup uid 10139 pid 3232 in 45ms
+08-14 22:53:18.771   506   810 I ActivityManager: Killing 3416:com.google.android.calendar/u0a129 (adj 975): empty #17
+08-14 22:53:18.806   304   304 I Zygote  : Process 3416 exited due to signal 9 (Killed)
+08-14 22:53:18.819   506   553 I libprocessgroup: Successfully killed process cgroup uid 10129 pid 3416 in 46ms
+08-14 22:53:20.266  1415  6292 I Vision  : Requesting optional module download of ocr.
+08-14 22:53:20.267  1415  6292 I Vision  : Checking for download completion for 167882 -- ocr
+08-14 22:53:21.771  1186  6045 E WakeLock: GCM_HB_ALARM release without a matched acquire!
+08-14 22:53:21.771  1186  6045 W WakeLock: GCM_HB_ALARM counter does not exist
+08-14 22:53:22.771  1186  6293 I NetworkManagementSocketTagger: tagSocketFd(-1, 805307399, -1) failed with errno-9
+08-14 22:53:22.771  1186  6293 W GCM     : socket file descriptor unavailable.
+08-14 22:53:22.841  1912  2342 W OpaSSRequestSender: Failed to get ZeroStateResponse from AssistantClientSyncWorker with error java.util.concurrent.TimeoutException
+08-14 22:53:23.411  1912  2349 W OpaSSRequestSender: Failed to get ZeroStateResponse from AssistantClientSyncWorker with error java.util.concurrent.TimeoutException
+08-14 22:53:25.762     0     0 D logd    : logdr: UID=0 GID=0 PID=6298 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns
+08-14 22:53:30.276  1415  6302 I Vision  : Requesting optional module download of ocr.
+08-14 22:53:30.276  1415  6302 I Vision  : Exceeded maximum feature download tries for ocr
+08-14 22:53:30.276  1415  6302 W Vision  : Request of optional module download of ocr failed.
+08-14 22:53:30.276  1415  6302 I Vision  : Checking for download completion for 177891 -- ocr
+08-14 22:53:30.315  1415  6096 I TelephonySpam: TelephonySpamChimeraService - Running Telephony Spam Chimera Service
+08-14 22:53:30.316  1415  6096 I TelephonySpam: TelephonySpamChimeraService - Cleaning SIP Header local table of old entries
+08-14 22:53:30.316  1415  6096 I TelephonySpam: SpamListSync - Call spam module disabled. Skipping cleaning cache sip header table.
+08-14 22:53:30.317  1415  6096 I TelephonySpam: TelephonySpamChimeraService - Syncing Call Spam List
+08-14 22:53:30.317  1415  6096 I TelephonySpam: SpamListSync - SpamListSyncChimeraService.syncSpamList called with tag: telephonyspam.SpamListSyncOneOffTask, extras: Bundle[{SpamList Type=0, Action=1.0}]
+08-14 22:53:30.317  1415  6096 I TelephonySpam: SpamListSync - Call spam module disabled. Skipping spam list syncing.
+08-14 22:53:30.333  1415  2724 E ConfigFileUtils: Failed to read config file: /data/user_de/0/com.google.android.gms/app_chimera/next_container.pb: open failed: ENOENT (No such file or directory)
+08-14 22:53:30.351  1415  2724 I ChmraDebugLogger: [73] 1801
+08-14 22:53:30.351  1415  2724 I ChmraDebugLogger: [30] [VisionOcr.optional:201817000400] permitMetered=true,[Pay.optional:201817020000] permitMetered=true,
+08-14 22:53:30.376  1415  2724 I ChimeraConfigService: Scheduling checkin for one-off execution between [3300,43201] seconds from now (1786719210376)
+08-14 22:53:30.386  1415  2724 I ChimeraConfigService: Scheduling checkin every 43201 seconds, with flex of 1800 seconds
+08-14 22:53:30.470  2911  3057 E libc    : Access denied finding property "persist.adb.tls_server.enable"
+08-14 22:53:30.470  2911  3057 E libc    : Access denied finding property "service.adb.tls.port"
+08-14 22:53:30.468  2911  2911 W Binder:2911_4: type=1400 audit(0.0:191): avc: denied { read } for name="u:object_r:system_adbd_prop:s0" dev="tmpfs" ino=236 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:system_adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+08-14 22:53:30.468  2911  2911 W Binder:2911_4: type=1400 audit(0.0:192): avc: denied { read } for name="u:object_r:adbd_prop:s0" dev="tmpfs" ino=96 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:adbd_prop:s0 tclass=file permissive=0 app=com.google.android.gms
+08-14 22:53:31.372  1186  6304 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+08-14 22:53:31.372  1186  6304 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@201817019@20.18.17 (040400-311416286):2)
+08-14 22:53:31.372  1186  6304 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@201817019@20.18.17 (040400-311416286):0)
+08-14 22:53:31.876  1186  6304 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+08-14 22:53:31.876  1186  6304 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@201817019@20.18.17 (040400-311416286):2)
+08-14 22:53:31.876  1186  6304 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@201817019@20.18.17 (040400-311416286):0)
+08-14 22:53:31.988  1186  6304 E GmsTaskScheduler: sendWakeUpEvent called on SchedulerClientBroadcastStrategy
+08-14 22:53:31.991  1186  2516 W GLSUser : [AppCertManager] Failed to get security token.
+08-14 22:53:31.991  1186  2516 W GLSUser : java.io.IOException: Invalid scope
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at adac.b(:com.google.android.gms@201817019@20.18.17 (040400-311416286):23)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at adac.a(:com.google.android.gms@201817019@20.18.17 (040400-311416286):18)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at adac.a(:com.google.android.gms@201817019@20.18.17 (040400-311416286):11)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at huk.a(:com.google.android.gms@201817019@20.18.17 (040400-311416286):16)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at hui.a(:com.google.android.gms@201817019@20.18.17 (040400-311416286):41)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at hud.a(:com.google.android.gms@201817019@20.18.17 (040400-311416286):0)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at hug.a(:com.google.android.gms@201817019@20.18.17 (040400-311416286):10)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at fzn.call(:com.google.android.gms@201817019@20.18.17 (040400-311416286):5)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at sji.b(:com.google.android.gms@201817019@20.18.17 (040400-311416286):12)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at sji.run(:com.google.android.gms@201817019@20.18.17 (040400-311416286):7)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at spj.run(:com.google.android.gms@201817019@20.18.17 (040400-311416286):0)
+08-14 22:53:31.991  1186  2516 W GLSUser : 	at java.lang.Thread.run(Thread.java:923)
+08-14 22:53:33.498  1186  2516 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+08-14 22:53:33.498  1186  2516 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@201817019@20.18.17 (040400-311416286):2)
+08-14 22:53:33.498  1186  2516 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@201817019@20.18.17 (040400-311416286):0)
+08-14 22:53:33.998  1186  2516 W Conscrypt: Could not set socket write timeout: java.net.SocketException: Socket closed
+08-14 22:53:33.999  1186  2516 W Conscrypt: 	at com.google.android.gms.org.conscrypt.Platform.setSocketWriteTimeout(:com.google.android.gms@201817019@20.18.17 (040400-311416286):2)
+08-14 22:53:33.999  1186  2516 W Conscrypt: 	at com.google.android.gms.org.conscrypt.ConscryptFileDescriptorSocket.setSoWriteTimeout(:com.google.android.gms@201817019@20.18.17 (040400-311416286):0)
+08-14 22:53:34.069  1186  2516 E GmsTaskScheduler: sendWakeUpEvent called on SchedulerClientBroadcastStrategy
+08-14 22:53:34.071  1186  2516 W GLSUser : [AppCertManager] IOException while requesting key: 
+08-14 22:53:34.071  1186  2516 W GLSUser : java.io.IOException: Invalid device key response.
+08-14 22:53:34.071  1186  2516 W GLSUser : 	at huk.a(:com.google.android.gms@201817019@20.18.17 (040400-311416286):46)
+08-14 22:53:34.071  1186  2516 W GLSUser : 	at hui.a(:com.google.android.gms@201817019@20.18.17 (040400-311416286):41)
+08-14 22:53:34.071  1186  2516 W GLSUser : 	at hud.a(:com.google.android.gms@201817019@20.18.17 (040400-311416286):0)
+08-14 22:53:34.071  1186  2516 W GLSUser : 	at hug.a(:com.google.android.gms@201817019@20.18.17 (040400-311416286):10)
+08-14 22:53:34.071  1186  2516 W GLSUser : 	at fzn.call(:com.google.android.gms@201817019@20.18.17 (040400-311416286):5)
+08-14 22:53:34.071  1186  2516 W GLSUser : 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+08-14 22:53:34.071  1186  2516 W GLSUser : 	at sji.b(:com.google.android.gms@201817019@20.18.17 (040400-311416286):12)
+08-14 22:53:34.071  1186  2516 W GLSUser : 	at sji.run(:com.google.android.gms@201817019@20.18.17 (040400-311416286):7)
+08-14 22:53:34.071  1186  2516 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1167)
+08-14 22:53:34.071  1186  2516 W GLSUser : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:641)
+08-14 22:53:34.071  1186  2516 W GLSUser : 	at spj.run(:com.google.android.gms@201817019@20.18.17 (040400-311416286):0)
+08-14 22:53:34.071  1186  2516 W GLSUser : 	at java.lang.Thread.run(Thread.java:923)
+08-14 22:53:35.267     0     0 D logd    : logdr: UID=0 GID=0 PID=6311 n tail=0 logMask=99 pid=0 start=0ns timeout=0ns

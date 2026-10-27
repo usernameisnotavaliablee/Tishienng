@@ -1,0 +1,164 @@
+package com.trello.rxlifecycle2.components;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_6_sz7847784.dex */
+public abstract class c extends android.app.Fragment implements com.trello.rxlifecycle2.b<com.trello.rxlifecycle2.android.FragmentEvent> {
+    private final io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> a;
+
+    public c() {
+            r1 = this;
+            r1.<init>()
+            io.reactivex.subjects.BehaviorSubject r0 = io.reactivex.subjects.BehaviorSubject.create()
+            r1.a = r0
+            return
+    }
+
+    @Override // com.trello.rxlifecycle2.b
+    @androidx.annotation.NonNull
+    @androidx.annotation.CheckResult
+    public /* bridge */ /* synthetic */ com.trello.rxlifecycle2.c H(@androidx.annotation.NonNull com.trello.rxlifecycle2.android.FragmentEvent r1) {
+            r0 = this;
+            com.trello.rxlifecycle2.android.FragmentEvent r1 = (com.trello.rxlifecycle2.android.FragmentEvent) r1
+            com.trello.rxlifecycle2.c r1 = r0.a(r1)
+            return r1
+    }
+
+    @androidx.annotation.NonNull
+    @androidx.annotation.CheckResult
+    public final <T> com.trello.rxlifecycle2.c<T> a(@androidx.annotation.NonNull com.trello.rxlifecycle2.android.FragmentEvent r2) {
+            r1 = this;
+            io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> r0 = r1.a
+            com.trello.rxlifecycle2.c r2 = com.trello.rxlifecycle2.d.c(r0, r2)
+            return r2
+    }
+
+    @Override // com.trello.rxlifecycle2.b
+    @androidx.annotation.NonNull
+    @androidx.annotation.CheckResult
+    public final io.reactivex.Observable<com.trello.rxlifecycle2.android.FragmentEvent> n() {
+            r1 = this;
+            io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> r0 = r1.a
+            io.reactivex.Observable r0 = r0.hide()
+            return r0
+    }
+
+    @Override // android.app.Fragment
+    @androidx.annotation.CallSuper
+    public void onAttach(android.app.Activity r2) {
+            r1 = this;
+            super.onAttach(r2)
+            io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> r2 = r1.a
+            com.trello.rxlifecycle2.android.FragmentEvent r0 = com.trello.rxlifecycle2.android.FragmentEvent.ATTACH
+            r2.onNext(r0)
+            return
+    }
+
+    @Override // android.app.Fragment
+    @androidx.annotation.CallSuper
+    public void onCreate(@androidx.annotation.Nullable android.os.Bundle r2) {
+            r1 = this;
+            super.onCreate(r2)
+            io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> r2 = r1.a
+            com.trello.rxlifecycle2.android.FragmentEvent r0 = com.trello.rxlifecycle2.android.FragmentEvent.CREATE
+            r2.onNext(r0)
+            return
+    }
+
+    @Override // android.app.Fragment
+    @androidx.annotation.CallSuper
+    public void onDestroy() {
+            r2 = this;
+            io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> r0 = r2.a
+            com.trello.rxlifecycle2.android.FragmentEvent r1 = com.trello.rxlifecycle2.android.FragmentEvent.DESTROY
+            r0.onNext(r1)
+            super.onDestroy()
+            return
+    }
+
+    @Override // android.app.Fragment
+    @androidx.annotation.CallSuper
+    public void onDestroyView() {
+            r2 = this;
+            io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> r0 = r2.a
+            com.trello.rxlifecycle2.android.FragmentEvent r1 = com.trello.rxlifecycle2.android.FragmentEvent.DESTROY_VIEW
+            r0.onNext(r1)
+            super.onDestroyView()
+            return
+    }
+
+    @Override // android.app.Fragment
+    @androidx.annotation.CallSuper
+    public void onDetach() {
+            r2 = this;
+            io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> r0 = r2.a
+            com.trello.rxlifecycle2.android.FragmentEvent r1 = com.trello.rxlifecycle2.android.FragmentEvent.DETACH
+            r0.onNext(r1)
+            super.onDetach()
+            return
+    }
+
+    @Override // android.app.Fragment
+    @androidx.annotation.CallSuper
+    public void onPause() {
+            r2 = this;
+            io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> r0 = r2.a
+            com.trello.rxlifecycle2.android.FragmentEvent r1 = com.trello.rxlifecycle2.android.FragmentEvent.PAUSE
+            r0.onNext(r1)
+            super.onPause()
+            return
+    }
+
+    @Override // android.app.Fragment
+    @androidx.annotation.CallSuper
+    public void onResume() {
+            r2 = this;
+            super.onResume()
+            io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> r0 = r2.a
+            com.trello.rxlifecycle2.android.FragmentEvent r1 = com.trello.rxlifecycle2.android.FragmentEvent.RESUME
+            r0.onNext(r1)
+            return
+    }
+
+    @Override // android.app.Fragment
+    @androidx.annotation.CallSuper
+    public void onStart() {
+            r2 = this;
+            super.onStart()
+            io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> r0 = r2.a
+            com.trello.rxlifecycle2.android.FragmentEvent r1 = com.trello.rxlifecycle2.android.FragmentEvent.START
+            r0.onNext(r1)
+            return
+    }
+
+    @Override // android.app.Fragment
+    @androidx.annotation.CallSuper
+    public void onStop() {
+            r2 = this;
+            io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> r0 = r2.a
+            com.trello.rxlifecycle2.android.FragmentEvent r1 = com.trello.rxlifecycle2.android.FragmentEvent.STOP
+            r0.onNext(r1)
+            super.onStop()
+            return
+    }
+
+    @Override // android.app.Fragment
+    @androidx.annotation.CallSuper
+    public void onViewCreated(android.view.View r1, @androidx.annotation.Nullable android.os.Bundle r2) {
+            r0 = this;
+            super.onViewCreated(r1, r2)
+            io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> r1 = r0.a
+            com.trello.rxlifecycle2.android.FragmentEvent r2 = com.trello.rxlifecycle2.android.FragmentEvent.CREATE_VIEW
+            r1.onNext(r2)
+            return
+    }
+
+    @Override // com.trello.rxlifecycle2.b
+    @androidx.annotation.NonNull
+    @androidx.annotation.CheckResult
+    public final <T> com.trello.rxlifecycle2.c<T> z() {
+            r1 = this;
+            io.reactivex.subjects.BehaviorSubject<com.trello.rxlifecycle2.android.FragmentEvent> r0 = r1.a
+            com.trello.rxlifecycle2.c r0 = com.trello.rxlifecycle2.android.b.b(r0)
+            return r0
+    }
+}

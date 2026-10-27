@@ -1,0 +1,19 @@
+RAW: ffc300d1fd7b02a9020080d2000080d242040091e3ffff10610040f900040091e3ffff10610000f91f2800f18a0000545f2800f14a000054f9ffff17fd7b42a9ffc30091c0035fd60000a0e10000a0e10000a0e10000a0e100000000011b033b
+0x000f68  sub      sp, sp, #0x30
+0x000f6c  stp      x29, x30, [sp, #0x20]
+0x000f70  mov      x2, #0
+0x000f74  mov      x0, #0
+0x000f78  add      x2, x2, #1
+0x000f7c  adr      x3, #0xf78
+0x000f80  ldr      x1, [x3]
+0x000f84  add      x0, x0, #1
+0x000f88  adr      x3, #0xf84
+0x000f8c  str      x1, [x3]
+0x000f90  cmp      x0, #0xa
+0x000f94  b.ge     #0xfa4
+0x000f98  cmp      x2, #0xa
+0x000f9c  b.ge     #0xfa4
+0x000fa0  b        #0xf84
+0x000fa4  ldp      x29, x30, [sp, #0x20]
+0x000fa8  add      sp, sp, #0x30
+0x000fac  ret      

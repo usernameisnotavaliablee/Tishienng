@@ -1,0 +1,59 @@
+### JNI_setConfig  @0x19398  size=232
+0x00019398  sub      sp, sp, #0x60
+0x0001939c  stp      x29, x30, [sp, #0x50]
+0x000193a0  add      x29, sp, #0x50
+0x000193a4  ldr      x9, [x29, #0x10]
+0x000193a8  ldrb     w8, [x29, #0x18]
+0x000193ac  stur     x0, [x29, #-8]
+0x000193b0  stur     x1, [x29, #-0x10]
+0x000193b4  stur     w2, [x29, #-0x14]
+0x000193b8  stur     w3, [x29, #-0x18]
+0x000193bc  stur     w4, [x29, #-0x1c]
+0x000193c0  stur     w5, [x29, #-0x20]
+0x000193c4  sturb    w6, [x29, #-0x21]
+0x000193c8  sturb    w7, [x29, #-0x22]
+0x000193cc  str      x9, [sp, #0x20]
+0x000193d0  strb     w8, [sp, #0x1f]
+0x000193d4  ldur     w8, [x29, #-0x14]
+0x000193d8  adrp     x9, #0x1d000
+0x000193dc  str      w8, [x9, #0xbac]
+0x000193e0  ldur     w8, [x29, #-0x18]
+0x000193e4  adrp     x9, #0x1d000
+0x000193e8  str      w8, [x9, #0xcc0]
+0x000193ec  ldur     w8, [x29, #-0x1c]
+0x000193f0  adrp     x9, #0x1d000
+0x000193f4  str      w8, [x9, #0xcbc]
+0x000193f8  ldur     w8, [x29, #-0x20]
+0x000193fc  adrp     x9, #0x1d000
+0x00019400  str      w8, [x9, #0xcb8]
+0x00019404  ldurb    w8, [x29, #-0x21]
+0x00019408  adrp     x9, #0x1d000
+0x0001940c  strb     w8, [x9, #0xcc4]
+0x00019410  ldurb    w8, [x29, #-0x22]
+0x00019414  adrp     x9, #0x1d000
+0x00019418  strb     w8, [x9, #0xcc5]
+0x0001941c  ldrb     w8, [sp, #0x1f]
+0x00019420  adrp     x9, #0x1d000
+0x00019424  strb     w8, [x9, #0xcc6]
+0x00019428  ldr      x8, [sp, #0x20]
+0x0001942c  cbz      x8, #0x19474
+0x00019430  ldur     x0, [x29, #-8]
+0x00019434  ldr      x1, [sp, #0x20]
+0x00019438  mov      x2, xzr
+0x0001943c  bl       #0xad78   ; sub_ad78
+0x00019440  str      x0, [sp, #0x10]
+0x00019444  mov      x0, #0x28
+0x00019448  bl       #0x1b260   ; sub_1b260
+0x0001944c  str      x0, [sp, #8]
+0x00019450  ldr      x1, [sp, #0x10]
+0x00019454  bl       #0x1420c   ; sub_1420c
+0x00019458  ldr      x0, [sp, #8]
+0x0001945c  adrp     x8, #0x1d000
+0x00019460  str      x0, [x8, #0xca8]
+0x00019464  ldur     x0, [x29, #-8]
+0x00019468  ldr      x1, [sp, #0x20]
+0x0001946c  ldr      x2, [sp, #0x10]
+0x00019470  bl       #0xb058   ; sub_b058
+0x00019474  ldp      x29, x30, [sp, #0x50]
+0x00019478  add      sp, sp, #0x60
+0x0001947c  ret      

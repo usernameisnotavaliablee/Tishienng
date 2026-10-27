@@ -1,0 +1,45 @@
+### load  @0xb68  size=176
+0x00000b68  sub      sp, sp, #0x50
+0x00000b6c  stp      x20, x19, [sp, #0x30]
+0x00000b70  stp      x29, x30, [sp, #0x40]
+0x00000b74  add      x29, sp, #0x40
+0x00000b78  mrs      x20, tpidr_el0
+0x00000b7c  adrp     x9, #0x11000
+0x00000b80  ldr      x8, [x20, #0x28]
+0x00000b84  ldr      x9, [x9, #0xff0]   ; -> [GOT] my_sigaction
+0x00000b88  mov      w10, #-0xffffffff80000000
+0x00000b8c  adrp     x19, #0x11000
+0x00000b90  stur     x8, [x29, #-0x18]
+0x00000b94  str      x9, [sp, #0x10]
+0x00000b98  str      w10, [sp, #8]
+0x00000b9c  ldr      x19, [x19, #0xff8]   ; -> [GOT] old_handlers
+0x00000ba0  mov      w0, #0xb
+0x00000ba4  add      x1, sp, #8
+0x00000ba8  mov      x2, x19
+0x00000bac  bl       #0xa80   ; sub_a80
+0x00000bb0  add      x2, x19, #0x20   ; -> 0x11020
+0x00000bb4  mov      w0, #6
+0x00000bb8  add      x1, sp, #8
+0x00000bbc  bl       #0xa80   ; sub_a80
+0x00000bc0  add      x2, x19, #0x40   ; -> 0x11040
+0x00000bc4  mov      w0, #8
+0x00000bc8  add      x1, sp, #8
+0x00000bcc  bl       #0xa80   ; sub_a80
+0x00000bd0  add      x2, x19, #0x60   ; -> 0x11060
+0x00000bd4  mov      w0, #4
+0x00000bd8  add      x1, sp, #8
+0x00000bdc  bl       #0xa80   ; sub_a80
+0x00000be0  add      x2, x19, #0x80   ; -> 0x11080
+0x00000be4  mov      w0, #7
+0x00000be8  add      x1, sp, #8
+0x00000bec  bl       #0xa80   ; sub_a80
+0x00000bf0  ldr      x8, [x20, #0x28]
+0x00000bf4  ldur     x9, [x29, #-0x18]
+0x00000bf8  cmp      x8, x9
+0x00000bfc  b.ne     #0xc14
+0x00000c00  ldp      x29, x30, [sp, #0x40]
+0x00000c04  ldp      x20, x19, [sp, #0x30]
+0x00000c08  mov      w0, #1
+0x00000c0c  add      sp, sp, #0x50
+0x00000c10  ret      
+0x00000c14  bl       #0xa50   ; sub_a50

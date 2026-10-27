@@ -1,0 +1,90 @@
+package io.netty.handler.codec.socks;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_6_sz7847784.dex */
+public enum SocksProtocolVersion extends java.lang.Enum<io.netty.handler.codec.socks.SocksProtocolVersion> {
+    private static final /* synthetic */ io.netty.handler.codec.socks.SocksProtocolVersion[] $VALUES = null;
+    public static final io.netty.handler.codec.socks.SocksProtocolVersion SOCKS4a = null;
+    public static final io.netty.handler.codec.socks.SocksProtocolVersion SOCKS5 = null;
+    public static final io.netty.handler.codec.socks.SocksProtocolVersion UNKNOWN = null;
+    private final byte b;
+
+    static {
+            io.netty.handler.codec.socks.SocksProtocolVersion r0 = new io.netty.handler.codec.socks.SocksProtocolVersion
+            r1 = 4
+            java.lang.String r2 = "SOCKS4a"
+            r3 = 0
+            r0.<init>(r2, r3, r1)
+            io.netty.handler.codec.socks.SocksProtocolVersion.SOCKS4a = r0
+            io.netty.handler.codec.socks.SocksProtocolVersion r1 = new io.netty.handler.codec.socks.SocksProtocolVersion
+            r2 = 5
+            java.lang.String r4 = "SOCKS5"
+            r5 = 1
+            r1.<init>(r4, r5, r2)
+            io.netty.handler.codec.socks.SocksProtocolVersion.SOCKS5 = r1
+            io.netty.handler.codec.socks.SocksProtocolVersion r2 = new io.netty.handler.codec.socks.SocksProtocolVersion
+            r4 = -1
+            java.lang.String r6 = "UNKNOWN"
+            r7 = 2
+            r2.<init>(r6, r7, r4)
+            io.netty.handler.codec.socks.SocksProtocolVersion.UNKNOWN = r2
+            r4 = 3
+            io.netty.handler.codec.socks.SocksProtocolVersion[] r4 = new io.netty.handler.codec.socks.SocksProtocolVersion[r4]
+            r4[r3] = r0
+            r4[r5] = r1
+            r4[r7] = r2
+            io.netty.handler.codec.socks.SocksProtocolVersion.$VALUES = r4
+            return
+    }
+
+    SocksProtocolVersion(java.lang.String r1, int r2, byte r3) {
+            r0 = this;
+            r0.<init>(r1, r2)
+            r0.b = r3
+            return
+    }
+
+    @java.lang.Deprecated
+    public static io.netty.handler.codec.socks.SocksProtocolVersion fromByte(byte r0) {
+            io.netty.handler.codec.socks.SocksProtocolVersion r0 = valueOf(r0)
+            return r0
+    }
+
+    public static io.netty.handler.codec.socks.SocksProtocolVersion valueOf(byte r5) {
+            io.netty.handler.codec.socks.SocksProtocolVersion[] r0 = values()
+            int r1 = r0.length
+            r2 = 0
+        L6:
+            if (r2 >= r1) goto L12
+            r3 = r0[r2]
+            byte r4 = r3.b
+            if (r4 != r5) goto Lf
+            return r3
+        Lf:
+            int r2 = r2 + 1
+            goto L6
+        L12:
+            io.netty.handler.codec.socks.SocksProtocolVersion r5 = io.netty.handler.codec.socks.SocksProtocolVersion.UNKNOWN
+            return r5
+    }
+
+    public static io.netty.handler.codec.socks.SocksProtocolVersion valueOf(java.lang.String r1) {
+            java.lang.Class<io.netty.handler.codec.socks.SocksProtocolVersion> r0 = io.netty.handler.codec.socks.SocksProtocolVersion.class
+            java.lang.Enum r1 = java.lang.Enum.valueOf(r0, r1)
+            io.netty.handler.codec.socks.SocksProtocolVersion r1 = (io.netty.handler.codec.socks.SocksProtocolVersion) r1
+            return r1
+    }
+
+    public static io.netty.handler.codec.socks.SocksProtocolVersion[] values() {
+            io.netty.handler.codec.socks.SocksProtocolVersion[] r0 = io.netty.handler.codec.socks.SocksProtocolVersion.$VALUES
+            java.lang.Object r0 = r0.clone()
+            io.netty.handler.codec.socks.SocksProtocolVersion[] r0 = (io.netty.handler.codec.socks.SocksProtocolVersion[]) r0
+            return r0
+    }
+
+    public byte byteValue() {
+            r1 = this;
+            byte r0 = r1.b
+            return r0
+    }
+}

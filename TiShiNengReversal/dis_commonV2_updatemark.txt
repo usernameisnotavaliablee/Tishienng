@@ -1,0 +1,129 @@
+### _Z16getDevUpdateMarkP7_JNIEnvP7_jclass  @0x138dc  size=500
+0x000138dc  sub      sp, sp, #0x130
+0x000138e0  str      x28, [sp, #0xf0]
+0x000138e4  stp      x22, x21, [sp, #0x100]
+0x000138e8  stp      x20, x19, [sp, #0x110]
+0x000138ec  stp      x29, x30, [sp, #0x120]
+0x000138f0  add      x29, sp, #0x120
+0x000138f4  mrs      x21, tpidr_el0
+0x000138f8  ldr      x8, [x21, #0x28]
+0x000138fc  mov      x19, x0
+0x00013900  adrp     x0, #0x34000
+0x00013904  add      x0, x0, #0xb0   ; -> 0x340b0 = '/data/data'
+0x00013908  mov      x1, sp
+0x0001390c  stur     x8, [x29, #-0x38]
+0x00013910  bl       #0x13740   ; sub_13740
+0x00013914  ldr      w0, [sp, #0x48]
+0x00013918  ldr      x20, [sp, #0x50]
+0x0001391c  sub      x8, x29, #0x88
+0x00013920  bl       #0x13350   ; sub_13350
+0x00013924  adrp     x1, #0x35000
+0x00013928  add      x1, x1, #0x19d   ; -> 0x3519d
+0x0001392c  sub      x0, x29, #0x88
+0x00013930  mov      w2, #1
+0x00013934  bl       #0x137a0   ; sub_137a0
+0x00013938  ldr      x8, [x0, #0x10]   ; -> 0x34010
+0x0001393c  ldr      q0, [x0]   ; -> 0x34000
+0x00013940  stur     x8, [x29, #-0x60]
+0x00013944  stur     q0, [x29, #-0x70]
+0x00013948  stp      xzr, xzr, [x0, #8]
+0x0001394c  str      xzr, [x0]
+0x00013950  add      x8, sp, #0x80
+0x00013954  mov      w0, w20
+0x00013958  add      x22, sp, #0x80
+0x0001395c  bl       #0x13350   ; sub_13350
+0x00013960  ldrb     w8, [sp, #0x80]
+0x00013964  ldp      x10, x9, [sp, #0x88]
+0x00013968  orr      x11, x22, #1
+0x0001396c  tst      w8, #1
+0x00013970  lsr      x12, x8, #1
+0x00013974  csel     x1, x11, x9, eq
+0x00013978  csel     x2, x12, x10, eq
+0x0001397c  sub      x0, x29, #0x70
+0x00013980  bl       #0x137a0   ; sub_137a0
+0x00013984  ldr      x8, [x0, #0x10]   ; -> 0x34010
+0x00013988  ldr      q0, [x0]   ; -> 0x34000
+0x0001398c  stur     x8, [x29, #-0x40]
+0x00013990  stur     q0, [x29, #-0x50]
+0x00013994  stp      xzr, xzr, [x0, #8]
+0x00013998  str      xzr, [x0]
+0x0001399c  ldrb     w8, [sp, #0x80]
+0x000139a0  tbnz     w8, #0, #0x13a24
+0x000139a4  ldurb    w8, [x29, #-0x70]
+0x000139a8  tbnz     w8, #0, #0x13a34
+0x000139ac  ldurb    w8, [x29, #-0x88]
+0x000139b0  tbz      w8, #0, #0x139bc
+0x000139b4  ldur     x0, [x29, #-0x78]
+0x000139b8  bl       #0x13620   ; sub_13620
+0x000139bc  ldr      x8, [x19]
+0x000139c0  ldurb    w9, [x29, #-0x50]
+0x000139c4  ldur     x10, [x29, #-0x40]
+0x000139c8  sub      x11, x29, #0x50
+0x000139cc  ldr      x8, [x8, #0x538]
+0x000139d0  orr      x11, x11, #1
+0x000139d4  tst      w9, #1
+0x000139d8  csel     x1, x11, x10, eq
+0x000139dc  mov      x0, x19
+0x000139e0  blr      x8
+0x000139e4  ldurb    w8, [x29, #-0x50]
+0x000139e8  mov      x19, x0
+0x000139ec  tbz      w8, #0, #0x139f8
+0x000139f0  ldur     x0, [x29, #-0x40]
+0x000139f4  bl       #0x13620   ; sub_13620
+0x000139f8  ldr      x8, [x21, #0x28]
+0x000139fc  ldur     x9, [x29, #-0x38]
+0x00013a00  cmp      x8, x9
+0x00013a04  b.ne     #0x13a48
+0x00013a08  mov      x0, x19
+0x00013a0c  ldp      x29, x30, [sp, #0x120]
+0x00013a10  ldp      x20, x19, [sp, #0x110]
+0x00013a14  ldp      x22, x21, [sp, #0x100]
+0x00013a18  ldr      x28, [sp, #0xf0]
+0x00013a1c  add      sp, sp, #0x130
+0x00013a20  ret      
+0x00013a24  ldr      x0, [sp, #0x90]
+0x00013a28  bl       #0x13620   ; sub_13620
+0x00013a2c  ldurb    w8, [x29, #-0x70]
+0x00013a30  tbz      w8, #0, #0x139ac
+0x00013a34  ldur     x0, [x29, #-0x60]
+0x00013a38  bl       #0x13620   ; sub_13620
+0x00013a3c  ldurb    w8, [x29, #-0x88]
+0x00013a40  tbnz     w8, #0, #0x139b4
+0x00013a44  b        #0x139bc   ; sub_139bc
+0x00013a48  bl       #0x13490   ; sub_13490
+0x00013a4c  ldurb    w8, [x29, #-0x50]
+0x00013a50  mov      x19, x0
+0x00013a54  tbz      w8, #0, #0x13ac8
+0x00013a58  ldur     x0, [x29, #-0x40]
+0x00013a5c  b        #0x13ac4   ; sub_13ac4
+0x00013a60  ldrb     w8, [sp, #0x80]
+0x00013a64  mov      x19, x0
+0x00013a68  tbnz     w8, #0, #0x13a80
+0x00013a6c  ldurb    w8, [x29, #-0x70]
+0x00013a70  tbnz     w8, #0, #0x13aa0
+0x00013a74  ldurb    w8, [x29, #-0x88]
+0x00013a78  tbnz     w8, #0, #0x13ac0
+0x00013a7c  b        #0x13ac8   ; sub_13ac8
+0x00013a80  ldr      x0, [sp, #0x90]
+0x00013a84  bl       #0x13620   ; sub_13620
+0x00013a88  ldurb    w8, [x29, #-0x70]
+0x00013a8c  tbz      w8, #0, #0x13a74
+0x00013a90  b        #0x13aa0   ; sub_13aa0
+0x00013a94  mov      x19, x0
+0x00013a98  ldurb    w8, [x29, #-0x70]
+0x00013a9c  tbz      w8, #0, #0x13a74
+0x00013aa0  ldur     x0, [x29, #-0x60]
+0x00013aa4  bl       #0x13620   ; sub_13620
+0x00013aa8  ldurb    w8, [x29, #-0x88]
+0x00013aac  tbnz     w8, #0, #0x13ac0
+0x00013ab0  b        #0x13ac8   ; sub_13ac8
+0x00013ab4  mov      x19, x0
+0x00013ab8  ldurb    w8, [x29, #-0x88]
+0x00013abc  tbz      w8, #0, #0x13ac8
+0x00013ac0  ldur     x0, [x29, #-0x78]
+0x00013ac4  bl       #0x13620   ; sub_13620
+0x00013ac8  mov      x0, x19
+0x00013acc  bl       #0x32568   ; sub_32568
+
+--- 引用的字符串常量 ---
+   0x340b0: '/data/data'

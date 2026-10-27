@@ -1,0 +1,7 @@
+INFO         | Android emulator version 37.1.11.0 (build_id 15917651) (CL:N/A)
+INFO         | Graphics backend: gfxstream
+DEBUG   | Current emulator version 37.1.11 is the same as the required version 37.1.11.
+INFO         | Found AVD name 'tsn30'
+INFO         | Found AVD target architecture: arm64
+INFO         | argv[0]: './sdk/emulator/emulator/emulator'; program directory: '/Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/sdk/emulator/emulator'
+INFO         | Found systemPath /Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/sdk/system-images/android-30/google_apis/arm64-v8a/arm64-v8a/

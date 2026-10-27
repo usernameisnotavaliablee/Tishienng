@@ -1,0 +1,19 @@
+<html>
+<title>BadKernel Test</title>
+<script>
+  var kMessages;
+  Object.prototype.__defineGetter__("observe_accept_invalid",function(){kMessages=this});
+  try{Object.observe({},function(){},1)}catch(e){}
+  delete Object.prototype["observe_accept_invalid"];
+  console.log("a",a());
+  function a(){
+    if(!kMessages){
+     window.stub.jsMethod(false)
+    return('badKernel vulnerability not exists.');
+ }else{
+     window.stub.jsMethod(true)
+   retuen('badKernel vulnerability exists!');
+ }
+  }
+  </script>
+</html>

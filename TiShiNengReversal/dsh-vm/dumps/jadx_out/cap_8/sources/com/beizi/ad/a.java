@@ -1,0 +1,56 @@
+package com.beizi.ad;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_8_sz9482380.dex */
+public abstract class a {
+    protected a() {
+            r0 = this;
+            r0.<init>()
+            return
+    }
+
+    public void a() {
+            r0 = this;
+            return
+    }
+
+    public void a(int r1) {
+            r0 = this;
+            return
+    }
+
+    public void a(long r1) {
+            r0 = this;
+            return
+    }
+
+    public void a(java.lang.String r1) {
+            r0 = this;
+            return
+    }
+
+    public void b() {
+            r0 = this;
+            return
+    }
+
+    public void c() {
+            r0 = this;
+            return
+    }
+
+    public void d() {
+            r0 = this;
+            return
+    }
+
+    public void e() {
+            r0 = this;
+            return
+    }
+
+    public void f() {
+            r0 = this;
+            return
+    }
+}

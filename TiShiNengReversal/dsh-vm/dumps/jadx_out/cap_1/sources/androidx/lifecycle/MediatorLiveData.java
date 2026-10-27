@@ -1,0 +1,156 @@
+package androidx.lifecycle;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_1_sz9857704.dex */
+public class MediatorLiveData<T> extends androidx.lifecycle.MutableLiveData<T> {
+    private androidx.arch.core.internal.SafeIterableMap<androidx.lifecycle.LiveData<?>, androidx.lifecycle.MediatorLiveData.Source<?>> mSources;
+
+    /* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+    private static class Source<V> implements androidx.lifecycle.Observer<V> {
+        final androidx.lifecycle.LiveData<V> mLiveData;
+        final androidx.lifecycle.Observer<? super V> mObserver;
+        int mVersion;
+
+        Source(androidx.lifecycle.LiveData<V> r2, androidx.lifecycle.Observer<? super V> r3) {
+                r1 = this;
+                r1.<init>()
+                r0 = -1
+                r1.mVersion = r0
+                r1.mLiveData = r2
+                r1.mObserver = r3
+                return
+        }
+
+        @Override // androidx.lifecycle.Observer
+        public void onChanged(@androidx.annotation.Nullable V r3) {
+                r2 = this;
+                int r0 = r2.mVersion
+                androidx.lifecycle.LiveData<V> r1 = r2.mLiveData
+                int r1 = r1.getVersion()
+                if (r0 == r1) goto L17
+                androidx.lifecycle.LiveData<V> r0 = r2.mLiveData
+                int r0 = r0.getVersion()
+                r2.mVersion = r0
+                androidx.lifecycle.Observer<? super V> r0 = r2.mObserver
+                r0.onChanged(r3)
+            L17:
+                return
+        }
+
+        void plug() {
+                r1 = this;
+                androidx.lifecycle.LiveData<V> r0 = r1.mLiveData
+                r0.observeForever(r1)
+                return
+        }
+
+        void unplug() {
+                r1 = this;
+                androidx.lifecycle.LiveData<V> r0 = r1.mLiveData
+                r0.removeObserver(r1)
+                return
+        }
+    }
+
+    public MediatorLiveData() {
+            r1 = this;
+            r1.<init>()
+            androidx.arch.core.internal.SafeIterableMap r0 = new androidx.arch.core.internal.SafeIterableMap
+            r0.<init>()
+            r1.mSources = r0
+            return
+    }
+
+    public MediatorLiveData(T r1) {
+            r0 = this;
+            r0.<init>(r1)
+            androidx.arch.core.internal.SafeIterableMap r1 = new androidx.arch.core.internal.SafeIterableMap
+            r1.<init>()
+            r0.mSources = r1
+            return
+    }
+
+    @androidx.annotation.MainThread
+    public <S> void addSource(@androidx.annotation.NonNull androidx.lifecycle.LiveData<S> r3, @androidx.annotation.NonNull androidx.lifecycle.Observer<? super S> r4) {
+            r2 = this;
+            if (r3 == 0) goto L2b
+            androidx.lifecycle.MediatorLiveData$Source r0 = new androidx.lifecycle.MediatorLiveData$Source
+            r0.<init>(r3, r4)
+            androidx.arch.core.internal.SafeIterableMap<androidx.lifecycle.LiveData<?>, androidx.lifecycle.MediatorLiveData$Source<?>> r1 = r2.mSources
+            java.lang.Object r3 = r1.putIfAbsent(r3, r0)
+            androidx.lifecycle.MediatorLiveData$Source r3 = (androidx.lifecycle.MediatorLiveData.Source) r3
+            if (r3 == 0) goto L1e
+            androidx.lifecycle.Observer<? super V> r1 = r3.mObserver
+            if (r1 != r4) goto L16
+            goto L1e
+        L16:
+            java.lang.IllegalArgumentException r3 = new java.lang.IllegalArgumentException
+            java.lang.String r4 = "This source was already added with the different observer"
+            r3.<init>(r4)
+            throw r3
+        L1e:
+            if (r3 == 0) goto L21
+            goto L2a
+        L21:
+            boolean r3 = r2.hasActiveObservers()
+            if (r3 == 0) goto L2a
+            r0.plug()
+        L2a:
+            return
+        L2b:
+            java.lang.NullPointerException r3 = new java.lang.NullPointerException
+            java.lang.String r4 = "source cannot be null"
+            r3.<init>(r4)
+            throw r3
+    }
+
+    @Override // androidx.lifecycle.LiveData
+    @androidx.annotation.CallSuper
+    protected void onActive() {
+            r2 = this;
+            androidx.arch.core.internal.SafeIterableMap<androidx.lifecycle.LiveData<?>, androidx.lifecycle.MediatorLiveData$Source<?>> r0 = r2.mSources
+            java.util.Iterator r0 = r0.iterator()
+        L6:
+            boolean r1 = r0.hasNext()
+            if (r1 == 0) goto L1c
+            java.lang.Object r1 = r0.next()
+            java.util.Map$Entry r1 = (java.util.Map.Entry) r1
+            java.lang.Object r1 = r1.getValue()
+            androidx.lifecycle.MediatorLiveData$Source r1 = (androidx.lifecycle.MediatorLiveData.Source) r1
+            r1.plug()
+            goto L6
+        L1c:
+            return
+    }
+
+    @Override // androidx.lifecycle.LiveData
+    @androidx.annotation.CallSuper
+    protected void onInactive() {
+            r2 = this;
+            androidx.arch.core.internal.SafeIterableMap<androidx.lifecycle.LiveData<?>, androidx.lifecycle.MediatorLiveData$Source<?>> r0 = r2.mSources
+            java.util.Iterator r0 = r0.iterator()
+        L6:
+            boolean r1 = r0.hasNext()
+            if (r1 == 0) goto L1c
+            java.lang.Object r1 = r0.next()
+            java.util.Map$Entry r1 = (java.util.Map.Entry) r1
+            java.lang.Object r1 = r1.getValue()
+            androidx.lifecycle.MediatorLiveData$Source r1 = (androidx.lifecycle.MediatorLiveData.Source) r1
+            r1.unplug()
+            goto L6
+        L1c:
+            return
+    }
+
+    @androidx.annotation.MainThread
+    public <S> void removeSource(@androidx.annotation.NonNull androidx.lifecycle.LiveData<S> r2) {
+            r1 = this;
+            androidx.arch.core.internal.SafeIterableMap<androidx.lifecycle.LiveData<?>, androidx.lifecycle.MediatorLiveData$Source<?>> r0 = r1.mSources
+            java.lang.Object r2 = r0.remove(r2)
+            androidx.lifecycle.MediatorLiveData$Source r2 = (androidx.lifecycle.MediatorLiveData.Source) r2
+            if (r2 == 0) goto Ld
+            r2.unplug()
+        Ld:
+            return
+    }
+}

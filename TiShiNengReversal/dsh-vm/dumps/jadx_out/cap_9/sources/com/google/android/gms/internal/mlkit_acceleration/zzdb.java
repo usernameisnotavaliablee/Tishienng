@@ -1,0 +1,28 @@
+package com.google.android.gms.internal.mlkit_acceleration;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_9_sz8866584.dex */
+public final class zzdb extends java.io.IOException {
+    zzdb() {
+            r1 = this;
+            java.lang.String r0 = "CodedOutputStream was writing to a flat byte array and ran out of space."
+            r1.<init>(r0)
+            return
+    }
+
+    zzdb(java.lang.String r2, java.lang.Throwable r3) {
+            r1 = this;
+            java.lang.String r0 = "CodedOutputStream was writing to a flat byte array and ran out of space.: "
+            java.lang.String r2 = java.lang.String.valueOf(r2)
+            java.lang.String r2 = r0.concat(r2)
+            r1.<init>(r2, r3)
+            return
+    }
+
+    zzdb(java.lang.Throwable r2) {
+            r1 = this;
+            java.lang.String r0 = "CodedOutputStream was writing to a flat byte array and ran out of space."
+            r1.<init>(r0, r2)
+            return
+    }
+}

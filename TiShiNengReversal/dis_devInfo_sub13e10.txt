@@ -1,0 +1,19 @@
+### sub_13e10  @0x13e10  size=64
+0x00013e10  adrp     x16, #0x44000
+0x00013e14  ldr      x17, [x16, #0xe10]   ; -> [GOT] stat
+0x00013e18  add      x16, x16, #0xe10   ; -> [GOT] stat
+0x00013e1c  br       x17
+0x00013e20  adrp     x16, #0x44000
+0x00013e24  ldr      x17, [x16, #0xe18]   ; -> [GOT] _ZNSt6__ndk16__itoa8__u32toaEjPc
+0x00013e28  add      x16, x16, #0xe18   ; -> [GOT] _ZNSt6__ndk16__itoa8__u32toaEjPc
+0x00013e2c  br       x17
+0x00013e30  adrp     x16, #0x44000
+0x00013e34  ldr      x17, [x16, #0xe20]   ; -> [GOT] _ZNSt9exceptionD2Ev
+0x00013e38  add      x16, x16, #0xe20   ; -> [GOT] _ZNSt9exceptionD2Ev
+0x00013e3c  br       x17
+0x00013e40  adrp     x16, #0x44000
+0x00013e44  ldr      x17, [x16, #0xe28]   ; -> [GOT] strtod
+0x00013e48  add      x16, x16, #0xe28   ; -> [GOT] strtod
+0x00013e4c  br       x17
+
+[0 个匹配]

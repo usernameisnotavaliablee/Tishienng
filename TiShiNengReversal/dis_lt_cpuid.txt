@@ -1,0 +1,84 @@
+### get_cpuid  @0x1380c  size=304
+0x0001380c  stp      x22, x21, [sp, #-0x30]!
+0x00013810  stp      x20, x19, [sp, #0x10]
+0x00013814  stp      x29, x30, [sp, #0x20]
+0x00013818  add      x29, sp, #0x20
+0x0001381c  sub      sp, sp, #0x10
+0x00013820  adrp     x22, #0x27000
+0x00013824  mov      x20, x0
+0x00013828  adrp     x0, #0x16000
+0x0001382c  ldr      x22, [x22, #0xff0]   ; -> [GOT] __stack_chk_guard
+0x00013830  add      x0, x0, #0xd80   ; -> 0x16d80 = "vm -c 'chmod 0666 /dev/vmdrm0'"
+0x00013834  ldr      x22, [x22]   ; -> 0x27000
+0x00013838  str      x22, [sp, #8]
+0x0001383c  bl       #0x12e0   ; sub_12e0
+0x00013840  adrp     x0, #0x16000
+0x00013844  add      x0, x0, #0xd9f   ; -> 0x16d9f = '/dev/vmdrm0'
+0x00013848  mov      w1, #2
+0x0001384c  bl       #0x12b0   ; sub_12b0
+0x00013850  mov      w19, w0
+0x00013854  tbz      w19, #0x1f, #0x13868
+0x00013858  adrp     x8, #0x27000
+0x0001385c  ldr      x8, [x8, #0xff8]   ; -> 0x27ff8
+0x00013860  ldrb     w8, [x8]
+0x00013864  cbnz     w8, #0x13900
+0x00013868  tbnz     w19, #0x1f, #0x138a8
+0x0001386c  mov      w1, #-0x3ff80000
+0x00013870  movk     w1, #0xb502
+0x00013874  mov      x2, sp
+0x00013878  mov      w0, w19
+0x0001387c  bl       #0x13c0   ; sub_13c0
+0x00013880  mov      w21, w0
+0x00013884  tbnz     w21, #0x1f, #0x138bc
+0x00013888  ldp      w4, w5, [sp]
+0x0001388c  adrp     x3, #0x16000
+0x00013890  mov      w1, wzr
+0x00013894  mov      x2, #-1
+0x00013898  add      x3, x3, #0xeeb   ; -> 0x16eeb = '%08x%08x'
+0x0001389c  mov      x0, x20
+0x000138a0  bl       #0x13e0   ; sub_13e0
+0x000138a4  b        #0x138c0   ; sub_138c0
+0x000138a8  adrp     x0, #0x16000
+0x000138ac  add      x0, x0, #0xebc   ; -> 0x16ebc = "vm -c 'chmod 0600 /dev/vmdrm0'"
+0x000138b0  bl       #0x12e0   ; sub_12e0
+0x000138b4  mov      w21, #-0x14
+0x000138b8  b        #0x138dc   ; sub_138dc
+0x000138bc  mov      w21, #-0x17
+0x000138c0  adrp     x0, #0x16000
+0x000138c4  add      x0, x0, #0xebc   ; -> 0x16ebc = "vm -c 'chmod 0600 /dev/vmdrm0'"
+0x000138c8  bl       #0x12e0   ; sub_12e0
+0x000138cc  cmp      w19, #2
+0x000138d0  b.lt     #0x138dc
+0x000138d4  mov      w0, w19
+0x000138d8  bl       #0x1470   ; sub_1470
+0x000138dc  ldr      x8, [sp, #8]
+0x000138e0  sub      x8, x22, x8
+0x000138e4  cbnz     x8, #0x13938
+0x000138e8  mov      w0, w21
+0x000138ec  sub      sp, x29, #0x20
+0x000138f0  ldp      x29, x30, [sp, #0x20]
+0x000138f4  ldp      x20, x19, [sp, #0x10]
+0x000138f8  ldp      x22, x21, [sp], #0x30
+0x000138fc  ret      
+0x00013900  adrp     x8, #0x27000
+0x00013904  ldr      x8, [x8, #0xfe8]   ; -> [GOT] __sF
+0x00013908  ldr      x21, [x8]   ; -> 0x27000
+0x0001390c  bl       #0x1330   ; sub_1330
+0x00013910  ldr      w0, [x0]   ; -> 0x16000
+0x00013914  bl       #0x1320   ; sub_1320
+0x00013918  adrp     x1, #0x16000
+0x0001391c  adrp     x2, #0x16000
+0x00013920  mov      x3, x0
+0x00013924  add      x1, x1, #0xf0b   ; -> 0x16f0b = 'drm: error: Cannot open: %s: %s\n'
+0x00013928  add      x2, x2, #0xd9f   ; -> 0x16d9f = '/dev/vmdrm0'
+0x0001392c  mov      x0, x21
+0x00013930  bl       #0x1480   ; sub_1480
+0x00013934  b        #0x13868   ; sub_13868
+0x00013938  bl       #0x1390   ; sub_1390
+
+--- 引用的字符串常量 ---
+   0x16d80: "vm -c 'chmod 0666 /dev/vmdrm0'"
+   0x16d9f: '/dev/vmdrm0'
+   0x16eeb: '%08x%08x'
+   0x16ebc: "vm -c 'chmod 0600 /dev/vmdrm0'"
+   0x16f0b: 'drm: error: Cannot open: %s: %s\n'

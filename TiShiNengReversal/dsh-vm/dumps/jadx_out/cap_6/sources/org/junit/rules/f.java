@@ -1,0 +1,7 @@
+package org.junit.rules;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_6_sz7847784.dex */
+public interface f {
+    org.junit.runners.model.h a(org.junit.runners.model.h r1, org.junit.runners.model.d r2, java.lang.Object r3);
+}

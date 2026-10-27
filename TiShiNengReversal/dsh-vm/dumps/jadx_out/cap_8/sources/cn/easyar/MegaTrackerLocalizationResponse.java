@@ -1,0 +1,39 @@
+package cn.easyar;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+@cn.easyar.TypeId("CE383E5A7")
+/* loaded from: /Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_8_sz9482380.dex */
+public class MegaTrackerLocalizationResponse extends cn.easyar.RefBase {
+    protected MegaTrackerLocalizationResponse(long r1, cn.easyar.RefBase r3) {
+            r0 = this;
+            r0.<init>(r1, r3)
+            return
+    }
+
+    @cn.easyar.MethodId("C8DA078CC")
+    public native cn.easyar.AccelerometerResult acceleration();
+
+    @cn.easyar.MethodId("C1D7F81F3")
+    public native java.lang.String errorMessage();
+
+    @cn.easyar.MethodId("CEBDF7478")
+    public native java.lang.String extraInfo();
+
+    @cn.easyar.MethodId("C2B2479BA")
+    public native cn.easyar.InputFrame inputFrame();
+
+    @cn.easyar.MethodId("C20202235")
+    public native java.util.ArrayList<cn.easyar.MegaTrackerBlockInstance> instances();
+
+    @cn.easyar.MethodId("CE6EAEA18")
+    public native cn.easyar.LocationResult location();
+
+    @cn.easyar.MethodId("CA8F5DD1B")
+    public native java.lang.Double serverCalculationDuration();
+
+    @cn.easyar.MethodId("C0DB6757F")
+    public native java.lang.Double serverResponseDuration();
+
+    @cn.easyar.MethodId("C073C1634")
+    public native int status();
+}

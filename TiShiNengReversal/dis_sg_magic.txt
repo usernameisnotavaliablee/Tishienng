@@ -1,0 +1,11 @@
+### Java_com_kwai_sgcore_SGCore_getMagic  @0x44f0  size=1464
+0x000044f0  stp      x0, x1, [sp, #-0x20]!
+0x000044f4  stp      x2, x30, [sp, #0x10]
+0x000044f8  adr      x1, #0x4518
+0x000044fc  subs     x1, x1, #8
+0x00004500  mov      x0, x1
+0x00004504  adds     x0, x0, #0x18
+0x00004508  str      x0, [sp, #0x18]
+0x0000450c  ldp      x2, x9, [sp, #0x10]
+0x00004510  ldp      x0, x1, [sp], #0x20
+0x00004514  br       x9

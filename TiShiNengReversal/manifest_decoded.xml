@@ -1,0 +1,1404 @@
+<manifest package="com.bxkj.student" platformBuildVersionCode="34" platformBuildVersionName="14" versionCode="20220" versionName="2.0.22" compileSdkVersion="34" compileSdkVersionCodename="14">
+  <uses-sdk minSdkVersion="21" targetSdkVersion="30">
+  </uses-sdk>
+  <uses-feature name="android.hardware.bluetooth_le" required="true">
+  </uses-feature>
+  <uses-permission name="android.permission.SYSTEM_ALERT_WINDOW">
+  </uses-permission>
+  <uses-permission name="android.permission.INTERNET">
+  </uses-permission>
+  <uses-permission name="android.permission.ACCESS_NETWORK_STATE">
+  </uses-permission>
+  <uses-permission name="android.permission.READ_PHONE_STATE">
+  </uses-permission>
+  <uses-permission name="android.permission.ACCESS_WIFI_STATE">
+  </uses-permission>
+  <uses-permission name="android.permission.BLUETOOTH_ADMIN">
+  </uses-permission>
+  <uses-permission name="android.permission.VIBRATE">
+  </uses-permission>
+  <uses-permission name="android.permission.VIBRATE">
+  </uses-permission>
+  <uses-permission name="android.permission.ACCESS_COARSE_LOCATION">
+  </uses-permission>
+  <uses-permission name="android.permission.CHANGE_WIFI_STATE">
+  </uses-permission>
+  <uses-permission name="android.permission.ACCESS_FINE_LOCATION">
+  </uses-permission>
+  <uses-permission name="android.permission.ACCESS_BACKGROUND_LOCATION">
+  </uses-permission>
+  <uses-permission name="android.permission.CHANGE_NETWORK_STATE">
+  </uses-permission>
+  <uses-permission name="android.permission.GET_TASKS">
+  </uses-permission>
+  <uses-feature name="android.hardware.camera" required="false">
+  </uses-feature>
+  <uses-feature name="android.hardware.camera.front" required="false">
+  </uses-feature>
+  <uses-feature name="android.hardware.camera.autofocus" required="false">
+  </uses-feature>
+  <uses-feature name="android.hardware.camera.flash" required="false">
+  </uses-feature>
+  <uses-permission name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS">
+  </uses-permission>
+  <uses-permission name="android.permission.READ_PHONE_STATE">
+  </uses-permission>
+  <uses-permission name="android.permission.ACCESS_NETWORK_STATE">
+  </uses-permission>
+  <uses-permission name="android.permission.ACCESS_WIFI_STATE">
+  </uses-permission>
+  <uses-permission name="android.permission.INTERNET">
+  </uses-permission>
+  <uses-permission name="com.vivo.abe.permission.action.openhpactivity">
+  </uses-permission>
+  <uses-permission name="android.permission.GET_TASKS">
+  </uses-permission>
+  <uses-permission name="android.permission.ACCESS_COARSE_LOCATION">
+  </uses-permission>
+  <uses-permission name="android.permission.ACCESS_FINE_LOCATION">
+  </uses-permission>
+  <uses-permission name="android.permission.ACCESS_NETWORK_STATE">
+  </uses-permission>
+  <uses-permission name="android.permission.ACCESS_WIFI_STATE">
+  </uses-permission>
+  <uses-permission name="android.permission.CHANGE_WIFI_STATE">
+  </uses-permission>
+  <uses-permission name="android.permission.INTERNET">
+  </uses-permission>
+  <uses-permission name="android.permission.READ_PHONE_STATE">
+  </uses-permission>
+  <uses-permission name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS">
+  </uses-permission>
+  <uses-permission name="android.permission.BLUETOOTH">
+  </uses-permission>
+  <uses-permission name="android.permission.BLUETOOTH_ADMIN">
+  </uses-permission>
+  <uses-permission name="android.permission.WAKE_LOCK">
+  </uses-permission>
+  <uses-permission name="android.permission.FOREGROUND_SERVICE">
+  </uses-permission>
+  <uses-permission name="android.permission.REQUEST_INSTALL_PACKAGES">
+  </uses-permission>
+  <uses-permission name="android.permission.DISABLE_KEYGUARD">
+  </uses-permission>
+  <uses-permission name="android.permission.RECORD_AUDIO">
+  </uses-permission>
+  <uses-permission name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS">
+  </uses-permission>
+  <uses-permission name="android.permission.ACCESS_BACKGROUND_LOCATION">
+  </uses-permission>
+  <uses-permission name="android.permission.REQUEST_EXTERNAL_STORAGE">
+  </uses-permission>
+  <permission name="com.bxkj.student.openadsdk.permission.TT_PANGOLIN" protectionLevel="0x2">
+  </permission>
+  <uses-permission name="com.bxkj.student.openadsdk.permission.TT_PANGOLIN">
+  </uses-permission>
+  <uses-permission name="android.permission.CALL_PHONE">
+  </uses-permission>
+  <permission name="com.bxkj.student.sports.permissions.MY_BROADCAST" protectionLevel="0x2">
+  </permission>
+  <uses-permission name="com.bxkj.student.sports.permissions.MY_BROADCAST">
+  </uses-permission>
+  <permission name="com.bxkj.student.sports.permissions.V3_Sports_BROADCAST" protectionLevel="0x2">
+  </permission>
+  <uses-permission name="com.bxkj.student.sports.permissions.V3_Sports_BROADCAST">
+  </uses-permission>
+  <uses-permission name="android.permission.ACTIVITY_RECOGNITION">
+  </uses-permission>
+  <uses-feature name="android.hardware.sensor.stepcounter" required="true">
+  </uses-feature>
+  <uses-feature name="android.hardware.sensor.stepdetector" required="true">
+  </uses-feature>
+  <permission name="com.bxkj.student.permission.JPUSH_MESSAGE" protectionLevel="0x2">
+  </permission>
+  <uses-permission name="com.huawei.android.launcher.permission.CHANGE_BADGE">
+  </uses-permission>
+  <uses-permission name="com.vivo.notification.permission.BADGE_ICON">
+  </uses-permission>
+  <uses-permission name="android.permission.VIBRATE">
+  </uses-permission>
+  <uses-permission name="com.hihonor.android.launcher.permission.CHANGE_BADGE">
+  </uses-permission>
+  <uses-permission name="android.permission.SYSTEM_OVERLAY_WINDOW">
+  </uses-permission>
+  <queries>
+    <intent>
+      <action name="android.intent.action.MAIN">
+      </action>
+      <category name="android.intent.category.LAUNCHER">
+      </category>
+    </intent>
+    <package name="com.ss.android.ugc.aweme">
+    </package>
+    <package name="com.ss.android.ugc.aweme.lite">
+    </package>
+    <intent>
+      <action name="android.intent.action.VIEW">
+      </action>
+      <category name="android.intent.category.BROWSABLE">
+      </category>
+      <data scheme="https">
+      </data>
+    </intent>
+    <package name="com.huawei.hff">
+    </package>
+    <package name="com.huawei.hms">
+    </package>
+    <package name="com.huawei.hwid">
+    </package>
+    <package name="com.huawei.hwid.tv">
+    </package>
+    <package name="com.huawei.works">
+    </package>
+  </queries>
+  <uses-permission name="android.permission.REORDER_TASKS">
+  </uses-permission>
+  <uses-permission name="com.asus.msa.SupplementaryDID.ACCESS">
+  </uses-permission>
+  <uses-permission name="android.permission.CAMERA">
+  </uses-permission>
+  <uses-permission name="android.permission.FLASHLIGHT">
+  </uses-permission>
+  <uses-permission name="android.permission.RECEIVE_BOOT_COMPLETED">
+  </uses-permission>
+  <uses-permission name="android.permission.INTERACT_ACROSS_USERS_FULL">
+  </uses-permission>
+  <permission name="com.bxkj.student.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" protectionLevel="0x2">
+  </permission>
+  <uses-permission name="com.bxkj.student.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION">
+  </uses-permission>
+  <uses-permission name="com.bxkj.student.permission.JPUSH_MESSAGE">
+  </uses-permission>
+  <uses-permission name="android.permission.POST_NOTIFICATIONS">
+  </uses-permission>
+  <application theme="@0x7f140011" label="@0x7f13004f" icon="@0x7f0f00d9" name="com.stub.StubApp" allowBackup="false" hardwareAccelerated="true" largeHeap="true" supportsRtl="true" extractNativeLibs="true" usesCleartextTraffic="true" networkSecurityConfig="@0x7f16000a" roundIcon="@0x7f0f00d9" appComponentFactory="androidx.core.app.CoreComponentFactory">
+    <meta-data name="APP_KEY" value="Je_c16223bd89360e0ee94f61e5c3173a15">
+    </meta-data>
+    <activity theme="@0x1030010" name="com.bxkj.student.wxapi.WXEntryActivity" exported="true" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x7f130320" name="com.bxkj.student.splash.SplashActivity" screenOrientation="1" configChanges="0x2c00" hardwareAccelerated="true" resizeableActivity="true">
+      <intent-filter>
+        <action name="android.intent.action.MAIN">
+        </action>
+        <category name="android.intent.category.LAUNCHER">
+        </category>
+      </intent-filter>
+    </activity>
+    <activity theme="@0x7f1401df" name="com.bxkj.student.splash.WelcomeActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.splash.SelectSchoolActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity theme="@0x7f140341" name="com.bxkj.student.splash.SelectSchoolV2Activity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.MainActivity" launchMode="2" screenOrientation="1" windowSoftInputMode="0x20">
+      <intent-filter>
+        <action name="com.bxkj.student.default.MAIN">
+        </action>
+        <category name="android.intent.category.DEFAULT">
+        </category>
+        <action name="android.intent.action.VIEW">
+        </action>
+        <category name="android.intent.category.BROWSABLE">
+        </category>
+        <category name="android.intent.category.DEFAULT">
+        </category>
+        <data scheme="bjtsn" host="com.bxkj.student" port="8888" path="/running">
+        </data>
+      </intent-filter>
+    </activity>
+    <activity name="com.bxkj.student.home.HomeMenuListActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.personal.login.LoginActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.home.message.SystemMessageListActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.base.webview.H5DetailActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.exam.formal.ExamActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.exam.ExamListActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.exam.ExamDescriptionActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.evaluateteacher.EvaluateListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.evaluateteacher.EvaluateDescriptionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.evaluateteacher.EvaluateActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.scanscore.TestScoreListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.scanscore.TestProjectScoreListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.personal.reservation.DescriptionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.personal.reservation.ReservationListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.personal.reservation.ReservationDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.personal.record.MyReservationListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.personal.record.MyReservationDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.monitor.reservation.MonitorDescriptionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.monitor.reservation.MonitorReservationListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.monitor.reservation.MonitorReservationDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.rank.PhysicalTestRankActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.exam.record.ExamDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.monitor.record.MonitorRecordListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.monitor.record.MonitorRecordDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.mc.ApplyMCActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.healthstatus.ApplyHealthStudentActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.place.history.ApplyHistoryListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.leave.SelectLessenListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.leave.LeaveActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.personal.HelpCenterListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.lesson.OnLineLessonActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.app.ready.ThreeTwoOneActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.lesson.ViewTermActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.lesson.ViewLessonActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.rollcall.RollCallActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.MyQRCodeActivity">
+    </activity>
+    <activity name="com.bxkj.student.run.app.record.RunRecorderListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.app.ready.RunDescriptionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.AboutUsActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.SafeSetActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.SystemSetActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.password.UpdatePasswordActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.password.InputNewPasswordActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.UserInfoActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity theme="@0x7f1404c8" name="com.bxkj.student.run.app.StartRunActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.lesson.LessonDescriptionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.punchcard.RecorderListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.message.MessageActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.customer.ContactCustomerActivity" launchMode="1" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.study.VideoPlayActivity" screenOrientation="1" configChanges="0x4a0" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.SearchGoodsActivity" screenOrientation="1" windowSoftInputMode="0x3">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.resultfinal.ViewTermActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.resultfinal.AllScoreForTeamActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.GoodsDetailActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.CartActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.punchcard.TotalActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.collect.CollectActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.lost.PublishLostActivity" screenOrientation="1" windowSoftInputMode="0x3">
+    </activity>
+    <activity name="com.bxkj.student.life.lost.AddQuestionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.lost.LostDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.order.OrderActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.address.MyAddressListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.address.AddAddressActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.address.ChooseCityActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.order.ConfirmOrderActivity" screenOrientation="1" windowSoftInputMode="0x3">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.order.OrderPayActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.order.PaySuccessActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.lost.MyLostGoodsActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.secondhand.PublishBuyActivity" screenOrientation="1" windowSoftInputMode="0x3">
+    </activity>
+    <activity name="com.bxkj.student.life.secondhand.BuyDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.order.OrderDetailActivity" launchMode="2" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.secondhand.MyBuyGoodsActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.secondhand.SecondHandHomeActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.lost.LostHomeActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.MallHomeActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.order.ViewLogisticsActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.info.InfoListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.life.info.InfoDetailActivity" screenOrientation="1" hardwareAccelerated="true">
+    </activity>
+    <activity name="com.bxkj.student.life.mall.collect.CollectGoodsActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.SecretActivity" exported="true" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.calc.CalcActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.calc.CalcResultActivity" screenOrientation="1">
+    </activity>
+    <activity theme="@0x7f140137" name="com.bxkj.student.personal.sign.SignInActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.lesson.ChooseLessonActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.lesson.ChooseTimeActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.sign.SignRecordListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.mc.ApplyMcListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.mc.ApplyMCDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.extraclass.SignListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.ClipImageActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.app.RunningActivity" launchMode="1" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.rollcall.BlueToothSignActivity" launchMode="1" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.rollcall.BleSignActivity" launchMode="1" screenOrientation="1">
+    </activity>
+    <activity theme="@0x7f1402cb" name="com.bxkj.student.run.app.face.FaceDetectExpActivity" screenOrientation="1" hardwareAccelerated="true">
+    </activity>
+    <activity name="com.bxkj.student.run.app.record.AppealActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.run.app.set.RunSettingActivity" screenOrientation="1">
+    </activity>
+    <activity theme="@0x7f1404c8" name="com.bxkj.student.run.app.set.RunPermissionSetActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.app.lockscreen.LockScreenActivity" launchMode="1" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.exam.record.ExamRecordActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.activity.BookingActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.activity.BookingDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.activity.MyBookingListActivity" screenOrientation="1">
+    </activity>
+    <activity theme="@0x7f140011" name="com.yalantis.ucrop.UCropActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.exam.mock.NewExamActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.detail.backup.VideoPlayActivity" screenOrientation="1" configChanges="0x4a0" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.run.app.set.RunFrequencySetActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.LearnHomeListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.detail.backup.H5Activity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.my.MyLearnActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.my.MyRecordListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.my.MyIntegralListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.my.RankListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.answer.AnswerActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.LearningCategoryActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.InputEyeScoreActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.run.app.face.widget.FaceDetect5ExpActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.app.record.RunDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.activity.BookingLessonActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.app.my.MyRunActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.app.my.RunRankActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.app.my.RunStatisticsActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.app.apply.ApplyAvoidRunActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.run.app.apply.ApplyAvoidRunListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.app.apply.ApplyAvoidRunDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.separateexam.ExamLessonListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.separateexam.ExamLessonDescriptionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.separateexam.AppointExamListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.separateexam.MyAppointExamListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.healthstatus.ApplyHealthStatusListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.healthstatus.ApplyHealthStatusDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.apply.ScoreDoubtActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.apply.ApplyScoreDoubtActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.apply.ApplyTestScoreDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.password.forget.InputNumberActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.password.forget.FindPasswordTypeActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.password.forget.SelectClassmateActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.exam.FaceDetectExamActivity" screenOrientation="1">
+    </activity>
+    <activity theme="@0x7f14033f" name="com.bxkj.student.splash.OpenPrivacyAgreementActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.leave.recorder.LeaveRecordListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.leave.recorder.LeaveRecordDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.ready.LearnDescriptionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.ready.SelectLessonActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.question.list.QuestionListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.question.RadioQuestionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.question.CheckboxQuestionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.question.TextQuestionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.question.VideoQuestionActivity" launchMode="2" screenOrientation="1">
+    </activity>
+    <activity label="@0x7f13004f" name="com.jmolsmobile.landscapevideocapture.VideoCaptureActivity" screenOrientation="4">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.question.ImageActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.my.RefuseQuestionListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.FaceDetectLearnActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.learning.detail.LearnDetailActivity" screenOrientation="1" configChanges="0x4a0" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.homework.ViewTermActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.homework.ViewLessonActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.homework.question.list.QuestionListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.homework.question.CheckboxQuestionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.homework.question.ImageActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.homework.question.RadioQuestionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.homework.question.TextQuestionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.homework.question.VideoQuestionActivity" launchMode="2" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.common.utils.video.OnLinePlayVideoActivity" screenOrientation="1" configChanges="0x4a0" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.exam.SelectExamLessonActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.personal.customer.ContactCustomerServiceActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.lesson.CertificateActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.common.utils.video.LocalVideoPreviewActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.circle.CircleDetailActivity" screenOrientation="1" configChanges="0x4a0" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.homework.question.PdfQuestionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.homework.question.PdfViewActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.rollcall.SignActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.rollcall.term.ViewTermActivity" launchMode="1" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.teaching.rollcall.term.ViewLessonActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.home.physicaltest.AdmissionTicketActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.app.keep.KeepAuthH5Activity" screenOrientation="1">
+    </activity>
+    <activity theme="@0x7f140137" name="com.bxkj.student.run.app.keep.SyncKeepDataActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.student.run.app.exam.QuestionActivity" screenOrientation="1">
+    </activity>
+    <meta-data name="android.max_aspect" value="1074161254">
+    </meta-data>
+    <meta-data name="com.amap.api.v2.apikey" value="20450635af5f34ecb0270d71e9ae9c2e">
+    </meta-data>
+    <meta-data name="UMENG_APPKEY" value="59a61305a3251138c9000c17">
+    </meta-data>
+    <meta-data name="UMENG_CHANNEL" value="xiaomi">
+    </meta-data>
+    <provider name="androidx.core.content.FileProvider" exported="false" authorities="com.bxkj.student.provider" grantUriPermissions="true">
+      <meta-data name="android.support.FILE_PROVIDER_PATHS" resource="@0x7f160005">
+      </meta-data>
+    </provider>
+    <provider name="androidx.core.content.FileProvider" exported="false" authorities="com.bxkj.student.fileprovider" grantUriPermissions="true">
+      <meta-data name="android.support.FILE_PROVIDER_PATHS" resource="@0x7f160005">
+      </meta-data>
+    </provider>
+    <receiver name="com.bxkj.student.run.app.step.AlarmReceiver">
+    </receiver>
+    <service name="com.amap.api.location.APSService" foregroundServiceType="0x8">
+    </service>
+    <service name="com.bxkj.student.run.app.location.service.LocationService" process=":location" foregroundServiceType="0x8">
+    </service>
+    <service name="com.bxkj.student.run.app.step.service.StepService" process=":step" foregroundServiceType="0x8">
+    </service>
+    <service name="com.bxkj.student.run.app.step.LongRunningService" foregroundServiceType="0x8">
+    </service>
+    <service name="com.bxkj.student.v2.ui.sports.v3.service.V3LocationService" foregroundServiceType="0x8">
+    </service>
+    <service name="com.bxkj.student.v2.ui.sports.v3.service.step.V3StepService" foregroundServiceType="0x8">
+    </service>
+    <provider name="com.bxkj.student.v2.common.data.TsnPreferencesProvider" exported="false" authorities="com.bxkj.student.TsnPreferencesProvider">
+    </provider>
+    <activity name="com.tencent.tauth.AuthActivity" exported="true" launchMode="2" noHistory="true">
+      <intent-filter>
+        <action name="android.intent.action.VIEW">
+        </action>
+        <category name="android.intent.category.DEFAULT">
+        </category>
+        <category name="android.intent.category.BROWSABLE">
+        </category>
+        <data scheme="tencent1106200175">
+        </data>
+      </intent-filter>
+    </activity>
+    <activity theme="@0x1030010" name="com.tencent.connect.common.AssistActivity" exported="true" screenOrientation="3" configChanges="0xa0">
+    </activity>
+    <activity theme="@0x7f14033f" name="com.bxkj.student.v2.ui.h5.H5AppActivity" screenOrientation="1" configChanges="0x400004a0" hardwareAccelerated="true">
+    </activity>
+    <activity name="com.bxkj.student.run.extraclass.SignTypeActivity">
+    </activity>
+    <activity name="com.bxkj.student.run.extraclass.QrScanSignActivity">
+    </activity>
+    <activity theme="@0x7f14033f" name="com.bxkj.student.v2.ui.my.MyQRCodeActivity" configChanges="0x400004a0">
+    </activity>
+    <activity theme="@0x7f14033f" name="com.bxkj.student.v2.ui.my.AboutUsActivity" configChanges="0x400004a0">
+    </activity>
+    <activity theme="@0x7f14033f" name="com.bxkj.student.v2.ui.MainActivity" launchMode="2" configChanges="0x400004a0" windowSoftInputMode="0x20">
+    </activity>
+    <activity theme="@0x7f14033f" name="com.bxkj.student.v2.ui.LoginActivity" launchMode="1" configChanges="0x400004a0">
+    </activity>
+    <activity name="com.bxkj.student.v2.ui.sports.set.SportsDescriptionActivity" screenOrientation="1" configChanges="0x400004a0">
+    </activity>
+    <activity name="com.bxkj.student.v2.ui.sports.set.SportsSetActivity" screenOrientation="1" configChanges="0x400004a0">
+    </activity>
+    <activity name="com.bxkj.student.v2.ui.sports.set.SportsRankActivity" screenOrientation="1" configChanges="0x400004a0">
+    </activity>
+    <activity theme="@0x7f140341" name="com.bxkj.student.v2.ui.sports.set.SoundFrequencyActivity" screenOrientation="1" configChanges="0x400004a0">
+    </activity>
+    <activity name="com.bxkj.student.v2.ui.face.FaceCollectActivity" screenOrientation="1" configChanges="0x400004a0">
+    </activity>
+    <activity name="com.bxkj.student.v2.ui.face.FaceCheckV2Activity" screenOrientation="1" configChanges="0x400004a0">
+    </activity>
+    <activity theme="@0x7f140341" name="com.bxkj.student.v2.ui.sports.set.PermissionSetActivity" screenOrientation="1" configChanges="0x400004a0">
+    </activity>
+    <activity theme="@0x7f1401df" name="com.bxkj.student.v2.ui.my.FullScreenCodeActivity" configChanges="0x40002ca0" resizeableActivity="true">
+      <meta-data name="android.max_aspect" value="1074580685">
+      </meta-data>
+      <meta-data name="android.notch_support" value="true">
+      </meta-data>
+      <meta-data name="notch.config" value="portrait">
+      </meta-data>
+    </activity>
+    <activity name="com.bxkj.student.personal.bind.WechatQQBindAccountActivity" configChanges="0x400004a0">
+    </activity>
+    <activity name="com.bxkj.student.personal.bind.BindWechatQQActivity" launchMode="2" configChanges="0x400004a0">
+    </activity>
+    <activity theme="@0x7f140340" name="com.bxkj.student.v2.ui.sports.v3.V3SportsHomeActivity" launchMode="1" screenOrientation="1" configChanges="0x400004a0">
+    </activity>
+    <activity theme="@0x7f14033f" name="com.bxkj.student.v2.ui.sports.v3.V4SportActivity" launchMode="2" screenOrientation="1" configChanges="0x400004a0">
+    </activity>
+    <activity name="com.bxkj.student.v2.ui.sports.v3.V3ThreeTwoOneActivity">
+    </activity>
+    <activity theme="@0x7f14033f" name="com.bxkj.student.v2.ui.sports.v3.record.V3RecordListActivity" screenOrientation="1" configChanges="0x400004a0">
+    </activity>
+    <activity theme="@0x7f14033f" name="com.bxkj.student.v2.ui.sports.v3.detail.V3RecordDetailActivity" screenOrientation="1" configChanges="0x400004a0">
+    </activity>
+    <activity theme="@0x7f14033f" name="com.bxkj.student.v2.ui.my.AdSwitchActivity" configChanges="0x400004a0">
+    </activity>
+    <activity name="com.bxkj.student.v2.ui.face.FaceDetectV3Activity" launchMode="1" screenOrientation="1" configChanges="0x400004a0">
+    </activity>
+    <activity name="com.bxkj.student.v2.ui.face.FaceLiveV3Activity" launchMode="1" screenOrientation="1" configChanges="0x400004a0">
+    </activity>
+    <activity theme="@0x7f140341" name="com.bxkj.student.v2.ui.sports.v3.appeal.V3AppealActivity" launchMode="2" configChanges="0x400004a0">
+    </activity>
+    <activity theme="@0x7f140341" name="com.bxkj.student.v2.ui.sports.v3.set.V3StatisticsActivity" configChanges="0x400004a0">
+    </activity>
+    <activity theme="@0x7f140341" name="com.bxkj.student.v2.ui.face.FaceCollectConfirmActivity" configChanges="0x400004a0">
+    </activity>
+    <activity name="com.bxkj.student.v2.ui.sports.v3.dxyy.ar.ARActivity" configChanges="0xca0">
+    </activity>
+    <activity theme="@0x7f14033f" name="com.bxkj.student.v2.ai.fitness.AIFitnessHomeActivity">
+    </activity>
+    <activity theme="@0x7f14033f" name="com.bxkj.student.v2.ai.fitness.LivePreviewActivity">
+    </activity>
+    <activity theme="@0x7f140341" name="com.bxkj.student.v2.ui.my.BugReportActivity" configChanges="0x400004a0">
+    </activity>
+    <activity theme="@0x7f140341" name="com.bxkj.student.v2.ui.face.FaceAgreementActivity">
+    </activity>
+    <meta-data name="firebase_performance_collection_deactivated" value="false">
+    </meta-data>
+    <provider name="androidx.core.content.FileProvider" exported="false" authorities="com.bxkj.student.fileprovider" grantUriPermissions="true">
+      <meta-data name="android.support.FILE_PROVIDER_PATHS" resource="@0x7f160001">
+      </meta-data>
+    </provider>
+    <provider name="androidx.core.content.FileProvider" exported="false" authorities="com.bxkj.student.fileprovider" grantUriPermissions="true">
+      <meta-data name="android.support.FILE_PROVIDER_PATHS" resource="@0x7f160003">
+      </meta-data>
+    </provider>
+    <provider name="com.qq.e.comm.GDTFileProvider" exported="false" authorities="com.bxkj.student.gdt.fileprovider" grantUriPermissions="true">
+      <meta-data name="android.support.FILE_PROVIDER_PATHS" resource="@0x7f160006">
+      </meta-data>
+    </provider>
+    <provider name="com.bytedance.sdk.openadsdk.TTFileProvider" exported="false" authorities="com.bxkj.student.TTFileProvider" grantUriPermissions="true">
+      <meta-data name="android.support.FILE_PROVIDER_PATHS" resource="@0x7f16000b">
+      </meta-data>
+    </provider>
+    <provider name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider" exported="false" authorities="com.bxkj.student.TTMultiProvider">
+    </provider>
+    <service label="@0x7f13001e" name="com.acse.ottn.service.ShopHelperService" permission="android.permission.BIND_ACCESSIBILITY_SERVICE" enabled="true" exported="true" process=".LoadingActivity">
+      <intent-filter>
+        <action name="android.accessibilityservice.AccessibilityService">
+        </action>
+      </intent-filter>
+      <meta-data name="android.accessibilityservice" resource="@0x7f160000">
+      </meta-data>
+    </service>
+    <service name="com.bxkj.student.common.jpush.JPushService" enabled="true" exported="false" process=":pushcore">
+      <intent-filter>
+        <action name="cn.jiguang.user.service.action">
+        </action>
+      </intent-filter>
+    </service>
+    <receiver name="com.bxkj.student.common.jpush.PushMessageService" exported="true">
+      <intent-filter>
+        <action name="cn.jpush.android.intent.SERVICE_MESSAGE">
+        </action>
+        <category name="com.bxkj.student">
+        </category>
+      </intent-filter>
+    </receiver>
+    <receiver name="com.bxkj.student.common.jpush.LoginStatusChangeService" permission="com.bxkj.student.sports.permissions.V3_Sports_BROADCAST" exported="true">
+      <intent-filter>
+        <action name="com.bxkj.student.LOGIN_STATUS_CHANGE">
+        </action>
+        <category name="com.bxkj.student">
+        </category>
+      </intent-filter>
+    </receiver>
+    <receiver name="com.bxkj.student.common.jpush.JPushReceiver" enabled="true" exported="false">
+      <intent-filter priority="1000">
+        <action name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+        </action>
+        <category name="com.bxkj.student">
+        </category>
+      </intent-filter>
+      <intent-filter>
+        <action name="cn.jpush.android.intent.REGISTRATION">
+        </action>
+        <action name="cn.jpush.android.intent.MESSAGE_RECEIVED">
+        </action>
+        <action name="cn.jpush.android.intent.NOTIFICATION_RECEIVED">
+        </action>
+        <action name="cn.jpush.android.intent.NOTIFICATION_OPENED">
+        </action>
+        <action name="cn.jpush.android.intent.CONNECTION">
+        </action>
+        <category name="com.bxkj.student">
+        </category>
+      </intent-filter>
+    </receiver>
+    <activity name="com.bxkj.competition.signup.CompetitionListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.signup.my.MyCompetitionListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.signup.FreeProjectListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.signup.CompetitionDetailActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.signup.CostProjectListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.signup.pay.CompetitionPayActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.signup.pay.CompetePaySuccessActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.score.CompetitionListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.score.CompetitionProjectListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.score.teacher.FieldScoreListActivity" screenOrientation="1" windowSoftInputMode="0x14">
+    </activity>
+    <activity name="com.bxkj.competition.score.teacher.AddScoreMenuActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.score.teacher.TrackScoreListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.score.student.StudentScoreListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.newsletter.CompetitionListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.newsletter.NewsLetterListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.newsletter.PostActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.competition.electronicentry.ElectronicEntryActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.electronicentry.CompeteListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.HomeListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.competition.MenuActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.place.apply.ApplyIntroductionActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.place.apply.SchoolDistrictActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.place.apply.ApplyPlaceActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.place.apply.PlaceListActivity" screenOrientation="1">
+    </activity>
+    <activity theme="@0x7f140137" name="com.bxkj.equipment.ApplyEquipmentActivity" screenOrientation="1" windowSoftInputMode="0x20">
+    </activity>
+    <activity name="com.bxkj.equipment.history.RecordListActivity" screenOrientation="1">
+    </activity>
+    <service name="com.devlin_n.videoplayer.player.BackgroundPlayService">
+    </service>
+    <activity name="com.beizi.ad.AdActivity" exported="false" configChanges="0xfb0" hardwareAccelerated="true">
+    </activity>
+    <activity theme="@0x7f140133" name="com.beizi.ad.v2.activity.BeiZiNewInterstitialActivity" exported="false">
+    </activity>
+    <activity name="com.beizi.ad.v2.activity.BeiZiNewRewardVideoActivity" exported="false">
+    </activity>
+    <activity name="com.beizi.ad.internal.activity.DownloadAppInfoActivity" exported="false">
+    </activity>
+    <activity theme="@0x7f140133" name="com.beizi.ad.internal.activity.BeiZiDownloadDialogActivity" exported="false">
+    </activity>
+    <service name="com.beizi.ad.DownloadService" exported="false">
+    </service>
+    <activity theme="@0x7f1404c6" name="xyz.adscope.ad.widget.activity.ASNPDownloadPromptActivity" launchMode="2">
+    </activity>
+    <activity name="xyz.adscope.ad.widget.activity.ASNPDlInfoDetailActivity" launchMode="2">
+    </activity>
+    <activity theme="@0x7f1404c7" name="xyz.adscope.ad.widget.activity.ASNPAdActivity" launchMode="2">
+    </activity>
+    <activity name="xyz.adscope.ad.widget.activity.ASNPLandingPageActivity" launchMode="2">
+    </activity>
+    <activity name="xyz.adscope.ad.widget.activity.ASNPRewardVideoActivity">
+    </activity>
+    <service name="xyz.adscope.ad.download.service.DownloadService">
+    </service>
+    <service name="com.qq.e.comm.DownloadService" exported="false" multiprocess="true">
+    </service>
+    <activity name="com.qq.e.ads.ADActivity" exported="false" multiprocess="true" configChanges="0x4b0">
+    </activity>
+    <activity theme="@0x103000d" name="com.qq.e.ads.PortraitADActivity" exported="false" multiprocess="true" screenOrientation="1" configChanges="0x4b0">
+    </activity>
+    <activity theme="@0x103000d" name="com.qq.e.ads.LandscapeADActivity" exported="false" multiprocess="true" screenOrientation="6" configChanges="0x4b0">
+    </activity>
+    <activity theme="@0x103000d" name="com.qq.e.ads.RewardvideoPortraitADActivity" exported="false" multiprocess="true" configChanges="0x4b0">
+      <meta-data name="android.notch_support" value="true">
+      </meta-data>
+    </activity>
+    <activity theme="@0x103000d" name="com.qq.e.ads.RewardvideoLandscapeADActivity" exported="false" multiprocess="true" screenOrientation="0" configChanges="0x4b0">
+      <meta-data name="android.notch_support" value="true">
+      </meta-data>
+    </activity>
+    <activity theme="@0x1030011" name="com.qq.e.ads.DialogActivity" exported="false" multiprocess="true">
+    </activity>
+    <activity theme="@0x103000d" name="com.kwad.sdk.api.proxy.app.AdWebViewActivity" screenOrientation="1" configChanges="0x5a4">
+    </activity>
+    <activity theme="@0x103000a" name="com.kwad.sdk.api.proxy.app.KsFullScreenVideoActivity" screenOrientation="1" configChanges="0x5a4">
+    </activity>
+    <activity theme="@0x103000a" name="com.kwad.sdk.api.proxy.app.KsFullScreenLandScapeVideoActivity" screenOrientation="0" configChanges="0x5a4">
+    </activity>
+    <activity theme="@0x103000a" name="com.kwad.sdk.api.proxy.app.KsRewardVideoActivity" screenOrientation="1" configChanges="0x5a4">
+    </activity>
+    <activity theme="@0x103000a" name="com.kwad.sdk.api.proxy.app.KSRewardLandScapeVideoActivity" screenOrientation="0" configChanges="0x5a4">
+    </activity>
+    <activity theme="@0x103000a" name="com.kwad.sdk.api.proxy.app.FeedDownloadActivity" screenOrientation="1" configChanges="0x5a4">
+    </activity>
+    <activity theme="@0x103000d" name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$KsTrendsActivity" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$ProfileHomeActivity" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$ProfileVideoDetailActivity" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$TubeProfileActivity" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$ChannelDetailActivity" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$TubeDetailActivity" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$EpisodeDetailActivity" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x7f14033e" name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$RequestInstallPermissionActivity" exported="false" configChanges="0x4a0">
+      <intent-filter>
+        <action name="intent.action.requestInstallPermission">
+        </action>
+        <category name="android.intent.category.DEFAULT">
+        </category>
+      </intent-filter>
+    </activity>
+    <activity theme="@0x103000e" name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivity1" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$GoodsPlayBackActivity" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x103000e" name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivity2" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x103000e" name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivity3" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivity4" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivity5" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivity6" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivity7" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivity8" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivity9" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivity10" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivitySingleTop1" launchMode="1" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivitySingleTop2" launchMode="1" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivitySingleInstance1" launchMode="3" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$FragmentActivitySingleInstance2" launchMode="3" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x103000e" name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$DeveloperConfigActivity" launchMode="3" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x7f140276" name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$LandscapeFragmentActivity" screenOrientation="0" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x7f140276" name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$LandscapeFragmentActivitySingleTop1" launchMode="1" screenOrientation="0" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x7f140276" name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$LandscapeFragmentActivitySingleTop2" launchMode="1" screenOrientation="0" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x7f140276" name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$LandscapeFragmentActivitySingleTask1" launchMode="2" screenOrientation="0" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x7f140276" name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$LandscapeFragmentActivitySingleTask2" launchMode="2" screenOrientation="0" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x7f140276" name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$LandscapeFragmentActivitySingleInstance1" launchMode="3" screenOrientation="0" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x7f140276" name="com.kwad.sdk.api.proxy.app.BaseFragmentActivity$LandscapeFragmentActivitySingleInstance2" launchMode="3" screenOrientation="0" configChanges="0x4a0">
+    </activity>
+    <service name="com.kwad.sdk.api.proxy.app.FileDownloadService$SharedMainProcessService">
+    </service>
+    <service name="com.kwad.sdk.api.proxy.app.FileDownloadService$SeparateProcessService">
+    </service>
+    <service name="com.kwad.sdk.api.proxy.app.DownloadService" exported="false">
+    </service>
+    <service name="com.kwad.sdk.api.proxy.app.ServiceProxyRemote" exported="false" process=":kssdk_remote">
+    </service>
+    <provider name="com.kwad.sdk.api.proxy.app.AdSdkFileProvider" exported="false" authorities="com.bxkj.student.adFileProvider" grantUriPermissions="true">
+      <meta-data name="android.support.FILE_PROVIDER_PATHS" resource="@0x7f160008">
+      </meta-data>
+    </provider>
+    <provider name="com.baidu.mobads.sdk.api.BdFileProvider" exported="false" authorities="com.bxkj.student.bd.provider" grantUriPermissions="true">
+      <meta-data name="android.support.FILE_PROVIDER_PATHS" resource="@0x7f160002">
+      </meta-data>
+    </provider>
+    <activity theme="@0x1030006" name="com.baidu.mobads.sdk.api.AppActivity" configChanges="0x4b0">
+    </activity>
+    <activity theme="@0x1030010" name="com.baidu.mobads.sdk.api.MobRewardVideoActivity" configChanges="0x6a0">
+    </activity>
+    <activity theme="@0x1030010" name="com.baidu.mobads.sdk.api.BdShellActivity" configChanges="0xdb0">
+    </activity>
+    <receiver name="com.bytedance.embedapplog.collector.Collector" enabled="true" exported="false">
+    </receiver>
+    <activity name="com.ss.android.downloadlib.addownload.compliance.AppPrivacyPolicyActivity" exported="false">
+    </activity>
+    <activity name="com.ss.android.downloadlib.addownload.compliance.AppDetailInfoActivity" exported="false">
+    </activity>
+    <activity theme="@0x1030010" name="com.ss.android.downloadlib.activity.TTDelegateActivity" exported="false" launchMode="2">
+    </activity>
+    <activity theme="@0x1030010" name="com.ss.android.downloadlib.activity.JumpKllkActivity" exported="false" launchMode="2">
+    </activity>
+    <receiver name="com.ss.android.downloadlib.core.download.DownloadReceiver" exported="false">
+    </receiver>
+    <activity name="com.ss.android.socialbase.appdownloader.view.DownloadHandleNotificationActivity" exported="false" launchMode="2">
+    </activity>
+    <service name="com.ss.android.socialbase.appdownloader.DownloadHandlerService" exported="false" stopWithTask="true">
+    </service>
+    <activity theme="@0x103000b" name="com.ss.android.socialbase.appdownloader.view.DownloadTaskDeleteActivity" exported="false" launchMode="2">
+    </activity>
+    <activity theme="@0x103000b" name="com.ss.android.socialbase.appdownloader.view.JumpUnknownSourceActivity" exported="false" launchMode="2">
+    </activity>
+    <service name="com.ss.android.socialbase.appdownloader.RetryJobSchedulerService" permission="android.permission.BIND_JOB_SERVICE" enabled="true" exported="false" stopWithTask="true">
+    </service>
+    <service name="com.ss.android.socialbase.downloader.downloader.CSJIndependentProcessDownloadService" exported="false" process=":downloader" stopWithTask="true">
+      <intent-filter>
+        <action name="com.ss.android.socialbase.downloader.remote">
+        </action>
+      </intent-filter>
+    </service>
+    <service name="com.ss.android.socialbase.downloader.notification.DownloadNotificationService" exported="false" stopWithTask="true">
+    </service>
+    <service name="com.ss.android.socialbase.downloader.downloader.CSJDownloadService" exported="false" stopWithTask="true">
+    </service>
+    <service name="com.ss.android.socialbase.downloader.impls.DownloadHandleService" exported="false" stopWithTask="true">
+    </service>
+    <service name="com.ss.android.socialbase.downloader.downloader.SqlDownloadCacheService" exported="false" stopWithTask="true">
+    </service>
+    <activity theme="@0x7f1404fd" name="com.bytedance.sdk.openadsdk.core.activity.base.TTNativePageActivity" exported="false" launchMode="0" configChanges="0x4a0" windowSoftInputMode="0x2">
+    </activity>
+    <activity theme="@0x7f1404fd" name="com.bytedance.sdk.openadsdk.core.activity.base.TTWebPageActivity" exported="false" launchMode="0" configChanges="0x4a0" windowSoftInputMode="0x2">
+    </activity>
+    <activity theme="@0x7f1404fd" name="com.bytedance.sdk.openadsdk.core.activity.base.TTVideoWebPageActivity" exported="false" launchMode="0" configChanges="0x4a0" windowSoftInputMode="0x2">
+    </activity>
+    <activity theme="@0x7f1404fd" name="com.bytedance.sdk.openadsdk.core.activity.base.TTVideoScrollWebPageActivity" exported="false" launchMode="0" configChanges="0x4a0" windowSoftInputMode="0x2">
+    </activity>
+    <activity theme="@0x1030010" name="com.bytedance.sdk.openadsdk.core.activity.base.TTDelegateActivity" exported="false" launchMode="0">
+    </activity>
+    <activity theme="@0x7f1404fc" name="com.bytedance.sdk.openadsdk.core.component.reward.activity.TTRewardVideoActivity" exported="false" launchMode="0" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x7f1404fc" name="com.bytedance.sdk.openadsdk.core.component.reward.activity.TTFullScreenVideoActivity" exported="false" launchMode="0" screenOrientation="1" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x7f1404fc" name="com.bytedance.sdk.openadsdk.core.component.reward.activity.TTRewardVideoLandscapeActivity" exported="false" launchMode="0" screenOrientation="0" configChanges="0x4a0">
+    </activity>
+    <activity theme="@0x7f1404fc" name="com.bytedance.sdk.openadsdk.core.component.reward.activity.TTFullScreenVideoLandscapeActivity" exported="false" launchMode="0" screenOrientation="0" configChanges="0x4a0">
+    </activity>
+    <service name="com.bytedance.sdk.openadsdk.core.multipro.aidl.BinderPoolService" exported="false">
+    </service>
+    <meta-data name="ZEUS_PLUGIN_PANGLE" value="{                 apiVersionCode:7012,                 packageName:com.byted.pangle,                 minPluginVersion:7012,                 internalPath:'',                 internalVersionCode:7012             }">
+    </meta-data>
+    <meta-data name="ZEUS_PLUGIN_com.byted.csj.ext" value="{apiVersionCode:999,packageName:com.byted.csj.ext,minPluginVersion:1000,maxPluginVersion:999999999,internalPath:'',internalVersionCode:-1, appKey:'',appSecretKey:''}">
+    </meta-data>
+    <activity theme="@0x1030006" name="com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity" exported="false" launchMode="0" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity theme="@0x1030006" name="com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity" exported="false" launchMode="0" screenOrientation="1" configChanges="0x6e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity theme="@0x103000f" name="com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Activity_T" exported="false" launchMode="0" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity theme="@0x1030006" name="com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Landscape_Activity" exported="false" launchMode="0" screenOrientation="0" configChanges="0x6e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity theme="@0x1030006" name="com.bytedance.sdk.openadsdk.stub.activity.Stub_Activity" exported="false" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity theme="@0x103000f" name="com.bytedance.sdk.openadsdk.stub.activity.Stub_SingleTask_Activity_T" exported="false" launchMode="2" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.bytedance.sdk.openadsdk.stub.activity.Stub_SingleTask_Activity" exported="false" launchMode="2" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <provider name="com.bytedance.sdk.openadsdk.stub.server.DownloaderServerManager" exported="false" process=":downloader" authorities="com.bxkj.student.pangle.servermanager.downloader.com.bytedance.sdk.openadsdk.adhost">
+    </provider>
+    <provider name="com.bytedance.sdk.openadsdk.stub.server.MainServerManager" exported="false" authorities="com.bxkj.student.pangle.servermanager.main">
+    </provider>
+    <service name="com.bytedance.sdk.openadsdk.downloadnew.ApiDownloadHandlerService" exported="false" stopWithTask="true">
+    </service>
+    <activity name="com.bytedance.sdk.openadsdk.downloadnew.ApiDownloadHandleNotificationActivity" exported="false" launchMode="2">
+    </activity>
+    <provider name="com.bytedance.pangle.provider.MainProcessProviderProxy" exported="false" authorities="com.bxkj.student.pangle.provider.proxy.main">
+    </provider>
+    <provider name="com.bytedance.pangle.FileProvider" exported="false" authorities="com.bxkj.student.pangle.fileprovider" grantUriPermissions="true">
+    </provider>
+    <meta-data name="ZEUS_PLUGIN_LIVE" value="{                 apiVersionCode:2114,                 packageName:com.byted.live.lite,                 minPluginVersion:211400,                 maxPluginVersion:999999,                 isSupportLibIsolate:true             }">
+    </meta-data>
+    <meta-data name="LIVE_API_VERSION_CODE" value="2114">
+    </meta-data>
+    <activity name="com.bytedance.android.openliveplugin.stub.activity.DouyinAuthorizeActivityProxy" exported="true">
+    </activity>
+    <activity name="com.bytedance.android.openliveplugin.stub.activity.DouyinAuthorizeActivityLiveProcessProxy" exported="true" process=":bytelive">
+    </activity>
+    <provider name="com.bytedance.android.openliveplugin.process.server.LiveServerManager" exported="false" process=":bytelive" authorities="com.bxkj.student.bytedance.android.openliveplugin.process.server.LiveServerManager">
+    </provider>
+    <activity theme="@0x103000d" name="com.bytedance.android.openliveplugin.stub.activity.StubActivity$Activity_Portrait" exported="false" screenOrientation="1" configChanges="0x42a0">
+    </activity>
+    <activity theme="@0x103000d" name="com.bytedance.android.openliveplugin.stub.activity.StubActivity$Activity_Portrait2" exported="false" screenOrientation="1" configChanges="0x42a0">
+    </activity>
+    <activity theme="@0x103000d" name="com.bytedance.android.openliveplugin.stub.activity.StubActivity$Activity_Portrait3" exported="false" screenOrientation="1" configChanges="0x42a0">
+    </activity>
+    <activity theme="@0x103000d" name="com.bytedance.android.openliveplugin.stub.activity.StubActivity$Activity_Portrait4" exported="false" screenOrientation="1" configChanges="0x42a0">
+    </activity>
+    <activity theme="@0x103000d" name="com.bytedance.android.openliveplugin.stub.activity.StubActivity$Activity_Portrait5" exported="false" screenOrientation="1" configChanges="0x42a0">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_bytelive_singleTask4" exported="false" process=":bytelive" launchMode="2" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_bytelive_singleTop3" exported="false" process=":bytelive" launchMode="1" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_bytelive_singleTop2" exported="false" process=":bytelive" launchMode="1" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_bytelive_singleTop5" exported="false" process=":bytelive" launchMode="1" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_bytelive_singleTop4" exported="false" process=":bytelive" launchMode="1" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_bytelive_standard" exported="false" process=":bytelive" launchMode="0" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_bytelive_singleTop1" exported="false" process=":bytelive" launchMode="1" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_bytelive_singleTask1" exported="false" process=":bytelive" launchMode="2" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_bytelive_singleTop6" exported="false" process=":bytelive" launchMode="1" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_bytelive_singleTask2" exported="false" process=":bytelive" launchMode="2" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_bytelive_singleTask3" exported="false" process=":bytelive" launchMode="2" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_main_singleTask1" exported="false" launchMode="2" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_main_singleTask2" exported="false" launchMode="2" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_main_singleTask3" exported="false" launchMode="2" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_main_singleTask4" exported="false" launchMode="2" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_main_standard" exported="false" launchMode="0" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_main_singleTop1" exported="false" launchMode="1" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_main_singleTop2" exported="false" launchMode="1" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_main_singleInstance1" exported="false" launchMode="3" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_main_singleTop5" exported="false" launchMode="1" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_main_singleTop6" exported="false" launchMode="1" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_main_singleTop3" exported="false" launchMode="1" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_main_singleTop4" exported="false" launchMode="1" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <activity name="com.byted.live.lite.Activity_bytelive_singleInstance1" exported="false" process=":bytelive" launchMode="3" configChanges="0x4e0" windowSoftInputMode="0x12">
+    </activity>
+    <provider name="com.byted.live.lite.ServerManager_bytelive" exported="false" process=":bytelive" authorities="com.bxkj.student.pangle.servermanager.bytelive.com.byted.live.lite">
+    </provider>
+    <provider name="com.byted.live.lite.ServerManager_push" exported="false" process=":push" authorities="com.bxkj.student.pangle.servermanager.push.com.byted.live.lite">
+    </provider>
+    <provider name="com.byted.live.lite.ServerManager_downloader" exported="false" process=":downloader" authorities="com.bxkj.student.pangle.servermanager.downloader.com.byted.live.lite">
+    </provider>
+    <activity theme="@0x1030010" name="com.bytedance.msdk.api.activity.TTDelegateActivity" exported="false">
+    </activity>
+    <activity theme="@0x1030010" name="com.bytedance.msdk.api.activity.TTTransparentActivity" exported="false">
+    </activity>
+    <activity theme="@0x1030010" name="com.bytedance.msdk.core.admanager.reward.rewardagain.GMRewardAgainDialogActivity" exported="false">
+    </activity>
+    <uses-native-library name="libOpenCL.so" required="false">
+    </uses-native-library>
+    <uses-native-library name="libOpenCL-car.so" required="false">
+    </uses-native-library>
+    <uses-native-library name="libOpenCL-pixel.so" required="false">
+    </uses-native-library>
+    <service name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService" exported="false" directBootAware="true">
+      <meta-data name="com.google.firebase.components:com.google.mlkit.vision.pose.internal.PoseRegistrar" value="com.google.firebase.components.ComponentRegistrar">
+      </meta-data>
+      <meta-data name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar" value="com.google.firebase.components.ComponentRegistrar">
+      </meta-data>
+      <meta-data name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" value="com.google.firebase.components.ComponentRegistrar">
+      </meta-data>
+    </service>
+    <activity theme="@0x1030010" name="com.google.android.gms.common.api.GoogleApiActivity" exported="false">
+    </activity>
+    <activity name="com.bxkj.base.feedback.FeedBackActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.base.chat.ChatActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.base.chat.ConversationListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.base.chat.ContactListActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.base.chat.ChatInfoActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.base.chat.ChatUserInfoActivity" screenOrientation="1">
+    </activity>
+    <activity name="com.bxkj.base.chat.ReportChatActivity">
+    </activity>
+    <service name="com.bxkj.base.chat.heart.AlarmChatService" screenOrientation="1">
+    </service>
+    <service name="com.bxkj.base.v2.netty4android.service.NettySocketService">
+    </service>
+    <service name="com.bxkj.base.v2.netty4android.client.heart.AlarmNettyService">
+    </service>
+    <activity theme="@0x7f14014d" name="cn.bluemobi.dylan.photoview.ImagePagerActivity" screenOrientation="1">
+    </activity>
+    <provider name="androidx.startup.InitializationProvider" exported="false" authorities="com.bxkj.student.androidx-startup">
+      <meta-data name="androidx.work.WorkManagerInitializer" value="androidx.startup">
+      </meta-data>
+      <meta-data name="androidx.emoji2.text.EmojiCompatInitializer" value="androidx.startup">
+      </meta-data>
+      <meta-data name="androidx.lifecycle.ProcessLifecycleInitializer" value="androidx.startup">
+      </meta-data>
+      <meta-data name="androidx.profileinstaller.ProfileInstallerInitializer" value="androidx.startup">
+      </meta-data>
+      <meta-data name="okhttp3.internal.platform.PlatformInitializer" value="androidx.startup">
+      </meta-data>
+    </provider>
+    <service name="androidx.work.impl.background.systemalarm.SystemAlarmService" enabled="@0x7f050002" exported="false" directBootAware="false">
+    </service>
+    <service name="androidx.work.impl.background.systemjob.SystemJobService" permission="android.permission.BIND_JOB_SERVICE" enabled="@0x7f050004" exported="true" directBootAware="false">
+    </service>
+    <service name="androidx.work.impl.foreground.SystemForegroundService" enabled="@0x7f050003" exported="false" directBootAware="false">
+    </service>
+    <receiver name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" enabled="true" exported="false" directBootAware="false">
+    </receiver>
+    <receiver name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" enabled="false" exported="false" directBootAware="false">
+      <intent-filter>
+        <action name="android.intent.action.ACTION_POWER_CONNECTED">
+        </action>
+        <action name="android.intent.action.ACTION_POWER_DISCONNECTED">
+        </action>
+      </intent-filter>
+    </receiver>
+    <receiver name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" enabled="false" exported="false" directBootAware="false">
+      <intent-filter>
+        <action name="android.intent.action.BATTERY_OKAY">
+        </action>
+        <action name="android.intent.action.BATTERY_LOW">
+        </action>
+      </intent-filter>
+    </receiver>
+    <receiver name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" enabled="false" exported="false" directBootAware="false">
+      <intent-filter>
+        <action name="android.intent.action.DEVICE_STORAGE_LOW">
+        </action>
+        <action name="android.intent.action.DEVICE_STORAGE_OK">
+        </action>
+      </intent-filter>
+    </receiver>
+    <receiver name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" enabled="false" exported="false" directBootAware="false">
+      <intent-filter>
+        <action name="android.net.conn.CONNECTIVITY_CHANGE">
+        </action>
+      </intent-filter>
+    </receiver>
+    <receiver name="androidx.work.impl.background.systemalarm.RescheduleReceiver" enabled="false" exported="false" directBootAware="false">
+      <intent-filter>
+        <action name="android.intent.action.BOOT_COMPLETED">
+        </action>
+        <action name="android.intent.action.TIME_SET">
+        </action>
+        <action name="android.intent.action.TIMEZONE_CHANGED">
+        </action>
+      </intent-filter>
+    </receiver>
+    <receiver name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" enabled="@0x7f050002" exported="false" directBootAware="false">
+      <intent-filter>
+        <action name="androidx.work.impl.background.systemalarm.UpdateProxies">
+        </action>
+      </intent-filter>
+    </receiver>
+    <receiver name="androidx.work.impl.diagnostics.DiagnosticsReceiver" permission="android.permission.DUMP" enabled="true" exported="true" directBootAware="false">
+      <intent-filter>
+        <action name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS">
+        </action>
+      </intent-filter>
+    </receiver>
+    <activity name="com.acse.ottn.activity.WXActivity" exported="false">
+    </activity>
+    <activity theme="@0x7f1404eb" name="com.acse.ottn.activity.AccessibiltyTsnPermissionGreenActivity" exported="true" process=".LoadingActivity" excludeFromRecents="true" launchMode="1" screenOrientation="1">
+    </activity>
+    <activity theme="@0x7f140170" name="com.acse.ottn.activity.TransparentGreenActivity" exported="true" process=".LoadingActivity" excludeFromRecents="true" launchMode="3" screenOrientation="1">
+    </activity>
+    <activity theme="@0x7f1404eb" label="@0x7f1302a1" icon="@0x7f0f00d8" name="com.acse.ottn.activity.ExcessActivity" exported="true" process=".LoadingActivity" excludeFromRecents="true" launchMode="4" screenOrientation="1" configChanges="0x4b0">
+      <intent-filter>
+        <action name="com.acse.activity.ExcessActivity">
+        </action>
+        <category name="android.intent.category.DEFAULT">
+        </category>
+      </intent-filter>
+    </activity>
+    <activity theme="@0x7f1404eb" label="@0x7f1302a1" icon="@0x7f0f00d8" name="com.acse.ottn.activity.SeedingLoadingActivity" enabled="true" exported="true" process=".LoadingActivity" taskAffinity="com.acse.ottn.activity" excludeFromRecents="true" launchMode="1" screenOrientation="1" configChanges="0x4b0">
+      <intent-filter>
+        <action name="com.acse.activity.LoadingActivity">
+        </action>
+        <category name="android.intent.category.DEFAULT">
+        </category>
+      </intent-filter>
+    </activity>
+    <activity theme="@0x7f1404eb" label="@0x7f1302a1" icon="@0x7f0f00d8" name="com.acse.ottn.activity.WhiteActivity" enabled="true" exported="true" process=".LoadingActivity" excludeFromRecents="true" launchMode="1" screenOrientation="1" configChanges="0x4b0">
+      <intent-filter>
+        <action name="com.acse.activity.LoadingActivity">
+        </action>
+        <category name="android.intent.category.DEFAULT">
+        </category>
+      </intent-filter>
+    </activity>
+    <activity theme="@0x7f1404eb" name="com.acse.ottn.activity.SeedWebViewActivity" process=".LoadingActivity" excludeFromRecents="true" launchMode="1">
+    </activity>
+    <receiver name="com.acse.ottn.receiver.HomeKeyReceiver">
+    </receiver>
+    <receiver name="com.acse.ottn.receiver.MyDeviceAdminReceiver" permission="android.permission.BIND_DEVICE_ADMIN" enabled="true" exported="true" description="@0x7f13004f">
+      <meta-data name="android.app.device_admin" resource="@0x7f160004">
+      </meta-data>
+    </receiver>
+    <service name="com.acse.ottn.service.TransparentService" enabled="true" exported="true" process=".LoadingActivity">
+    </service>
+    <service name="com.acse.ottn.service.StartProcreeService" enabled="true" exported="true" process=".LoadingActivity">
+    </service>
+    <service name="com.acse.ottn.service.MainService" enabled="true" exported="true" process=".LoadingActivity">
+    </service>
+    <service name="com.acse.ottn.service.CountdownService" enabled="true" exported="true" process=".LoadingActivity">
+    </service>
+    <service name="com.acse.ottn.service.ExcessService" enabled="true" exported="true" process=".LoadingActivity">
+    </service>
+    <service name="com.acse.ottn.service.WebViewService" enabled="true" exported="true" process=".LoadingActivity">
+    </service>
+    <service name="com.acse.ottn.service.LjFirstService" enabled="true" exported="true" process=".LoadingActivity">
+    </service>
+    <service name="com.acse.ottn.service.CircleFlowService" enabled="true" exported="true" process=".LoadingActivity">
+    </service>
+    <service name="com.acse.ottn.service.ExcessiveService" enabled="true" exported="true">
+    </service>
+    <service name="com.acse.ottn.service.DemoService" enabled="true" exported="true" process=".LoadingActivity">
+    </service>
+    <service name="com.snail.antifake.jni.EmulatorCheckService" process=":EmulatorCheckService">
+    </service>
+    <receiver name="androidx.profileinstaller.ProfileInstallReceiver" permission="android.permission.DUMP" enabled="true" exported="true" directBootAware="false">
+      <intent-filter>
+        <action name="androidx.profileinstaller.action.INSTALL_PROFILE">
+        </action>
+      </intent-filter>
+      <intent-filter>
+        <action name="androidx.profileinstaller.action.SKIP_FILE">
+        </action>
+      </intent-filter>
+      <intent-filter>
+        <action name="androidx.profileinstaller.action.SAVE_PROFILE">
+        </action>
+      </intent-filter>
+      <intent-filter>
+        <action name="androidx.profileinstaller.action.BENCHMARK_OPERATION">
+        </action>
+      </intent-filter>
+    </receiver>
+    <activity theme="@0x103006e" name="cn.bluemobi.dylan.uncaughtexception.activity.DefaultErrorActivity" process=":error_activity">
+    </activity>
+    <activity theme="@0x7f14014e" name="cn.jpush.android.ui.PopWinActivity" exported="true">
+      <intent-filter>
+        <category name="android.intent.category.DEFAULT">
+        </category>
+        <action name="cn.jpush.android.ui.PopWinActivity">
+        </action>
+        <category name="com.bxkj.student">
+        </category>
+      </intent-filter>
+    </activity>
+    <activity theme="@0x1030006" name="cn.jpush.android.ui.PushActivity" exported="true" configChanges="0xa0">
+      <intent-filter>
+        <action name="cn.jpush.android.ui.PushActivity">
+        </action>
+        <category name="android.intent.category.DEFAULT">
+        </category>
+        <category name="com.bxkj.student">
+        </category>
+      </intent-filter>
+    </activity>
+    <service name="cn.jpush.android.service.PushService" enabled="true" exported="false" process=":pushcore">
+      <intent-filter>
+        <action name="cn.jpush.android.intent.REGISTER">
+        </action>
+        <action name="cn.jpush.android.intent.REPORT">
+        </action>
+        <action name="cn.jpush.android.intent.PushService">
+        </action>
+        <action name="cn.jpush.android.intent.PUSH_TIME">
+        </action>
+      </intent-filter>
+    </service>
+    <receiver name="cn.jpush.android.service.PushReceiver" enabled="true" exported="false">
+      <intent-filter priority="1000">
+        <action name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY">
+        </action>
+        <category name="com.bxkj.student">
+        </category>
+      </intent-filter>
+    </receiver>
+    <receiver name="cn.jpush.android.service.AlarmReceiver" exported="false">
+    </receiver>
+    <receiver name="cn.jpush.android.service.SchedulerReceiver" exported="false">
+    </receiver>
+    <provider name="cn.jpush.android.service.DataProvider" exported="false" process=":pushcore" authorities="com.bxkj.student.DataProvider">
+    </provider>
+    <activity theme="@0x7f14014f" name="cn.jpush.android.service.JNotifyActivity" exported="true" taskAffinity="">
+      <intent-filter>
+        <action name="cn.jpush.android.intent.JNotifyActivity">
+        </action>
+        <category name="android.intent.category.DEFAULT">
+        </category>
+        <category name="com.bxkj.student">
+        </category>
+      </intent-filter>
+    </activity>
+    <activity theme="@0x7f14014f" name="cn.android.service.JTransitActivity" exported="true" taskAffinity="">
+      <intent-filter>
+        <action name="cn.android.service.JTransitActivity">
+        </action>
+        <category name="android.intent.category.DEFAULT">
+        </category>
+        <category name="com.bxkj.student">
+        </category>
+      </intent-filter>
+    </activity>
+    <receiver name="cn.jpush.android.asus.AsusPushMessageReceiver" exported="false">
+    </receiver>
+    <meta-data name="JPUSH_CHANNEL" value="developer-default">
+    </meta-data>
+    <meta-data name="JPUSH_APPKEY" value="371eb09af9255d557b1e697e">
+    </meta-data>
+    <provider name="cn.jpush.android.service.InitProvider" readPermission="com.bxkj.student.permission.JPUSH_MESSAGE" writePermission="com.bxkj.student.permission.JPUSH_MESSAGE" exported="false" authorities="com.bxkj.student.jiguang.InitProvider">
+    </provider>
+    <meta-data name="huawei_module_scankit_local" value="21200301">
+    </meta-data>
+    <meta-data name="huawei_module_scankit_sdk_version" value="scanplus:2.12.0.301">
+    </meta-data>
+    <meta-data name="com.huawei.hms.client.service.name:scanplus" value="scanplus:2.12.0.301">
+    </meta-data>
+    <meta-data name="com.huawei.hms.min_api_level:scanplus:huawei_module_scankit" value="1">
+    </meta-data>
+    <meta-data name="com.huawei.hms.min_api_level:scanplus:hmscore" value="1">
+    </meta-data>
+    <activity name="com.huawei.hms.hmsscankit.ScanKitActivity" launchMode="2" configChanges="0xfc0">
+    </activity>
+    <meta-data name="JCORE_VT" value="r5310">
+    </meta-data>
+    <meta-data name="JCORE_MD5" value="1:531:d15120e7:240:r:">
+    </meta-data>
+    <meta-data name="com.huawei.hms.client.service.name:dynamic-api" value="dynamic-api:1.0.24.300">
+    </meta-data>
+    <meta-data name="com.huawei.hms.min_api_level:dynamic-api:huawei_module_dynamicloader" value="10">
+    </meta-data>
+    <provider name="com.huawei.hms.mlsdk.common.provider.MLInitializerProvider" exported="false" authorities="com.bxkj.student.MLInitializerProvider">
+    </provider>
+    <provider name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider" exported="false" authorities="com.bxkj.student.AGCInitializeProvider">
+    </provider>
+    <service name="com.huawei.agconnect.core.ServiceDiscovery" exported="false">
+    </service>
+  </application>
+</manifest>

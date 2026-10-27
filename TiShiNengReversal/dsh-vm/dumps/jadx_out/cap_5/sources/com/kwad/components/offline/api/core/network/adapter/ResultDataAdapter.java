@@ -1,0 +1,75 @@
+package com.kwad.components.offline.api.core.network.adapter;
+
+import com.kwad.components.offline.api.core.network.model.CommonOfflineCompoResultData;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_5_sz8796392.dex */
+public class ResultDataAdapter<T extends com.kwad.components.offline.api.core.network.model.CommonOfflineCompoResultData> extends com.kwad.sdk.core.response.model.BaseResultData {
+    private static final long serialVersionUID = -6920968714292152136L;
+    private final T mOfflineCompoResultData;
+
+    public ResultDataAdapter(T r1) {
+            r0 = this;
+            r0.<init>()
+            r0.mOfflineCompoResultData = r1
+            return
+    }
+
+    public T getOfflineCompoResultData() {
+            r1 = this;
+            T extends com.kwad.components.offline.api.core.network.model.CommonOfflineCompoResultData r0 = r1.mOfflineCompoResultData
+            return r0
+    }
+
+    @Override // com.kwad.sdk.core.response.model.BaseResultData
+    public boolean hasData() {
+            r1 = this;
+            T extends com.kwad.components.offline.api.core.network.model.CommonOfflineCompoResultData r0 = r1.mOfflineCompoResultData
+            boolean r0 = r0.hasData()
+            return r0
+    }
+
+    @Override // com.kwad.sdk.core.response.model.BaseResultData
+    public boolean isDataEmpty() {
+            r1 = this;
+            T extends com.kwad.components.offline.api.core.network.model.CommonOfflineCompoResultData r0 = r1.mOfflineCompoResultData
+            boolean r0 = r0.isDataEmpty()
+            return r0
+    }
+
+    @Override // com.kwad.sdk.core.response.model.BaseResultData
+    public boolean isResultOk() {
+            r1 = this;
+            T extends com.kwad.components.offline.api.core.network.model.CommonOfflineCompoResultData r0 = r1.mOfflineCompoResultData
+            boolean r0 = r0.isResultOk()
+            return r0
+    }
+
+    @Override // com.kwad.sdk.core.response.model.BaseResultData
+    public boolean notifyFailOnResultError() {
+            r1 = this;
+            T extends com.kwad.components.offline.api.core.network.model.CommonOfflineCompoResultData r0 = r1.mOfflineCompoResultData
+            boolean r0 = r0.notifyFailOnResultError()
+            return r0
+    }
+
+    @Override // com.kwad.sdk.core.response.model.BaseResultData, com.kwad.sdk.core.b
+    public void parseJson(@androidx.annotation.Nullable org.json.JSONObject r2) {
+            r1 = this;
+            super.parseJson(r2)
+            T extends com.kwad.components.offline.api.core.network.model.CommonOfflineCompoResultData r0 = r1.mOfflineCompoResultData
+            r0.parseJson(r2)
+            return
+    }
+
+    @Override // com.kwad.sdk.core.response.model.BaseResultData, com.kwad.sdk.core.b
+    public org.json.JSONObject toJson() {
+            r3 = this;
+            org.json.JSONObject r0 = super.toJson()
+            T extends com.kwad.components.offline.api.core.network.model.CommonOfflineCompoResultData r1 = r3.mOfflineCompoResultData
+            org.json.JSONObject r1 = r1.toJson()
+            r2 = 1
+            com.kwad.sdk.utils.aa.a(r0, r1, r2)
+            return r0
+    }
+}

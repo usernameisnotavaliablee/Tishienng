@@ -1,0 +1,21 @@
+==== libdevInfo.so : 2 hits ====
+  | Android (6454773 based on r365631c2) clang version 9.0.8 (https://android.googlesource.com/toolchain/llvm-project 98c855489587874b2a325e7a516b99d838599c6f) (based on LLVM 9.0.8svn)
+  | .comment
+==== libcommonV2DevInfo.so : 3 hits ====
+  | xyz/adscope/common/v2/dev/info/DevSysMark
+  | Android (7019983 based on r365631c3) clang version 9.0.9 (https://android.googlesource.com/toolchain/llvm-project a2a1e703c0edb03ba29944e529ccbf457742737b) (based on LLVM 9.0.9svn)
+  | .comment
+==== libumeng-spy.so : 2 hits ====
+  | not enough space for format expansion (Please submit full bug report at http://gcc.gnu.org/bugs.html):
+  | .comment
+==== libti-monitor.so : 2 hits ====
+  | Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+  | .comment
+==== libliantian.so : 1 hits ====
+  | .comment
+==== libsgcore.so : 2 hits ====
+  | Android (5220042 based on r346389c) clang version 8.0.7 (https://android.googlesource.com/toolchain/clang b55f2d4ebfd35bf643d27dbca1bb228957008617) (https://android.googlesource.com/toolchain/llvm 3c393fe7a7e13b0fba4ac75a01aa683d7a5b11cd) (based on LLVM 8.0.7svn)
+  | .comment
+==== libemulator_check.so : 2 hits ====
+  | Android (5220042 based on r346389c) clang version 8.0.7 (https://android.googlesource.com/toolchain/clang b55f2d4ebfd35bf643d27dbca1bb228957008617) (https://android.googlesource.com/toolchain/llvm 3c393fe7a7e13b0fba4ac75a01aa683d7a5b11cd) (based on LLVM 8.0.7svn)
+  | .comment

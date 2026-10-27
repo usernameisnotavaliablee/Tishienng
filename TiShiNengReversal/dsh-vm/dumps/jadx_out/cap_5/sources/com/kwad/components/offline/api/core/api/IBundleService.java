@@ -1,0 +1,11 @@
+package com.kwad.components.offline.api.core.api;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_5_sz8796392.dex */
+public interface IBundleService {
+    void loadBundle(android.content.Context r1, java.lang.String r2, com.kwad.components.offline.api.core.api.IBundleLoadListener r3);
+
+    void loadBundleWithString(android.content.Context r1, java.lang.String r2, com.kwad.components.offline.api.core.api.IBundleLoadListener r3);
+
+    void unloadBundle(java.lang.String r1);
+}

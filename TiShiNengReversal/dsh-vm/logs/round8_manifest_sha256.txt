@@ -1,0 +1,28 @@
+# round8_manifest_sha256 — 生成时间: 2026-08-15 04:19:11 +0800
+# 工具: shasum -a 256 (macOS)
+# 分类: cap_0/10/11=360壳, cap_12/13=噪音碎片, cap_4=主业务, cap_8=acse, cap_1/2/3/5/6/7/9=第三方库
+
+cap_0_sz45352584.dex         e821483b707274a4bc7c7348e0016db3743384caec9a454376f4029d80867068  360壳
+cap_1_sz9857704.dex          f83d89a09fa0f9c04200d99bd4a958942ee581884b41cd7af620f05f47063dae  第三方库
+cap_10_sz45352584.dex        e821483b707274a4bc7c7348e0016db3743384caec9a454376f4029d80867068  360壳
+cap_11_sz45352584.dex        e933d3112a0493d4dd1c392b8587499daafb52d4eacd83d8074ec9154f0b7059  360壳
+cap_12_sz284.dex             9f8898ce35a47aeafced99ea0d17c33e73037bb2307c7688e50819966f4ae939  噪音碎片
+cap_13_sz96220.dex           d25645d5b0618b5de8e422aec4d149d4201e117527335c66d9512148fa61b06d  噪音碎片
+cap_2_sz9469608.dex          9b22482ccd3b4e9749f06cd6eaa0c7b567df4194707098d90ee4262e7b190331  第三方库
+cap_3_sz3714748.dex          8f95c5ed4ca95c0e137b6389ae03a2db7269bb0e5025b0c0ba72a2a22f27c3f1  第三方库
+cap_4_sz9502280.dex          c56d61f6ca91e76d9f7dc05c7879447f3ec3d09acfa93a36de6ab7a31e3c9b9a  主业务com.bxkj.student
+cap_5_sz8796392.dex          91bd6abd698a202ef81f3bf17c0d3fb2c197ae675a932a24789b98ba259f0432  第三方库
+cap_6_sz7847784.dex          472cafa3604f1fa48537fba1ed05d8a3c6247993adcf47d421b9b376990a60c5  第三方库
+cap_7_sz8008092.dex          6a0162350e18e0697e4a9c3beee0f3856b63dcf0c31d7ccd917fb019988685ee  第三方库
+cap_8_sz9482380.dex          7ac0ab45d5a73d2489ede29c4ec6b2c016d762f0473115c996c7839729bd277f  acse
+cap_9_sz8866584.dex          efa512fcd0a4b28e2166de7a2fd59da37653babb62f136b553ccde15091a2606  第三方库
+
+# 8 个输入文件基线
+classes.dex                     e821483b707274a4bc7c7348e0016db3743384caec9a454376f4029d80867068  360壳
+AndroidManifest.xml             ecfa2803c4607f56dd46b65df053d30118ae12e033a3f9f9d13da11e013310c3  manifest
+dsh-vm/base.apk                 9f359682c31b8c8d33ca942da509495590fd391912792533a1974a49ed077245  原始APK备份
+cap_0(即classes.dex)            见上
+cap_8(acse全量)                见上
+cap_4(主业务)                  见上
+lib/arm64-v8a/libtsnsecret.so   4e65c11176c379c0f5d9603baf1d26f56b7c3dc6083f7a107680b3b25034dfd3  已unidbg验证
+assets/libjiagu_a64.so          2efd4795051b5031b5fc2d0e5b5f799bb415ae5657ae3d17bfc93cb0845dd41f  360壳native

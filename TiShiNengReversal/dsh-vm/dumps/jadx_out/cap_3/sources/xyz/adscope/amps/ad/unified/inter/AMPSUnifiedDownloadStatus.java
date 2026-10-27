@@ -1,0 +1,34 @@
+package xyz.adscope.amps.ad.unified.inter;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_3_sz3714748.dex */
+public enum AMPSUnifiedDownloadStatus extends java.lang.Enum<xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus> {
+    private static final /* synthetic */ xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus[] $VALUES = null;
+
+    static {
+            r0 = 0
+            xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus[] r0 = new xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus[r0]
+            xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus.$VALUES = r0
+            return
+    }
+
+    AMPSUnifiedDownloadStatus(java.lang.String r1, int r2) {
+            r0 = this;
+            r0.<init>(r1, r2)
+            return
+    }
+
+    public static xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus valueOf(java.lang.String r1) {
+            java.lang.Class<xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus> r0 = xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus.class
+            java.lang.Enum r1 = java.lang.Enum.valueOf(r0, r1)
+            xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus r1 = (xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus) r1
+            return r1
+    }
+
+    public static xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus[] values() {
+            xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus[] r0 = xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus.$VALUES
+            java.lang.Object r0 = r0.clone()
+            xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus[] r0 = (xyz.adscope.amps.ad.unified.inter.AMPSUnifiedDownloadStatus[]) r0
+            return r0
+    }
+}

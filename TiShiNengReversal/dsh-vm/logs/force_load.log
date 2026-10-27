@@ -1,0 +1,24 @@
+[*] device ok: Device(id="emulator-5554", name="Android Emulator 5554", type='usb')
+[*] spawned pid=7547
+[*] resumed, waiting 60s for app to reach login ...
+[*] anti_detect loaded
+[-] no EmulatorDetectUtil(Java): Error: java.lang.ClassNotFoundException: Didn't find class "com.snail.antifake.jni.EmulatorDetectUtil" on path: DexPathList[[zip file "/data/app/~~q5oRDBRnYtl9FpQelmt-5A==/com.bxkj.student-hLXYAh59iNT2wHDgXcZsRA==/base.apk"],nativeLibraryDirectories=[/data/app/~~q5oRDBRnYtl9FpQelmt-5A==/com.bxkj.student-hLXYAh59iNT2wHDgXcZsRA==/lib/arm64, /data/app/~~q5oRDBRnYtl9FpQelmt-5A==/com.bxkj.student-hLXYAh59iNT2wHDgXcZsRA==/base.apk!/lib/arm64-v8a, /system/lib64, /system_ext/lib64]]
+[-] libemulator_check export not found
+[+] Build fields spoofed
+[*] anti_detect setup done
+[CAP] InMemoryDexClassLoader hooked
+[CAP] DF hook skip: TypeError: cannot read property 'overload' of undefined
+[CAP] all hooks installed, dir=/data/data/com.bxkj.student/files/dexcap
+[LOAD] com.stub.StubApp
+Traceback (most recent call last):
+  File "/Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/frida/force_load.py", line 91, in <module>
+    main()
+    ~~~~^^
+  File "/Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/frida/force_load.py", line 81, in main
+    script2 = session.create_script(fl_src)
+  File "/Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/pyvenv16/lib/python3.14/site-packages/frida/core.py", line 86, in wrapper
+    return f(*args, **kwargs)
+  File "/Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/pyvenv16/lib/python3.14/site-packages/frida/core.py", line 635, in create_script
+    return Script(self._impl.create_script(source, **kwargs))  # type: ignore
+                  ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+frida.InvalidOperationError: session is gone

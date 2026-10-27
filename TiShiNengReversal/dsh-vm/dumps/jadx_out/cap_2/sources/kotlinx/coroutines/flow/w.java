@@ -1,0 +1,30 @@
+package kotlinx.coroutines.flow;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_2_sz9469608.dex */
+final class w<T> extends kotlinx.coroutines.flow.a<T> {
+
+    @org.jetbrains.annotations.NotNull
+    private final kotlin.jvm.functions.Function2<kotlinx.coroutines.flow.j<? super T>, kotlin.coroutines.e<? super kotlin.n1>, java.lang.Object> a;
+
+    public w(@org.jetbrains.annotations.NotNull kotlin.jvm.functions.Function2<? super kotlinx.coroutines.flow.j<? super T>, ? super kotlin.coroutines.e<? super kotlin.n1>, ? extends java.lang.Object> r1) {
+            r0 = this;
+            r0.<init>()
+            r0.a = r1
+            return
+    }
+
+    @Override // kotlinx.coroutines.flow.a
+    @org.jetbrains.annotations.Nullable
+    public java.lang.Object f(@org.jetbrains.annotations.NotNull kotlinx.coroutines.flow.j<? super T> r2, @org.jetbrains.annotations.NotNull kotlin.coroutines.e<? super kotlin.n1> r3) {
+            r1 = this;
+            kotlin.jvm.functions.Function2<kotlinx.coroutines.flow.j<? super T>, kotlin.coroutines.e<? super kotlin.n1>, java.lang.Object> r0 = r1.a
+            java.lang.Object r2 = r0.invoke(r2, r3)
+            java.lang.Object r3 = kotlin.coroutines.intrinsics.a.l()
+            if (r2 != r3) goto Ld
+            return r2
+        Ld:
+            kotlin.n1 r2 = kotlin.n1.a
+            return r2
+    }
+}

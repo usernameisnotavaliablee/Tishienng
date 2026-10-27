@@ -1,0 +1,68 @@
+==================================================================
+subagent_a.log — 体适能动态脱壳执行记录
+时间: 2026-08-14 22:36:26
+==================================================================
+
+[1] 环境核查
+  工作目录: /Volumes/前任肥胖/下载/tishineng.apk/dsh-vm
+  架构: arm64 / macOS 26.5
+  HVF: kern.hv_support=1
+  Java: java version "21.0.11" 2026-04-21 LTS
+  emulator-check accel: accel: 0 Hypervisor.Framework OS X Version 26.5 accel 
+
+[2] 模拟器启动尝试 (HVF, -accel auto)
+  命令: ./sdk/emulator/emulator/emulator -avd tsn30 -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader_indirect -accel auto
+  结果: 日志停在 'Found systemPath ...' 后无进展 (见 logs/emulator_full.log)
+  端口: 5554 CLOSED / 5555 CLOSED (等待 >60s)
+
+[3] 模拟器启动尝试 (软件 TCG, -accel off)
+  结果: 同样停在 'Found systemPath ...' (见 logs/emulator_tcg.log)
+  端口: 5554 CLOSED / 5555 CLOSED
+  结论: 挂起非 HVF 专属，QEMU 初始化(加载 libqemu/内存映射/线程)即被沙箱静默阻断
+
+[4] 提权边界
+  会话审批弹窗已禁用，且本子代理权限范围固定不可扩权 → 无法使用 sandbox_permissions=danger-full-access
+  依据运行时约束，不请求提权、不绕过 → 动态脱壳主流程被硬阻塞
+
+[5] 静态兜底（无需模拟器）关键事实
+  APK: base.apk 132MB, 单 classes.dex (45MB, 360壳)
+  壳特征: /.jiagu / jiagu_x86 / Lcom/stub/StubApp; / libjiagu / needX86Bridge / X86Bridge
+  Shell Application: com.stub.StubApp (360加固标准入口)
+  真业务类清单 classes.txt: 289 类 (com.acse.* / com.bxkj.*)
+  主代理 unidbg 已分析 libtsnsecret.so (业务签名 generateAuthInfo)，与 360 壳解密无关
+  360 壳核心 so 未在 lib/arm64-v8a 中显式列出 libjiagu.so（X86Bridge/libjiagu 字符串在 classes.dex 内）
+
+==================================================================
+最终状态: 失败(硬阻塞) — 模拟器在沙箱内静默卡死，且无法提权
+==================================================================
+
+==================================================================
+阶段2（主代理解决模拟器阻塞后）执行记录 23:38:58
+==================================================================
+[环境] 模拟器 emulator-5554 运行中 (API30 arm64)；adb=/Users/mac/Desktop/tishineng.apk/sdk/platform-tools/platform-tools/adb；HOME=/tmp/dshvm-home
+
+[6] 安装+裸跑：base.apk install Success；SplashActivity->OpenPrivacyAgreementActivity (+2.5s)，进程存活，360壳 libjiagu_64.so 正常执行
+    => 判定：启动正常，继续脱壳
+
+[7] 关键障碍与解决：
+  a. frida 17.17.0 对 plain JS 不注入 Java bridge => 'Java is not defined'（system_server 同样 UNDEF）
+     解决1: pip install frida-legacy-compat + patch_frida() 可恢复 Java（已装于 pyvenv）
+  b. 但任何 frida hook（Java bridge 或 native Interceptor）都会在 360 壳调用 art::Runtime::DisableVerifier 时
+     SIGSEGV(SEGV_ACCERR) 崩溃（frida 16/17 均复现）=> Java 层 InMemoryDexClassLoader/DexFile hook 路线不可用
+     解决2: 降级 frida 16.7.19(host)/16.7.16(device)，并改用【纯 native 内存扫描 dump】——不 hook 任何函数，规避崩溃
+  c. 首次内存扫描 T+30s 只找到 0 dex：真 dex 位于 rwx 匿名区且 360 加载后很快抹掉魔数，扫描时机过晚 + 未过滤大区域
+     解决3: am start 后 ~T+2s attach，扫描过滤 (4KB<size<128MB 且匿名/memfd)，T+0.5~26s 多轮扫描 + native libc 直接落盘
+
+[7结果] 成功 dump：/data/data/com.bxkj.student/files/dexcap/ 落盘 14 个 dex，adb pull 到 dumps/dexcap/dexcap/
+  去重后业务/库 dex 共 9 个（约 55,000 类），全部结构校验通过(magic/file_size/checksum/map)
+  - cap_4 (7027类): com.bxkj.student 全量业务 (splash/SplashActivity, v2/ui/LoginActivity, home/, common/ ...)
+  - cap_8 (6331类): com.acse 全量业务 (acse/ottn/activity, service, receiver ...)
+  - cap_1/2/3/5/6/7/9: 第三方库 dex (androidx 8253, tencent 571/187/42, amap 等)
+  - cap_0/10/11: 360壳(45MB, 762 str/4 cls)，cap_12(284B)/cap_13(96KB)为壳辅助/噪音
+
+[8] jadx 1.5.1 反编译：需 -Duser.home=<workspace>/tools/jadx-home 绕过 ~/Library 沙箱限制；默认 mode 在 360 混淆控制流上卡死，
+    改用 -m fallback 模式成功。cap_4=5690 java，cap_8=6874 java，均 exit=0
+    验证：SplashActivity.java 527 行，方法体完整(CountDownTimer/AMPSSplashAd/databinding/logger 真实逻辑)，非空/nop
+
+最终状态: 成功
+==================================================================

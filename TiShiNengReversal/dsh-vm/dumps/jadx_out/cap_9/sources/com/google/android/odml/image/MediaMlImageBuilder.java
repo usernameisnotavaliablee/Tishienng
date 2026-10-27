@@ -1,0 +1,50 @@
+package com.google.android.odml.image;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+@androidx.annotation.RequiresApi(19)
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_9_sz8866584.dex */
+public class MediaMlImageBuilder {
+    private final android.media.Image zza;
+    private int zzb;
+    private android.graphics.Rect zzc;
+
+    public MediaMlImageBuilder(@androidx.annotation.NonNull android.media.Image r4) {
+            r3 = this;
+            r3.<init>()
+            r3.zza = r4
+            r0 = 0
+            r3.zzb = r0
+            android.graphics.Rect r1 = new android.graphics.Rect
+            int r2 = r4.getWidth()
+            int r4 = r4.getHeight()
+            r1.<init>(r0, r0, r2, r4)
+            r3.zzc = r1
+            return
+    }
+
+    @androidx.annotation.NonNull
+    public com.google.android.odml.image.MlImage build() {
+            r8 = this;
+            com.google.android.odml.image.MlImage r0 = new com.google.android.odml.image.MlImage
+            com.google.android.odml.image.zzi r1 = new com.google.android.odml.image.zzi
+            android.media.Image r2 = r8.zza
+            r1.<init>(r2)
+            int r2 = r8.zzb
+            android.graphics.Rect r3 = r8.zzc
+            android.media.Image r4 = r8.zza
+            int r6 = r4.getWidth()
+            android.media.Image r4 = r8.zza
+            int r7 = r4.getHeight()
+            r4 = 0
+            r0.<init>(r1, r2, r3, r4, r6, r7)
+            return r0
+    }
+
+    @androidx.annotation.NonNull
+    public com.google.android.odml.image.MediaMlImageBuilder setRotation(int r1) {
+            r0 = this;
+            com.google.android.odml.image.MlImage.zzc(r1)
+            r0.zzb = r1
+            return r0
+    }
+}

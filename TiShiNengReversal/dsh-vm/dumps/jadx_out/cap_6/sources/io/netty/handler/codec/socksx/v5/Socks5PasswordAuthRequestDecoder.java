@@ -1,0 +1,190 @@
+package io.netty.handler.codec.socksx.v5;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_6_sz7847784.dex */
+public class Socks5PasswordAuthRequestDecoder extends io.netty.handler.codec.ReplayingDecoder<io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State> {
+
+    /* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+    /* renamed from: io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$1, reason: invalid class name */
+    static /* synthetic */ class AnonymousClass1 {
+        static final /* synthetic */ int[] $SwitchMap$io$netty$handler$codec$socksx$v5$Socks5PasswordAuthRequestDecoder$State = null;
+
+        static {
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State[] r0 = io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State.values()
+                int r0 = r0.length
+                int[] r0 = new int[r0]
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.AnonymousClass1.$SwitchMap$io$netty$handler$codec$socksx$v5$Socks5PasswordAuthRequestDecoder$State = r0
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State r1 = io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State.INIT     // Catch: java.lang.NoSuchFieldError -> L12
+                int r1 = r1.ordinal()     // Catch: java.lang.NoSuchFieldError -> L12
+                r2 = 1
+                r0[r1] = r2     // Catch: java.lang.NoSuchFieldError -> L12
+            L12:
+                int[] r0 = io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.AnonymousClass1.$SwitchMap$io$netty$handler$codec$socksx$v5$Socks5PasswordAuthRequestDecoder$State     // Catch: java.lang.NoSuchFieldError -> L1d
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State r1 = io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State.SUCCESS     // Catch: java.lang.NoSuchFieldError -> L1d
+                int r1 = r1.ordinal()     // Catch: java.lang.NoSuchFieldError -> L1d
+                r2 = 2
+                r0[r1] = r2     // Catch: java.lang.NoSuchFieldError -> L1d
+            L1d:
+                int[] r0 = io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.AnonymousClass1.$SwitchMap$io$netty$handler$codec$socksx$v5$Socks5PasswordAuthRequestDecoder$State     // Catch: java.lang.NoSuchFieldError -> L28
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State r1 = io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State.FAILURE     // Catch: java.lang.NoSuchFieldError -> L28
+                int r1 = r1.ordinal()     // Catch: java.lang.NoSuchFieldError -> L28
+                r2 = 3
+                r0[r1] = r2     // Catch: java.lang.NoSuchFieldError -> L28
+            L28:
+                return
+        }
+
+        public AnonymousClass1() {
+                r1 = this;
+                r1.<init>()
+                return
+        }
+    }
+
+    /* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+    enum State extends java.lang.Enum<io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State> {
+        private static final /* synthetic */ io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State[] $VALUES = null;
+        public static final io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State FAILURE = null;
+        public static final io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State INIT = null;
+        public static final io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State SUCCESS = null;
+
+        static {
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State r0 = new io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State
+                java.lang.String r1 = "INIT"
+                r2 = 0
+                r0.<init>(r1, r2)
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State.INIT = r0
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State r1 = new io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State
+                java.lang.String r3 = "SUCCESS"
+                r4 = 1
+                r1.<init>(r3, r4)
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State.SUCCESS = r1
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State r3 = new io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State
+                java.lang.String r5 = "FAILURE"
+                r6 = 2
+                r3.<init>(r5, r6)
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State.FAILURE = r3
+                r5 = 3
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State[] r5 = new io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State[r5]
+                r5[r2] = r0
+                r5[r4] = r1
+                r5[r6] = r3
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State.$VALUES = r5
+                return
+        }
+
+        State(java.lang.String r1, int r2) {
+                r0 = this;
+                r0.<init>(r1, r2)
+                return
+        }
+
+        public static io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State valueOf(java.lang.String r1) {
+                java.lang.Class<io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State> r0 = io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State.class
+                java.lang.Enum r1 = java.lang.Enum.valueOf(r0, r1)
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State r1 = (io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State) r1
+                return r1
+        }
+
+        public static io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State[] values() {
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State[] r0 = io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State.$VALUES
+                java.lang.Object r0 = r0.clone()
+                io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State[] r0 = (io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State[]) r0
+                return r0
+        }
+    }
+
+    public Socks5PasswordAuthRequestDecoder() {
+            r1 = this;
+            io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State r0 = io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State.INIT
+            r1.<init>(r0)
+            return
+    }
+
+    private void fail(java.util.List<java.lang.Object> r3, java.lang.Exception r4) {
+            r2 = this;
+            boolean r0 = r4 instanceof io.netty.handler.codec.DecoderException
+            if (r0 != 0) goto La
+            io.netty.handler.codec.DecoderException r0 = new io.netty.handler.codec.DecoderException
+            r0.<init>(r4)
+            r4 = r0
+        La:
+            io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State r0 = io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State.FAILURE
+            r2.checkpoint(r0)
+            io.netty.handler.codec.socksx.v5.DefaultSocks5PasswordAuthRequest r0 = new io.netty.handler.codec.socksx.v5.DefaultSocks5PasswordAuthRequest
+            java.lang.String r1 = ""
+            r0.<init>(r1, r1)
+            io.netty.handler.codec.DecoderResult r4 = io.netty.handler.codec.DecoderResult.failure(r4)
+            r0.setDecoderResult(r4)
+            r3.add(r0)
+            return
+    }
+
+    @Override // io.netty.handler.codec.ByteToMessageDecoder
+    protected void decode(io.netty.channel.ChannelHandlerContext r7, io.netty.buffer.ByteBuf r8, java.util.List<java.lang.Object> r9) throws java.lang.Exception {
+            r6 = this;
+            int[] r7 = io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.AnonymousClass1.$SwitchMap$io$netty$handler$codec$socksx$v5$Socks5PasswordAuthRequestDecoder$State     // Catch: java.lang.Exception -> L20
+            java.lang.Object r0 = r6.state()     // Catch: java.lang.Exception -> L20
+            io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State r0 = (io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State) r0     // Catch: java.lang.Exception -> L20
+            int r0 = r0.ordinal()     // Catch: java.lang.Exception -> L20
+            r7 = r7[r0]     // Catch: java.lang.Exception -> L20
+            r0 = 3
+            r1 = 1
+            if (r7 == r1) goto L22
+            r1 = 2
+            if (r7 == r1) goto L59
+            if (r7 == r0) goto L18
+            goto L66
+        L18:
+            int r7 = r6.actualReadableBytes()     // Catch: java.lang.Exception -> L20
+            r8.skipBytes(r7)     // Catch: java.lang.Exception -> L20
+            return
+        L20:
+            r7 = move-exception
+            goto L83
+        L22:
+            int r7 = r8.readerIndex()     // Catch: java.lang.Exception -> L20
+            byte r2 = r8.getByte(r7)     // Catch: java.lang.Exception -> L20
+            if (r2 != r1) goto L67
+            int r1 = r7 + 1
+            short r1 = r8.getUnsignedByte(r1)     // Catch: java.lang.Exception -> L20
+            int r2 = r7 + 2
+            int r3 = r2 + r1
+            short r3 = r8.getUnsignedByte(r3)     // Catch: java.lang.Exception -> L20
+            int r4 = r1 + r3
+            int r4 = r4 + r0
+            r8.skipBytes(r4)     // Catch: java.lang.Exception -> L20
+            io.netty.handler.codec.socksx.v5.DefaultSocks5PasswordAuthRequest r4 = new io.netty.handler.codec.socksx.v5.DefaultSocks5PasswordAuthRequest     // Catch: java.lang.Exception -> L20
+            java.nio.charset.Charset r5 = io.netty.util.CharsetUtil.US_ASCII     // Catch: java.lang.Exception -> L20
+            java.lang.String r2 = r8.toString(r2, r1, r5)     // Catch: java.lang.Exception -> L20
+            int r7 = r7 + r0
+            int r7 = r7 + r1
+            java.lang.String r7 = r8.toString(r7, r3, r5)     // Catch: java.lang.Exception -> L20
+            r4.<init>(r2, r7)     // Catch: java.lang.Exception -> L20
+            r9.add(r4)     // Catch: java.lang.Exception -> L20
+            io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder$State r7 = io.netty.handler.codec.socksx.v5.Socks5PasswordAuthRequestDecoder.State.SUCCESS     // Catch: java.lang.Exception -> L20
+            r6.checkpoint(r7)     // Catch: java.lang.Exception -> L20
+        L59:
+            int r7 = r6.actualReadableBytes()     // Catch: java.lang.Exception -> L20
+            if (r7 <= 0) goto L66
+            io.netty.buffer.ByteBuf r7 = r8.readRetainedSlice(r7)     // Catch: java.lang.Exception -> L20
+            r9.add(r7)     // Catch: java.lang.Exception -> L20
+        L66:
+            return
+        L67:
+            io.netty.handler.codec.DecoderException r7 = new io.netty.handler.codec.DecoderException     // Catch: java.lang.Exception -> L20
+            java.lang.StringBuilder r8 = new java.lang.StringBuilder     // Catch: java.lang.Exception -> L20
+            r8.<init>()     // Catch: java.lang.Exception -> L20
+            java.lang.String r0 = "unsupported subnegotiation version: "
+            r8.append(r0)     // Catch: java.lang.Exception -> L20
+            r8.append(r2)     // Catch: java.lang.Exception -> L20
+            java.lang.String r0 = " (expected: 1)"
+            r8.append(r0)     // Catch: java.lang.Exception -> L20
+            java.lang.String r8 = r8.toString()     // Catch: java.lang.Exception -> L20
+            r7.<init>(r8)     // Catch: java.lang.Exception -> L20
+            throw r7     // Catch: java.lang.Exception -> L20
+        L83:
+            r6.fail(r9, r7)
+            return
+    }
+}

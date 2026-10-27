@@ -1,0 +1,1244 @@
+### _Z11rsa_decryptP7_JNIEnvP8_jobjectP11_jbyteArrayS4_  @0x3ddb90  size=4900
+0x003ddb90  sub      sp, sp, #0x140
+0x003ddb94  stp      x28, x27, [sp, #0xe0]
+0x003ddb98  stp      x26, x25, [sp, #0xf0]
+0x003ddb9c  stp      x24, x23, [sp, #0x100]
+0x003ddba0  stp      x22, x21, [sp, #0x110]
+0x003ddba4  stp      x20, x19, [sp, #0x120]
+0x003ddba8  stp      x29, x30, [sp, #0x130]
+0x003ddbac  add      x29, sp, #0x130
+0x003ddbb0  mrs      x19, tpidr_el0
+0x003ddbb4  ldr      x8, [x19, #0x28]
+0x003ddbb8  mov      x24, xzr
+0x003ddbbc  stur     x8, [x29, #-0x60]
+0x003ddbc0  cbz      x2, #0x3de6dc
+0x003ddbc4  cbz      x3, #0x3de6dc
+0x003ddbc8  stp      x19, x2, [sp, #8]
+0x003ddbcc  mov      w23, #0xe58e
+0x003ddbd0  mov      w22, #0x5c1a
+0x003ddbd4  mov      w24, #0xd67a
+0x003ddbd8  mov      w25, #0xa4f4
+0x003ddbdc  mov      w26, #0xf17e
+0x003ddbe0  mov      w19, #0x5c19
+0x003ddbe4  mov      w8, #0xe58e
+0x003ddbe8  mov      x27, x2
+0x003ddbec  mov      x20, x0
+0x003ddbf0  movk     w23, #0xf6d5, lsl #16
+0x003ddbf4  movk     w22, #0xc974, lsl #16
+0x003ddbf8  movk     w24, #0x9ec0, lsl #16
+0x003ddbfc  movk     w25, #0x8bc9, lsl #16
+0x003ddc00  movk     w26, #0x75a5, lsl #16
+0x003ddc04  movk     w19, #0xc974, lsl #16
+0x003ddc08  movk     w8, #0xf6d5, lsl #16
+0x003ddc0c  str      x3, [sp, #0x20]
+0x003ddc10  cmp      w8, w19
+0x003ddc14  b.le     #0x3ddc70
+0x003ddc18  cmp      w8, w22
+0x003ddc1c  b.eq     #0x3ddcc4
+0x003ddc20  cmp      w8, w26
+0x003ddc24  b.eq     #0x3ddc48
+0x003ddc28  cmp      w8, w23
+0x003ddc2c  b.ne     #0x3ddc10
+0x003ddc30  mov      w8, #0xa4f4
+0x003ddc34  str      x20, [sp, #0x40]
+0x003ddc38  movk     w8, #0x8bc9, lsl #16
+0x003ddc3c  cmp      w8, w19
+0x003ddc40  b.gt     #0x3ddc18
+0x003ddc44  b        #0x3ddc70   ; sub_3ddc70
+0x003ddc48  ldr      x8, [sp, #0x60]
+0x003ddc4c  mov      x0, x20
+0x003ddc50  mov      x1, x27
+0x003ddc54  mov      x2, xzr
+0x003ddc58  blr      x8
+0x003ddc5c  mov      w8, #0x5c1a
+0x003ddc60  stur     x0, [x29, #-0x90]
+0x003ddc64  movk     w8, #0xc974, lsl #16
+0x003ddc68  cmp      w8, w19
+0x003ddc6c  b.gt     #0x3ddc18
+0x003ddc70  cmp      w8, w25
+0x003ddc74  b.eq     #0x3ddca0
+0x003ddc78  cmp      w8, w24
+0x003ddc7c  b.ne     #0x3ddc10
+0x003ddc80  ldr      x8, [sp, #0x50]
+0x003ddc84  ldr      x8, [x8]
+0x003ddc88  str      x8, [sp, #0x60]
+0x003ddc8c  mov      w8, #0xf17e
+0x003ddc90  movk     w8, #0x75a5, lsl #16
+0x003ddc94  cmp      w8, w19
+0x003ddc98  b.gt     #0x3ddc18
+0x003ddc9c  b        #0x3ddc70   ; sub_3ddc70
+0x003ddca0  ldr      x8, [sp, #0x40]
+0x003ddca4  ldr      x8, [x8]
+0x003ddca8  add      x8, x8, #0x5c0
+0x003ddcac  str      x8, [sp, #0x50]
+0x003ddcb0  mov      w8, #0xd67a
+0x003ddcb4  movk     w8, #0x9ec0, lsl #16
+0x003ddcb8  cmp      w8, w19
+0x003ddcbc  b.gt     #0x3ddc18
+0x003ddcc0  b        #0x3ddc70   ; sub_3ddc70
+0x003ddcc4  ldur     x8, [x29, #-0x90]
+0x003ddcc8  str      x8, [sp, #0x18]
+0x003ddccc  cbz      x8, #0x3de714
+0x003ddcd0  mov      w24, #0x3289
+0x003ddcd4  mov      w26, #0xeb44
+0x003ddcd8  mov      w19, #0xd9d1
+0x003ddcdc  mov      w21, #0xcf3a
+0x003ddce0  mov      w25, #0x73b3
+0x003ddce4  mov      w22, #0xeb43
+0x003ddce8  mov      w8, #0x73b3
+0x003ddcec  movk     w24, #0xfffa, lsl #16
+0x003ddcf0  movk     w26, #0x8d58, lsl #16
+0x003ddcf4  movk     w19, #0x8b08, lsl #16
+0x003ddcf8  movk     w21, #0x844c, lsl #16
+0x003ddcfc  movk     w25, #0x7dc, lsl #16
+0x003ddd00  movk     w22, #0x8d58, lsl #16
+0x003ddd04  movk     w8, #0x7dc, lsl #16
+0x003ddd08  cmp      w8, w22
+0x003ddd0c  b.le     #0x3ddd3c
+0x003ddd10  cmp      w8, w26
+0x003ddd14  b.eq     #0x3dddac
+0x003ddd18  cmp      w8, w25
+0x003ddd1c  b.eq     #0x3ddd98
+0x003ddd20  cmp      w8, w24
+0x003ddd24  b.ne     #0x3ddd08
+0x003ddd28  mov      w8, #0xcf3a
+0x003ddd2c  str      x20, [sp, #0x60]
+0x003ddd30  movk     w8, #0x844c, lsl #16
+0x003ddd34  cmp      w8, w22
+0x003ddd38  b.gt     #0x3ddd10
+0x003ddd3c  cmp      w8, w21
+0x003ddd40  b.eq     #0x3ddd74
+0x003ddd44  cmp      w8, w19
+0x003ddd48  b.ne     #0x3ddd08
+0x003ddd4c  ldur     x8, [x29, #-0x90]
+0x003ddd50  mov      x0, x20
+0x003ddd54  mov      x1, x27
+0x003ddd58  blr      x8
+0x003ddd5c  mov      w8, #0xeb44
+0x003ddd60  str      w0, [sp, #0x50]
+0x003ddd64  movk     w8, #0x8d58, lsl #16
+0x003ddd68  cmp      w8, w22
+0x003ddd6c  b.gt     #0x3ddd10
+0x003ddd70  b        #0x3ddd3c   ; sub_3ddd3c
+0x003ddd74  ldr      x8, [sp, #0x60]
+0x003ddd78  ldr      x8, [x8]
+0x003ddd7c  ldr      x8, [x8, #0x558]
+0x003ddd80  stur     x8, [x29, #-0x90]
+0x003ddd84  mov      w8, #0xd9d1
+0x003ddd88  movk     w8, #0x8b08, lsl #16
+0x003ddd8c  cmp      w8, w22
+0x003ddd90  b.gt     #0x3ddd10
+0x003ddd94  b        #0x3ddd3c   ; sub_3ddd3c
+0x003ddd98  mov      w8, #0x3289
+0x003ddd9c  movk     w8, #0xfffa, lsl #16
+0x003ddda0  cmp      w8, w22
+0x003ddda4  b.gt     #0x3ddd10
+0x003ddda8  b        #0x3ddd3c   ; sub_3ddd3c
+0x003dddac  ldrsw    x24, [sp, #0x50]
+0x003dddb0  mov      w26, #0x5c19
+0x003dddb4  mov      w28, #0xa4f4
+0x003dddb8  mov      w27, #0xd67a
+0x003dddbc  mov      w19, #0x5c1a
+0x003dddc0  mov      w22, #0xf17e
+0x003dddc4  mov      w21, #0xe58e
+0x003dddc8  movk     w26, #0xc974, lsl #16
+0x003dddcc  movk     w28, #0x8bc9, lsl #16
+0x003dddd0  movk     w27, #0x9ec0, lsl #16
+0x003dddd4  movk     w19, #0xc974, lsl #16
+0x003dddd8  movk     w22, #0x75a5, lsl #16
+0x003ddddc  movk     w21, #0xf6d5, lsl #16
+0x003ddde0  cmp      w23, w26
+0x003ddde4  b.le     #0x3dde40
+0x003ddde8  cmp      w23, w19
+0x003dddec  b.eq     #0x3dde94
+0x003dddf0  cmp      w23, w22
+0x003dddf4  b.eq     #0x3dde18
+0x003dddf8  cmp      w23, w21
+0x003dddfc  b.ne     #0x3ddde0
+0x003dde00  mov      w23, #0xa4f4
+0x003dde04  str      x20, [sp, #0x40]
+0x003dde08  movk     w23, #0x8bc9, lsl #16
+0x003dde0c  cmp      w23, w26
+0x003dde10  b.gt     #0x3ddde8
+0x003dde14  b        #0x3dde40   ; sub_3dde40
+0x003dde18  ldr      x8, [sp, #0x60]
+0x003dde1c  ldr      x1, [sp, #0x20]
+0x003dde20  mov      x0, x20
+0x003dde24  mov      x2, xzr
+0x003dde28  blr      x8
+0x003dde2c  mov      w23, #0x5c1a
+0x003dde30  stur     x0, [x29, #-0x90]
+0x003dde34  movk     w23, #0xc974, lsl #16
+0x003dde38  cmp      w23, w26
+0x003dde3c  b.gt     #0x3ddde8
+0x003dde40  cmp      w23, w28
+0x003dde44  b.eq     #0x3dde70
+0x003dde48  cmp      w23, w27
+0x003dde4c  b.ne     #0x3ddde0
+0x003dde50  ldr      x8, [sp, #0x50]
+0x003dde54  mov      w23, #0xf17e
+0x003dde58  movk     w23, #0x75a5, lsl #16
+0x003dde5c  ldr      x8, [x8]
+0x003dde60  str      x8, [sp, #0x60]
+0x003dde64  cmp      w23, w26
+0x003dde68  b.gt     #0x3ddde8
+0x003dde6c  b        #0x3dde40   ; sub_3dde40
+0x003dde70  ldr      x8, [sp, #0x40]
+0x003dde74  mov      w23, #0xd67a
+0x003dde78  movk     w23, #0x9ec0, lsl #16
+0x003dde7c  ldr      x8, [x8]
+0x003dde80  add      x8, x8, #0x5c0
+0x003dde84  str      x8, [sp, #0x50]
+0x003dde88  cmp      w23, w26
+0x003dde8c  b.gt     #0x3ddde8
+0x003dde90  b        #0x3dde40   ; sub_3dde40
+0x003dde94  ldur     x23, [x29, #-0x90]
+0x003dde98  cbz      x23, #0x3de748
+0x003dde9c  mov      w19, #0xeb43
+0x003ddea0  mov      w21, #0xcf3a
+0x003ddea4  mov      w22, #0xd9d1
+0x003ddea8  mov      w26, #0xeb44
+0x003ddeac  mov      w27, #0x73b3
+0x003ddeb0  mov      w28, #0x3289
+0x003ddeb4  movk     w19, #0x8d58, lsl #16
+0x003ddeb8  movk     w21, #0x844c, lsl #16
+0x003ddebc  movk     w22, #0x8b08, lsl #16
+0x003ddec0  movk     w26, #0x8d58, lsl #16
+0x003ddec4  movk     w27, #0x7dc, lsl #16
+0x003ddec8  movk     w28, #0xfffa, lsl #16
+0x003ddecc  cmp      w25, w19
+0x003dded0  b.le     #0x3ddf00
+0x003dded4  cmp      w25, w26
+0x003dded8  b.eq     #0x3ddf70
+0x003ddedc  cmp      w25, w27
+0x003ddee0  b.eq     #0x3ddf5c
+0x003ddee4  cmp      w25, w28
+0x003ddee8  b.ne     #0x3ddecc
+0x003ddeec  mov      w25, #0xcf3a
+0x003ddef0  str      x20, [sp, #0x60]
+0x003ddef4  movk     w25, #0x844c, lsl #16
+0x003ddef8  cmp      w25, w19
+0x003ddefc  b.gt     #0x3dded4
+0x003ddf00  cmp      w25, w21
+0x003ddf04  b.eq     #0x3ddf38
+0x003ddf08  cmp      w25, w22
+0x003ddf0c  b.ne     #0x3ddecc
+0x003ddf10  ldur     x8, [x29, #-0x90]
+0x003ddf14  ldr      x1, [sp, #0x20]
+0x003ddf18  mov      x0, x20
+0x003ddf1c  blr      x8
+0x003ddf20  mov      w25, #0xeb44
+0x003ddf24  str      w0, [sp, #0x50]
+0x003ddf28  movk     w25, #0x8d58, lsl #16
+0x003ddf2c  cmp      w25, w19
+0x003ddf30  b.gt     #0x3dded4
+0x003ddf34  b        #0x3ddf00   ; sub_3ddf00
+0x003ddf38  ldr      x8, [sp, #0x60]
+0x003ddf3c  mov      w25, #0xd9d1
+0x003ddf40  movk     w25, #0x8b08, lsl #16
+0x003ddf44  ldr      x8, [x8]
+0x003ddf48  ldr      x8, [x8, #0x558]
+0x003ddf4c  stur     x8, [x29, #-0x90]
+0x003ddf50  cmp      w25, w19
+0x003ddf54  b.gt     #0x3dded4
+0x003ddf58  b        #0x3ddf00   ; sub_3ddf00
+0x003ddf5c  mov      w25, #0x3289
+0x003ddf60  movk     w25, #0xfffa, lsl #16
+0x003ddf64  cmp      w25, w19
+0x003ddf68  b.gt     #0x3dded4
+0x003ddf6c  b        #0x3ddf00   ; sub_3ddf00
+0x003ddf70  ldr      w1, [sp, #0x50]
+0x003ddf74  ldp      x27, x19, [sp, #0x10]
+0x003ddf78  mov      x0, x23
+0x003ddf7c  bl       #0xe4690   ; sub_e4690
+0x003ddf80  mov      x25, x0
+0x003ddf84  cbz      x0, #0x3de77c
+0x003ddf88  adrp     x8, #0x48f000
+0x003ddf8c  ldr      x8, [x8, #0x9e0]   ; -> [GOT] BIO_free
+0x003ddf90  str      x25, [sp, #0x88]
+0x003ddf94  str      x8, [sp, #0x70]
+0x003ddf98  sub      x0, x29, #0x90
+0x003ddf9c  add      x1, sp, #0x88
+0x003ddfa0  add      x2, sp, #0x70
+0x003ddfa4  bl       #0xe3120   ; sub_e3120
+0x003ddfa8  mov      x0, x25
+0x003ddfac  mov      x1, xzr
+0x003ddfb0  bl       #0xdf960   ; sub_df960
+0x003ddfb4  mov      x25, x0
+0x003ddfb8  cbz      x0, #0x3de7b0
+0x003ddfbc  adrp     x8, #0x48f000
+0x003ddfc0  ldr      x8, [x8, #0x4d8]   ; -> [GOT] EVP_PKEY_free
+0x003ddfc4  str      x25, [sp, #0x88]
+0x003ddfc8  str      x8, [sp, #0x70]
+0x003ddfcc  add      x0, sp, #0x60
+0x003ddfd0  add      x1, sp, #0x88
+0x003ddfd4  add      x2, sp, #0x70
+0x003ddfd8  bl       #0xe1a90   ; sub_e1a90
+0x003ddfdc  mov      x0, x25
+0x003ddfe0  bl       #0xe5050   ; sub_e5050
+0x003ddfe4  cbz      x0, #0x3de818
+0x003ddfe8  adrp     x8, #0x48f000
+0x003ddfec  ldr      x8, [x8, #0x4b8]   ; -> [GOT] RSA_free
+0x003ddff0  str      x0, [sp, #0x88]
+0x003ddff4  str      x8, [sp, #0x70]
+0x003ddff8  add      x0, sp, #0x50
+0x003ddffc  add      x1, sp, #0x88
+0x003de000  add      x2, sp, #0x70
+0x003de004  bl       #0xdf530   ; sub_df530
+0x003de008  mov      x0, x25
+0x003de00c  mov      x1, xzr
+0x003de010  bl       #0xdece0   ; sub_dece0
+0x003de014  mov      x26, x0
+0x003de018  cbz      x0, #0x3de880
+0x003de01c  adrp     x8, #0x48f000
+0x003de020  ldr      x8, [x8, #0xfa0]   ; -> [GOT] EVP_PKEY_CTX_free
+0x003de024  str      x26, [sp, #0x88]
+0x003de028  str      x8, [sp, #0x70]
+0x003de02c  add      x0, sp, #0x40
+0x003de030  add      x1, sp, #0x88
+0x003de034  add      x2, sp, #0x70
+0x003de038  bl       #0xdfc20   ; sub_dfc20
+0x003de03c  mov      x0, x26
+0x003de040  bl       #0xe83f0   ; sub_e83f0
+0x003de044  cmp      w0, #0
+0x003de048  b.le     #0x3de8b4
+0x003de04c  mov      w1, #-1
+0x003de050  mov      w2, #0x1001
+0x003de054  mov      w3, #1
+0x003de058  mov      x0, x26
+0x003de05c  mov      x4, xzr
+0x003de060  bl       #0xe0110   ; sub_e0110
+0x003de064  cmp      w0, #0
+0x003de068  b.le     #0x3de91c
+0x003de06c  str      xzr, [sp, #0x38]
+0x003de070  add      x2, sp, #0x38
+0x003de074  mov      x0, x26
+0x003de078  mov      x1, xzr
+0x003de07c  mov      x3, x19
+0x003de080  mov      x4, x24
+0x003de084  bl       #0xe1e80   ; sub_e1e80
+0x003de088  cmp      w0, #0
+0x003de08c  b.le     #0x3de984
+0x003de090  ldr      x0, [sp, #0x38]
+0x003de094  bl       #0xe1200   ; sub_e1200
+0x003de098  cbz      x0, #0x3de9ec
+0x003de09c  adrp     x8, #0x48f000
+0x003de0a0  ldr      x8, [x8, #0x3c0]   ; -> [GOT] free
+0x003de0a4  mov      x25, x0
+0x003de0a8  str      x0, [sp, #0x88]
+0x003de0ac  str      x8, [sp, #0x70]
+0x003de0b0  add      x0, sp, #0x28
+0x003de0b4  add      x1, sp, #0x88
+0x003de0b8  add      x2, sp, #0x70
+0x003de0bc  bl       #0xe3f50   ; sub_e3f50
+0x003de0c0  add      x2, sp, #0x38
+0x003de0c4  mov      x0, x26
+0x003de0c8  mov      x1, x25
+0x003de0cc  mov      x3, x19
+0x003de0d0  mov      x4, x24
+0x003de0d4  mov      x28, xzr
+0x003de0d8  bl       #0xe1e80   ; sub_e1e80
+0x003de0dc  cmp      w0, #0
+0x003de0e0  b.le     #0x3dea20
+0x003de0e4  ldr      x1, [sp, #0x38]
+0x003de0e8  mov      w8, #0x8285
+0x003de0ec  mov      w9, #0x8e44
+0x003de0f0  mov      w10, #0xab15
+0x003de0f4  mov      w11, #0x6d73
+0x003de0f8  mov      w12, #0xb31f
+0x003de0fc  mov      w13, #0x8e45
+0x003de100  mov      w14, #0x8285
+0x003de104  movk     w8, #0xf7ee, lsl #16
+0x003de108  movk     w9, #0x20eb, lsl #16
+0x003de10c  movk     w10, #0xa3e1, lsl #16
+0x003de110  movk     w11, #0x705f, lsl #16
+0x003de114  movk     w12, #0x4bf0, lsl #16
+0x003de118  movk     w13, #0x20eb, lsl #16
+0x003de11c  movk     w14, #0xf7ee, lsl #16
+0x003de120  cmp      w14, w9
+0x003de124  b.gt     #0x3de148
+0x003de128  b        #0x3de1a8   ; sub_3de1a8
+0x003de12c  ldur     x14, [x29, #-0x70]
+0x003de130  add      x14, x14, #0x580
+0x003de134  stur     x14, [x29, #-0x68]
+0x003de138  mov      w14, #0xab15
+0x003de13c  movk     w14, #0xa3e1, lsl #16
+0x003de140  cmp      w14, w9
+0x003de144  b.le     #0x3de1a8
+0x003de148  cmp      w14, w11
+0x003de14c  b.eq     #0x3de12c
+0x003de150  cmp      w14, w12
+0x003de154  b.eq     #0x3de178
+0x003de158  cmp      w14, w13
+0x003de15c  b.ne     #0x3de140
+0x003de160  mov      w14, #0xb31f
+0x003de164  stur     x20, [x29, #-0x78]
+0x003de168  movk     w14, #0x4bf0, lsl #16
+0x003de16c  cmp      w14, w9
+0x003de170  b.gt     #0x3de148
+0x003de174  b        #0x3de1a8   ; sub_3de1a8
+0x003de178  ldur     x14, [x29, #-0x78]
+0x003de17c  ldr      x14, [x14]
+0x003de180  stur     x14, [x29, #-0x70]
+0x003de184  mov      w14, #0x6d73
+0x003de188  movk     w14, #0x705f, lsl #16
+0x003de18c  cmp      w14, w9
+0x003de190  b.gt     #0x3de148
+0x003de194  b        #0x3de1a8   ; sub_3de1a8
+0x003de198  mov      w14, #0x8e45
+0x003de19c  movk     w14, #0x20eb, lsl #16
+0x003de1a0  cmp      w14, w9
+0x003de1a4  b.gt     #0x3de148
+0x003de1a8  cmp      w14, w10
+0x003de1ac  b.eq     #0x3de1bc
+0x003de1b0  cmp      w14, w8
+0x003de1b4  b.ne     #0x3de140
+0x003de1b8  b        #0x3de198   ; sub_3de198
+0x003de1bc  ldur     x8, [x29, #-0x68]
+0x003de1c0  ldr      x8, [x8]   ; -> [GOT] OPENSSL_uni2utf8
+0x003de1c4  mov      x0, x20
+0x003de1c8  mov      x28, xzr
+0x003de1cc  blr      x8   ; [GOT] OPENSSL_uni2utf8
+0x003de1d0  mov      x24, x0
+0x003de1d4  cbz      x0, #0x3dea88
+0x003de1d8  ldr      x3, [sp, #0x38]
+0x003de1dc  mov      w8, #0xf91c
+0x003de1e0  mov      w9, #0xf91b
+0x003de1e4  mov      w10, #0x3abb
+0x003de1e8  mov      w11, #0xd2e
+0x003de1ec  mov      w12, #0x76ea
+0x003de1f0  mov      w13, #0x9a07
+0x003de1f4  mov      w14, #0xf91c
+0x003de1f8  movk     w8, #0xe391, lsl #16
+0x003de1fc  movk     w9, #0xe391, lsl #16
+0x003de200  movk     w10, #0xc840, lsl #16
+0x003de204  movk     w11, #0xd7d7, lsl #16
+0x003de208  movk     w12, #0x3fef, lsl #16
+0x003de20c  movk     w13, #0x463f, lsl #16
+0x003de210  movk     w14, #0xe391, lsl #16
+0x003de214  cmp      w14, w9
+0x003de218  b.gt     #0x3de230
+0x003de21c  b        #0x3de27c   ; sub_3de27c
+0x003de220  mov      w14, #0x9a07
+0x003de224  movk     w14, #0x463f, lsl #16
+0x003de228  cmp      w14, w9
+0x003de22c  b.le     #0x3de27c
+0x003de230  cmp      w14, w8
+0x003de234  b.eq     #0x3de220
+0x003de238  cmp      w14, w12
+0x003de23c  b.eq     #0x3de260
+0x003de240  cmp      w14, w13
+0x003de244  b.ne     #0x3de228
+0x003de248  mov      w14, #0xd2e
+0x003de24c  stur     x20, [x29, #-0x78]
+0x003de250  movk     w14, #0xd7d7, lsl #16
+0x003de254  cmp      w14, w9
+0x003de258  b.gt     #0x3de230
+0x003de25c  b        #0x3de27c   ; sub_3de27c
+0x003de260  ldur     x14, [x29, #-0x70]
+0x003de264  ldr      x14, [x14, #0x680]
+0x003de268  stur     x14, [x29, #-0x68]
+0x003de26c  mov      w14, #0x3abb
+0x003de270  movk     w14, #0xc840, lsl #16
+0x003de274  cmp      w14, w9
+0x003de278  b.gt     #0x3de230
+0x003de27c  cmp      w14, w10
+0x003de280  b.eq     #0x3de2ac
+0x003de284  cmp      w14, w11
+0x003de288  b.ne     #0x3de228
+0x003de28c  ldur     x14, [x29, #-0x78]
+0x003de290  ldr      x14, [x14]
+0x003de294  stur     x14, [x29, #-0x70]
+0x003de298  mov      w14, #0x76ea
+0x003de29c  movk     w14, #0x3fef, lsl #16
+0x003de2a0  cmp      w14, w9
+0x003de2a4  b.gt     #0x3de230
+0x003de2a8  b        #0x3de27c   ; sub_3de27c
+0x003de2ac  ldur     x8, [x29, #-0x68]
+0x003de2b0  mov      x0, x20
+0x003de2b4  mov      x1, x24
+0x003de2b8  mov      w2, wzr
+0x003de2bc  mov      x4, x25
+0x003de2c0  mov      x28, x24
+0x003de2c4  blr      x8   ; [GOT] OPENSSL_uni2utf8
+0x003de2c8  mov      w8, #0x8526
+0x003de2cc  mov      w9, #0x4d79
+0x003de2d0  mov      w10, #0xca0b
+0x003de2d4  mov      w11, #0xb35f
+0x003de2d8  mov      w12, #0x4d7a
+0x003de2dc  mov      w13, #0xae5b
+0x003de2e0  mov      w14, #0x8526
+0x003de2e4  movk     w8, #0x62ea, lsl #16
+0x003de2e8  movk     w9, #0x11c6, lsl #16
+0x003de2ec  movk     w10, #0xc792, lsl #16
+0x003de2f0  movk     w11, #0xfeac, lsl #16
+0x003de2f4  movk     w12, #0x11c6, lsl #16
+0x003de2f8  movk     w13, #0x706a, lsl #16
+0x003de2fc  movk     w14, #0x62ea, lsl #16
+0x003de300  cmp      w14, w9
+0x003de304  b.gt     #0x3de328
+0x003de308  b        #0x3de374   ; sub_3de374
+0x003de30c  ldur     x14, [x29, #-0x80]
+0x003de310  ldr      x14, [x14]
+0x003de314  stur     x14, [x29, #-0x78]
+0x003de318  mov      w14, #0xae5b
+0x003de31c  movk     w14, #0x706a, lsl #16
+0x003de320  cmp      w14, w9
+0x003de324  b.le     #0x3de374
+0x003de328  cmp      w14, w12
+0x003de32c  b.eq     #0x3de30c
+0x003de330  cmp      w14, w13
+0x003de334  b.eq     #0x3de358
+0x003de338  cmp      w14, w8
+0x003de33c  b.ne     #0x3de320
+0x003de340  mov      w14, #0x4d7a
+0x003de344  stur     x20, [x29, #-0x80]
+0x003de348  movk     w14, #0x11c6, lsl #16
+0x003de34c  cmp      w14, w9
+0x003de350  b.gt     #0x3de328
+0x003de354  b        #0x3de374   ; sub_3de374
+0x003de358  ldur     x14, [x29, #-0x78]
+0x003de35c  add      x14, x14, #0x720
+0x003de360  stur     x14, [x29, #-0x70]
+0x003de364  mov      w14, #0xb35f
+0x003de368  movk     w14, #0xfeac, lsl #16
+0x003de36c  cmp      w14, w9
+0x003de370  b.gt     #0x3de328
+0x003de374  cmp      w14, w10
+0x003de378  b.eq     #0x3de3a4
+0x003de37c  cmp      w14, w11
+0x003de380  b.ne     #0x3de320
+0x003de384  ldur     x14, [x29, #-0x70]
+0x003de388  ldr      x14, [x14]
+0x003de38c  stur     x14, [x29, #-0x68]
+0x003de390  mov      w14, #0xca0b
+0x003de394  movk     w14, #0xc792, lsl #16
+0x003de398  cmp      w14, w9
+0x003de39c  b.gt     #0x3de328
+0x003de3a0  b        #0x3de374   ; sub_3de374
+0x003de3a4  ldur     x8, [x29, #-0x68]
+0x003de3a8  mov      x28, x24
+0x003de3ac  mov      x0, x20
+0x003de3b0  blr      x8   ; [GOT] OPENSSL_uni2utf8
+0x003de3b4  tst      w0, #0xff
+0x003de3b8  b.ne     #0x3deac0
+0x003de3bc  mov      w19, #0x77b
+0x003de3c0  mov      w21, #0x6a31
+0x003de3c4  mov      w22, #0x77b
+0x003de3c8  movk     w19, #0x9991, lsl #16
+0x003de3cc  movk     w21, #0x9384, lsl #16
+0x003de3d0  movk     w22, #0x9991, lsl #16
+0x003de3d4  cmp      w22, w21
+0x003de3d8  b.eq     #0x3de400
+0x003de3dc  cmp      w22, w19
+0x003de3e0  b.ne     #0x3de3d4
+0x003de3e4  mov      w22, #0x6a31
+0x003de3e8  add      x0, sp, #0x28
+0x003de3ec  mov      x1, xzr
+0x003de3f0  movk     w22, #0x9384, lsl #16
+0x003de3f4  bl       #0x158bcc   ; sub_158bcc
+0x003de3f8  cmp      w22, w21
+0x003de3fc  b.ne     #0x3de3dc
+0x003de400  mov      w19, #0xe2aa
+0x003de404  mov      w21, #0x7fe
+0x003de408  mov      w22, #0xe2aa
+0x003de40c  movk     w19, #0x2a75, lsl #16
+0x003de410  movk     w21, #0xa272, lsl #16
+0x003de414  movk     w22, #0x2a75, lsl #16
+0x003de418  cmp      w22, w21
+0x003de41c  b.eq     #0x3de444
+0x003de420  cmp      w22, w19
+0x003de424  b.ne     #0x3de418
+0x003de428  mov      w22, #0x7fe
+0x003de42c  add      x0, sp, #0x40
+0x003de430  mov      x1, xzr
+0x003de434  movk     w22, #0xa272, lsl #16
+0x003de438  bl       #0x158654   ; sub_158654
+0x003de43c  cmp      w22, w21
+0x003de440  b.ne     #0x3de420
+0x003de444  mov      w19, #0x67a8
+0x003de448  mov      w21, #0xb86f
+0x003de44c  mov      w22, #0x67a8
+0x003de450  movk     w19, #0xdef7, lsl #16
+0x003de454  movk     w21, #0xefe4, lsl #16
+0x003de458  movk     w22, #0xdef7, lsl #16
+0x003de45c  cmp      w22, w21
+0x003de460  b.eq     #0x3de488
+0x003de464  cmp      w22, w19
+0x003de468  b.ne     #0x3de45c
+0x003de46c  mov      w22, #0xb86f
+0x003de470  add      x0, sp, #0x50
+0x003de474  mov      x1, xzr
+0x003de478  movk     w22, #0xefe4, lsl #16
+0x003de47c  bl       #0x1580cc   ; sub_1580cc
+0x003de480  cmp      w22, w21
+0x003de484  b.ne     #0x3de464
+0x003de488  mov      w19, #0xcb8e
+0x003de48c  mov      w21, #0xf9b2
+0x003de490  mov      w22, #0xcb8e
+0x003de494  movk     w19, #0x1e9a, lsl #16
+0x003de498  movk     w21, #0xfade, lsl #16
+0x003de49c  movk     w22, #0x1e9a, lsl #16
+0x003de4a0  cmp      w22, w21
+0x003de4a4  b.eq     #0x3de4cc
+0x003de4a8  cmp      w22, w19
+0x003de4ac  b.ne     #0x3de4a0
+0x003de4b0  mov      w22, #0xf9b2
+0x003de4b4  add      x0, sp, #0x60
+0x003de4b8  mov      x1, xzr
+0x003de4bc  movk     w22, #0xfade, lsl #16
+0x003de4c0  bl       #0x157b5c   ; sub_157b5c
+0x003de4c4  cmp      w22, w21
+0x003de4c8  b.ne     #0x3de4a8
+0x003de4cc  mov      w19, #0x222c
+0x003de4d0  mov      w21, #0x3998
+0x003de4d4  mov      w22, #0x222c
+0x003de4d8  movk     w19, #0x7704, lsl #16
+0x003de4dc  movk     w21, #0xe784, lsl #16
+0x003de4e0  movk     w22, #0x7704, lsl #16
+0x003de4e4  cmp      w22, w21
+0x003de4e8  b.eq     #0x3de510
+0x003de4ec  cmp      w22, w19
+0x003de4f0  b.ne     #0x3de4e4
+0x003de4f4  mov      w22, #0x3998
+0x003de4f8  sub      x0, x29, #0x90
+0x003de4fc  mov      x1, xzr
+0x003de500  movk     w22, #0xe784, lsl #16
+0x003de504  bl       #0x154b08   ; sub_154b08
+0x003de508  cmp      w22, w21
+0x003de50c  b.ne     #0x3de4ec
+0x003de510  ldr      x19, [sp, #8]
+0x003de514  ldr      x2, [sp, #0x18]
+0x003de518  mov      w8, #0x813e
+0x003de51c  mov      w9, #0xdc1e
+0x003de520  mov      w10, #0x66a4
+0x003de524  mov      w25, #0x5325
+0x003de528  mov      w11, #0x1003
+0x003de52c  movk     w8, #0xe1e5, lsl #16
+0x003de530  movk     w9, #0x8b55, lsl #16
+0x003de534  movk     w10, #0x7ba7, lsl #16
+0x003de538  movk     w25, #0x4fb3, lsl #16
+0x003de53c  movk     w11, #0x499f, lsl #16
+0x003de540  cbz      x2, #0x3de5fc
+0x003de544  mov      w12, #0x1002
+0x003de548  mov      w13, #0x5325
+0x003de54c  movk     w12, #0x499f, lsl #16
+0x003de550  movk     w13, #0x4fb3, lsl #16
+0x003de554  cmp      w13, w12
+0x003de558  b.gt     #0x3de580
+0x003de55c  b        #0x3de5bc   ; sub_3de5bc
+0x003de560  ldr      x13, [sp, #0x70]
+0x003de564  ldr      x13, [x13]
+0x003de568  add      x13, x13, #0x600
+0x003de56c  str      x13, [sp, #0x88]
+0x003de570  mov      w13, #0xdc1e
+0x003de574  movk     w13, #0x8b55, lsl #16
+0x003de578  cmp      w13, w12
+0x003de57c  b.le     #0x3de5bc
+0x003de580  cmp      w13, w11
+0x003de584  b.eq     #0x3de560
+0x003de588  cmp      w13, w25
+0x003de58c  b.eq     #0x3de5ac
+0x003de590  cmp      w13, w10
+0x003de594  b.ne     #0x3de578
+0x003de598  mov      w13, #0x813e
+0x003de59c  movk     w13, #0xe1e5, lsl #16
+0x003de5a0  cmp      w13, w12
+0x003de5a4  b.gt     #0x3de580
+0x003de5a8  b        #0x3de5bc   ; sub_3de5bc
+0x003de5ac  mov      w13, #0x66a4
+0x003de5b0  movk     w13, #0x7ba7, lsl #16
+0x003de5b4  cmp      w13, w12
+0x003de5b8  b.gt     #0x3de580
+0x003de5bc  cmp      w13, w9
+0x003de5c0  b.eq     #0x3de5e4
+0x003de5c4  cmp      w13, w8
+0x003de5c8  b.ne     #0x3de578
+0x003de5cc  mov      w13, #0x1003
+0x003de5d0  str      x20, [sp, #0x70]
+0x003de5d4  movk     w13, #0x499f, lsl #16
+0x003de5d8  cmp      w13, w12
+0x003de5dc  b.gt     #0x3de580
+0x003de5e0  b        #0x3de5bc   ; sub_3de5bc
+0x003de5e4  ldr      x8, [sp, #0x88]
+0x003de5e8  mov      w3, #2
+0x003de5ec  mov      x0, x20
+0x003de5f0  mov      x1, x27
+0x003de5f4  ldr      x8, [x8]   ; -> [GOT] OPENSSL_uni2utf8
+0x003de5f8  blr      x8   ; [GOT] OPENSSL_uni2utf8
+0x003de5fc  cbz      x23, #0x3de6dc
+0x003de600  mov      w8, #0x1002
+0x003de604  mov      w9, #0xdc1e
+0x003de608  mov      w10, #0x813e
+0x003de60c  mov      w11, #0x1003
+0x003de610  mov      w12, #0x5325
+0x003de614  mov      w13, #0x66a4
+0x003de618  movk     w8, #0x499f, lsl #16
+0x003de61c  movk     w9, #0x8b55, lsl #16
+0x003de620  movk     w10, #0xe1e5, lsl #16
+0x003de624  movk     w11, #0x499f, lsl #16
+0x003de628  movk     w12, #0x4fb3, lsl #16
+0x003de62c  movk     w13, #0x7ba7, lsl #16
+0x003de630  cmp      w25, w8
+0x003de634  b.gt     #0x3de65c
+0x003de638  b        #0x3de698   ; sub_3de698
+0x003de63c  ldr      x14, [sp, #0x70]
+0x003de640  mov      w25, #0xdc1e
+0x003de644  movk     w25, #0x8b55, lsl #16
+0x003de648  ldr      x14, [x14]
+0x003de64c  add      x14, x14, #0x600
+0x003de650  str      x14, [sp, #0x88]
+0x003de654  cmp      w25, w8
+0x003de658  b.le     #0x3de698
+0x003de65c  cmp      w25, w11
+0x003de660  b.eq     #0x3de63c
+0x003de664  cmp      w25, w12
+0x003de668  b.eq     #0x3de688
+0x003de66c  cmp      w25, w13
+0x003de670  b.ne     #0x3de654
+0x003de674  mov      w25, #0x813e
+0x003de678  movk     w25, #0xe1e5, lsl #16
+0x003de67c  cmp      w25, w8
+0x003de680  b.gt     #0x3de65c
+0x003de684  b        #0x3de698   ; sub_3de698
+0x003de688  mov      w25, #0x66a4
+0x003de68c  movk     w25, #0x7ba7, lsl #16
+0x003de690  cmp      w25, w8
+0x003de694  b.gt     #0x3de65c
+0x003de698  cmp      w25, w9
+0x003de69c  b.eq     #0x3de6c0
+0x003de6a0  cmp      w25, w10
+0x003de6a4  b.ne     #0x3de654
+0x003de6a8  mov      w25, #0x1003
+0x003de6ac  str      x20, [sp, #0x70]
+0x003de6b0  movk     w25, #0x499f, lsl #16
+0x003de6b4  cmp      w25, w8
+0x003de6b8  b.gt     #0x3de65c
+0x003de6bc  b        #0x3de698   ; sub_3de698
+0x003de6c0  ldr      x8, [sp, #0x88]
+0x003de6c4  ldr      x1, [sp, #0x20]
+0x003de6c8  mov      w3, #2
+0x003de6cc  mov      x0, x20
+0x003de6d0  ldr      x8, [x8]   ; -> [GOT] OPENSSL_uni2utf8
+0x003de6d4  mov      x2, x23
+0x003de6d8  blr      x8   ; [GOT] OPENSSL_uni2utf8
+0x003de6dc  ldr      x8, [x19, #0x28]
+0x003de6e0  ldur     x9, [x29, #-0x60]
+0x003de6e4  cmp      x8, x9
+0x003de6e8  b.ne     #0x3de710
+0x003de6ec  mov      x0, x24
+0x003de6f0  ldp      x29, x30, [sp, #0x130]
+0x003de6f4  ldp      x20, x19, [sp, #0x120]
+0x003de6f8  ldp      x22, x21, [sp, #0x110]
+0x003de6fc  ldp      x24, x23, [sp, #0x100]
+0x003de700  ldp      x26, x25, [sp, #0xf0]
+0x003de704  ldp      x28, x27, [sp, #0xe0]
+0x003de708  add      sp, sp, #0x140
+0x003de70c  ret      
+0x003de710  bl       #0xe8bf0   ; sub_e8bf0
+0x003de714  mov      w0, #0x10
+0x003de718  bl       #0xe0630   ; sub_e0630
+0x003de71c  mov      x22, x0
+0x003de720  adrp     x1, #0x3f2000
+0x003de724  add      x1, x1, #0xf43   ; -> 0x3f2f43 = 'Failed to get encryptedData elements'
+0x003de728  bl       #0xe5a10   ; sub_e5a10
+0x003de72c  adrp     x1, #0x48f000
+0x003de730  adrp     x2, #0x48f000
+0x003de734  ldr      x1, [x1, #0x700]   ; -> [GOT] _ZTISt13runtime_error
+0x003de738  ldr      x2, [x2, #0x9c8]   ; -> [GOT] _ZNSt13runtime_errorD1Ev
+0x003de73c  mov      x0, x22
+0x003de740  bl       #0xe6690   ; sub_e6690
+0x003de744  b        #0x3deaf4   ; sub_3deaf4
+0x003de748  mov      w0, #0x10
+0x003de74c  bl       #0xe0630   ; sub_e0630
+0x003de750  mov      x23, x0
+0x003de754  adrp     x1, #0x3f2000
+0x003de758  add      x1, x1, #0xf68   ; -> 0x3f2f68 = 'Failed to get privateKeyDer elements'
+0x003de75c  bl       #0xe5a10   ; sub_e5a10
+0x003de760  adrp     x1, #0x48f000
+0x003de764  adrp     x2, #0x48f000
+0x003de768  ldr      x1, [x1, #0x700]   ; -> [GOT] _ZTISt13runtime_error
+0x003de76c  ldr      x2, [x2, #0x9c8]   ; -> [GOT] _ZNSt13runtime_errorD1Ev
+0x003de770  mov      x0, x23
+0x003de774  bl       #0xe6690   ; sub_e6690
+0x003de778  b        #0x3deaf4   ; sub_3deaf4
+0x003de77c  mov      w0, #0x10
+0x003de780  bl       #0xe0630   ; sub_e0630
+0x003de784  mov      x26, x0
+0x003de788  adrp     x1, #0x3f2000
+0x003de78c  add      x1, x1, #0xf8d   ; -> 0x3f2f8d = 'Failed to create BIO'
+0x003de790  bl       #0xe5a10   ; sub_e5a10
+0x003de794  adrp     x1, #0x48f000
+0x003de798  adrp     x2, #0x48f000
+0x003de79c  ldr      x1, [x1, #0x700]   ; -> [GOT] _ZTISt13runtime_error
+0x003de7a0  ldr      x2, [x2, #0x9c8]   ; -> [GOT] _ZNSt13runtime_errorD1Ev
+0x003de7a4  mov      x0, x26
+0x003de7a8  bl       #0xe6690   ; sub_e6690
+0x003de7ac  b        #0x3deaf4   ; sub_3deaf4
+0x003de7b0  mov      w0, #0x10
+0x003de7b4  bl       #0xe0630   ; sub_e0630
+0x003de7b8  mov      x26, x0
+0x003de7bc  adrp     x1, #0x3f2000
+0x003de7c0  add      x1, x1, #0xfa2   ; -> 0x3f2fa2 = 'Failed to load PKCS#8 private key: '
+0x003de7c4  add      x0, sp, #0x70
+0x003de7c8  bl       #0xe7690   ; sub_e7690
+0x003de7cc  bl       #0xe7ea0   ; sub_e7ea0
+0x003de7d0  mov      x1, xzr
+0x003de7d4  bl       #0xe6290   ; sub_e6290
+0x003de7d8  mov      x1, x0
+0x003de7dc  add      x8, sp, #0x88
+0x003de7e0  add      x0, sp, #0x70
+0x003de7e4  bl       #0x154458   ; sub_154458
+0x003de7e8  mov      w19, #1
+0x003de7ec  add      x1, sp, #0x88
+0x003de7f0  mov      x0, x26
+0x003de7f4  bl       #0xe8330   ; sub_e8330
+0x003de7f8  adrp     x1, #0x48f000
+0x003de7fc  adrp     x2, #0x48f000
+0x003de800  ldr      x1, [x1, #0x700]   ; -> [GOT] _ZTISt13runtime_error
+0x003de804  ldr      x2, [x2, #0x9c8]   ; -> [GOT] _ZNSt13runtime_errorD1Ev
+0x003de808  mov      x0, x26
+0x003de80c  mov      w19, wzr
+0x003de810  bl       #0xe6690   ; sub_e6690
+0x003de814  b        #0x3deaf4   ; sub_3deaf4
+0x003de818  mov      w0, #0x10
+0x003de81c  bl       #0xe0630   ; sub_e0630
+0x003de820  mov      x26, x0
+0x003de824  adrp     x1, #0x3f2000
+0x003de828  add      x1, x1, #0xfc6   ; -> 0x3f2fc6 = 'Failed to extract RSA key: '
+0x003de82c  add      x0, sp, #0x70
+0x003de830  bl       #0xe7690   ; sub_e7690
+0x003de834  bl       #0xe7ea0   ; sub_e7ea0
+0x003de838  mov      x1, xzr
+0x003de83c  bl       #0xe6290   ; sub_e6290
+0x003de840  mov      x1, x0
+0x003de844  add      x8, sp, #0x88
+0x003de848  add      x0, sp, #0x70
+0x003de84c  bl       #0x154458   ; sub_154458
+0x003de850  mov      w19, #1
+0x003de854  add      x1, sp, #0x88
+0x003de858  mov      x0, x26
+0x003de85c  bl       #0xe8330   ; sub_e8330
+0x003de860  adrp     x1, #0x48f000
+0x003de864  adrp     x2, #0x48f000
+0x003de868  ldr      x1, [x1, #0x700]   ; -> [GOT] _ZTISt13runtime_error
+0x003de86c  ldr      x2, [x2, #0x9c8]   ; -> [GOT] _ZNSt13runtime_errorD1Ev
+0x003de870  mov      x0, x26
+0x003de874  mov      w19, wzr
+0x003de878  bl       #0xe6690   ; sub_e6690
+0x003de87c  b        #0x3deaf4   ; sub_3deaf4
+0x003de880  mov      w0, #0x10
+0x003de884  bl       #0xe0630   ; sub_e0630
+0x003de888  mov      x26, x0
+0x003de88c  adrp     x1, #0x3f2000
+0x003de890  add      x1, x1, #0xfe2   ; -> 0x3f2fe2 = 'Failed to create EVP_PKEY_CTX'
+0x003de894  bl       #0xe5a10   ; sub_e5a10
+0x003de898  adrp     x1, #0x48f000
+0x003de89c  adrp     x2, #0x48f000
+0x003de8a0  ldr      x1, [x1, #0x700]   ; -> [GOT] _ZTISt13runtime_error
+0x003de8a4  ldr      x2, [x2, #0x9c8]   ; -> [GOT] _ZNSt13runtime_errorD1Ev
+0x003de8a8  mov      x0, x26
+0x003de8ac  bl       #0xe6690   ; sub_e6690
+0x003de8b0  b        #0x3deaf4   ; sub_3deaf4
+0x003de8b4  mov      w0, #0x10
+0x003de8b8  bl       #0xe0630   ; sub_e0630
+0x003de8bc  mov      x26, x0
+0x003de8c0  adrp     x1, #0x3f3000
+0x003de8c4  add      x1, x1, #0   ; -> 0x3f3000 = 'EVP_PKEY_decrypt_init failed: '
+0x003de8c8  add      x0, sp, #0x70
+0x003de8cc  bl       #0xe7690   ; sub_e7690
+0x003de8d0  bl       #0xe7ea0   ; sub_e7ea0
+0x003de8d4  mov      x1, xzr
+0x003de8d8  bl       #0xe6290   ; sub_e6290
+0x003de8dc  mov      x1, x0
+0x003de8e0  add      x8, sp, #0x88
+0x003de8e4  add      x0, sp, #0x70
+0x003de8e8  bl       #0x154458   ; sub_154458
+0x003de8ec  mov      w19, #1
+0x003de8f0  add      x1, sp, #0x88
+0x003de8f4  mov      x0, x26
+0x003de8f8  bl       #0xe8330   ; sub_e8330
+0x003de8fc  adrp     x1, #0x48f000
+0x003de900  adrp     x2, #0x48f000
+0x003de904  ldr      x1, [x1, #0x700]   ; -> [GOT] _ZTISt13runtime_error
+0x003de908  ldr      x2, [x2, #0x9c8]   ; -> [GOT] _ZNSt13runtime_errorD1Ev
+0x003de90c  mov      x0, x26
+0x003de910  mov      w19, wzr
+0x003de914  bl       #0xe6690   ; sub_e6690
+0x003de918  b        #0x3deaf4   ; sub_3deaf4
+0x003de91c  mov      w0, #0x10
+0x003de920  bl       #0xe0630   ; sub_e0630
+0x003de924  mov      x26, x0
+0x003de928  adrp     x1, #0x3f3000
+0x003de92c  add      x1, x1, #0x1f   ; -> 0x3f301f = 'EVP_PKEY_CTX_set_rsa_padding failed: '
+0x003de930  add      x0, sp, #0x70
+0x003de934  bl       #0xe7690   ; sub_e7690
+0x003de938  bl       #0xe7ea0   ; sub_e7ea0
+0x003de93c  mov      x1, xzr
+0x003de940  bl       #0xe6290   ; sub_e6290
+0x003de944  mov      x1, x0
+0x003de948  add      x8, sp, #0x88
+0x003de94c  add      x0, sp, #0x70
+0x003de950  bl       #0x154458   ; sub_154458
+0x003de954  mov      w19, #1
+0x003de958  add      x1, sp, #0x88
+0x003de95c  mov      x0, x26
+0x003de960  bl       #0xe8330   ; sub_e8330
+0x003de964  adrp     x1, #0x48f000
+0x003de968  adrp     x2, #0x48f000
+0x003de96c  ldr      x1, [x1, #0x700]   ; -> [GOT] _ZTISt13runtime_error
+0x003de970  ldr      x2, [x2, #0x9c8]   ; -> [GOT] _ZNSt13runtime_errorD1Ev
+0x003de974  mov      x0, x26
+0x003de978  mov      w19, wzr
+0x003de97c  bl       #0xe6690   ; sub_e6690
+0x003de980  b        #0x3deaf4   ; sub_3deaf4
+0x003de984  mov      w0, #0x10
+0x003de988  bl       #0xe0630   ; sub_e0630
+0x003de98c  mov      x26, x0
+0x003de990  adrp     x1, #0x3f3000
+0x003de994  add      x1, x1, #0x45   ; -> 0x3f3045 = 'EVP_PKEY_decrypt (size calc) failed: '
+0x003de998  add      x0, sp, #0x70
+0x003de99c  bl       #0xe7690   ; sub_e7690
+0x003de9a0  bl       #0xe7ea0   ; sub_e7ea0
+0x003de9a4  mov      x1, xzr
+0x003de9a8  bl       #0xe6290   ; sub_e6290
+0x003de9ac  mov      x1, x0
+0x003de9b0  add      x8, sp, #0x88
+0x003de9b4  add      x0, sp, #0x70
+0x003de9b8  bl       #0x154458   ; sub_154458
+0x003de9bc  mov      w19, #1
+0x003de9c0  add      x1, sp, #0x88
+0x003de9c4  mov      x0, x26
+0x003de9c8  bl       #0xe8330   ; sub_e8330
+0x003de9cc  adrp     x1, #0x48f000
+0x003de9d0  adrp     x2, #0x48f000
+0x003de9d4  ldr      x1, [x1, #0x700]   ; -> [GOT] _ZTISt13runtime_error
+0x003de9d8  ldr      x2, [x2, #0x9c8]   ; -> [GOT] _ZNSt13runtime_errorD1Ev
+0x003de9dc  mov      x0, x26
+0x003de9e0  mov      w19, wzr
+0x003de9e4  bl       #0xe6690   ; sub_e6690
+0x003de9e8  b        #0x3deaf4   ; sub_3deaf4
+0x003de9ec  mov      w0, #0x10
+0x003de9f0  bl       #0xe0630   ; sub_e0630
+0x003de9f4  mov      x26, x0
+0x003de9f8  adrp     x1, #0x3f3000
+0x003de9fc  add      x1, x1, #0x6b   ; -> 0x3f306b = 'Failed to allocate decrypted buffer'
+0x003dea00  bl       #0xe5a10   ; sub_e5a10
+0x003dea04  adrp     x1, #0x48f000
+0x003dea08  adrp     x2, #0x48f000
+0x003dea0c  ldr      x1, [x1, #0x700]   ; -> [GOT] _ZTISt13runtime_error
+0x003dea10  ldr      x2, [x2, #0x9c8]   ; -> [GOT] _ZNSt13runtime_errorD1Ev
+0x003dea14  mov      x0, x26
+0x003dea18  bl       #0xe6690   ; sub_e6690
+0x003dea1c  b        #0x3deaf4   ; sub_3deaf4
+0x003dea20  mov      w0, #0x10
+0x003dea24  bl       #0xe0630   ; sub_e0630
+0x003dea28  mov      x26, x0
+0x003dea2c  adrp     x1, #0x3f3000
+0x003dea30  add      x1, x1, #0x8f   ; -> 0x3f308f = 'EVP_PKEY_decrypt failed: '
+0x003dea34  add      x0, sp, #0x70
+0x003dea38  bl       #0xe7690   ; sub_e7690
+0x003dea3c  bl       #0xe7ea0   ; sub_e7ea0
+0x003dea40  mov      x1, xzr
+0x003dea44  bl       #0xe6290   ; sub_e6290
+0x003dea48  mov      x1, x0
+0x003dea4c  add      x8, sp, #0x88
+0x003dea50  add      x0, sp, #0x70
+0x003dea54  bl       #0x154458   ; sub_154458
+0x003dea58  mov      w19, #1
+0x003dea5c  add      x1, sp, #0x88
+0x003dea60  mov      x0, x26
+0x003dea64  bl       #0xe8330   ; sub_e8330
+0x003dea68  adrp     x1, #0x48f000
+0x003dea6c  adrp     x2, #0x48f000
+0x003dea70  ldr      x1, [x1, #0x700]   ; -> [GOT] _ZTISt13runtime_error
+0x003dea74  ldr      x2, [x2, #0x9c8]   ; -> [GOT] _ZNSt13runtime_errorD1Ev
+0x003dea78  mov      x0, x26
+0x003dea7c  mov      w19, wzr
+0x003dea80  bl       #0xe6690   ; sub_e6690
+0x003dea84  b        #0x3deaf4   ; sub_3deaf4
+0x003dea88  mov      w0, #0x10
+0x003dea8c  bl       #0xe0630   ; sub_e0630
+0x003dea90  mov      x26, x0
+0x003dea94  adrp     x1, #0x3f3000
+0x003dea98  add      x1, x1, #0xa9   ; -> 0x3f30a9 = 'Failed to create jbyteArray'
+0x003dea9c  bl       #0xe5a10   ; sub_e5a10
+0x003deaa0  adrp     x1, #0x48f000
+0x003deaa4  adrp     x2, #0x48f000
+0x003deaa8  ldr      x1, [x1, #0x700]   ; -> [GOT] _ZTISt13runtime_error
+0x003deaac  ldr      x2, [x2, #0x9c8]   ; -> [GOT] _ZNSt13runtime_errorD1Ev
+0x003deab0  mov      x0, x26
+0x003deab4  mov      x28, xzr
+0x003deab8  bl       #0xe6690   ; sub_e6690
+0x003deabc  b        #0x3deaf4   ; sub_3deaf4
+0x003deac0  mov      w0, #0x10
+0x003deac4  bl       #0xe0630   ; sub_e0630
+0x003deac8  mov      x26, x0
+0x003deacc  adrp     x1, #0x3f3000
+0x003dead0  add      x1, x1, #0xc5   ; -> 0x3f30c5 = 'JNI exception occurred'
+0x003dead4  bl       #0xe5a10   ; sub_e5a10
+0x003dead8  adrp     x1, #0x48f000
+0x003deadc  adrp     x2, #0x48f000
+0x003deae0  ldr      x1, [x1, #0x700]   ; -> [GOT] _ZTISt13runtime_error
+0x003deae4  ldr      x2, [x2, #0x9c8]   ; -> [GOT] _ZNSt13runtime_errorD1Ev
+0x003deae8  mov      x0, x26
+0x003deaec  mov      x28, x24
+0x003deaf0  bl       #0xe6690   ; sub_e6690
+0x003deaf4  mov      x25, x0
+0x003deaf8  mov      x0, x26
+0x003deafc  mov      x27, x1
+0x003deb00  bl       #0xe9b70   ; sub_e9b70
+0x003deb04  b        #0x3ded40   ; sub_3ded40
+0x003deb08  b        #0x3deb0c   ; sub_3deb0c
+0x003deb0c  mov      x27, x1
+0x003deb10  mov      x25, x0
+0x003deb14  b        #0x3dec14   ; sub_3dec14
+0x003deb18  b        #0x3ded24   ; sub_3ded24
+0x003deb1c  b        #0x3deb28   ; sub_3deb28
+0x003deb20  b        #0x3deb28   ; sub_3deb28
+0x003deb24  b        #0x3deb28   ; sub_3deb28
+0x003deb28  mov      x27, x1
+0x003deb2c  mov      x25, x0
+0x003deb30  b        #0x3dec44   ; sub_3dec44
+0x003deb34  mov      x25, x0
+0x003deb38  mov      x0, x26
+0x003deb3c  mov      x27, x1
+0x003deb40  bl       #0xe9b70   ; sub_e9b70
+0x003deb44  b        #0x3dece0   ; sub_3dece0
+0x003deb48  mov      x27, x1
+0x003deb4c  mov      x25, x0
+0x003deb50  b        #0x3dec68   ; sub_3dec68
+0x003deb54  mov      x27, x1
+0x003deb58  mov      x25, x0
+0x003deb5c  b        #0x3dec8c   ; sub_3dec8c
+0x003deb60  mov      x25, x0
+0x003deb64  mov      x0, x26
+0x003deb68  mov      x27, x1
+0x003deb6c  bl       #0xe9b70   ; sub_e9b70
+0x003deb70  b        #0x3ded1c   ; sub_3ded1c
+0x003deb74  b        #0x3deca0   ; sub_3deca0
+0x003deb78  mov      x25, x0
+0x003deb7c  mov      x0, x23
+0x003deb80  mov      x27, x1
+0x003deb84  bl       #0xe9b70   ; sub_e9b70
+0x003deb88  b        #0x3deca8   ; sub_3deca8
+0x003deb8c  b        #0x3decb4   ; sub_3decb4
+0x003deb90  mov      x25, x0
+0x003deb94  mov      x0, x22
+0x003deb98  mov      x27, x1
+0x003deb9c  bl       #0xe9b70   ; sub_e9b70
+0x003deba0  b        #0x3decbc   ; sub_3decbc
+0x003deba4  mov      x25, x0
+0x003deba8  add      x0, sp, #0x88
+0x003debac  mov      x27, x1
+0x003debb0  bl       #0xe9df0   ; sub_e9df0
+0x003debb4  b        #0x3dec08   ; sub_3dec08
+0x003debb8  b        #0x3debc0   ; sub_3debc0
+0x003debbc  b        #0x3debc0   ; sub_3debc0
+0x003debc0  mov      x25, x0
+0x003debc4  add      x0, sp, #0x88
+0x003debc8  mov      x27, x1
+0x003debcc  bl       #0xe9df0   ; sub_e9df0
+0x003debd0  b        #0x3dec38   ; sub_3dec38
+0x003debd4  mov      x25, x0
+0x003debd8  add      x0, sp, #0x88
+0x003debdc  mov      x27, x1
+0x003debe0  bl       #0xe9df0   ; sub_e9df0
+0x003debe4  b        #0x3dec5c   ; sub_3dec5c
+0x003debe8  mov      x25, x0
+0x003debec  add      x0, sp, #0x88
+0x003debf0  mov      x27, x1
+0x003debf4  bl       #0xe9df0   ; sub_e9df0
+0x003debf8  b        #0x3dec80   ; sub_3dec80
+0x003debfc  mov      x27, x1
+0x003dec00  mov      x25, x0
+0x003dec04  mov      w19, #1
+0x003dec08  add      x0, sp, #0x70
+0x003dec0c  bl       #0xe9df0   ; sub_e9df0
+0x003dec10  cbz      w19, #0x3dec1c
+0x003dec14  mov      x0, x26
+0x003dec18  bl       #0xe9b70   ; sub_e9b70
+0x003dec1c  mov      x24, xzr
+0x003dec20  b        #0x3ded40   ; sub_3ded40
+0x003dec24  b        #0x3dec2c   ; sub_3dec2c
+0x003dec28  b        #0x3dec2c   ; sub_3dec2c
+0x003dec2c  mov      x27, x1
+0x003dec30  mov      x25, x0
+0x003dec34  mov      w19, #1
+0x003dec38  add      x0, sp, #0x70
+0x003dec3c  bl       #0xe9df0   ; sub_e9df0
+0x003dec40  cbz      w19, #0x3ded2c
+0x003dec44  mov      x0, x26
+0x003dec48  bl       #0xe9b70   ; sub_e9b70
+0x003dec4c  b        #0x3ded2c   ; sub_3ded2c
+0x003dec50  mov      x27, x1
+0x003dec54  mov      x25, x0
+0x003dec58  mov      w19, #1
+0x003dec5c  add      x0, sp, #0x70
+0x003dec60  bl       #0xe9df0   ; sub_e9df0
+0x003dec64  cbz      w19, #0x3decf4
+0x003dec68  mov      x0, x26
+0x003dec6c  bl       #0xe9b70   ; sub_e9b70
+0x003dec70  b        #0x3decf4   ; sub_3decf4
+0x003dec74  mov      x27, x1
+0x003dec78  mov      x25, x0
+0x003dec7c  mov      w19, #1
+0x003dec80  add      x0, sp, #0x70
+0x003dec84  bl       #0xe9df0   ; sub_e9df0
+0x003dec88  cbz      w19, #0x3ded08
+0x003dec8c  mov      x0, x26
+0x003dec90  bl       #0xe9b70   ; sub_e9b70
+0x003dec94  b        #0x3ded08   ; sub_3ded08
+0x003dec98  b        #0x3ded14   ; sub_3ded14
+0x003dec9c  b        #0x3deca0   ; sub_3deca0
+0x003deca0  mov      x27, x1
+0x003deca4  mov      x25, x0
+0x003deca8  mov      x24, xzr
+0x003decac  mov      x23, xzr
+0x003decb0  b        #0x3dee94   ; sub_3dee94
+0x003decb4  mov      x27, x1
+0x003decb8  mov      x25, x0
+0x003decbc  mov      x24, xzr
+0x003decc0  mov      x23, xzr
+0x003decc4  str      xzr, [sp, #0x18]
+0x003decc8  b        #0x3dee94   ; sub_3dee94
+0x003deccc  bl       #0xf4304   ; sub_f4304
+0x003decd0  b        #0x3ded24   ; sub_3ded24
+0x003decd4  bl       #0xf4304   ; sub_f4304
+0x003decd8  mov      x27, x1
+0x003decdc  mov      x25, x0
+0x003dece0  mov      x24, xzr
+0x003dece4  b        #0x3dedc8   ; sub_3dedc8
+0x003dece8  bl       #0xf4304   ; sub_f4304
+0x003decec  mov      x27, x1
+0x003decf0  mov      x25, x0
+0x003decf4  mov      x24, xzr
+0x003decf8  b        #0x3dee0c   ; sub_3dee0c
+0x003decfc  bl       #0xf4304   ; sub_f4304
+0x003ded00  mov      x27, x1
+0x003ded04  mov      x25, x0
+0x003ded08  mov      x24, xzr
+0x003ded0c  b        #0x3dee50   ; sub_3dee50
+0x003ded10  bl       #0xf4304   ; sub_f4304
+0x003ded14  mov      x27, x1
+0x003ded18  mov      x25, x0
+0x003ded1c  mov      x24, xzr
+0x003ded20  b        #0x3dee94   ; sub_3dee94
+0x003ded24  mov      x27, x1
+0x003ded28  mov      x25, x0
+0x003ded2c  mov      x24, xzr
+0x003ded30  b        #0x3ded84   ; sub_3ded84
+0x003ded34  mov      x27, x1
+0x003ded38  mov      x25, x0
+0x003ded3c  mov      x24, x28
+0x003ded40  mov      w19, #0x77b
+0x003ded44  mov      w21, #0x6a31
+0x003ded48  mov      w22, #0x77b
+0x003ded4c  movk     w19, #0x9991, lsl #16
+0x003ded50  movk     w21, #0x9384, lsl #16
+0x003ded54  movk     w22, #0x9991, lsl #16
+0x003ded58  cmp      w22, w21
+0x003ded5c  b.eq     #0x3ded84
+0x003ded60  cmp      w22, w19
+0x003ded64  b.ne     #0x3ded58
+0x003ded68  mov      w22, #0x6a31
+0x003ded6c  add      x0, sp, #0x28
+0x003ded70  mov      x1, xzr
+0x003ded74  movk     w22, #0x9384, lsl #16
+0x003ded78  bl       #0x158bcc   ; sub_158bcc
+0x003ded7c  cmp      w22, w21
+0x003ded80  b.ne     #0x3ded60
+0x003ded84  mov      w19, #0xe2aa
+0x003ded88  mov      w21, #0x7fe
+0x003ded8c  mov      w22, #0xe2aa
+0x003ded90  movk     w19, #0x2a75, lsl #16
+0x003ded94  movk     w21, #0xa272, lsl #16
+0x003ded98  movk     w22, #0x2a75, lsl #16
+0x003ded9c  cmp      w22, w21
+0x003deda0  b.eq     #0x3dedc8
+0x003deda4  cmp      w22, w19
+0x003deda8  b.ne     #0x3ded9c
+0x003dedac  mov      w22, #0x7fe
+0x003dedb0  add      x0, sp, #0x40
+0x003dedb4  mov      x1, xzr
+0x003dedb8  movk     w22, #0xa272, lsl #16
+0x003dedbc  bl       #0x158654   ; sub_158654
+0x003dedc0  cmp      w22, w21
+0x003dedc4  b.ne     #0x3deda4
+0x003dedc8  mov      w19, #0x67a8
+0x003dedcc  mov      w21, #0xb86f
+0x003dedd0  mov      w22, #0x67a8
+0x003dedd4  movk     w19, #0xdef7, lsl #16
+0x003dedd8  movk     w21, #0xefe4, lsl #16
+0x003deddc  movk     w22, #0xdef7, lsl #16
+0x003dede0  cmp      w22, w21
+0x003dede4  b.eq     #0x3dee0c
+0x003dede8  cmp      w22, w19
+0x003dedec  b.ne     #0x3dede0
+0x003dedf0  mov      w22, #0xb86f
+0x003dedf4  add      x0, sp, #0x50
+0x003dedf8  mov      x1, xzr
+0x003dedfc  movk     w22, #0xefe4, lsl #16
+0x003dee00  bl       #0x1580cc   ; sub_1580cc
+0x003dee04  cmp      w22, w21
+0x003dee08  b.ne     #0x3dede8
+0x003dee0c  mov      w19, #0xcb8e
+0x003dee10  mov      w21, #0xf9b2
+0x003dee14  mov      w22, #0xcb8e
+0x003dee18  movk     w19, #0x1e9a, lsl #16
+0x003dee1c  movk     w21, #0xfade, lsl #16
+0x003dee20  movk     w22, #0x1e9a, lsl #16
+0x003dee24  cmp      w22, w21
+0x003dee28  b.eq     #0x3dee50
+0x003dee2c  cmp      w22, w19
+0x003dee30  b.ne     #0x3dee24
+0x003dee34  mov      w22, #0xf9b2
+0x003dee38  add      x0, sp, #0x60
+0x003dee3c  mov      x1, xzr
+0x003dee40  movk     w22, #0xfade, lsl #16
+0x003dee44  bl       #0x157b5c   ; sub_157b5c
+0x003dee48  cmp      w22, w21
+0x003dee4c  b.ne     #0x3dee2c
+0x003dee50  mov      w19, #0x222c
+0x003dee54  mov      w21, #0x3998
+0x003dee58  mov      w22, #0x222c
+0x003dee5c  movk     w19, #0x7704, lsl #16
+0x003dee60  movk     w21, #0xe784, lsl #16
+0x003dee64  movk     w22, #0x7704, lsl #16
+0x003dee68  cmp      w22, w21
+0x003dee6c  b.eq     #0x3dee94
+0x003dee70  cmp      w22, w19
+0x003dee74  b.ne     #0x3dee68
+0x003dee78  mov      w22, #0x3998
+0x003dee7c  sub      x0, x29, #0x90
+0x003dee80  mov      x1, xzr
+0x003dee84  movk     w22, #0xe784, lsl #16
+0x003dee88  bl       #0x154b08   ; sub_154b08
+0x003dee8c  cmp      w22, w21
+0x003dee90  b.ne     #0x3dee70
+0x003dee94  mov      x0, x25
+0x003dee98  cmp      w27, #2
+0x003dee9c  b.ne     #0x3deeb0
+0x003deea0  bl       #0xe6500   ; sub_e6500
+0x003deea4  bl       #0xe04c0   ; sub_e04c0
+0x003deea8  ldr      x27, [sp, #0x10]
+0x003deeac  b        #0x3de510   ; sub_3de510
+0x003deeb0  bl       #0x3cd654   ; sub_3cd654
+
+--- 该函数调用的已命名符号(bl) ---
+     5x  OPENSSL_uni2utf8
+
+--- 引用的字符串常量 ---
+   0x3f2f43: 'Failed to get encryptedData elements'
+   0x3f2f68: 'Failed to get privateKeyDer elements'
+   0x3f2f8d: 'Failed to create BIO'
+   0x3f2fa2: 'Failed to load PKCS#8 private key: '
+   0x3f2fc6: 'Failed to extract RSA key: '
+   0x3f2fe2: 'Failed to create EVP_PKEY_CTX'
+   0x3f3000: 'EVP_PKEY_decrypt_init failed: '
+   0x3f301f: 'EVP_PKEY_CTX_set_rsa_padding failed: '
+   0x3f3045: 'EVP_PKEY_decrypt (size calc) failed: '
+   0x3f306b: 'Failed to allocate decrypted buffer'
+   0x3f308f: 'EVP_PKEY_decrypt failed: '
+   0x3f30a9: 'Failed to create jbyteArray'
+   0x3f30c5: 'JNI exception occurred'

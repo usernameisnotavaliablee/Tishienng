@@ -1,0 +1,21 @@
+[*] app launched, waiting 2s ...
+[*] pid=8374
+[DUMP] armed
+[*] dump script loaded, waiting 35s ...
+[SCAN:t+500] ranges=1946 candidates=515
+[SCAN:t+500] FOUND dex @0x738d55a000 fileSize=45352584 header=112 endian=0x12345678 prot=r-- file=anon
+[DUMP] wrote /data/data/com.bxkj.student/files/dexcap/cap_0_sz45352584.dex size=45352584
+[SCAN:t+500] FOUND dex @0x739009b000 fileSize=9857704 header=112 endian=0x12345678 prot=rwx file=anon
+[DUMP] wrote /data/data/com.bxkj.student/files/dexcap/cap_1_sz9857704.dex size=9857704
+[SCAN:t+500] FOUND dex @0x7390a02000 fileSize=9469608 header=112 endian=0x12345678 prot=rwx file=anon
+[DUMP] wrote /data/data/com.bxkj.student/files/dexcap/cap_2_sz9469608.dex size=9469608
+[SCAN:t+500] FOUND dex @0x73923c2000 fileSize=3714748 header=112 endian=0x12345678 prot=rwx file=anon
+[DUMP] wrote /data/data/com.bxkj.student/files/dexcap/cap_3_sz3714748.dex size=3714748
+Traceback (most recent call last):
+  File "/Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/frida/dump_dex.py", line 51, in <module>
+    main()
+    ~~~~^^
+  File "/Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/frida/dump_dex.py", line 48, in main
+    print('[*] done' % pid, flush=True)
+          ~~~~~~~~~~~^~~~~
+TypeError: not all arguments converted during string formatting

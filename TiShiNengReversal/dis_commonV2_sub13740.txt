@@ -1,0 +1,35 @@
+### sub_13740  @0x13740  size=128
+0x00013740  adrp     x16, #0x41000
+0x00013744  ldr      x17, [x16, #0xe38]   ; -> [GOT] stat
+0x00013748  add      x16, x16, #0xe38   ; -> [GOT] stat
+0x0001374c  br       x17
+0x00013750  adrp     x16, #0x41000
+0x00013754  ldr      x17, [x16, #0xe40]   ; -> [GOT] _ZNSt6__ndk16__itoa8__u32toaEjPc
+0x00013758  add      x16, x16, #0xe40   ; -> [GOT] _ZNSt6__ndk16__itoa8__u32toaEjPc
+0x0001375c  br       x17
+0x00013760  adrp     x16, #0x41000
+0x00013764  ldr      x17, [x16, #0xe48]   ; -> [GOT] _ZNSt9exceptionD2Ev
+0x00013768  add      x16, x16, #0xe48   ; -> [GOT] _ZNSt9exceptionD2Ev
+0x0001376c  br       x17
+0x00013770  adrp     x16, #0x41000
+0x00013774  ldr      x17, [x16, #0xe50]   ; -> [GOT] strtod
+0x00013778  add      x16, x16, #0xe50   ; -> [GOT] strtod
+0x0001377c  br       x17
+0x00013780  adrp     x16, #0x41000
+0x00013784  ldr      x17, [x16, #0xe58]   ; -> [GOT] __cxa_rethrow
+0x00013788  add      x16, x16, #0xe58   ; -> [GOT] __cxa_rethrow
+0x0001378c  br       x17
+0x00013790  adrp     x16, #0x41000
+0x00013794  ldr      x17, [x16, #0xe60]   ; -> [GOT] wcstoll
+0x00013798  add      x16, x16, #0xe60   ; -> [GOT] wcstoll
+0x0001379c  br       x17
+0x000137a0  adrp     x16, #0x41000
+0x000137a4  ldr      x17, [x16, #0xe68]   ; -> [GOT] _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+0x000137a8  add      x16, x16, #0xe68   ; -> [GOT] _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+0x000137ac  br       x17
+0x000137b0  adrp     x16, #0x41000
+0x000137b4  ldr      x17, [x16, #0xe70]   ; -> [GOT] malloc
+0x000137b8  add      x16, x16, #0xe70   ; -> [GOT] malloc
+0x000137bc  br       x17
+
+[0 个匹配]

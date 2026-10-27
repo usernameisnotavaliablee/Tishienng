@@ -1,0 +1,187 @@
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[+] cert DER: 891B md5=7fc022e67c7d2accc3c8770a46138dc3 MATCH (auth 可通过)
+[+] libtsnsecret.so loaded @ base=0x12000000 size=0x497000
+[CASE1] 密文(host自加密) = d059e02a8aa2281698a5d4743facd201b0344ac2c060a22274a41a18c529485a
+
+==== call aes_decrypt: dataLen=32 key=165f47a702bf0965d2fb49cdbb373377 iv=00000000000000000000000000000000 ====
+JNIEnv->GetMethodID(android/content/Context.getPackageManager()Landroid/content/pm/PackageManager;) => 0x3acc78f0 was called from RX@0x1214a8a4[libtsnsecret.so]0x14a8a4
+[JNI] callObjectMethod role=1 sig=getPackageManager()Landroid/content/pm/PackageManager;
+JNIEnv->CallObjectMethodV(android.content.Context@4bdc7136, getPackageManager() => android.content.pm.PackageManager@641e0d53) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetMethodID(android/content/pm/PackageManager.getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;) => 0x3bca8377 was called from RX@0x1214ac54[libtsnsecret.so]0x14ac54
+JNIEnv->GetMethodID(android/content/Context.getPackageName()Ljava/lang/String;) => 0xf6590850 was called from RX@0x1214aa3c[libtsnsecret.so]0x14aa3c
+[JNI] callObjectMethod role=1 sig=getPackageName()Ljava/lang/String;
+JNIEnv->CallObjectMethodV(android.content.Context@4bdc7136, getPackageName() => "com.bxkj.student") was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetStringUtfChars("com.bxkj.student") was called from RX@0x1214adf4[libtsnsecret.so]0x14adf4
+[JNI] callObjectMethod role=2 sig=getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+JNIEnv->CallObjectMethodV(android.content.pm.PackageManager@641e0d53, getPackageInfo("com.bxkj.student", 0x40) => android.content.pm.PackageInfo@28ad338c) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetFieldID(android/content/pm/PackageInfo.signatures [Landroid/content/pm/Signature;) => 0x25f17218 was called from RX@0x1214b2cc[libtsnsecret.so]0x14b2cc
+[JNI] getObjectField role=3 sig=android/content/pm/PackageInfo->signatures:[Landroid/content/pm/Signature;
+java.lang.UnsupportedOperationException: android/content/pm/PackageInfo->signatures:[Landroid/content/pm/Signature;
+	at com.github.unidbg.linux.android.dvm.AbstractJni.getObjectField(AbstractJni.java:171)
+	at com.tsn.harness.TsnSecretHarness.getObjectField(TsnSecretHarness.java:139)
+	at com.github.unidbg.linux.android.dvm.AbstractJni.getObjectField(AbstractJni.java:141)
+	at com.github.unidbg.linux.android.dvm.DvmField.getObjectField(DvmField.java:126)
+	at com.github.unidbg.linux.android.dvm.DalvikVM64$92.handle(DalvikVM64.java:1436)
+	at com.github.unidbg.linux.ARM64SyscallHandler.hook(ARM64SyscallHandler.java:119)
+	at com.github.unidbg.arm.backend.UnicornBackend.lambda$hook_add_new$4(UnicornBackend.java:232)
+	at unicorn.Unicorn$NewHook.onInterrupt(Unicorn.java:97)
+	at unicorn.Unicorn.emu_start(Native Method)
+	at com.github.unidbg.arm.backend.UnicornBackend.emu_start(UnicornBackend.java:253)
+	at com.github.unidbg.AbstractEmulator.emulate(AbstractEmulator.java:375)
+	at com.github.unidbg.thread.Function64.run(Function64.java:39)
+	at com.github.unidbg.thread.MainTask.dispatch(MainTask.java:19)
+	at com.github.unidbg.thread.UniThreadDispatcher.run(UniThreadDispatcher.java:165)
+	at com.github.unidbg.thread.UniThreadDispatcher.runMainForResult(UniThreadDispatcher.java:97)
+	at com.github.unidbg.AbstractEmulator.runMainForResult(AbstractEmulator.java:332)
+	at com.github.unidbg.arm.AbstractARM64Emulator.eFunc(AbstractARM64Emulator.java:262)
+	at com.github.unidbg.Module.emulateFunction(Module.java:170)
+	at com.github.unidbg.linux.LinuxModule.callFunction(LinuxModule.java:264)
+	at com.tsn.harness.TsnSecretHarness.aesDecrypt(TsnSecretHarness.java:271)
+	at com.tsn.harness.TsnSecretHarness.main(TsnSecretHarness.java:345)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.executeMainMethod(AbstractExecJavaBase.java:402)
+	at org.codehaus.mojo.exec.ExecJavaMojo.executeMainMethod(ExecJavaMojo.java:142)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.doExecClassLoader(AbstractExecJavaBase.java:377)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.lambda$execute$0(AbstractExecJavaBase.java:287)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+debugger break at: 0xfffe0644 @ Runnable|Function64 address=0x123d973c, arguments=[unidbg@0xfffe1640, -2130846850, 1272738102, 1606400745, 2090799741, 1582667765]
+>>> x0=0xfffe1640(-125376) x1=0x28ad338c x2=0x25f17218 x3=0x123f1fd8 x4=0x40 x5=0x5e5597f5 x6=0x0 x7=0x0 x8=0xfffe0640 x9=0xd9a81d0d x10=0xdb1c8504 x11=0x80f433f x12=0x5a411bb3 x13=0x6de5d3ed x14=0x98a799dc
+>>> x15=0x47e02c3d x16=0xb2c7c005 x17=0x21018b58 x18=0x127c2000 x19=0x5e2ab9d2 x20=0xb65614f2 x21=0xf826221b x22=0xb65614f3 x23=0x80f433e x24=0xb65614f3 x25=0x5e2ab9d2 x26=0xa7f0fe41 x27=0x3343593f x28=0x2b3dbbfb fp=0xe4ffefd0
+>>> q0=0xe4ffee4000000000e4ffef10(1.898189405E-314, 1.8981893024E-314) q1=0xffffff80ffffffd800000000e4ffee10(1.8981892786E-314, NaN) q2=0x0(0.0) q3=0x0(0.0) q4=0x0(0.0) q5=0x40100401401004014010040140100401(4.003911019303815, 4.003911019303815) q6=0x0(0.0) q7=0x1f100000000000001f1(2.456E-321, 2.456E-321) q8=0x0(0.0) q9=0x0(0.0) q10=0x0(0.0) q11=0x0(0.0) q12=0x0(0.0) q13=0x0(0.0) q14=0x0(0.0) q15=0x0(0.0)
+>>> q16=0x51f100000000000041f1(8.3403E-320, 1.0364E-319) q17=0x0(0.0) q18=0x51f100000000000041f1(8.3403E-320, 1.0364E-319) q19=0x0(0.0) q20=0x0(0.0) q21=0x0(0.0) q22=0x0(0.0) q23=0x0(0.0) q24=0x0(0.0) q25=0x0(0.0) q26=0x0(0.0) q27=0x0(0.0) q28=0x0(0.0) q29=0x0(0.0) q30=0x0(0.0) q31=0x0(0.0)
+LR=RX@0x1214b024[libtsnsecret.so]0x14b024
+SP=0xe4ffef10
+PC=unidbg@0xfffe0644
+nzcv: N=0, Z=1, C=1, V=0, EL0, use SP_EL0
+    [Arm64Svc        0x000640] [612b00d4] 0xfffe0640: "svc #0x15b"
+=> *[Arm64Svc       *0x000644]*[c0035fd6]*0xfffe0644:*"ret"
+
+[!] 返回对象不是 ByteArray: null
+CASE1 FAIL
+
+==== call aes_decrypt: dataLen=32 key=c310d8a21490eddc2f3cd870c34bb732 iv=00000000000000000000000000000000 ====
+JNIEnv->GetMethodID(android/content/Context.getPackageManager()Landroid/content/pm/PackageManager;) => 0x3acc78f0 was called from RX@0x1214a8a4[libtsnsecret.so]0x14a8a4
+[JNI] callObjectMethod role=1 sig=getPackageManager()Landroid/content/pm/PackageManager;
+JNIEnv->CallObjectMethodV(android.content.Context@6eb7939c, getPackageManager() => android.content.pm.PackageManager@7e98962d) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetMethodID(android/content/pm/PackageManager.getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;) => 0x3bca8377 was called from RX@0x1214ac54[libtsnsecret.so]0x14ac54
+JNIEnv->GetMethodID(android/content/Context.getPackageName()Ljava/lang/String;) => 0xf6590850 was called from RX@0x1214aa3c[libtsnsecret.so]0x14aa3c
+[JNI] callObjectMethod role=1 sig=getPackageName()Ljava/lang/String;
+JNIEnv->CallObjectMethodV(android.content.Context@6eb7939c, getPackageName() => "com.bxkj.student") was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetStringUtfChars("com.bxkj.student") was called from RX@0x1214adf4[libtsnsecret.so]0x14adf4
+[JNI] callObjectMethod role=2 sig=getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+JNIEnv->CallObjectMethodV(android.content.pm.PackageManager@7e98962d, getPackageInfo("com.bxkj.student", 0x40) => android.content.pm.PackageInfo@5a097e68) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetFieldID(android/content/pm/PackageInfo.signatures [Landroid/content/pm/Signature;) => 0x25f17218 was called from RX@0x1214b2cc[libtsnsecret.so]0x14b2cc
+[JNI] getObjectField role=3 sig=android/content/pm/PackageInfo->signatures:[Landroid/content/pm/Signature;
+java.lang.UnsupportedOperationException: android/content/pm/PackageInfo->signatures:[Landroid/content/pm/Signature;
+	at com.github.unidbg.linux.android.dvm.AbstractJni.getObjectField(AbstractJni.java:171)
+	at com.tsn.harness.TsnSecretHarness.getObjectField(TsnSecretHarness.java:139)
+	at com.github.unidbg.linux.android.dvm.AbstractJni.getObjectField(AbstractJni.java:141)
+	at com.github.unidbg.linux.android.dvm.DvmField.getObjectField(DvmField.java:126)
+	at com.github.unidbg.linux.android.dvm.DalvikVM64$92.handle(DalvikVM64.java:1436)
+	at com.github.unidbg.linux.ARM64SyscallHandler.hook(ARM64SyscallHandler.java:119)
+	at com.github.unidbg.arm.backend.UnicornBackend.lambda$hook_add_new$4(UnicornBackend.java:232)
+	at unicorn.Unicorn$NewHook.onInterrupt(Unicorn.java:97)
+	at unicorn.Unicorn.emu_start(Native Method)
+	at com.github.unidbg.arm.backend.UnicornBackend.emu_start(UnicornBackend.java:253)
+	at com.github.unidbg.AbstractEmulator.emulate(AbstractEmulator.java:375)
+	at com.github.unidbg.thread.Function64.run(Function64.java:39)
+	at com.github.unidbg.thread.MainTask.dispatch(MainTask.java:19)
+	at com.github.unidbg.thread.UniThreadDispatcher.run(UniThreadDispatcher.java:165)
+	at com.github.unidbg.thread.UniThreadDispatcher.runMainForResult(UniThreadDispatcher.java:97)
+	at com.github.unidbg.AbstractEmulator.runMainForResult(AbstractEmulator.java:332)
+	at com.github.unidbg.arm.AbstractARM64Emulator.eFunc(AbstractARM64Emulator.java:262)
+	at com.github.unidbg.Module.emulateFunction(Module.java:170)
+	at com.github.unidbg.linux.LinuxModule.callFunction(LinuxModule.java:264)
+	at com.tsn.harness.TsnSecretHarness.aesDecrypt(TsnSecretHarness.java:271)
+	at com.tsn.harness.TsnSecretHarness.main(TsnSecretHarness.java:353)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.executeMainMethod(AbstractExecJavaBase.java:402)
+	at org.codehaus.mojo.exec.ExecJavaMojo.executeMainMethod(ExecJavaMojo.java:142)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.doExecClassLoader(AbstractExecJavaBase.java:377)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.lambda$execute$0(AbstractExecJavaBase.java:287)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+debugger break at: 0xfffe0644 @ Runnable|Function64 address=0x123d973c, arguments=[unidbg@0xfffe1640, -2130846850, 1857524636, 956639040, 1038546509, 53848735]
+>>> x0=0xfffe1640(-125376) x1=0x5a097e68 x2=0x25f17218 x3=0x123f1fd8 x4=0x40 x5=0x335aa9f x6=0x0 x7=0x0 x8=0xfffe0640 x9=0xd9a81d0d x10=0xdb1c8504 x11=0x80f433f x12=0x5a411bb3 x13=0x6de5d3ed x14=0x98a799dc
+>>> x15=0x47e02c3d x16=0xb2c7c005 x17=0x21018b58 x18=0x127c2000 x19=0x5e2ab9d2 x20=0xb65614f2 x21=0xf826221b x22=0xb65614f3 x23=0x80f433e x24=0xb65614f3 x25=0x5e2ab9d2 x26=0xa7f0fe41 x27=0x3343593f x28=0x2b3dbbfb fp=0xe4ffefd0
+>>> q0=0xe4ffee4000000000e4ffef10(1.898189405E-314, 1.8981893024E-314) q1=0xffffff80ffffffd800000000e4ffee10(1.8981892786E-314, NaN) q2=0x0(0.0) q3=0x0(0.0) q4=0x0(0.0) q5=0x40100401401004014010040140100401(4.003911019303815, 4.003911019303815) q6=0x0(0.0) q7=0x1f100000000000001f1(2.456E-321, 2.456E-321) q8=0x0(0.0) q9=0x0(0.0) q10=0x0(0.0) q11=0x0(0.0) q12=0x0(0.0) q13=0x0(0.0) q14=0x0(0.0) q15=0x0(0.0)
+>>> q16=0x51f100000000000041f1(8.3403E-320, 1.0364E-319) q17=0x0(0.0) q18=0x51f100000000000041f1(8.3403E-320, 1.0364E-319) q19=0x0(0.0) q20=0x0(0.0) q21=0x0(0.0) q22=0x0(0.0) q23=0x0(0.0) q24=0x0(0.0) q25=0x0(0.0) q26=0x0(0.0) q27=0x0(0.0) q28=0x0(0.0) q29=0x0(0.0) q30=0x0(0.0) q31=0x0(0.0)
+LR=RX@0x1214b024[libtsnsecret.so]0x14b024
+SP=0xe4ffef10
+PC=unidbg@0xfffe0644
+nzcv: N=0, Z=1, C=1, V=0, EL0, use SP_EL0
+    [Arm64Svc        0x000640] [612b00d4] 0xfffe0640: "svc #0x15b"
+=> *[Arm64Svc       *0x000644]*[c0035fd6]*0xfffe0644:*"ret"
+
+[!] 返回对象不是 ByteArray: null
+CASE2 FAIL
+
+==== call generateAuthInfo: map={password=abc123, timestamp=1700000000, userName=test} ====
+JNIEnv->FindClass(java/util/Map) was called from RX@0x123e2e04[libtsnsecret.so]0x3e2e04
+JNIEnv->FindClass(java/util/Set) was called from RX@0x123e2f00[libtsnsecret.so]0x3e2f00
+JNIEnv->FindClass(java/util/Iterator) was called from RX@0x123e2ffc[libtsnsecret.so]0x3e2ffc
+JNIEnv->GetMethodID(java/util/Map.entrySet()Ljava/util/Set;) => 0xd4c69907 was called from RX@0x123e3108[libtsnsecret.so]0x3e3108
+JNIEnv->GetMethodID(java/util/Set.iterator()Ljava/util/Iterator;) => 0x429e3fc3 was called from RX@0x123e31fc[libtsnsecret.so]0x3e31fc
+JNIEnv->GetMethodID(java/util/Iterator.hasNext()Z) => 0x74f5adeb was called from RX@0x123e32f0[libtsnsecret.so]0x3e32f0
+JNIEnv->GetMethodID(java/util/Iterator.next()Ljava/lang/Object;) => 0xc9be0fcf was called from RX@0x123e33e8[libtsnsecret.so]0x3e33e8
+JNIEnv->FindClass(java/util/Map$Entry) was called from RX@0x123e34c0[libtsnsecret.so]0x3e34c0
+JNIEnv->GetMethodID(java/util/Map$Entry.getKey()Ljava/lang/Object;) => 0x7e357521 was called from RX@0x123e35cc[libtsnsecret.so]0x3e35cc
+JNIEnv->GetMethodID(java/util/Map$Entry.getValue()Ljava/lang/Object;) => 0x45e7c5f3 was called from RX@0x123e36bc[libtsnsecret.so]0x3e36bc
+[JNI] callObjectMethod role=null sig=entrySet()Ljava/util/Set;
+JNIEnv->CallObjectMethodV(java.util.Map@3263fb1b, entrySet() => java.util.Set@747a8951) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+[JNI] callObjectMethod role=10 sig=iterator()Ljava/util/Iterator;
+JNIEnv->CallObjectMethodV(java.util.Set@747a8951, iterator() => java.util.Iterator@65914388) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+	at java.base/java.util.Objects.checkIndex(Objects.java:385)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at com.github.unidbg.linux.android.dvm.VarArg.getIntArg(VarArg.java:33)
+	at com.github.unidbg.linux.android.dvm.VarArg.getObjectArg(VarArg.java:25)
+	at com.github.unidbg.linux.android.dvm.AbstractJni.callBooleanMethodV(AbstractJni.java:620)
+	at com.tsn.harness.TsnSecretHarness.callBooleanMethodV(TsnSecretHarness.java:245)
+	at com.github.unidbg.linux.android.dvm.AbstractJni.callBooleanMethodV(AbstractJni.java:603)
+	at com.github.unidbg.linux.android.dvm.DvmMethod.callBooleanMethodV(DvmMethod.java:119)
+	at com.github.unidbg.linux.android.dvm.DalvikVM64$35.handle(DalvikVM64.java:636)
+	at com.github.unidbg.linux.ARM64SyscallHandler.hook(ARM64SyscallHandler.java:119)
+	at com.github.unidbg.arm.backend.UnicornBackend.lambda$hook_add_new$4(UnicornBackend.java:232)
+	at unicorn.Unicorn$NewHook.onInterrupt(Unicorn.java:97)
+	at unicorn.Unicorn.emu_start(Native Method)
+	at com.github.unidbg.arm.backend.UnicornBackend.emu_start(UnicornBackend.java:253)
+	at com.github.unidbg.AbstractEmulator.emulate(AbstractEmulator.java:375)
+	at com.github.unidbg.thread.Function64.run(Function64.java:39)
+	at com.github.unidbg.thread.MainTask.dispatch(MainTask.java:19)
+	at com.github.unidbg.thread.UniThreadDispatcher.run(UniThreadDispatcher.java:165)
+	at com.github.unidbg.thread.UniThreadDispatcher.runMainForResult(UniThreadDispatcher.java:97)
+	at com.github.unidbg.AbstractEmulator.runMainForResult(AbstractEmulator.java:332)
+	at com.github.unidbg.arm.AbstractARM64Emulator.eFunc(AbstractARM64Emulator.java:262)
+	at com.github.unidbg.Module.emulateFunction(Module.java:170)
+	at com.github.unidbg.linux.LinuxModule.callFunction(LinuxModule.java:264)
+	at com.tsn.harness.TsnSecretHarness.generateAuthInfo(TsnSecretHarness.java:286)
+	at com.tsn.harness.TsnSecretHarness.main(TsnSecretHarness.java:362)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.executeMainMethod(AbstractExecJavaBase.java:402)
+	at org.codehaus.mojo.exec.ExecJavaMojo.executeMainMethod(ExecJavaMojo.java:142)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.doExecClassLoader(AbstractExecJavaBase.java:377)
+	at org.codehaus.mojo.exec.AbstractExecJavaBase.lambda$execute$0(AbstractExecJavaBase.java:287)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+debugger break at: 0xfffe02b4 @ Runnable|Function64 address=0x123e2cf0, arguments=[unidbg@0xfffe1640, -2130846850, 845413147]
+>>> x0=0xfffe1640(-125376) x1=0x65914388 x2=0x74f5adeb x3=0xe4fff3e8 x4=0x5e88765 x5=0xcd81a76a x6=0x66c56781 x7=0xc842cff9 x8=0xfffe02b0 x9=0xe4fff3e8 x10=0x946e4eb7 x11=0xffffff80ffffffd8 x12=0xe4fff470 x13=0xee72ec67 x14=0xf90161b0
+>>> x15=0xe4fff3e8 x16=0x5e88765 x17=0xe4fff3c0 x18=0x127c2000 x19=0xe4fff708 x20=0x2425a129 x21=0x2c1b5fa7 x22=0x166fa842 x23=0x166fa841 x24=0x9da6e8c8 x25=0x68d0073b x26=0x7bde7622 x27=0xd0be48a8 x28=0xaf07c9db fp=0xe4fff460
+>>> q0=0xe4fff3e800000000e4fff470(1.898190085E-314, 1.898190018E-314) q1=0xffffff80ffffffd800000000e4fff3c0(1.898189998E-314, NaN) q2=0x0(0.0) q3=0x0(0.0) q4=0x0(0.0) q5=0x40100401401004014010040140100401(4.003911019303815, 4.003911019303815) q6=0x0(0.0) q7=0x1f100000000000001f1(2.456E-321, 2.456E-321) q8=0x0(0.0) q9=0x0(0.0) q10=0x0(0.0) q11=0x0(0.0) q12=0x0(0.0) q13=0x0(0.0) q14=0x0(0.0) q15=0x0(0.0)
+>>> q16=0x51f100000000000041f1(8.3403E-320, 1.0364E-319) q17=0x0(0.0) q18=0x51f100000000000041f1(8.3403E-320, 1.0364E-319) q19=0x0(0.0) q20=0x0(0.0) q21=0x0(0.0) q22=0x0(0.0) q23=0x0(0.0) q24=0x0(0.0) q25=0x0(0.0) q26=0x0(0.0) q27=0x0(0.0) q28=0x0(0.0) q29=0x0(0.0) q30=0x0(0.0) q31=0x0(0.0)
+LR=RX@0x1215ac08[libtsnsecret.so]0x15ac08
+SP=0xe4fff340
+PC=unidbg@0xfffe02b4
+nzcv: N=0, Z=1, C=1, V=0, EL0, use SP_EL0
+    [Arm64Svc        0x0002b0] [412400d4] 0xfffe02b0: "svc #0x122"
+=> *[Arm64Svc       *0x0002b4]*[c0035fd6]*0xfffe02b4:*"ret"
+
+CASE3 generateAuthInfo -> null
+
+===== 全部用例结束 =====

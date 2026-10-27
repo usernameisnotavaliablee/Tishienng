@@ -1,0 +1,72 @@
+package androidx.work.impl.constraints.controllers;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_1_sz9857704.dex */
+public class NetworkMeteredController extends androidx.work.impl.constraints.controllers.ConstraintController<androidx.work.impl.constraints.NetworkState> {
+    private static final java.lang.String TAG = null;
+
+    static {
+            java.lang.String r0 = "NetworkMeteredCtrlr"
+            java.lang.String r0 = androidx.work.Logger.tagWithPrefix(r0)
+            androidx.work.impl.constraints.controllers.NetworkMeteredController.TAG = r0
+            return
+    }
+
+    public NetworkMeteredController(android.content.Context r1, androidx.work.impl.utils.taskexecutor.TaskExecutor r2) {
+            r0 = this;
+            androidx.work.impl.constraints.trackers.Trackers r1 = androidx.work.impl.constraints.trackers.Trackers.getInstance(r1, r2)
+            androidx.work.impl.constraints.trackers.NetworkStateTracker r1 = r1.getNetworkStateTracker()
+            r0.<init>(r1)
+            return
+    }
+
+    @Override // androidx.work.impl.constraints.controllers.ConstraintController
+    boolean hasConstraint(@androidx.annotation.NonNull androidx.work.impl.model.WorkSpec r2) {
+            r1 = this;
+            androidx.work.Constraints r2 = r2.constraints
+            androidx.work.NetworkType r2 = r2.getRequiredNetworkType()
+            androidx.work.NetworkType r0 = androidx.work.NetworkType.METERED
+            if (r2 != r0) goto Lc
+            r2 = 1
+            return r2
+        Lc:
+            r2 = 0
+            return r2
+    }
+
+    /* renamed from: isConstrained, reason: avoid collision after fix types in other method */
+    boolean isConstrained2(@androidx.annotation.NonNull androidx.work.impl.constraints.NetworkState r6) {
+            r5 = this;
+            int r0 = android.os.Build.VERSION.SDK_INT
+            r1 = 26
+            r2 = 1
+            r3 = 0
+            if (r0 >= r1) goto L1b
+            androidx.work.Logger r0 = androidx.work.Logger.get()
+            java.lang.String r1 = androidx.work.impl.constraints.controllers.NetworkMeteredController.TAG
+            java.lang.String r4 = "Metered network constraint is not supported before API 26, only checking for connected state."
+            java.lang.Throwable[] r3 = new java.lang.Throwable[r3]
+            r0.debug(r1, r4, r3)
+            boolean r6 = r6.isConnected()
+            r6 = r6 ^ r2
+            return r6
+        L1b:
+            boolean r0 = r6.isConnected()
+            if (r0 == 0) goto L29
+            boolean r6 = r6.isMetered()
+            if (r6 != 0) goto L28
+            goto L29
+        L28:
+            return r3
+        L29:
+            return r2
+    }
+
+    @Override // androidx.work.impl.constraints.controllers.ConstraintController
+    /* bridge */ /* synthetic */ boolean isConstrained(@androidx.annotation.NonNull androidx.work.impl.constraints.NetworkState r1) {
+            r0 = this;
+            androidx.work.impl.constraints.NetworkState r1 = (androidx.work.impl.constraints.NetworkState) r1
+            boolean r1 = r0.isConstrained2(r1)
+            return r1
+    }
+}

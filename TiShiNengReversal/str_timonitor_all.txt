@@ -1,0 +1,168 @@
+Android
+7779620
+__cxa_atexit
+__cxa_finalize
+Java_com_kwai_performance_stability_artti_monitor_JvmtiHelper_avoidDeoptForReleaseBuild
+Java_com_kwai_performance_stability_artti_monitor_JvmtiHelper_disableJdwp
+Java_com_kwai_performance_stability_artti_monitor_JvmtiHelper_enableJdwp
+Java_com_kwai_performance_stability_artti_monitor_JvmtiHelper_unloadAgent
+__android_log_print
+__stack_chk_fail
+xhook_clear
+xhook_enable_sigsegv_protection
+xhook_refresh
+xhook_register
+_ZdlPv
+__memcpy_chk
+__system_property_get
+asprintf
+malloc
+memcmp
+memset
+realloc
+strlen
+__vsnprintf_chk
+clock_gettime
+gettimeofday
+localtime
+__emutls_get_address
+pthread_attr_init
+pthread_create
+pthread_join
+sem_destroy
+sem_init
+sem_post
+sem_wait
+__memset_chk
+ftruncate
+getpagesize
+memchr
+munmap
+_ZdlPvSt11align_val_t
+_ZnwmSt11align_val_t
+closedir
+opendir
+printf
+readdir
+remove
+Agent_OnAttach
+Agent_OnUnload
+IsLoaded
+JNI_AttachAgent
+JNI_OnLoad
+JNI_getObjSize
+JNI_setConfig
+__strlen_chk
+registerJvmtiEventCallbacks
+strcmp
+memcpy
+pthread_getspecific
+pthread_key_create
+pthread_key_delete
+pthread_mutex_lock
+pthread_mutex_unlock
+pthread_once
+pthread_setspecific
+libc.so
+libplt-base.so
+libplt-unwind.so
+liblog.so
+libm.so
+libdl.so
+libti-monitor.so
+%s%s%s
+jvmti-agent
+agent_attach_done
+[JVMTI ERROR on GetClassSignature]:%d
+Jdwp Reset
+[JVMTI ERROR on GetMethodName]:%d
+jvmti-jdwp
+Avoid Depot
+log dir %s
+Failure running GetObjectSize: %s
+ does not include an ArtPlugin_Initialize function
+frameInfoToTrace
+(Ljava/lang/String;)V
+isJavaUnwindInSig
+com/kwai/performance/stability/artti/monitor/JvmtiHelper
+timestamp: %s; alloc_obj: %s; size: %llu; stack:%s
+loadTiAgent
+ArtPlugin_Deinitialize
+exceptionMsg
+lockType
+setEventNotification got err %d
+SetMonitorCapabilities got err %d
+()Ljava/lang/String;
+(IIIIZZLjava/lang/String;Z)V
+nativeTidCost
+failed to disable jdwp!
+scoped env DetachCurrentThread
+nativeUnwindWaitCost
+ti-looper
+setConfig
+ _NewPhaseUtil_Register
+VM NULL
+RegisterNatives failed
+vm nullptr when get jvmtiEnv
+getName
+(Ljava/lang/Object;)J
+Unsupported JNI version.
+nativeUnwindCost
+Could not load jvmti plugin
+class_load:%s, len:%u
+failed deinitialization! 
+lockMsg
+nativeUnwindTotalCost
+event_cb_err
+ArtPlugin_Initialize
+unknown
+Failed to attach thread.
+threadStateStr
+ro.build.version.sdk
+Initialization of artti plugin failed
+libart.so
+ does not include a deinitialization function
+nativeSigCost
+[JVMTI ERROR on GetMethodDeclaringClass]:%d
+Agent Unload
+ _NewThreadUtil_Register
+threadInfoCost
+%s%s%s%s%s
+dlopen failed for libopenjdkjvmti
+threadDumpStr
+(Ljava/lang/String;)[Ljava/lang/StackTraceElement;
+ERROR_SYSTEM_CALL
+Jdwp Enabled
+libopenjdkjvmti.so
+threadState
+threadId
+%d-%02d-%02d %02d:%02d:%02d.%03ld
+backtraces
+logEvent
+isNative
+SETJDWP_SYM_NULL
+getObjectSize
+SetJdwpAllowed successful.
+_NewDeBootImg
+[JVMTI ERROR on GetStackTrace]: %d
+jvmti_env_get_fail
+vm or log class NULL
+artMethod
+fastUnwindStack
+agent_on_attach
+gc_start:%llu, end:%llu, dur:%llu
+ERROR_THREAD_TIMEOUT
+java/lang/Class
+javaUnwindCost
+does not include a setJdwp function!
+ _NewDumpUtil_Register
+alloc_obj::%s; size::%llu; stack::%s
+0123456789ABCDEFuuuuuuuubtnufruuuuuuuuuuuuuuuuuu
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+9Y>)F$
+s\ax}?
+tC7Ddx
+xg^Jp5|
+{zel#|67
+Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+Linker: LLD 12.0.8 (/buildbot/src/android/llvm-r416183/out/llvm-project/lld c935d99d7cf2016289302412d708641d52d2f7ee)

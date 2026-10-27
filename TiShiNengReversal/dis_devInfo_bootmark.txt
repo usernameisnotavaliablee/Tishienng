@@ -1,0 +1,100 @@
+### Java_com_beizi_ad_internal_utilities_DeviceInfo_getBootMark  @0x13ffc  size=368
+0x00013ffc  sub      sp, sp, #0x90
+0x00014000  stp      x29, x30, [sp, #0x80]
+0x00014004  add      x29, sp, #0x80
+0x00014008  mrs      x8, tpidr_el0
+0x0001400c  ldr      x8, [x8, #0x28]
+0x00014010  stur     x8, [x29, #-8]
+0x00014014  stur     x0, [x29, #-0x38]
+0x00014018  str      x1, [sp, #0x40]
+0x0001401c  adrp     x0, #0x35000
+0x00014020  add      x0, x0, #0xa70   ; -> 0x35a70 = '/proc/sys/kernel/random/boot_id'
+0x00014024  adrp     x1, #0x36000
+0x00014028  add      x1, x1, #0xad1   ; -> 0x36ad1
+0x0001402c  bl       #0x13ed0   ; sub_13ed0
+0x00014030  str      x0, [sp, #0x38]
+0x00014034  ldr      x8, [sp, #0x38]
+0x00014038  cbnz     x8, #0x14044
+0x0001403c  b        #0x14040   ; sub_14040
+0x00014040  b        #0x140a4   ; sub_140a4
+0x00014044  mov      w8, wzr
+0x00014048  str      w8, [sp, #0x30]
+0x0001404c  b        #0x14050   ; sub_14050
+0x00014050  ldr      w8, [sp, #0x30]
+0x00014054  subs     w8, w8, #0x24
+0x00014058  b.gt     #0x1408c
+0x0001405c  b        #0x14060   ; sub_14060
+0x00014060  ldr      x0, [sp, #0x38]
+0x00014064  bl       #0x13c60   ; sub_13c60
+0x00014068  strb     w0, [sp, #0x34]
+0x0001406c  ldrb     w8, [sp, #0x34]
+0x00014070  ldrsw    x9, [sp, #0x30]
+0x00014074  sub      x10, x29, #0x30
+0x00014078  strb     w8, [x10, x9]
+0x0001407c  ldr      w8, [sp, #0x30]
+0x00014080  add      w8, w8, #1
+0x00014084  str      w8, [sp, #0x30]
+0x00014088  b        #0x14050   ; sub_14050
+0x0001408c  ldr      x0, [sp, #0x38]
+0x00014090  bl       #0x13d10   ; sub_13d10
+0x00014094  cbz      w0, #0x140a0
+0x00014098  b        #0x1409c   ; sub_1409c
+0x0001409c  b        #0x140a0   ; sub_140a0
+0x000140a0  b        #0x140a4   ; sub_140a4
+0x000140a4  ldur     x0, [x29, #-0x38]
+0x000140a8  adrp     x1, #0x35000
+0x000140ac  add      x1, x1, #0xa90   ; -> 0x35a90 = 'java/lang/String'
+0x000140b0  bl       #0x13ef0   ; sub_13ef0
+0x000140b4  str      x0, [sp, #0x28]
+0x000140b8  ldur     x0, [x29, #-0x38]
+0x000140bc  adrp     x1, #0x35000
+0x000140c0  add      x1, x1, #0xaa1   ; -> 0x35aa1 = 'UTF-8'
+0x000140c4  bl       #0x13970   ; sub_13970
+0x000140c8  str      x0, [sp, #0x20]
+0x000140cc  ldur     x0, [x29, #-0x38]
+0x000140d0  ldr      x1, [sp, #0x28]
+0x000140d4  adrp     x2, #0x35000
+0x000140d8  add      x2, x2, #0xaa7   ; -> 0x35aa7 = '<init>'
+0x000140dc  adrp     x3, #0x35000
+0x000140e0  add      x3, x3, #0xaae   ; -> 0x35aae = '([BLjava/lang/String;)V'
+0x000140e4  bl       #0x13830   ; sub_13830
+0x000140e8  str      x0, [sp, #0x18]
+0x000140ec  ldur     x0, [x29, #-0x38]
+0x000140f0  mov      w8, #0x25
+0x000140f4  mov      w1, w8
+0x000140f8  str      w8, [sp, #0xc]
+0x000140fc  bl       #0x13e70   ; sub_13e70
+0x00014100  str      x0, [sp, #0x10]
+0x00014104  ldur     x0, [x29, #-0x38]
+0x00014108  ldr      x1, [sp, #0x10]
+0x0001410c  mov      w4, wzr
+0x00014110  sub      x9, x29, #0x30
+0x00014114  mov      w2, w4
+0x00014118  ldr      w3, [sp, #0xc]
+0x0001411c  mov      x4, x9
+0x00014120  bl       #0x13950   ; sub_13950
+0x00014124  ldur     x0, [x29, #-0x38]
+0x00014128  ldr      x1, [sp, #0x28]
+0x0001412c  ldr      x2, [sp, #0x18]
+0x00014130  ldr      x3, [sp, #0x10]
+0x00014134  ldr      x4, [sp, #0x20]
+0x00014138  bl       #0x13840   ; sub_13840
+0x0001413c  mrs      x9, tpidr_el0
+0x00014140  ldr      x9, [x9, #0x28]
+0x00014144  ldur     x10, [x29, #-8]
+0x00014148  subs     x9, x9, x10
+0x0001414c  str      x0, [sp]
+0x00014150  b.ne     #0x14168
+0x00014154  b        #0x14158   ; sub_14158
+0x00014158  ldr      x0, [sp]
+0x0001415c  ldp      x29, x30, [sp, #0x80]
+0x00014160  add      sp, sp, #0x90
+0x00014164  ret      
+0x00014168  bl       #0x13b20   ; sub_13b20
+
+--- 引用的字符串常量 ---
+   0x35a70: '/proc/sys/kernel/random/boot_id'
+   0x35a90: 'java/lang/String'
+   0x35aa1: 'UTF-8'
+   0x35aa7: '<init>'
+   0x35aae: '([BLjava/lang/String;)V'

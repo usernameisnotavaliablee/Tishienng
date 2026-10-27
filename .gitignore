@@ -1,0 +1,35 @@
+# ===== macOS / Windows =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+venv/
+.venv/
+
+# ===== IDE / 编辑器 =====
+.idea/
+.vscode/
+.claude/
+
+# ===== 可重建环境（体积大，不入库；保留在本地磁盘） =====
+# Android SDK / AVD 镜像 / 虚拟环境
+TiShiNengReversal/sdk/
+TiShiNengReversal/avd-home/
+TiShiNengReversal/dsh-vm/maven/
+TiShiNengReversal/dsh-vm/pyvenv*/
+TiShiNengReversal/dsh-vm/tools/
+# 132MB，超 GitHub 单文件 100MB 限制
+TiShiNengReversal/dsh-vm/base.apk
+
+# ===== 构建产物与临时文件 =====
+TiShiNengReversal/unidbg_harness/target/
+target/
+out/
+docx_render_check/
+*.log.tmp

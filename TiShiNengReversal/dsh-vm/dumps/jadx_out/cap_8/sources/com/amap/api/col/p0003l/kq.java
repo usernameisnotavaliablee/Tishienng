@@ -1,0 +1,147 @@
+package com.amap.api.col.p0003l;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_8_sz9482380.dex */
+public final class kq extends com.amap.api.col.p0003l.ko implements java.io.Serializable {
+
+    /* renamed from: j, reason: collision with root package name */
+    public int f3656j;
+
+    /* renamed from: k, reason: collision with root package name */
+    public int f3657k;
+    public int l;
+    public int m;
+    public int n;
+    public int o;
+
+    public kq() {
+            r1 = this;
+            r1.<init>()
+            r0 = 0
+            r1.f3656j = r0
+            r1.f3657k = r0
+            r0 = 2147483647(0x7fffffff, float:NaN)
+            r1.l = r0
+            r1.m = r0
+            r1.n = r0
+            r1.o = r0
+            return
+    }
+
+    public kq(boolean r1, boolean r2) {
+            r0 = this;
+            r0.<init>(r1, r2)
+            r1 = 0
+            r0.f3656j = r1
+            r0.f3657k = r1
+            r1 = 2147483647(0x7fffffff, float:NaN)
+            r0.l = r1
+            r0.m = r1
+            r0.n = r1
+            r0.o = r1
+            return
+    }
+
+    @Override // com.amap.api.col.p0003l.ko
+    public final com.amap.api.col.p0003l.ko a() {
+            r3 = this;
+            com.amap.api.col.3l.kq r0 = new com.amap.api.col.3l.kq
+            boolean r1 = r3.f3652h
+            boolean r2 = r3.f3653i
+            r0.<init>(r1, r2)
+            r0.a(r3)
+            int r1 = r3.f3656j
+            r0.f3656j = r1
+            int r1 = r3.f3657k
+            r0.f3657k = r1
+            int r1 = r3.l
+            r0.l = r1
+            int r1 = r3.m
+            r0.m = r1
+            int r1 = r3.n
+            r0.n = r1
+            int r1 = r3.o
+            r0.o = r1
+            return r0
+    }
+
+    @Override // com.amap.api.col.p0003l.ko
+    public final /* synthetic */ java.lang.Object clone() throws java.lang.CloneNotSupportedException {
+            r1 = this;
+            com.amap.api.col.3l.ko r0 = r1.a()
+            return r0
+    }
+
+    @Override // com.amap.api.col.p0003l.ko
+    public final java.lang.String toString() {
+            r3 = this;
+            java.lang.StringBuilder r0 = new java.lang.StringBuilder
+            java.lang.String r1 = "AmapCellGsm{lac="
+            r0.<init>(r1)
+            int r1 = r3.f3656j
+            r0.append(r1)
+            java.lang.String r1 = ", cid="
+            r0.append(r1)
+            int r1 = r3.f3657k
+            r0.append(r1)
+            java.lang.String r1 = ", psc="
+            r0.append(r1)
+            int r1 = r3.l
+            r0.append(r1)
+            java.lang.String r1 = ", arfcn="
+            r0.append(r1)
+            int r1 = r3.m
+            r0.append(r1)
+            java.lang.String r1 = ", bsic="
+            r0.append(r1)
+            int r1 = r3.n
+            r0.append(r1)
+            java.lang.String r1 = ", timingAdvance="
+            r0.append(r1)
+            int r1 = r3.o
+            r0.append(r1)
+            java.lang.String r1 = ", mcc='"
+            r0.append(r1)
+            java.lang.String r1 = r3.a
+            r0.append(r1)
+            r1 = 39
+            r0.append(r1)
+            java.lang.String r2 = ", mnc='"
+            r0.append(r2)
+            java.lang.String r2 = r3.f3646b
+            r0.append(r2)
+            r0.append(r1)
+            java.lang.String r1 = ", signalStrength="
+            r0.append(r1)
+            int r1 = r3.f3647c
+            r0.append(r1)
+            java.lang.String r1 = ", asuLevel="
+            r0.append(r1)
+            int r1 = r3.f3648d
+            r0.append(r1)
+            java.lang.String r1 = ", lastUpdateSystemMills="
+            r0.append(r1)
+            long r1 = r3.f3649e
+            r0.append(r1)
+            java.lang.String r1 = ", lastUpdateUtcMills="
+            r0.append(r1)
+            long r1 = r3.f3650f
+            r0.append(r1)
+            java.lang.String r1 = ", age="
+            r0.append(r1)
+            int r1 = r3.f3651g
+            r0.append(r1)
+            java.lang.String r1 = ", main="
+            r0.append(r1)
+            boolean r1 = r3.f3652h
+            r0.append(r1)
+            java.lang.String r1 = ", newApi="
+            r0.append(r1)
+            boolean r1 = r3.f3653i
+            r0.append(r1)
+            r1 = 125(0x7d, float:1.75E-43)
+            r0.append(r1)
+            java.lang.String r0 = r0.toString()
+            return r0
+    }
+}

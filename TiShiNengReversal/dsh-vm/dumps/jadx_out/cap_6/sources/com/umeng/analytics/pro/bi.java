@@ -1,0 +1,138 @@
+package com.umeng.analytics.pro;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_6_sz7847784.dex */
+public class bi {
+    public static final java.lang.String A = "mc";
+    public static final java.lang.String B = "mccmnc";
+    public static final java.lang.String C = "device_id";
+    public static final java.lang.String D = "device_model";
+    public static final java.lang.String E = "device_board";
+    public static final java.lang.String F = "device_brand";
+    public static final java.lang.String G = "device_manutime";
+    public static final java.lang.String H = "device_manufacturer";
+    public static final java.lang.String I = "device_manuid";
+    public static final java.lang.String J = "device_name";
+    public static final java.lang.String K = "sub_os_name";
+    public static final java.lang.String L = "sub_os_version";
+    public static final java.lang.String M = "timezone";
+    public static final java.lang.String N = "language";
+    public static final java.lang.String O = "country";
+    public static final java.lang.String P = "carrier";
+    public static final java.lang.String Q = "access";
+    public static final java.lang.String R = "access_subtype";
+    public static final java.lang.String S = "local_ip";
+    public static final java.lang.String T = "network_type";
+    public static final java.lang.String U = "successful_requests";
+    public static final java.lang.String V = "failed_requests";
+    public static final java.lang.String W = "req_time";
+    public static final java.lang.String X = "imprint";
+    public static final java.lang.String Y = "id_tracking";
+    public static final java.lang.String Z = "battery";
+    public static final java.lang.String a = "devicetoken";
+    public static final java.lang.String aA = "p";
+    public static final java.lang.String aB = "pr";
+    public static final java.lang.String aC = "pl";
+    public static final java.lang.String aD = "pg";
+    public static final java.lang.String aE = "s";
+    public static final java.lang.String aF = "i";
+    public static final java.lang.String aG = "z";
+    public static final java.lang.String aH = "v";
+    public static final java.lang.String aI = "c";
+    public static final java.lang.String aJ = "h";
+    public static final java.lang.String aK = "u";
+    public static final java.lang.String aL = "t";
+    public static final java.lang.String aM = "st";
+    public static final java.lang.String aN = "sdk_version";
+    public static final java.lang.String aO = "p_sdk_v";
+    public static final java.lang.String aP = "s_sdk_v";
+    public static final java.lang.String aQ = "i_sdk_v";
+    public static final java.lang.String aR = "c_sdk_v";
+    public static final java.lang.String aS = "v_sdk_v";
+    public static final java.lang.String aT = "ut/";
+    public static final java.lang.String aU = "control_policy";
+    public static final java.lang.String aV = "latent";
+    public static final java.lang.String aW = "latency";
+    public static final java.lang.String aX = "interval";
+    public static final java.lang.String aY = "targetSdkVer";
+    public static final java.lang.String aZ = "rps_pr";
+    public static final java.lang.String aa = "iccid";
+    public static final java.lang.String ab = "secondaryimei";
+    public static final java.lang.String ac = "sensor";
+    public static final java.lang.String ad = "basestation";
+    public static final java.lang.String ae = "is";
+    public static final java.lang.String af = "urec_ver";
+    public static final java.lang.String ag = "header";
+    public static final java.lang.String ah = "versioncode";
+    public static final java.lang.String ai = "device_type";
+    public static final java.lang.String aj = "api_level";
+    public static final java.lang.String ak = "oaid_required_time";
+    public static final java.lang.String al = "zid";
+    public static final java.lang.String am = "zid_sdk_version";
+    public static final java.lang.String an = "session_id";
+    public static final java.lang.String ao = "others_OS";
+    public static final java.lang.String ap = "module_tag";
+    public static final java.lang.String aq = "issys";
+    public static final java.lang.String ar = "xpus";
+    public static final java.lang.String as = "rpus";
+    public static final java.lang.String at = "analytics";
+    public static final java.lang.String au = "dplus";
+    public static final java.lang.String av = "push";
+    public static final java.lang.String aw = "share";
+    public static final java.lang.String ax = "inner";
+    public static final java.lang.String ay = "a";
+    public static final java.lang.String az = "ad";
+    public static final java.lang.String b = "com_ver";
+    public static final java.lang.String ba = "acl_pr";
+    public static final java.lang.String bb = "afl_pr";
+    public static final java.lang.String bc = "module_ver";
+    public static final java.lang.String bd = "i_ver";
+    public static final java.lang.String be = "a_ver";
+    public static final java.lang.String bf = "g_ver";
+    public static final java.lang.String bg = "p_ver";
+    public static final java.lang.String bh = "s_ver";
+    public static final java.lang.String bi = "c_ver";
+    public static final java.lang.String bj = "n_ver";
+    public static final java.lang.String bk = "m_ver";
+    public static final java.lang.String bl = "u_ver";
+    public static final java.lang.String bm = "v_ver";
+    public static final java.lang.String bn = "z_ver";
+    public static final java.lang.String bo = "l_ver";
+    public static final java.lang.String bp = "t_ver";
+    public static final java.lang.String bq = "r_ver";
+    public static final java.lang.String br = "_$apmflag";
+    public static final java.lang.String bs = "dk";
+    public static final java.lang.String bt = "policy";
+    public static final java.lang.String c = "com_type";
+    public static final java.lang.String d = "mini_ver";
+    public static final java.lang.String e = "module";
+    public static final java.lang.String f = "umtt";
+    public static final java.lang.String g = "umid";
+    public static final java.lang.String h = "utoken";
+    public static final java.lang.String i = "wrapper_type";
+    public static final java.lang.String j = "wrapper_version";
+    public static final java.lang.String k = "appkey";
+    public static final java.lang.String l = "channel";
+    public static final java.lang.String m = "secret";
+    public static final java.lang.String n = "app_version";
+    public static final java.lang.String o = "package_name";
+    public static final java.lang.String p = "app_signature";
+
+    /* renamed from: q, reason: collision with root package name */
+    public static final java.lang.String f23q = "app_sig_sha1";
+    public static final java.lang.String r = "app_sig_sha";
+    public static final java.lang.String s = "display_name";
+    public static final java.lang.String t = "version_code";
+    public static final java.lang.String u = "sdk_type";
+    public static final java.lang.String v = "idmd5";
+    public static final java.lang.String w = "cpu";
+    public static final java.lang.String x = "os";
+    public static final java.lang.String y = "os_version";
+    public static final java.lang.String z = "resolution";
+
+    public bi() {
+            r0 = this;
+            r0.<init>()
+            return
+    }
+}

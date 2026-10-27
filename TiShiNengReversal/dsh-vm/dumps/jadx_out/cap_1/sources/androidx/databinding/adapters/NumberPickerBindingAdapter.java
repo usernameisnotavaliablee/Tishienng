@@ -1,0 +1,37 @@
+package androidx.databinding.adapters;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+@androidx.databinding.BindingMethods({@androidx.databinding.BindingMethod(attribute = "android:format", method = "setFormatter", type = android.widget.NumberPicker.class), @androidx.databinding.BindingMethod(attribute = "android:onScrollStateChange", method = "setOnScrollListener", type = android.widget.NumberPicker.class)})
+@androidx.databinding.InverseBindingMethods({@androidx.databinding.InverseBindingMethod(attribute = "android:value", type = android.widget.NumberPicker.class)})
+@androidx.annotation.RestrictTo({androidx.annotation.RestrictTo.Scope.LIBRARY})
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_1_sz9857704.dex */
+public class NumberPickerBindingAdapter {
+
+
+    public NumberPickerBindingAdapter() {
+            r0 = this;
+            r0.<init>()
+            return
+    }
+
+    @androidx.databinding.BindingAdapter(requireAll = false, value = {"android:onValueChange", "android:valueAttrChanged"})
+    public static void setListeners(android.widget.NumberPicker r1, android.widget.NumberPicker.OnValueChangeListener r2, androidx.databinding.InverseBindingListener r3) {
+            if (r3 != 0) goto L6
+            r1.setOnValueChangedListener(r2)
+            return
+        L6:
+            androidx.databinding.adapters.NumberPickerBindingAdapter$1 r0 = new androidx.databinding.adapters.NumberPickerBindingAdapter$1
+            r0.<init>(r2, r3)
+            r1.setOnValueChangedListener(r0)
+            return
+    }
+
+    @androidx.databinding.BindingAdapter({"android:value"})
+    public static void setValue(android.widget.NumberPicker r1, int r2) {
+            int r0 = r1.getValue()
+            if (r0 == r2) goto L9
+            r1.setValue(r2)
+        L9:
+            return
+    }
+}

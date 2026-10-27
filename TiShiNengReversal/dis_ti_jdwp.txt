@@ -1,0 +1,20 @@
+### Java_com_kwai_performance_stability_artti_monitor_JvmtiHelper_enableJdwp  @0x9338  size=60
+0x00009338  sub      sp, sp, #0x20
+0x0000933c  stp      x29, x30, [sp, #0x10]
+0x00009340  add      x29, sp, #0x10
+0x00009344  str      x0, [sp, #8]
+0x00009348  str      x1, [sp]
+0x0000934c  mov      w0, #4
+0x00009350  adrp     x1, #0x2000
+0x00009354  add      x1, x1, #0x3ff   ; -> 0x23ff = 'jvmti-jdwp'
+0x00009358  adrp     x2, #0x2000
+0x0000935c  add      x2, x2, #0x963   ; -> 0x2963 = 'Jdwp Enabled'
+0x00009360  bl       #0x1b180   ; sub_1b180
+0x00009364  bl       #0x8fa8   ; sub_8fa8
+0x00009368  ldp      x29, x30, [sp, #0x10]
+0x0000936c  add      sp, sp, #0x20
+0x00009370  ret      
+
+--- 引用的字符串常量 ---
+   0x23ff: 'jvmti-jdwp'
+   0x2963: 'Jdwp Enabled'

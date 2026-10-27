@@ -1,0 +1,39 @@
+==============================================================================
+FILE: C:/Users/Administrator/Downloads/tishineng.apk/lib/arm64-v8a/libti-monitor.so
+  arch = AArch64 | class = 64 | type = ET_DYN
+  exports total=13  imports total=77
+  -- 业务相关导出符号(名, 地址) --
+     0x000093f0  Java_com_kwai_performance_stability_artti_monitor_JvmtiHelper_avoidDeoptForReleaseBuild
+     0x00009338  Java_com_kwai_performance_stability_artti_monitor_JvmtiHelper_enableJdwp
+     0x00019780  Agent_OnUnload
+     0x000195d0  IsLoaded
+     0x00019480  JNI_getObjSize
+     0x00009374  Java_com_kwai_performance_stability_artti_monitor_JvmtiHelper_disableJdwp
+     0x00018510  Agent_OnAttach
+     0x000195e8  JNI_AttachAgent
+     0x000182d0  registerJvmtiEventCallbacks
+     0x000093b0  Java_com_kwai_performance_stability_artti_monitor_JvmtiHelper_unloadAgent
+     0x00019884  JNI_OnLoad
+     0x00019398  JNI_setConfig
+  -- 关注的导入(openssl/系统调用) --
+     _ZN11unwindstack22UnwinderFromJavaThread16FrameInfoToTraceEP7_JNIEnvPNS_10UnwindDataEb, _ZN11unwindstack22UnwinderFromJavaThread4InitEP7_JavaVM, _ZN11unwindstack22UnwinderFromJavaThread6UnwindEP7_JNIEnvPNS_10UnwindDataEP8_jobjectbbbi, _ZN4kwai6linker5DlFcn6dlopenEPKci, __system_property_get, open, opendir, pthread_attr_init, pthread_create, pthread_getspecific, pthread_join, pthread_key_create, pthread_key_delete, pthread_mutex_lock, pthread_mutex_unlock, pthread_once, pthread_setspecific, readdir
+  -- 有意义字符串 19 条(去重，截前 120) --
+    | _ZN11unwindstack22UnwinderFromJavaThread16FrameInfoToTraceEP7_JNIEnvPNS_10UnwindDataEb
+    | _ZN11unwindstack22UnwinderFromJavaThread6UnwindEP7_JNIEnvPNS_10UnwindDataEP8_jobjectbbbi
+    | JNI_AttachAgent
+    | JNI_OnLoad
+    | JNI_getObjSize
+    | JNI_setConfig
+    | pthread_key_create
+    | pthread_key_delete
+    | [JVMTI ERROR on GetClassSignature]:%d
+    | (Ljava/lang/String;)V
+    | ()Ljava/lang/String;
+    | (IIIIZZLjava/lang/String;Z)V
+    | RegisterNatives failed
+    | (Ljava/lang/Object;)J
+    | Unsupported JNI version.
+    | ro.build.version.sdk
+    | (Ljava/lang/String;)[Ljava/lang/StackTraceElement;
+    | Android (7714059, based on r416183c1) clang version 12.0.8 (https://android.googlesource.com/toolchain/llvm-project c935d99d7cf2016289302412d708641d52d2f7ee)
+    | .comment

@@ -1,0 +1,19 @@
+package com.bumptech.glide.load.engine;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_4_sz9502280.dex */
+interface f {
+
+    /* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+    public interface a {
+        void b(com.bumptech.glide.load.c r1, java.lang.Exception r2, com.bumptech.glide.load.data.d<?> r3, com.bumptech.glide.load.DataSource r4);
+
+        void c();
+
+        void d(com.bumptech.glide.load.c r1, @androidx.annotation.Nullable java.lang.Object r2, com.bumptech.glide.load.data.d<?> r3, com.bumptech.glide.load.DataSource r4, com.bumptech.glide.load.c r5);
+    }
+
+    boolean a();
+
+    void cancel();
+}

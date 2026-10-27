@@ -1,0 +1,164 @@
+package io.netty.handler.codec.rtsp;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_6_sz7847784.dex */
+public final class RtspHeaderValues {
+    public static final io.netty.util.AsciiString APPEND = null;
+    public static final io.netty.util.AsciiString AVP = null;
+    public static final io.netty.util.AsciiString BYTES = null;
+    public static final io.netty.util.AsciiString CHARSET = null;
+    public static final io.netty.util.AsciiString CLIENT_PORT = null;
+    public static final io.netty.util.AsciiString CLOCK = null;
+    public static final io.netty.util.AsciiString CLOSE = null;
+    public static final io.netty.util.AsciiString COMPRESS = null;
+    public static final io.netty.util.AsciiString CONTINUE = null;
+    public static final io.netty.util.AsciiString DEFLATE = null;
+    public static final io.netty.util.AsciiString DESTINATION = null;
+    public static final io.netty.util.AsciiString GZIP = null;
+    public static final io.netty.util.AsciiString IDENTITY = null;
+    public static final io.netty.util.AsciiString INTERLEAVED = null;
+    public static final io.netty.util.AsciiString KEEP_ALIVE = null;
+    public static final io.netty.util.AsciiString LAYERS = null;
+    public static final io.netty.util.AsciiString MAX_AGE = null;
+    public static final io.netty.util.AsciiString MAX_STALE = null;
+    public static final io.netty.util.AsciiString MIN_FRESH = null;
+    public static final io.netty.util.AsciiString MODE = null;
+    public static final io.netty.util.AsciiString MULTICAST = null;
+    public static final io.netty.util.AsciiString MUST_REVALIDATE = null;
+    public static final io.netty.util.AsciiString NONE = null;
+    public static final io.netty.util.AsciiString NO_CACHE = null;
+    public static final io.netty.util.AsciiString NO_TRANSFORM = null;
+    public static final io.netty.util.AsciiString ONLY_IF_CACHED = null;
+    public static final io.netty.util.AsciiString PORT = null;
+    public static final io.netty.util.AsciiString PRIVATE = null;
+    public static final io.netty.util.AsciiString PROXY_REVALIDATE = null;
+    public static final io.netty.util.AsciiString PUBLIC = null;
+    public static final io.netty.util.AsciiString RTP = null;
+    public static final io.netty.util.AsciiString RTPTIME = null;
+    public static final io.netty.util.AsciiString SEQ = null;
+    public static final io.netty.util.AsciiString SERVER_PORT = null;
+    public static final io.netty.util.AsciiString SSRC = null;
+    public static final io.netty.util.AsciiString TCP = null;
+    public static final io.netty.util.AsciiString TIME = null;
+    public static final io.netty.util.AsciiString TIMEOUT = null;
+    public static final io.netty.util.AsciiString TTL = null;
+    public static final io.netty.util.AsciiString UDP = null;
+    public static final io.netty.util.AsciiString UNICAST = null;
+    public static final io.netty.util.AsciiString URL = null;
+
+    static {
+            java.lang.String r0 = "append"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.APPEND = r0
+            java.lang.String r0 = "AVP"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.AVP = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.BYTES
+            io.netty.handler.codec.rtsp.RtspHeaderValues.BYTES = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.CHARSET
+            io.netty.handler.codec.rtsp.RtspHeaderValues.CHARSET = r0
+            java.lang.String r0 = "client_port"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.CLIENT_PORT = r0
+            java.lang.String r0 = "clock"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.CLOCK = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.CLOSE
+            io.netty.handler.codec.rtsp.RtspHeaderValues.CLOSE = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.COMPRESS
+            io.netty.handler.codec.rtsp.RtspHeaderValues.COMPRESS = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.CONTINUE
+            io.netty.handler.codec.rtsp.RtspHeaderValues.CONTINUE = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.DEFLATE
+            io.netty.handler.codec.rtsp.RtspHeaderValues.DEFLATE = r0
+            java.lang.String r0 = "destination"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.DESTINATION = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.GZIP
+            io.netty.handler.codec.rtsp.RtspHeaderValues.GZIP = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.IDENTITY
+            io.netty.handler.codec.rtsp.RtspHeaderValues.IDENTITY = r0
+            java.lang.String r0 = "interleaved"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.INTERLEAVED = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.KEEP_ALIVE
+            io.netty.handler.codec.rtsp.RtspHeaderValues.KEEP_ALIVE = r0
+            java.lang.String r0 = "layers"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.LAYERS = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.MAX_AGE
+            io.netty.handler.codec.rtsp.RtspHeaderValues.MAX_AGE = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.MAX_STALE
+            io.netty.handler.codec.rtsp.RtspHeaderValues.MAX_STALE = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.MIN_FRESH
+            io.netty.handler.codec.rtsp.RtspHeaderValues.MIN_FRESH = r0
+            java.lang.String r0 = "mode"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.MODE = r0
+            java.lang.String r0 = "multicast"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.MULTICAST = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.MUST_REVALIDATE
+            io.netty.handler.codec.rtsp.RtspHeaderValues.MUST_REVALIDATE = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.NONE
+            io.netty.handler.codec.rtsp.RtspHeaderValues.NONE = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.NO_CACHE
+            io.netty.handler.codec.rtsp.RtspHeaderValues.NO_CACHE = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.NO_TRANSFORM
+            io.netty.handler.codec.rtsp.RtspHeaderValues.NO_TRANSFORM = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.ONLY_IF_CACHED
+            io.netty.handler.codec.rtsp.RtspHeaderValues.ONLY_IF_CACHED = r0
+            java.lang.String r0 = "port"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.PORT = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.PRIVATE
+            io.netty.handler.codec.rtsp.RtspHeaderValues.PRIVATE = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.PROXY_REVALIDATE
+            io.netty.handler.codec.rtsp.RtspHeaderValues.PROXY_REVALIDATE = r0
+            io.netty.util.AsciiString r0 = io.netty.handler.codec.http.HttpHeaderValues.PUBLIC
+            io.netty.handler.codec.rtsp.RtspHeaderValues.PUBLIC = r0
+            java.lang.String r0 = "RTP"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.RTP = r0
+            java.lang.String r0 = "rtptime"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.RTPTIME = r0
+            java.lang.String r0 = "seq"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.SEQ = r0
+            java.lang.String r0 = "server_port"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.SERVER_PORT = r0
+            java.lang.String r0 = "ssrc"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.SSRC = r0
+            java.lang.String r0 = "TCP"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.TCP = r0
+            java.lang.String r0 = "time"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.TIME = r0
+            java.lang.String r0 = "timeout"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.TIMEOUT = r0
+            java.lang.String r0 = "ttl"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.TTL = r0
+            java.lang.String r0 = "UDP"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.UDP = r0
+            java.lang.String r0 = "unicast"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.UNICAST = r0
+            java.lang.String r0 = "url"
+            io.netty.util.AsciiString r0 = io.netty.util.AsciiString.cached(r0)
+            io.netty.handler.codec.rtsp.RtspHeaderValues.URL = r0
+            return
+    }
+
+    private RtspHeaderValues() {
+            r0 = this;
+            r0.<init>()
+            return
+    }
+}

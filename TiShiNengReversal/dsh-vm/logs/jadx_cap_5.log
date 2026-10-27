@@ -1,0 +1,8 @@
+# jadx_cap_5 — 输入: cap_5_sz*.dex SHA-256=91bd6abd698a202ef81f3bf17c0d3fb2c197ae675a932a24789b98ba259f0432
+# 命令: JADX_OPTS="-Duser.home=.../jadx-home" dsh-vm/tools/bin/jadx -m fallback -j 1 -d dsh-vm/dumps/jadx_out/cap_5 dsh-vm/dumps/dexcap/dexcap/cap_5_sz*.dex
+# 版本: 1.5.1  模式: fallback  线程: -j 1
+# 起止: 见文件时间戳（生成于 2026-08-15 Phase 2 批处理）
+--- jadx 原始输出 ---
+INFO  - loading ...
+INFO  - processing ...
+INFO  - progress: 0 of 2492 (0%)INFO  - progress: 10 of 2492 (0%)INFO  - progress: 25 of 2492 (1%)INFO  - progress: 42 of 2492 (1%)INFO  - progress: 170 of 2492 (6%)INFO  - progress: 392 of 2492 (15%)INFO  - progress: 557 of 2492 (22%)INFO  - progress: 761 of 2492 (30%)INFO  - progress: 1041 of 2492 (41%)INFO  - progress: 1383 of 2492 (55%)INFO  - progress: 1653 of 2492 (66%)INFO  - progress: 1938 of 2492 (77%)INFO  - progress: 2110 of 2492 (84%)INFO  - progress: 2251 of 2492 (90%)INFO  - progress: 2375 of 2492 (95%)                                                             INFO  - done

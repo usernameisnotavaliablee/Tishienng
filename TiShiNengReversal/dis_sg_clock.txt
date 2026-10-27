@@ -1,0 +1,11 @@
+### Java_com_kwai_sgcore_SGCore_getClock  @0x3d58  size=1944
+0x00003d58  stp      x0, x1, [sp, #-0x20]!
+0x00003d5c  stp      x2, x30, [sp, #0x10]
+0x00003d60  adr      x1, #0x3d80
+0x00003d64  subs     x1, x1, #8
+0x00003d68  mov      x0, x1
+0x00003d6c  adds     x0, x0, #0x28
+0x00003d70  str      x0, [sp, #0x18]
+0x00003d74  ldp      x2, x9, [sp, #0x10]
+0x00003d78  ldp      x0, x1, [sp], #0x20
+0x00003d7c  br       x9

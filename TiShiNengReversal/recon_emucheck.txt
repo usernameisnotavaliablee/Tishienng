@@ -1,0 +1,23 @@
+==============================================================================
+FILE: C:/Users/Administrator/Downloads/tishineng.apk/lib/arm64-v8a/libemulator_check.so
+  arch = AArch64 | class = 64 | type = ET_DYN
+  exports total=10  imports total=10
+  -- 业务相关导出符号(名, 地址) --
+     0x00000c18  Java_com_snail_antifake_jni_EmulatorDetectUtil_detect
+     0x00012008  a
+     0x00000b3c  my_sigaction
+     0x00000eec  handledSignalsNum
+     0x00000ed8  handledSignals
+     0x00012018  asmcheck
+     0x00012020  old_handlers
+     0x00000b68  load
+  -- 关注的导入(openssl/系统调用) --
+     fopen
+  -- 有意义字符串 7 条(去重，截前 120) --
+    | Java_com_snail_antifake_jni_EmulatorDetectUtil_detect
+    | handledSignals
+    | handledSignalsNum
+    | Crash detect  signal %d
+    | /dev/zero
+    | Android (5220042 based on r346389c) clang version 8.0.7 (https://android.googlesource.com/toolchain/clang b55f2d4ebfd35bf643d27dbca1bb228957008617) (https://android.googlesource.com/toolchain/llvm 3c393fe7a7e13b0fba4ac75a01aa683d7a5b11cd) (based on LLVM 8.0.7svn)
+    | .comment

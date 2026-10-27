@@ -1,0 +1,40 @@
+==============================================================================
+FILE: C:/Users/Administrator/Downloads/tishineng.apk/lib/arm64-v8a/libcommonV2DevInfo.so
+  arch = AArch64 | class = 64 | type = ET_DYN
+  exports total=515  imports total=61
+  -- 业务相关导出符号(名, 地址) --
+     0x00013ad0  JNI_OnLoad
+     0x00016294  _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignEPKwm
+     0x00016bfc  _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignEmw
+     0x000146f4  _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKcm
+     0x00014ddc  _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEmc
+     0x00016bc8  _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignEPKw
+     0x00016b7c  _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignERKS5_mm
+     0x0002fb0c  __dynamic_cast
+     0x00014da8  _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+     0x00014d60  _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignERKS5_mm
+  -- 关注的导入(openssl/系统调用) --
+     openlog, pthread_create, pthread_getspecific, pthread_key_create, pthread_mutex_lock, pthread_mutex_unlock, pthread_once, pthread_setspecific
+  -- 有意义字符串 22 条(去重，截前 120) --
+    | JNI_OnLoad
+    | _Z16getDevUpdateMarkP7_JNIEnvP7_jclass
+    | _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+    | _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKcm
+    | _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignERKS5_mm
+    | _ZNSt6__ndk112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEmc
+    | _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignEPKw
+    | _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignEPKwm
+    | _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignERKS5_mm
+    | _ZNSt6__ndk112basic_stringIwNS_11char_traitsIwEENS_9allocatorIwEEE6assignEmw
+    | pthread_key_create
+    | xyz/adscope/common/v2/dev/info/DevSysMark
+    | getDevUpdateMark
+    | ()Ljava/lang/String;
+    | unsigned char
+    | unsigned short
+    | unsigned __int128
+    | unsigned int
+    | unsigned long
+    | unsigned long long
+    | Android (7019983 based on r365631c3) clang version 9.0.9 (https://android.googlesource.com/toolchain/llvm-project a2a1e703c0edb03ba29944e529ccbf457742737b) (based on LLVM 9.0.9svn)
+    | .comment

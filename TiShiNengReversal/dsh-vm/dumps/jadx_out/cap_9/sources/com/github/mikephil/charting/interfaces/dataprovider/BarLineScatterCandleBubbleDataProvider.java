@@ -1,0 +1,15 @@
+package com.github.mikephil.charting.interfaces.dataprovider;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_9_sz8866584.dex */
+public interface BarLineScatterCandleBubbleDataProvider extends com.github.mikephil.charting.interfaces.dataprovider.ChartInterface {
+    com.github.mikephil.charting.data.BarLineScatterCandleBubbleData getData();
+
+    float getHighestVisibleX();
+
+    float getLowestVisibleX();
+
+    com.github.mikephil.charting.utils.Transformer getTransformer(com.github.mikephil.charting.components.YAxis.AxisDependency r1);
+
+    boolean isInverted(com.github.mikephil.charting.components.YAxis.AxisDependency r1);
+}

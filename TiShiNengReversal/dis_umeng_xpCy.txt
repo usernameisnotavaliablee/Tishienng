@@ -1,0 +1,27 @@
+### Java_com_support_callhoo_NativeMethodDef_xpCy  @0x42124  size=5824
+0x00042124  stp      x28, x27, [sp, #-0x60]!
+0x00042128  stp      x26, x25, [sp, #0x10]
+0x0004212c  stp      x24, x23, [sp, #0x20]
+0x00042130  stp      x22, x21, [sp, #0x30]
+0x00042134  stp      x20, x19, [sp, #0x40]
+0x00042138  stp      x29, x30, [sp, #0x50]
+0x0004213c  add      x29, sp, #0x50
+0x00042140  sub      sp, sp, #0x460
+0x00042144  mrs      x8, tpidr_el0
+0x00042148  str      x8, [sp, #0x10]
+0x0004214c  ldr      x8, [x8, #0x28]
+0x00042150  mov      w9, #0x14
+0x00042154  add      x11, sp, #0x68
+0x00042158  add      x1, sp, #0x6c
+0x0004215c  stur     x8, [x29, #-0x58]
+0x00042160  str      w9, [sp, #0x68]
+0x00042164  adr      x2, #0x42168
+0x00042168  ldrsw    x26, #0x42188
+0x0004216c  sub      x26, x26, #0x4e
+0x00042170  ldrsw    x10, [x11]
+0x00042174  add      x26, x26, x10
+0x00042178  add      x2, x2, x26
+0x0004217c  mov      w8, #0xec
+0x00042180  str      w8, [x1]
+0x00042184  blr      x2
+0x00042188  udf      #0x6e

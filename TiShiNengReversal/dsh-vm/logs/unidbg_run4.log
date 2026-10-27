@@ -1,0 +1,122 @@
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[+] cert DER: 891B md5=7fc022e67c7d2accc3c8770a46138dc3 MATCH (auth 可通过)
+[+] libtsnsecret.so loaded @ base=0x12000000 size=0x497000
+[CASE1] 密文(host自加密) = d059e02a8aa2281698a5d4743facd201b0344ac2c060a22274a41a18c529485a
+
+==== call aes_decrypt: dataLen=32 key=165f47a702bf0965d2fb49cdbb373377 iv=00000000000000000000000000000000 ====
+JNIEnv->GetMethodID(android/content/Context.getPackageManager()Landroid/content/pm/PackageManager;) => 0x3acc78f0 was called from RX@0x1214a8a4[libtsnsecret.so]0x14a8a4
+[JNI] callObjectMethod role=1 sig=getPackageManager()Landroid/content/pm/PackageManager;
+JNIEnv->CallObjectMethodV(android.content.Context@77d42290, getPackageManager() => android.content.pm.PackageManager@166f61ce) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetMethodID(android/content/pm/PackageManager.getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;) => 0x3bca8377 was called from RX@0x1214ac54[libtsnsecret.so]0x14ac54
+JNIEnv->GetMethodID(android/content/Context.getPackageName()Ljava/lang/String;) => 0xf6590850 was called from RX@0x1214aa3c[libtsnsecret.so]0x14aa3c
+[JNI] callObjectMethod role=1 sig=getPackageName()Ljava/lang/String;
+JNIEnv->CallObjectMethodV(android.content.Context@77d42290, getPackageName() => "com.bxkj.student") was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetStringUtfChars("com.bxkj.student") was called from RX@0x1214adf4[libtsnsecret.so]0x14adf4
+[JNI] callObjectMethod role=2 sig=getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+JNIEnv->CallObjectMethodV(android.content.pm.PackageManager@166f61ce, getPackageInfo("com.bxkj.student", 0x40) => android.content.pm.PackageInfo@2bc08a81) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetFieldID(android/content/pm/PackageInfo.signatures [Landroid/content/pm/Signature;) => 0x25f17218 was called from RX@0x1214b2cc[libtsnsecret.so]0x14b2cc
+[JNI] getObjectField role=3 sig=signatures:[Landroid/content/pm/Signature;
+JNIEnv->GetObjectField(android.content.pm.PackageInfo@2bc08a81, signatures [Landroid/content/pm/Signature; => [android.content.pm.Signature@28165b2c]) was called from RX@0x1214b024[libtsnsecret.so]0x14b024
+JNIEnv->GetObjectArrayElement([android.content.pm.Signature@28165b2c], 0) => android.content.pm.Signature@28165b2c was called from RX@0x1214b118[libtsnsecret.so]0x14b118
+JNIEnv->GetMethodID(android/content/pm/Signature.toByteArray()[B) => 0x6a3e2031 was called from RX@0x1214b4a8[libtsnsecret.so]0x14b4a8
+[JNI] callObjectMethod role=4 sig=toByteArray()[B
+JNIEnv->CallObjectMethodV(android.content.pm.Signature@28165b2c, toByteArray() => [B@79d8ccc4) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetArrayLength([B@79d8ccc4 => 891) was called from RX@0x123cf67c[libtsnsecret.so]0x3cf67c
+JNIEnv->GetByteArrayRegion([B@79d8ccc4, 0, 891, RW@0x127d8000) was called from RX@0x123cf760[libtsnsecret.so]0x3cf760
+JNIEnv->GetByteArrayElements(false) => [B@0xd059e02a8aa2281698a5d4743facd201b0344ac2c060a22274a41a18c529485a was called from RX@0x123da2f0[libtsnsecret.so]0x3da2f0
+JNIEnv->GetArrayLength([B@0xd059e02a8aa2281698a5d4743facd201b0344ac2c060a22274a41a18c529485a => 32) was called from RX@0x123da394[libtsnsecret.so]0x3da394
+JNIEnv->GetByteArrayElements(false) => [B@0x165f47a702bf0965d2fb49cdbb373377 was called from RX@0x123da7c8[libtsnsecret.so]0x3da7c8
+JNIEnv->GetByteArrayElements(false) => [B@0x00000000000000000000000000000000 was called from RX@0x123dbd54[libtsnsecret.so]0x3dbd54
+JNIEnv->NewByteArray(18) was called from RX@0x123da768[libtsnsecret.so]0x3da768
+JNIEnv->SetByteArrayRegion([B@0x000000000000000000000000000000000000, 0, 18, RW@0x127d3030) was called from RX@0x123dac30[libtsnsecret.so]0x3dac30
+[+] aes_decrypt -> 18B: 54534e2d415554482d544553542d32303236
+★ CASE1 AUTH_KEY 往返验证 PASS
+
+==== call aes_decrypt: dataLen=32 key=c310d8a21490eddc2f3cd870c34bb732 iv=00000000000000000000000000000000 ====
+JNIEnv->GetMethodID(android/content/Context.getPackageManager()Landroid/content/pm/PackageManager;) => 0x3acc78f0 was called from RX@0x1214a8a4[libtsnsecret.so]0x14a8a4
+[JNI] callObjectMethod role=1 sig=getPackageManager()Landroid/content/pm/PackageManager;
+JNIEnv->CallObjectMethodV(android.content.Context@45b6f5ca, getPackageManager() => android.content.pm.PackageManager@41e4b5f3) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetMethodID(android/content/pm/PackageManager.getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;) => 0x3bca8377 was called from RX@0x1214ac54[libtsnsecret.so]0x14ac54
+JNIEnv->GetMethodID(android/content/Context.getPackageName()Ljava/lang/String;) => 0xf6590850 was called from RX@0x1214aa3c[libtsnsecret.so]0x14aa3c
+[JNI] callObjectMethod role=1 sig=getPackageName()Ljava/lang/String;
+JNIEnv->CallObjectMethodV(android.content.Context@45b6f5ca, getPackageName() => "com.bxkj.student") was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetStringUtfChars("com.bxkj.student") was called from RX@0x1214adf4[libtsnsecret.so]0x14adf4
+[JNI] callObjectMethod role=2 sig=getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+JNIEnv->CallObjectMethodV(android.content.pm.PackageManager@41e4b5f3, getPackageInfo("com.bxkj.student", 0x40) => android.content.pm.PackageInfo@1da584d5) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetFieldID(android/content/pm/PackageInfo.signatures [Landroid/content/pm/Signature;) => 0x25f17218 was called from RX@0x1214b2cc[libtsnsecret.so]0x14b2cc
+[JNI] getObjectField role=3 sig=signatures:[Landroid/content/pm/Signature;
+JNIEnv->GetObjectField(android.content.pm.PackageInfo@1da584d5, signatures [Landroid/content/pm/Signature; => [android.content.pm.Signature@6f4f3a0e]) was called from RX@0x1214b024[libtsnsecret.so]0x14b024
+JNIEnv->GetObjectArrayElement([android.content.pm.Signature@6f4f3a0e], 0) => android.content.pm.Signature@6f4f3a0e was called from RX@0x1214b118[libtsnsecret.so]0x14b118
+JNIEnv->GetMethodID(android/content/pm/Signature.toByteArray()[B) => 0x6a3e2031 was called from RX@0x1214b4a8[libtsnsecret.so]0x14b4a8
+[JNI] callObjectMethod role=4 sig=toByteArray()[B
+JNIEnv->CallObjectMethodV(android.content.pm.Signature@6f4f3a0e, toByteArray() => [B@79d8ccc4) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetArrayLength([B@79d8ccc4 => 891) was called from RX@0x123cf67c[libtsnsecret.so]0x3cf67c
+JNIEnv->GetByteArrayRegion([B@79d8ccc4, 0, 891, RW@0x127d8380) was called from RX@0x123cf760[libtsnsecret.so]0x3cf760
+JNIEnv->GetByteArrayElements(false) => [B@0xc11708af261ffdd6492d412a3c85fc3751ae6d21cf80c4358e9cd2ed711d7d9a was called from RX@0x123da2f0[libtsnsecret.so]0x3da2f0
+JNIEnv->GetArrayLength([B@0xc11708af261ffdd6492d412a3c85fc3751ae6d21cf80c4358e9cd2ed711d7d9a => 32) was called from RX@0x123da394[libtsnsecret.so]0x3da394
+JNIEnv->GetByteArrayElements(false) => [B@0xc310d8a21490eddc2f3cd870c34bb732 was called from RX@0x123da7c8[libtsnsecret.so]0x3da7c8
+JNIEnv->GetByteArrayElements(false) => [B@0x00000000000000000000000000000000 was called from RX@0x123dbd54[libtsnsecret.so]0x3dbd54
+JNIEnv->NewByteArray(17) was called from RX@0x123da768[libtsnsecret.so]0x3da768
+JNIEnv->SetByteArrayRegion([B@0x0000000000000000000000000000000000, 0, 17, RW@0x127d3030) was called from RX@0x123dac30[libtsnsecret.so]0x3dac30
+[+] aes_decrypt -> 17B: 51522d434f44452d5345435245542d3432
+★ CASE2 QR_CODE_KEY 往返验证 PASS
+
+==== call generateAuthInfo: map={password=abc123, timestamp=1700000000, userName=test} ====
+JNIEnv->FindClass(java/util/Map) was called from RX@0x123e2e04[libtsnsecret.so]0x3e2e04
+JNIEnv->FindClass(java/util/Set) was called from RX@0x123e2f00[libtsnsecret.so]0x3e2f00
+JNIEnv->FindClass(java/util/Iterator) was called from RX@0x123e2ffc[libtsnsecret.so]0x3e2ffc
+JNIEnv->GetMethodID(java/util/Map.entrySet()Ljava/util/Set;) => 0xd4c69907 was called from RX@0x123e3108[libtsnsecret.so]0x3e3108
+JNIEnv->GetMethodID(java/util/Set.iterator()Ljava/util/Iterator;) => 0x429e3fc3 was called from RX@0x123e31fc[libtsnsecret.so]0x3e31fc
+JNIEnv->GetMethodID(java/util/Iterator.hasNext()Z) => 0x74f5adeb was called from RX@0x123e32f0[libtsnsecret.so]0x3e32f0
+JNIEnv->GetMethodID(java/util/Iterator.next()Ljava/lang/Object;) => 0xc9be0fcf was called from RX@0x123e33e8[libtsnsecret.so]0x3e33e8
+JNIEnv->FindClass(java/util/Map$Entry) was called from RX@0x123e34c0[libtsnsecret.so]0x3e34c0
+JNIEnv->GetMethodID(java/util/Map$Entry.getKey()Ljava/lang/Object;) => 0x7e357521 was called from RX@0x123e35cc[libtsnsecret.so]0x3e35cc
+JNIEnv->GetMethodID(java/util/Map$Entry.getValue()Ljava/lang/Object;) => 0x45e7c5f3 was called from RX@0x123e36bc[libtsnsecret.so]0x3e36bc
+[JNI] callObjectMethod role=null sig=entrySet()Ljava/util/Set;
+JNIEnv->CallObjectMethodV(java.util.Map@230313cb, entrySet() => java.util.Set@2ae3f71b) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+[JNI] callObjectMethod role=10 sig=iterator()Ljava/util/Iterator;
+JNIEnv->CallObjectMethodV(java.util.Set@2ae3f71b, iterator() => java.util.Iterator@6d664f68) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+[JNI] callBooleanMethodV role=11 sig=hasNext()Z
+JNIEnv->CallBooleanMethodV(java.util.Iterator@6d664f68, hasNext() => true) was called from RX@0x1215ac08[libtsnsecret.so]0x15ac08
+[JNI] callObjectMethod role=11 sig=next()Ljava/lang/Object;
+JNIEnv->CallObjectMethodV(java.util.Iterator@6d664f68, next() => java.util.Map$Entry@e0e794a) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+[JNI] callObjectMethod role=12 sig=getKey()Ljava/lang/Object;
+JNIEnv->CallObjectMethodV(java.util.Map$Entry@e0e794a, getKey() => "password") was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+[JNI] callObjectMethod role=12 sig=getValue()Ljava/lang/Object;
+JNIEnv->CallObjectMethodV(java.util.Map$Entry@e0e794a, getValue() => "abc123") was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetStringUtfChars("password") was called from RX@0x123e3974[libtsnsecret.so]0x3e3974
+JNIEnv->GetStringUtfChars("abc123") was called from RX@0x123e3a48[libtsnsecret.so]0x3e3a48
+JNIEnv->ReleaseStringUTFChars("password") was called from RX@0x123e3c88[libtsnsecret.so]0x3e3c88
+JNIEnv->ReleaseStringUTFChars("abc123") was called from RX@0x123e3d6c[libtsnsecret.so]0x3e3d6c
+[JNI] callBooleanMethodV role=11 sig=hasNext()Z
+JNIEnv->CallBooleanMethodV(java.util.Iterator@6d664f68, hasNext() => true) was called from RX@0x1215ac08[libtsnsecret.so]0x15ac08
+[JNI] callObjectMethod role=11 sig=next()Ljava/lang/Object;
+JNIEnv->CallObjectMethodV(java.util.Iterator@6d664f68, next() => java.util.Map$Entry@5f84dee5) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+[JNI] callObjectMethod role=12 sig=getKey()Ljava/lang/Object;
+JNIEnv->CallObjectMethodV(java.util.Map$Entry@5f84dee5, getKey() => "timestamp") was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+[JNI] callObjectMethod role=12 sig=getValue()Ljava/lang/Object;
+JNIEnv->CallObjectMethodV(java.util.Map$Entry@5f84dee5, getValue() => "1700000000") was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetStringUtfChars("timestamp") was called from RX@0x123e3974[libtsnsecret.so]0x3e3974
+JNIEnv->GetStringUtfChars("1700000000") was called from RX@0x123e3a48[libtsnsecret.so]0x3e3a48
+JNIEnv->ReleaseStringUTFChars("timestamp") was called from RX@0x123e3c88[libtsnsecret.so]0x3e3c88
+JNIEnv->ReleaseStringUTFChars("1700000000") was called from RX@0x123e3d6c[libtsnsecret.so]0x3e3d6c
+[JNI] callBooleanMethodV role=11 sig=hasNext()Z
+JNIEnv->CallBooleanMethodV(java.util.Iterator@6d664f68, hasNext() => true) was called from RX@0x1215ac08[libtsnsecret.so]0x15ac08
+[JNI] callObjectMethod role=11 sig=next()Ljava/lang/Object;
+JNIEnv->CallObjectMethodV(java.util.Iterator@6d664f68, next() => java.util.Map$Entry@64813698) was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+[JNI] callObjectMethod role=12 sig=getKey()Ljava/lang/Object;
+JNIEnv->CallObjectMethodV(java.util.Map$Entry@64813698, getKey() => "userName") was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+[JNI] callObjectMethod role=12 sig=getValue()Ljava/lang/Object;
+JNIEnv->CallObjectMethodV(java.util.Map$Entry@64813698, getValue() => "test") was called from RX@0x12149f74[libtsnsecret.so]0x149f74
+JNIEnv->GetStringUtfChars("userName") was called from RX@0x123e3974[libtsnsecret.so]0x3e3974
+JNIEnv->GetStringUtfChars("test") was called from RX@0x123e3a48[libtsnsecret.so]0x3e3a48
+JNIEnv->ReleaseStringUTFChars("userName") was called from RX@0x123e3c88[libtsnsecret.so]0x3e3c88
+JNIEnv->ReleaseStringUTFChars("test") was called from RX@0x123e3d6c[libtsnsecret.so]0x3e3d6c
+[JNI] callBooleanMethodV role=11 sig=hasNext()Z
+JNIEnv->CallBooleanMethodV(java.util.Iterator@6d664f68, hasNext() => false) was called from RX@0x1215ac08[libtsnsecret.so]0x15ac08
+JNIEnv->NewStringUTF("password=abc123&timestamp=1700000000&userName=test") was called from RX@0x123e5c18[libtsnsecret.so]0x3e5c18
+CASE3 generateAuthInfo -> password=abc123&timestamp=1700000000&userName=test
+
+===== 全部用例结束 =====

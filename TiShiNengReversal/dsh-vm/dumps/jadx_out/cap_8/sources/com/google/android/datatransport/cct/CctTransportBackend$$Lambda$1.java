@@ -1,0 +1,29 @@
+package com.google.android.datatransport.cct;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_8_sz9482380.dex */
+final /* synthetic */ class CctTransportBackend$$Lambda$1 implements com.google.android.datatransport.runtime.retries.Function {
+    private final com.google.android.datatransport.cct.CctTransportBackend arg$1;
+
+    private CctTransportBackend$$Lambda$1(com.google.android.datatransport.cct.CctTransportBackend r1) {
+            r0 = this;
+            r0.<init>()
+            r0.arg$1 = r1
+            return
+    }
+
+    public static com.google.android.datatransport.runtime.retries.Function lambdaFactory$(com.google.android.datatransport.cct.CctTransportBackend r1) {
+            com.google.android.datatransport.cct.CctTransportBackend$$Lambda$1 r0 = new com.google.android.datatransport.cct.CctTransportBackend$$Lambda$1
+            r0.<init>(r1)
+            return r0
+    }
+
+    @Override // com.google.android.datatransport.runtime.retries.Function
+    public java.lang.Object apply(java.lang.Object r2) {
+            r1 = this;
+            com.google.android.datatransport.cct.CctTransportBackend r0 = r1.arg$1
+            com.google.android.datatransport.cct.CctTransportBackend$HttpRequest r2 = (com.google.android.datatransport.cct.CctTransportBackend.HttpRequest) r2
+            com.google.android.datatransport.cct.CctTransportBackend$HttpResponse r2 = com.google.android.datatransport.cct.CctTransportBackend.access$lambda$0(r0, r2)
+            return r2
+    }
+}

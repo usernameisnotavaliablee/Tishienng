@@ -1,0 +1,153 @@
+package io.reactivex.internal.operators.flowable;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_2_sz9469608.dex */
+public final class FlowableAnySingle<T> extends io.reactivex.Single<java.lang.Boolean> implements io.reactivex.internal.fuseable.FuseToFlowable<java.lang.Boolean> {
+    final io.reactivex.functions.Predicate<? super T> predicate;
+    final org.reactivestreams.Publisher<T> source;
+
+    /* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+    static final class AnySubscriber<T> implements org.reactivestreams.Subscriber<T>, io.reactivex.disposables.Disposable {
+        final io.reactivex.SingleObserver<? super java.lang.Boolean> actual;
+        boolean done;
+        final io.reactivex.functions.Predicate<? super T> predicate;
+        org.reactivestreams.Subscription s;
+
+        AnySubscriber(io.reactivex.SingleObserver<? super java.lang.Boolean> r1, io.reactivex.functions.Predicate<? super T> r2) {
+                r0 = this;
+                r0.<init>()
+                r0.actual = r1
+                r0.predicate = r2
+                return
+        }
+
+        @Override // io.reactivex.disposables.Disposable
+        public void dispose() {
+                r1 = this;
+                org.reactivestreams.Subscription r0 = r1.s
+                r0.cancel()
+                io.reactivex.internal.subscriptions.SubscriptionHelper r0 = io.reactivex.internal.subscriptions.SubscriptionHelper.CANCELLED
+                r1.s = r0
+                return
+        }
+
+        @Override // io.reactivex.disposables.Disposable
+        public boolean isDisposed() {
+                r2 = this;
+                org.reactivestreams.Subscription r0 = r2.s
+                io.reactivex.internal.subscriptions.SubscriptionHelper r1 = io.reactivex.internal.subscriptions.SubscriptionHelper.CANCELLED
+                if (r0 != r1) goto L8
+                r0 = 1
+                return r0
+            L8:
+                r0 = 0
+                return r0
+        }
+
+        public void onComplete() {
+                r2 = this;
+                boolean r0 = r2.done
+                if (r0 != 0) goto L12
+                r0 = 1
+                r2.done = r0
+                io.reactivex.internal.subscriptions.SubscriptionHelper r0 = io.reactivex.internal.subscriptions.SubscriptionHelper.CANCELLED
+                r2.s = r0
+                io.reactivex.SingleObserver<? super java.lang.Boolean> r0 = r2.actual
+                java.lang.Boolean r1 = java.lang.Boolean.FALSE
+                r0.onSuccess(r1)
+            L12:
+                return
+        }
+
+        public void onError(java.lang.Throwable r2) {
+                r1 = this;
+                boolean r0 = r1.done
+                if (r0 == 0) goto L8
+                io.reactivex.plugins.RxJavaPlugins.onError(r2)
+                return
+            L8:
+                r0 = 1
+                r1.done = r0
+                io.reactivex.internal.subscriptions.SubscriptionHelper r0 = io.reactivex.internal.subscriptions.SubscriptionHelper.CANCELLED
+                r1.s = r0
+                io.reactivex.SingleObserver<? super java.lang.Boolean> r0 = r1.actual
+                r0.onError(r2)
+                return
+        }
+
+        public void onNext(T r2) {
+                r1 = this;
+                boolean r0 = r1.done
+                if (r0 == 0) goto L5
+                goto L20
+            L5:
+                io.reactivex.functions.Predicate<? super T> r0 = r1.predicate     // Catch: java.lang.Throwable -> L21
+                boolean r2 = r0.test(r2)     // Catch: java.lang.Throwable -> L21
+                if (r2 == 0) goto L20
+                r2 = 1
+                r1.done = r2
+                org.reactivestreams.Subscription r2 = r1.s
+                r2.cancel()
+                io.reactivex.internal.subscriptions.SubscriptionHelper r2 = io.reactivex.internal.subscriptions.SubscriptionHelper.CANCELLED
+                r1.s = r2
+                io.reactivex.SingleObserver<? super java.lang.Boolean> r2 = r1.actual
+                java.lang.Boolean r0 = java.lang.Boolean.TRUE
+                r2.onSuccess(r0)
+            L20:
+                return
+            L21:
+                r2 = move-exception
+                io.reactivex.exceptions.Exceptions.throwIfFatal(r2)
+                org.reactivestreams.Subscription r0 = r1.s
+                r0.cancel()
+                io.reactivex.internal.subscriptions.SubscriptionHelper r0 = io.reactivex.internal.subscriptions.SubscriptionHelper.CANCELLED
+                r1.s = r0
+                r1.onError(r2)
+                return
+        }
+
+        public void onSubscribe(org.reactivestreams.Subscription r3) {
+                r2 = this;
+                org.reactivestreams.Subscription r0 = r2.s
+                boolean r0 = io.reactivex.internal.subscriptions.SubscriptionHelper.validate(r0, r3)
+                if (r0 == 0) goto L17
+                r2.s = r3
+                io.reactivex.SingleObserver<? super java.lang.Boolean> r0 = r2.actual
+                r0.onSubscribe(r2)
+                r0 = 9223372036854775807(0x7fffffffffffffff, double:NaN)
+                r3.request(r0)
+            L17:
+                return
+        }
+    }
+
+    public FlowableAnySingle(org.reactivestreams.Publisher<T> r1, io.reactivex.functions.Predicate<? super T> r2) {
+            r0 = this;
+            r0.<init>()
+            r0.source = r1
+            r0.predicate = r2
+            return
+    }
+
+    @Override // io.reactivex.internal.fuseable.FuseToFlowable
+    public io.reactivex.Flowable<java.lang.Boolean> fuseToFlowable() {
+            r3 = this;
+            io.reactivex.internal.operators.flowable.FlowableAny r0 = new io.reactivex.internal.operators.flowable.FlowableAny
+            org.reactivestreams.Publisher<T> r1 = r3.source
+            io.reactivex.functions.Predicate<? super T> r2 = r3.predicate
+            r0.<init>(r1, r2)
+            io.reactivex.Flowable r0 = io.reactivex.plugins.RxJavaPlugins.onAssembly(r0)
+            return r0
+    }
+
+    @Override // io.reactivex.Single
+    protected void subscribeActual(io.reactivex.SingleObserver<? super java.lang.Boolean> r4) {
+            r3 = this;
+            org.reactivestreams.Publisher<T> r0 = r3.source
+            io.reactivex.internal.operators.flowable.FlowableAnySingle$AnySubscriber r1 = new io.reactivex.internal.operators.flowable.FlowableAnySingle$AnySubscriber
+            io.reactivex.functions.Predicate<? super T> r2 = r3.predicate
+            r1.<init>(r4, r2)
+            r0.subscribe(r1)
+            return
+    }
+}

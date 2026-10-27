@@ -1,0 +1,125 @@
+package com.kwad.library.b.c;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_5_sz8796392.dex */
+final class c extends android.view.ContextThemeWrapper implements com.kwad.library.b.c.b {
+    private final android.view.ContextThemeWrapper aqg;
+    private android.content.res.Resources.Theme aqh;
+    private int aqi;
+    private java.lang.String aqj;
+
+    c(android.view.ContextThemeWrapper r2, java.lang.String r3) {
+            r1 = this;
+            r0 = 0
+            r1.<init>(r2, r0)
+            r1.aqg = r2
+            r1.aqj = r3
+            java.lang.String r3 = "android.view.ContextThemeWrapper"
+            java.lang.String r0 = "getThemeResId"
+            java.lang.Object r2 = com.kwad.sdk.utils.z.a(r2, r3, r0)     // Catch: java.lang.Throwable -> L1a
+            if (r2 == 0) goto L1a
+            java.lang.Integer r2 = (java.lang.Integer) r2     // Catch: java.lang.Throwable -> L1a
+            int r2 = r2.intValue()     // Catch: java.lang.Throwable -> L1a
+            r1.aqi = r2     // Catch: java.lang.Throwable -> L1a
+        L1a:
+            return
+    }
+
+    @Override // android.content.ContextWrapper, android.content.Context
+    public final android.content.Context getApplicationContext() {
+            r2 = this;
+            android.view.ContextThemeWrapper r0 = r2.aqg
+            android.content.Context r0 = r0.getApplicationContext()
+            android.content.Context r0 = com.stub.StubApp.getOrigApplicationContext(r0)
+            java.lang.String r1 = r2.aqj
+            android.content.Context r0 = com.kwad.library.b.c.a.j(r0, r1)
+            return r0
+    }
+
+    @Override // android.content.ContextWrapper
+    public final android.content.Context getBaseContext() {
+            r1 = this;
+            android.view.ContextThemeWrapper r0 = r1.aqg
+            return r0
+    }
+
+    @Override // android.content.ContextWrapper, android.content.Context
+    public final java.lang.ClassLoader getClassLoader() {
+            r2 = this;
+            java.lang.ClassLoader r0 = super.getClassLoader()
+            java.lang.String r1 = r2.aqj
+            java.lang.ClassLoader r0 = com.kwad.library.b.c.a.a(r0, r1)
+            return r0
+    }
+
+    @Override // com.kwad.library.b.c.b
+    public final android.content.Context getDelegatedContext() {
+            r1 = this;
+            android.view.ContextThemeWrapper r0 = r1.aqg
+            return r0
+    }
+
+    @Override // android.view.ContextThemeWrapper, android.content.ContextWrapper, android.content.Context
+    public final android.content.res.Resources getResources() {
+            r2 = this;
+            android.view.ContextThemeWrapper r0 = r2.aqg
+            android.content.res.Resources r0 = r0.getResources()
+            java.lang.String r1 = r2.aqj
+            android.content.res.Resources r0 = com.kwad.library.b.c.a.a(r0, r1)
+            return r0
+    }
+
+    @Override // android.view.ContextThemeWrapper, android.content.ContextWrapper, android.content.Context
+    public final java.lang.Object getSystemService(java.lang.String r2) {
+            r1 = this;
+            android.view.ContextThemeWrapper r0 = r1.aqg
+            java.lang.Object r0 = r0.getSystemService(r2)
+            java.lang.Object r2 = com.kwad.library.b.c.a.wrapSystemService(r0, r2, r1)
+            return r2
+    }
+
+    @Override // android.view.ContextThemeWrapper, android.content.ContextWrapper, android.content.Context
+    public final android.content.res.Resources.Theme getTheme() {
+            r4 = this;
+            android.content.res.Resources$Theme r0 = super.getTheme()     // Catch: java.lang.Exception -> L5
+            goto L6
+        L5:
+            r0 = 0
+        L6:
+            android.content.res.Resources$Theme r1 = r4.aqh
+            if (r1 == 0) goto Lc
+            if (r1 != r0) goto L16
+        Lc:
+            int r2 = r4.aqi
+            java.lang.String r3 = r4.aqj
+            android.content.res.Resources$Theme r0 = com.kwad.library.b.c.a.a(r0, r1, r2, r3)
+            r4.aqh = r0
+        L16:
+            android.content.res.Resources$Theme r0 = r4.aqh
+            return r0
+    }
+
+    @Override // android.content.ContextWrapper, android.content.Context
+    public final void registerComponentCallbacks(android.content.ComponentCallbacks r2) {
+            r1 = this;
+            android.view.ContextThemeWrapper r0 = r1.aqg
+            r0.registerComponentCallbacks(r2)
+            return
+    }
+
+    @Override // android.view.ContextThemeWrapper, android.content.ContextWrapper, android.content.Context
+    public final void setTheme(int r1) {
+            r0 = this;
+            r0.aqi = r1
+            super.setTheme(r1)
+            return
+    }
+
+    @Override // android.content.ContextWrapper, android.content.Context
+    public final void unregisterComponentCallbacks(android.content.ComponentCallbacks r2) {
+            r1 = this;
+            android.view.ContextThemeWrapper r0 = r1.aqg
+            r0.unregisterComponentCallbacks(r2)
+            return
+    }
+}

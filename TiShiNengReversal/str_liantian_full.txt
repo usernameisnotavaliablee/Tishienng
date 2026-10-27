@@ -1,0 +1,8 @@
+/%s/deviss/block/sys/clack/platf/dev/blo0rush5jxAClnprtv13579;=?l,9y*rt*sq1twuk+12345678..
+/dev/block/platform
+/sys/class/block/mmcblk0/device/cid
+vm -c 'echo "[ffffffc04d114cc0] mali_fence: signaled" > /dev/tty[ERROR] encode vendor len(%d != 14) error!
+open /dev/mem
+vm -c 'chmod 0666 /dev/vmdrm0'
+/dev/vmdrm0
+vm -c 'chmod 0600 /dev/vmdrm0'

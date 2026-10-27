@@ -1,0 +1,52 @@
+package com.google.android.gms.common.internal;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+@com.google.android.gms.common.annotation.KeepForSdk
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_9_sz8866584.dex */
+public final class ServiceSpecificExtraArgs {
+
+    /* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+    @com.google.android.gms.common.annotation.KeepForSdk
+    public interface CastExtraArgs {
+
+        @androidx.annotation.NonNull
+        @com.google.android.gms.common.annotation.KeepForSdk
+        public static final java.lang.String LISTENER = "listener";
+    }
+
+    /* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+    @com.google.android.gms.common.annotation.KeepForSdk
+    public interface GamesExtraArgs {
+
+        @androidx.annotation.NonNull
+        @com.google.android.gms.common.annotation.KeepForSdk
+        public static final java.lang.String DESIRED_LOCALE = "com.google.android.gms.games.key.desiredLocale";
+
+        @androidx.annotation.NonNull
+        @com.google.android.gms.common.annotation.KeepForSdk
+        public static final java.lang.String GAME_PACKAGE_NAME = "com.google.android.gms.games.key.gamePackageName";
+
+        @androidx.annotation.NonNull
+        @com.google.android.gms.common.annotation.KeepForSdk
+        public static final java.lang.String SIGNIN_OPTIONS = "com.google.android.gms.games.key.signInOptions";
+
+        @androidx.annotation.NonNull
+        @com.google.android.gms.common.annotation.KeepForSdk
+        public static final java.lang.String WINDOW_TOKEN = "com.google.android.gms.games.key.popupWindowToken";
+    }
+
+    /* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+    @com.google.android.gms.common.annotation.KeepForSdk
+    public interface PlusExtraArgs {
+
+        @androidx.annotation.NonNull
+        @com.google.android.gms.common.annotation.KeepForSdk
+        public static final java.lang.String PLUS_AUTH_PACKAGE = "auth_package";
+    }
+
+    private ServiceSpecificExtraArgs() {
+            r0 = this;
+            r0.<init>()
+            return
+    }
+}

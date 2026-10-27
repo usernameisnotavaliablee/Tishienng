@@ -1,0 +1,399 @@
+TOTAL FILES: 367
+
+REL_PATH                                                                     SIZE MAGIC                ENT PRINT HEAD16HEX
+--------------------------------------------------------------------------------------------------------------------------------------------
+.jgapp                                                                         16                      3.5   1.0 37343138666461616235396231633063
+libwbsafeedit                                                               17636 ELF                 6.46  0.41 7f454c46010101000000000000000000
+libwbsafeedit_64                                                            18024 ELF                 5.59  0.32 7f454c46020101000000000000000000
+libwbsafeedit_x86                                                           17600 ELF                  5.6  0.31 7f454c46010101000000000000000000
+libwbsafeedit_x86_64                                                        18344 ELF                 5.42  0.32 7f454c46020101000000000000000000
+align\align-customized-pa-offlineCapture_withScore_quant_20200909.model.int8.6.4.7.1     255345                      8.0  0.39 6d6f64656c5f747970653d7267625f61
+blur\blur-customized-pa-blurnet_9768.model.int8-3.0.9.1                    128569                      8.0  0.39 6d6f64656c5f747970653d626c75723b
+detect\detect_rgb-customized-pa-faceid4_0.model.int8.0.0.6.1               210305                      8.0  0.39 6d6f64656c5f747970653d6465746563
+eyes_close\eyes-customized-pa-caiji.model.float32.1.0.3.1                   68910                      8.0   0.4 6d6f64656c5f747970653d6579655f63
+mouth_close\mouth-customized-pa-caiji.model.float32.1.0.3.1                 70449                      8.0   0.4 6d6f64656c5f747970653d6d6f757468
+occlusion\occlusion-customized-pa-occ.model.float32.2.0.6.1                265632                      8.0  0.39 6d6f64656c5f747970653d6f63636c75
+mlkit_pose\bundled_allowlist.binarypb                                          71                     4.43  0.86 0a450a2f0a10636f6d2e676f6f676c65
+mlkit_pose\pose_non_tracking_graph.binarypb                                   498                     5.24  0.95 0a4f1215506f7365446574656374696f
+mlkit_pose\pose_non_tracking_graph_gpu.binarypb                               898                     5.33  0.94 0a491216436f6c6f72436f6e76657274
+mlkit_pose\pose_non_tracking_graph_nnapi.binarypb                             630                     5.23  0.95 0a76121a506f7365446574656374696f
+mlkit_pose\pose_tracking_graph.binarypb                                       374                     5.27  0.94 0a661214506f7365547261636b696e67
+mlkit_pose\pose_tracking_graph_gpu.binarypb                                   786                     5.39  0.94 0a491216436f6c6f72436f6e76657274
+mlkit_pose\pose_tracking_graph_nnapi.binarypb                                 533                     5.27  0.95 0acf011219506f7365547261636b696e
+grs_sp.bks                                                                   1470                     7.67  0.43 0000000200000014458e3bef5e09a5eb
+hmsincas.bks                                                                 3670                     7.65  0.47 0000000200000014ca5dbd0f9d823f0d
+hmsrootcas.bks                                                              34118                     7.63  0.47 00000002000000144dc8cdffdb5ed6b4
+ae\res.ck                                                                      33                     3.67   1.0 36613939626537653362373165636466
+pose\down_jump_close_csvs_out.csv                                          111066                     3.77   1.0 6672616d655f303030302e6a70672c63
+pose\gaotaitui_csvs_out.csv                                                382036                     3.74   1.0 646f776e5f3130302e6a70672c646f77
+pose\houtituitiao_csvs_out.csv                                              42877                     3.76   1.0 6672616d655f303030382e6a70672c64
+pose\jiantui_csvs_out_basic.csv                                            430072                     3.73   1.0 494d475f32303233313132325f313835
+pose\jump_csvs_out_basic.csv                                              1471574                     3.74   1.0 3030312e6a70672c6a756d705f636c6f
+pose\kuo_xiong_csvs_out.csv                                                194172                     3.76   1.0 6672616d655f303030302e6a70672c63
+pose\pushups_up_out_basic.csv                                              828450                     3.87   1.0 53637265656e73686f745f323032312d
+pose\shen_to_ce_xiang_shen_zhan_csvs_out.csv                               330525                     3.77   1.0 6672616d655f303030302e6a70672c6c
+pose\shou_bi_hua_quan_csvs_out.csv                                         276070                     3.75   1.0 6672616d655f303030302e6a70672c64
+pose\shuipingkaihetiao_csvs_out.csv                                        285028                     3.76   1.0 6672616d655f303030302e6a70672c63
+pose\squat_csvs_out_basic.csv                                              425375                     3.88   1.0 6672616d655f5f36784b72474e713648
+pose\tiaosheng_csvs_out.csv                                                322048                     3.75   1.0 6672616d655f302e6a70672c646f776e
+pose\yinti_csvs_out_basic.csv                                              424959                     3.73   1.0 44534346373131382e4a50472c646f77
+pose\you_ti_ce_csvs_out.csv                                                131812                     3.78   1.0 6672616d655f303033312e6a70672c6e
+pose\yuan_di_man_pao_csvs_out.csv                                          127316                     3.76   1.0 6672616d655f303031392e6a70672c6c
+pose\zha_ma_bu_csvs_out.csv                                                295909                     3.82   1.0 6672616d655f5f36784b72474e713648
+pose\zhibikaihetiao_csvs_out.csv                                           227751                     3.76   1.0 6672616d655f303030362e6a70672c63
+pose\zuo_ti_ce_csvs_out.csv                                                140253                     3.77   1.0 6672616d655f303031322e6a70672c6c
+na.czl                                                                       2094                     7.24  0.34 000101001100b897dcddce97cbd7dbd3
+ap.data                                                                      1653 PNG                 7.74  0.34 89504e470d0a1a0a0000000d49484452
+ap1.data                                                                     1652 PNG                 7.75  0.36 89504e470d0a1a0a0000000d49484452
+cross\crossing_nigth_bk.data                                                  752 PNG                 5.93  0.64 89504e470d0a1a0a0000000d49484452
+icons_assets\icons_1_18_1620803672.data                                     64305 GZIP                7.99  0.39 1f8b08000000000000004c7a755c535f
+icons_assets\icons_2_18_1620803665.data                                     71164 GZIP                 8.0  0.38 1f8b0800000000000000447a7754934f
+icons_assets\icons_4_18_1624863920.data                                     39235 GZIP                7.99  0.38 1f8b08000000000000004cba05589351
+icons_assets\icons_50_18_1621241047.data                                    32049 GZIP                7.99  0.38 1f8b080000000000000094bb77541441
+map_assets\3d_navi_sky_day.data                                               384                     5.06  0.22 734213004d0099163301000041f10200
+map_assets\3d_sky_day.data                                                   2962                     7.76  0.37 734213004d00f2e9450b0000c8250200
+map_assets\3d_sky_night.data                                                  633                     6.46  0.33 734213004d004d112c02000019f30200
+map_assets\bktile.data                                                       1124                      1.7  0.01 734213004d00569717040000ac980100
+map_assets\bktile_n.data                                                     1124                     1.56  0.11 734213004d00f24b170400002d750100
+map_assets\config_1_21_1680057984.data                                       2336 GZIP                7.89   0.4 1f8b0800000000000000ed9dd96edb48
+map_assets\config_2_21_1680057984.data                                        365 GZIP                7.24  0.38 1f8b0800000000000000dd96416ec320
+map_assets\dash.data                                                          241 PNG                 5.77  0.43 89504e470d0a1a0a0000000d49484452
+map_assets\dash_cd.data                                                      1034 PNG                 5.85  0.85 89504e470d0a1a0a0000000d49484452
+map_assets\dash_tq.data                                                       249 PNG                  6.2  0.41 89504e470d0a1a0a0000000d49484452
+map_assets\icons_10_21_1680057953.data                                      51929 GZIP                7.99  0.39 1f8b0800000000000000b4b9537ca451
+map_assets\icons_11_21_1680057953.data                                      45449 GZIP                7.99  0.39 1f8b0800000000000000acb853702e5c
+map_assets\icons_1_21_1680057953.data                                       56614 GZIP                7.99  0.38 1f8b0800000000000000acb76370aec1
+map_assets\icons_201_21_1680057953.data                                     67916 GZIP                 8.0  0.39 1f8b0800000000000000001a40e5bf50
+map_assets\icons_25_21_1680057953.data                                      11943 GZIP                7.98  0.39 1f8b08000000000000008d7b7754d3db
+map_assets\icons_2_21_1680057953.data                                       48194 GZIP                7.99  0.38 1f8b08000000000000006cba7370654f
+map_assets\icons_3_21_1680057953.data                                       52150 GZIP                 8.0  0.39 1f8b0800000000000000acba6370256d
+map_assets\icons_40_21_1680057953.data                                      59013 GZIP                 8.0  0.38 1f8b08000000000000008cf753702e4c
+map_assets\icons_4_21_1680057953.data                                       51947 GZIP                7.99  0.38 1f8b0800000000000000b4b865509cdd
+map_assets\icons_50_21_1680057953.data                                      42192 GZIP                7.99  0.39 1f8b0800000000000000a497537466d1
+map_assets\icons_5_21_1680057953.data                                      141678 GZIP                 8.0  0.39 1f8b0800000000000000d4bb75501d4d
+map_assets\icons_60_21_1680057953.data                                      45424 GZIP                7.99  0.39 1f8b0800000000000000b4b8537025ce
+map_assets\icons_65_21_1680057953.data                                      55630 GZIP                 8.0  0.39 1f8b0800000000000000c4b8639424df
+map_assets\icons_6_21_1680057953.data                                       37023 GZIP                7.99  0.39 1f8b0800000000000000b4b765505c51
+map_assets\icons_74_21_1680057953.data                                      10166 GZIP                7.98  0.39 1f8b0800000000000000dd7755541d4c
+map_assets\icons_9_21_1684757273.data                                      177737 GZIP                7.99  0.37 1f8b0800000000000000ecbd0b3c54df
+map_assets\laneprofile_1_21_1681099982.data                                  2789 GZIP                7.92   0.4 1f8b0800000000000000b55a6d4fdbc8
+map_assets\laneprofile_low_1_21_1680057984.data                              2788 GZIP                7.92   0.4 1f8b0800000000000000b55a6d4fdbc8
+map_assets\laneprofile_mid_1_21_1680057984.data                              2788 GZIP                7.92   0.4 1f8b0800000000000000b55a6d4fdbc8
+map_assets\lineround.data                                                   21911                     0.72   0.0 50565203000000007267626108080808
+map_assets\mapprofile_1_21_1680057984.data                                   3143 GZIP                7.94  0.39 1f8b0800000000000000b55b6b4fdb48
+map_assets\mapprofile_2_21_1680057984.data                                   2874 GZIP                7.91  0.39 1f8b0800000000000000b55a6d4fdbc8
+map_assets\search_scenic_icon.data                                          11843                     7.94  0.38 734213004d0097ecf62d0000b8160200
+map_assets\style_0_21_1681133945.data                                       20545 GZIP                7.95   0.4 1f8b08000000000000009d9d756016e9
+map_assets\style_100_s_21_1670999202.data                                   35341 GZIP                7.95  0.38 1f8b0800000000000000ec9d077c5cd5
+map_assets\style_16_s_21_1678776309.data                                     2414 GZIP                7.87  0.39 1f8b0800000000000000ed9c4b6c1b45
+map_assets\style_17_s_21_1655347084.data                                      152 GZIP                6.28   0.4 1f8b0800000000000000e3e2e1d83087
+map_assets\style_18_s_21_1678776921.data                                    31994 GZIP                7.98  0.39 1f8b0800000000000000ec5d07801445
+map_assets\style_19_s_21_1678776357.data                                     2437 GZIP                7.85   0.4 1f8b0800000000000000ed5c3b8c1347
+map_assets\style_1_d_21_1680092748.data                                     23887 GZIP                7.98  0.38 1f8b0800000000000000ed5d077c1455
+map_assets\style_1_s_21_1680092748.data                                     71274 GZIP                7.99  0.39 1f8b0800000000000000ec7d07bc5d45
+map_assets\style_1_sh_21_1680057953.data                                      548 GZIP                7.35  0.43 1f8b0800000000000000e30ae6f8f9f3
+map_assets\style_1_sh_l_21_1680057953.data                                    540 GZIP                7.35  0.39 1f8b0800000000000000e30ae6f8f9f3
+map_assets\style_1_sh_m_21_1680057953.data                                    447 GZIP                7.34  0.37 1f8b0800000000000000e332e3f8ffff
+map_assets\style_1_sl_21_1680092748.data                                    71268 GZIP                7.99  0.39 1f8b0800000000000000ec7d07bc5d45
+map_assets\style_29_s_21_1679988739.data                                    11199 GZIP                7.96   0.4 1f8b0800000000000000ed7d777c1bc7
+map_assets\style_2_d_21_1680589176.data                                     22634 GZIP                7.98  0.38 1f8b0800000000000000ed5d097c1445
+map_assets\style_2_s_21_1680589176.data                                     67102 GZIP                7.99  0.39 1f8b0800000000000000ec5d07981cc5
+map_assets\style_2_sh_21_1680057953.data                                      675 GZIP                7.64  0.38 1f8b08000000000000008d94cf6b1341
+map_assets\style_2_sh_l_21_1680057953.data                                    667 GZIP                7.65  0.38 1f8b08000000000000008d944f481451
+map_assets\style_2_sh_m_21_1680057953.data                                    432 GZIP                7.53  0.36 1f8b080000000000000085524d2f0341
+map_assets\style_2_sl_21_1680589176.data                                    67093 GZIP                7.99  0.39 1f8b0800000000000000ec5d07981cc5
+map_assets\style_35_s_21_1681131121.data                                    26484 GZIP                7.97  0.39 1f8b0800000000000000ed5d078014d5
+map_assets\style_35_sh_21_1680057953.data                                     468 GZIP                7.39  0.38 1f8b0800000000000000e3f2e0f80f03
+map_assets\style_35_sl_21_1681131121.data                                   26542 GZIP                7.97  0.39 1f8b0800000000000000ed5d078014d5
+map_assets\style_36_s_21_1678777060.data                                    22218 GZIP                7.98  0.39 1f8b0800000000000000ed7d07801445
+map_assets\style_36_sh_21_1680057953.data                                     384 GZIP                7.14  0.39 1f8b0800000000000000e3f2e0f80f03
+map_assets\style_36_sl_21_1678777060.data                                   22226 GZIP                7.98  0.39 1f8b0800000000000000ed7d07801445
+map_assets\style_38_s_21_1678777083.data                                    30386 GZIP                7.97  0.39 1f8b0800000000000000ec7d07801445
+map_assets\style_39_s_21_1678777105.data                                    25201 GZIP                7.97  0.38 1f8b0800000000000000ed5d07801445
+map_assets\style_3_s_21_1678710524.data                                     29968 GZIP                7.96  0.39 1f8b0800000000000000ec9d07801445
+map_assets\style_4_s_21_1678776087.data                                     31443 GZIP                7.97  0.39 1f8b0800000000000000ec5d0780dcc4
+map_assets\style_50_s_21_1675145929.data                                     7926 GZIP                7.95  0.39 1f8b0800000000000000ed5d797414c7
+map_assets\style_5_s_21_1678776244.data                                     26029 GZIP                7.97  0.38 1f8b0800000000000000ed7d098014c5
+map_assets\style_6_s_21_1678776860.data                                     48736 GZIP                7.98  0.39 1f8b0800000000000000ec5d07981bd5
+map_assets\style_8_s_21_1678776272.data                                     30323 GZIP                7.97  0.39 1f8b0800000000000000ec5d098014c5
+map_assets\styleiconslist.data                                               1662                     4.43   1.0 35360a636f6e6669675f315f32315f31
+map_assets\tmc3d_allinone.data                                              21943                     2.75  0.09 50565203020000007267626108080808
+map_assets\tmc3d_blind_allinone.data                                        21943                     2.86  0.08 50565203020000007267626108080808
+map_assets\tmc3d_l_allinone.data                                            21943                     2.79  0.05 50565203020000007267626108080808
+map_assets\tmc3d_n_allinone.data                                            21919                     1.93  0.13 50565203000000007267626108080808
+map_assets\tmc3d_n_l_allinone.data                                          21943                     2.19  0.13 50565203020000007267626108080808
+map_assets\tmc_allinone.data                                                21919                     1.61  0.04 50565203000000007267626108080808
+map_assets\tmc_blind_allinone.data                                          21919                     1.76  0.04 50565203000000007267626108080808
+map_assets\tmc_l_allinone.data                                              21919                     1.68  0.02 50565203000000007267626108080808
+map_assets\tmc_n_allinone.data                                              21919                     1.24  0.08 50565203000000007267626108080808
+map_assets\tmc_n_l_allinone.data                                            21919                     1.27  0.08 50565203000000007267626108080808
+map_assets\VM3DRes\crossing_day_bk.data                                      4951 PNG                 6.69  0.41 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\crossing_nigth_bk.data                                    4387 PNG                 6.53  0.38 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\icons_42_18_1617197042.data                              72958 GZIP                 8.0  0.39 1f8b0808f2776460000369636f6e735f
+map_custom\custom_bktile.data                                                 109 PNG                 4.74  0.46 89504e470d0a1a0a0000000d49484452
+map_custom\icons-for_custom_5_14.data                                        2628 ZIP/JAR/APK         4.82  0.31 504b03041400080008004e8b834d0000
+map_custom\style-for-custom_0_18_1641525834.data                            20743 GZIP                7.94   0.4 1f8b08000000000000009d9d756016e9
+map_custom\terrain\terrainStyle.data                                         6755 GZIP                7.96  0.38 1f8b0808ff1afa600003746572726169
+mlkit_pose\benchmark_breaking1.data                                         18410 JPEG                7.53  0.47 ffd8ffe000104a464946000101000048
+mlkit_pose\benchmark_breaking2.data                                         28488 JPEG                7.74  0.44 ffd8ffe000104a464946000101000048
+mlkit_pose\benchmark_halfbody.data                                          35537 JPEG                7.81  0.44 ffd8ffe000104a464946000101000048
+mlkit_pose\benchmark_jump.data                                              15229 JPEG                7.33  0.47 ffd8ffe000104a464946000101000048
+mlkit_pose\benchmark_plant.data                                             19552 JPEG                7.57  0.47 ffd8ffe000104a464946000101000048
+baidu-idl-license.face-android                                               1028                     4.02   1.0 33364439303537333532383332313945
+map_assets\anscii.fnt                                                       14961                     4.38   1.0 696e666f20666163653d22417269616c
+amap_sdk_shaders\point.glsl                                                   306                     5.62  0.78 707265636973696f6e20686967687020
+amap_sdk_shaders\point_2.glsl                                                 311                     5.63  0.79 707265636973696f6e20686967687020
+amap_sdk_shaders\texture.glsl                                                 491                     5.58  0.79 707265636973696f6e20686967687020
+amap_sdk_shaders\texture_layer.glsl                                           881                      5.9  0.72 707265636973696f6e20686967687020
+amap_sdk_shaders\texture_normal.glsl                                         2313                     5.35  0.86 707265636973696f6e20686967687020
+AAChartView.html                                                             1187                     5.27  0.94 3c68746d6c3e0d0a3c686561643e0d0a
+v8_bug_check.html                                                             531                     5.04   1.0 3c68746d6c3e0d0a3c7469746c653e42
+bdxadsdk.jar                                                              1362687 ZIP/JAR/APK         7.96  0.37 504b0304140008080800000021000000
+gdt_plugin\gdtadv2.jar                                                    2250947 ZIP/JAR/APK          8.0  0.39 504b03041400000808005d51ee5a0000
+sightplus\argame00.jpg                                                     118581 JPEG                7.85  0.37 ffd8ffe000104a464946000101000001
+sightplus\argame01.jpg                                                      92932 JPEG                7.93  0.38 ffd8ffe000104a464946000101000001
+sightplus\argame02.jpg                                                      82598 JPEG                7.86  0.37 ffd8ffe000104a464946000101000001
+sightplus\argame03.jpg                                                     194763 JPEG                7.99  0.39 ffd8ffe000104a464946000101000001
+AAChartView.js                                                               5114                     5.09  0.95 0d0a766172206161476c6f62616c4368
+AAEasing.js                                                                  3386                     5.12   1.0 66756e6374696f6e20636f6e66696775
+AAFunnel.js                                                                  5626                     5.47   1.0 2f2a0d0a204869676863686172747320
+AAHighcharts-More.js                                                        99315                     5.37   1.0 2f2a0d0a204869676863686172747320
+AAHighcharts.js                                                            302663                     5.39   1.0 2f2a0d0a204869676863686172747320
+AARounded-Corners.js                                                         1529                     5.25   1.0 2f2a2a0d0a202a204869676863686172
+com.tencent.open.config.json                                                   56 JSON?(brace)        4.54   1.0 7b0d0a0922436f6d6d6f6e5f74615f65
+grs_sdk_global_route_config_mlkit.json                                       9809 JSON?(brace)        2.02   1.0 7b0a20202020226170706c6963617469
+grs_sdk_server_config.json                                                    370 JSON?(brace)        4.67   1.0 7b0a2020226772735f73657276657222
+ksad_idc.json                                                                 327 JSON?(brace)        4.35   1.0 7b0a202022617069223a205b0a202020
+lottie_json\shake_phone.json                                                 2645 JSON?(brace)        4.63  0.98 7b2276223a22352e362e39222c226672
+lottie_json\swipe_right.json                                                 7273 JSON?(brace)        4.36   1.0 7b2276223a22352e392e31222c226672
+lottie_json\twist_multi_angle.json                                          18983 JSON?(brace)        4.28   1.0 7b2276223a22352e372e38222c226672
+supplierconfig.json                                                           133 JSON?(brace)        3.94   1.0 7b0d0a202022737570706c696572223a
+PublicSuffixDatabase.list                                                  132737                     4.71  0.98 000206022a2e3030312e746573742e63
+angle.ms                                                                   125968                      7.5  0.35 240000004d534c321c00000000001600
+corner.ms                                                                  380592                     7.67  0.32 240000004d534c321c00000000001600
+detect.ms                                                                  679056                     7.61  0.33 280000004d534c322000000000000000
+amap_resource1_0_0.png                                                      24691 ZIP/JAR/APK         6.18  0.39 504b0304140002000800f1a4f84c4ba7
+amap_sdk_lineDashTexture_circle.png                                           432 PNG                 6.14  0.32 89504e470d0a1a0a0000000d49484452
+amap_sdk_lineDashTexture_square.png                                           171 PNG                 5.35  0.33 89504e470d0a1a0a0000000d49484452
+amap_sdk_lineTexture.png                                                      103 PNG                 4.72   0.4 89504e470d0a1a0a0000000d49484452
+arrow\arrow_line_inner.png                                                    441 PNG                 6.02  0.33 89504e470d0a1a0a0000000d49484452
+arrow\arrow_line_outer.png                                                    347 PNG                 6.14  0.34 89504e470d0a1a0a0000000d49484452
+arrow\arrow_line_shadow.png                                                   958 PNG                 7.08  0.33 89504e470d0a1a0a0000000d49484452
+AZURE.png                                                                    1513 PNG                 7.63  0.35 89504e470d0a1a0a0000000d49484452
+BLUE.png                                                                     1554 PNG                 7.67  0.41 89504e470d0a1a0a0000000d49484452
+CYAN.png                                                                     1529 PNG                 7.61  0.34 89504e470d0a1a0a0000000d49484452
+eagle_eye_day.png                                                            1994 PNG                 6.68  0.34 89504e470d0a1a0a0000000d49484452
+eagle_eye_night.png                                                          1968 PNG                 6.64  0.37 89504e470d0a1a0a0000000d49484452
+GREEN.png                                                                    1546 PNG                 7.58  0.41 89504e470d0a1a0a0000000d49484452
+h5_qr_back.png                                                                116 PNG                 5.72  0.45 89504e470d0a1a0a0000000d49484452
+hud.png                                                                      2424 PNG                 6.98  0.39 89504e470d0a1a0a0000000d49484452
+icon\aboutKey-ts.png                                                         2649 PNG                 7.61  0.58 89504e470d0a1a0a0000000d49484452
+icon\aboutKey.png                                                             926 PNG                 7.34  0.37 89504e470d0a1a0a0000000d49484452
+icon\accountKey-ts.png                                                       2772 PNG                 7.64  0.57 89504e470d0a1a0a0000000d49484452
+icon\accountKey.png                                                          1019 PNG                 7.35  0.39 89504e470d0a1a0a0000000d49484452
+icon\ai.png                                                                111919 PNG                 7.94  0.39 89504e470d0a1a0a0000000d49484452
+icon\AIFitness.png                                                           2287 PNG                 7.69  0.29 89504e470d0a1a0a0000000d49484452
+icon\appExerciseRecordCount.png                                            114881 PNG                 7.95   0.4 89504e470d0a1a0a0000000d49484452
+icon\appGym.png                                                               617 PNG                 6.88  0.54 89504e470d0a1a0a0000000d49484452
+icon\appRunKey.png                                                           1923 PNG                 7.52  0.42 89504e470d0a1a0a0000000d49484452
+icon\appRunRank.png                                                           772 PNG                 7.31  0.34 89504e470d0a1a0a0000000d49484452
+icon\appRunRecord.png                                                         856 PNG                 7.47  0.46 89504e470d0a1a0a0000000d49484452
+icon\appRunStatistics.png                                                     617 PNG                 6.88  0.54 89504e470d0a1a0a0000000d49484452
+icon\assoc1.png                                                            107905 PNG                 7.95   0.4 89504e470d0a1a0a0000000d49484452
+icon\assoc2.png                                                            125814 PNG                 7.96  0.41 89504e470d0a1a0a0000000d49484452
+icon\assoc3.png                                                            111930 PNG                 7.96  0.39 89504e470d0a1a0a0000000d49484452
+icon\assoc4.png                                                            113854 PNG                 7.96   0.4 89504e470d0a1a0a0000000d49484452
+icon\assoc5.png                                                            113854 PNG                 7.96   0.4 89504e470d0a1a0a0000000d49484452
+icon\assoc6.png                                                            111930 PNG                 7.96  0.39 89504e470d0a1a0a0000000d49484452
+icon\Bmi-ai.png                                                              4906 PNG                  7.9  0.42 89504e470d0a1a0a0000000d49484452
+icon\contest1.png                                                           81364 PNG                 7.93  0.41 89504e470d0a1a0a0000000d49484452
+icon\contest10.png                                                         108439 PNG                 7.93  0.41 89504e470d0a1a0a0000000d49484452
+icon\contest11.png                                                         244803 PNG                 7.93   0.4 89504e470d0a1a0a0000000d49484452
+icon\contest12.png                                                          62336 PNG                 7.91  0.38 89504e470d0a1a0a0000000d49484452
+icon\contest13.png                                                          99283 PNG                 7.94   0.4 89504e470d0a1a0a0000000d49484452
+icon\contest14.png                                                          97359 PNG                 7.93   0.4 89504e470d0a1a0a0000000d49484452
+icon\contest15.png                                                         114881 PNG                 7.95   0.4 89504e470d0a1a0a0000000d49484452
+icon\contest16.png                                                         160049 PNG                 7.91  0.39 89504e470d0a1a0a0000000d49484452
+icon\contest2.png                                                           93974 PNG                 7.96  0.37 89504e470d0a1a0a0000000d49484452
+icon\contest3.png                                                           49136 PNG                 7.95   0.4 89504e470d0a1a0a0000000d49484452
+icon\contest4.png                                                           75048 PNG                 7.86   0.4 89504e470d0a1a0a0000000d49484452
+icon\contest5.png                                                           63600 PNG                 7.96  0.39 89504e470d0a1a0a0000000d49484452
+icon\contest6.png                                                           65609 PNG                 7.93  0.39 89504e470d0a1a0a0000000d49484452
+icon\contest7.png                                                          174403 PNG                 7.91  0.39 89504e470d0a1a0a0000000d49484452
+icon\contest8.png                                                           68720 PNG                 7.95   0.4 89504e470d0a1a0a0000000d49484452
+icon\contest9.png                                                          176855 PNG                 7.94   0.4 89504e470d0a1a0a0000000d49484452
+icon\cteam1.png                                                            111627 PNG                 7.94  0.38 89504e470d0a1a0a0000000d49484452
+icon\cteam2.png                                                             80912 PNG                 7.96   0.4 89504e470d0a1a0a0000000d49484452
+icon\exercise_ai.png                                                         5458 PNG                 7.83  0.37 89504e470d0a1a0a0000000d49484452
+icon\faceKey.png                                                              963 PNG                 7.24  0.36 89504e470d0a1a0a0000000d49484452
+icon\helpKey-ts.png                                                          2859 PNG                 7.68  0.58 89504e470d0a1a0a0000000d49484452
+icon\helpKey.png                                                             1006 PNG                 7.34  0.33 89504e470d0a1a0a0000000d49484452
+icon\jianshen_ai.png                                                         8111 PNG                 7.94  0.41 89504e470d0a1a0a0000000d49484452
+icon\learnFunction.png                                                     160049 PNG                 7.91  0.39 89504e470d0a1a0a0000000d49484452
+icon\myQrCodeKey-ts.png                                                      2358 PNG                 7.55  0.61 89504e470d0a1a0a0000000d49484452
+icon\myQrCodeKey.png                                                          948 PNG                 6.96  0.36 89504e470d0a1a0a0000000d49484452
+icon\navKey1.png                                                              902 PNG                 7.17   0.5 89504e470d0a1a0a0000000d49484452
+icon\navKey1s.png                                                            1792 PNG                 7.66  0.35 89504e470d0a1a0a0000000d49484452
+icon\navKey2.png                                                              663 PNG                  6.9  0.52 89504e470d0a1a0a0000000d49484452
+icon\navKey2s.png                                                             536 PNG                 6.92  0.47 89504e470d0a1a0a0000000d49484452
+icon\navKey3.png                                                              856 PNG                 7.14  0.51 89504e470d0a1a0a0000000d49484452
+icon\navKey3s.png                                                             732 PNG                 7.23  0.42 89504e470d0a1a0a0000000d49484452
+icon\navKey4.png                                                              694 PNG                 6.82  0.53 89504e470d0a1a0a0000000d49484452
+icon\navKey4s.png                                                            1688 PNG                 7.84   0.4 89504e470d0a1a0a0000000d49484452
+icon\navKey5.png                                                             2271 PNG                 7.86  0.39 89504e470d0a1a0a0000000d49484452
+icon\navKey5s.png                                                            1655 PNG                 7.83  0.39 89504e470d0a1a0a0000000d49484452
+icon\navKey6.png                                                             3171 PNG                 7.33  0.66 89504e470d0a1a0a0000000d49484452
+icon\navKey6s.png                                                            2755 PNG                 7.11  0.73 89504e470d0a1a0a0000000d49484452
+icon\otherExerciseApply.png                                                 11246 PNG                 7.96  0.43 89504e470d0a1a0a0000000d49484452
+icon\personInfoKey-ts.png                                                    2665 PNG                 7.59  0.59 89504e470d0a1a0a0000000d49484452
+icon\personInfoKey.png                                                       2665 PNG                 7.59  0.59 89504e470d0a1a0a0000000d49484452
+icon\quanzi.png                                                              2755 PNG                 7.11  0.73 89504e470d0a1a0a0000000d49484452
+icon\recommendKey.png                                                        2219 PNG                 7.52  0.61 89504e470d0a1a0a0000000d49484452
+icon\scanQRCode-ts.png                                                       1851 PNG                 7.35  0.65 89504e470d0a1a0a0000000d49484452
+icon\scanQRCode.png                                                          1851 PNG                 7.35  0.65 89504e470d0a1a0a0000000d49484452
+icon\schoolInfoKey-ts.png                                                    2696 PNG                 7.64  0.57 89504e470d0a1a0a0000000d49484452
+icon\schoolInfoKey.png                                                       2696 PNG                 7.64  0.57 89504e470d0a1a0a0000000d49484452
+icon\sysSettingKey.png                                                       3333 PNG                 7.75  0.54 89504e470d0a1a0a0000000d49484452
+icon\teach0.png                                                             87666 PNG                 7.94  0.39 89504e470d0a1a0a0000000d49484452
+icon\teach1.png                                                              2642 PNG                  7.7  0.35 89504e470d0a1a0a0000000d49484452
+icon\teach10.png                                                             4505 PNG                 7.88  0.35 89504e470d0a1a0a0000000d49484452
+icon\teach11.png                                                             3922 PNG                 7.84  0.36 89504e470d0a1a0a0000000d49484452
+icon\teach12.png                                                             6316 PNG                 7.96  0.39 89504e470d0a1a0a0000000d49484452
+icon\teach13.png                                                            79533 PNG                 7.93  0.39 89504e470d0a1a0a0000000d49484452
+icon\teach14.png                                                            72737 PNG                 7.95  0.37 89504e470d0a1a0a0000000d49484452
+icon\teach15.png                                                            90163 PNG                 7.88  0.35 89504e470d0a1a0a0000000d49484452
+icon\teach16.png                                                            97352 PNG                 7.95  0.39 89504e470d0a1a0a0000000d49484452
+icon\teach18.png                                                             4055 PNG                  7.8  0.52 89504e470d0a1a0a0000000d49484452
+icon\teach19.png                                                            79914 PNG                 7.92  0.36 89504e470d0a1a0a0000000d49484452
+icon\teach2.png                                                            143608 PNG                 7.95  0.39 89504e470d0a1a0a0000000d49484452
+icon\teach20.png                                                            79914 PNG                 7.92  0.36 89504e470d0a1a0a0000000d49484452
+icon\teach21.png                                                             2642 PNG                  7.7  0.35 89504e470d0a1a0a0000000d49484452
+icon\teach22.png                                                             1636 PNG                 7.83  0.39 89504e470d0a1a0a0000000d49484452
+icon\teach3.png                                                             19240 PNG                 7.96  0.39 89504e470d0a1a0a0000000d49484452
+icon\teach30.png                                                             4505 PNG                 7.88  0.35 89504e470d0a1a0a0000000d49484452
+icon\teach39.png                                                            87666 PNG                 7.94  0.39 89504e470d0a1a0a0000000d49484452
+icon\teach4.png                                                             59830 PNG                 7.93   0.4 89504e470d0a1a0a0000000d49484452
+icon\teach5.png                                                             76483 PNG                 7.94  0.41 89504e470d0a1a0a0000000d49484452
+icon\teach6.png                                                             76519 PNG                 7.84  0.34 89504e470d0a1a0a0000000d49484452
+icon\teach7.png                                                             64340 PNG                 7.94  0.36 89504e470d0a1a0a0000000d49484452
+icon\teach8.png                                                             75721 PNG                 7.95   0.4 89504e470d0a1a0a0000000d49484452
+icon\teach9.png                                                             78401 PNG                 7.88  0.39 89504e470d0a1a0a0000000d49484452
+icon\tice1.png                                                              87666 PNG                 7.94  0.39 89504e470d0a1a0a0000000d49484452
+icon\tice10.png                                                             81303 PNG                 7.93   0.4 89504e470d0a1a0a0000000d49484452
+icon\tice11.png                                                             84592 PNG                 7.93   0.4 89504e470d0a1a0a0000000d49484452
+icon\tice2.png                                                             111919 PNG                 7.94  0.39 89504e470d0a1a0a0000000d49484452
+icon\tice3.png                                                             136613 PNG                 7.96   0.4 89504e470d0a1a0a0000000d49484452
+icon\tice4.png                                                             112819 PNG                 7.97   0.4 89504e470d0a1a0a0000000d49484452
+icon\tice5.png                                                             102954 PNG                 7.96   0.4 89504e470d0a1a0a0000000d49484452
+icon\tice6.png                                                             107042 PNG                 7.95  0.39 89504e470d0a1a0a0000000d49484452
+icon\tice7.png                                                             113738 PNG                 7.98  0.38 89504e470d0a1a0a0000000d49484452
+icon\tice8.png                                                              73760 PNG                 7.95   0.4 89504e470d0a1a0a0000000d49484452
+icon\tice9.png                                                             113910 PNG                 7.92   0.4 89504e470d0a1a0a0000000d49484452
+icon\tice_ai.png                                                             6083 PNG                 7.91  0.39 89504e470d0a1a0a0000000d49484452
+icon\ts-appRunKey.png                                                        4055 PNG                  7.8  0.52 89504e470d0a1a0a0000000d49484452
+icon\ts-appRunRecord.png                                                     2061 PNG                 7.86  0.37 89504e470d0a1a0a0000000d49484452
+icon\ts-appRunStatistics.png                                                 1470 PNG                 7.79   0.4 89504e470d0a1a0a0000000d49484452
+icon\ts-navKey11.png                                                         2903 PNG                 7.91  0.38 89504e470d0a1a0a0000000d49484452
+icon\ts-navKey11s.png                                                        3032 PNG                 7.91  0.38 89504e470d0a1a0a0000000d49484452
+icon\ts-navKey55.png                                                         2271 PNG                 7.86  0.39 89504e470d0a1a0a0000000d49484452
+icon\ts-navKey55s.png                                                        1655 PNG                 7.83  0.39 89504e470d0a1a0a0000000d49484452
+icon\ts-quanzi.png                                                           2755 PNG                 7.11  0.73 89504e470d0a1a0a0000000d49484452
+icon\ts-venueEqu.png                                                       256614 PNG                 7.99  0.38 89504e470d0a1a0a0000000d49484452
+icon\venueEqu.png                                                           83404 PNG                 7.93  0.37 89504e470d0a1a0a0000000d49484452
+icon\venueEqu1.png                                                          83404 PNG                 7.93  0.37 89504e470d0a1a0a0000000d49484452
+icon\venueEqu2.png                                                         112592 PNG                 7.96   0.4 89504e470d0a1a0a0000000d49484452
+icon\venueEqu3.png                                                         173571 PNG                 7.95  0.38 89504e470d0a1a0a0000000d49484452
+icon\venueEqu4.png                                                         187773 PNG                 7.94  0.39 89504e470d0a1a0a0000000d49484452
+infowindow_bg.9.png                                                          1239 PNG                 7.44  0.34 89504e470d0a1a0a0000000d49484452
+ksad_common_encrypt_image.png                                                2880 PNG                 4.85  0.43 89504e470d0a1a0a0000000d49484452
+location_map_gps_3d.png                                                      1890 PNG                 7.48  0.35 89504e470d0a1a0a0000000d49484452
+location_map_gps_locked.png                                                  1301 PNG                 7.36  0.36 89504e470d0a1a0a0000000d49484452
+location_pressed.png                                                         1149 PNG                 7.62  0.31 89504e470d0a1a0a0000000d49484452
+location_selected.png                                                        1135 PNG                 7.59  0.27 89504e470d0a1a0a0000000d49484452
+location_unselected.png                                                       978 PNG                 7.57   0.3 89504e470d0a1a0a0000000d49484452
+MAGENTA.png                                                                  3151 PNG                 7.69  0.56 89504e470d0a1a0a0000000d49484452
+map_assets\anscii_0.png                                                      4473 PNG                 7.81  0.37 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\1015_1.png                                                1094 PNG                 5.88  0.88 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\1015_2.png                                                 108 PNG                 4.96  0.37 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\1016_1.png                                                 370 PNG                 5.95  0.33 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\1016_2.png                                                 297 PNG                  6.0  0.31 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\cross_bk_grass_day.png                                   83899 PNG                 7.96  0.38 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\cross_bk_grass_night.png                                 60533 PNG                 7.94  0.37 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\cross_sky_day.png                                        20699 PNG                 7.91  0.36 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\cross_sky_night.png                                      17123 PNG                 7.83  0.37 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\d_yellow_day.png                                         15480 PNG                 1.78  0.99 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\d_yellow_night.png                                       15480 PNG                 1.78  0.99 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\exit_label_bk_main_day.png                                 175 PNG                 5.85  0.35 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\exit_label_bk_secondary_day.png                            179 PNG                 5.69  0.34 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\grass_day.png                                               82 PNG                 4.48  0.39 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\grass_night.png                                             82 PNG                 4.46   0.4 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\road_bottom_day.png                                       1523 PNG                 7.64  0.52 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\road_bottom_night.png                                     1523 PNG                 7.64  0.53 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\roadbk_main_day.png                                         99 PNG                 5.14  0.43 89504e470d0a1a0a0000000d49484452
+map_assets\VM3DRes\roadbk_main_night.png                                       82 PNG                 4.45   0.4 89504e470d0a1a0a0000000d49484452
+map_custom\particle\fog.png                                                 79020 PNG                 7.81  0.35 89504e470d0a1a0a0000000d49484452
+map_custom\particle\haze.png                                                  260 PNG                 4.97  0.25 89504e470d0a1a0a0000000d49484452
+map_custom\particle\rain.png                                                  477 PNG                 5.73  0.22 89504e470d0a1a0a0000000d49484452
+map_custom\particle\snow.png                                                  683 PNG                 6.42   0.3 89504e470d0a1a0a0000000d49484452
+map_custom\particle\sun_0.png                                                1116 PNG                 7.51  0.36 89504e470d0a1a0a0000000d49484452
+map_custom\particle\sun_1.png                                                1078 PNG                 7.47  0.37 89504e470d0a1a0a0000000d49484452
+map_custom\skybox\back.png                                                  15030 PNG                 7.95  0.37 89504e470d0a1a0a0000000d49484452
+map_custom\skybox\bottom.png                                                  152 PNG                 3.58  0.27 89504e470d0a1a0a0000000d49484452
+map_custom\skybox\front.png                                                 12293 PNG                  7.9  0.37 89504e470d0a1a0a0000000d49484452
+map_custom\skybox\left.png                                                  30944 PNG                 7.88  0.39 89504e470d0a1a0a0000000d49484452
+map_custom\skybox\right.png                                                 32381 PNG                 7.88  0.39 89504e470d0a1a0a0000000d49484452
+map_custom\skybox\top.png                                                   10073 PNG                 7.94  0.37 89504e470d0a1a0a0000000d49484452
+map_indoor_select.png                                                         683 PNG                 7.51  0.36 89504e470d0a1a0a0000000d49484452
+maps_dav_compass_needle_large.png                                            2026 PNG                 7.66  0.35 89504e470d0a1a0a0000000d49484452
+marker_default.png                                                           1519 PNG                 7.71  0.31 89504e470d0a1a0a0000000d49484452
+marker_gps_no_sharing.png                                                    1063 PNG                 7.65  0.34 89504e470d0a1a0a0000000d49484452
+offlinemapv4.png                                                            14172 GZIP                7.98   0.4 1f8b0800000000000000dd7ddb525bd7
+ORANGE.png                                                                   1526 PNG                 7.57  0.35 89504e470d0a1a0a0000000d49484452
+RED.png                                                                      1523 PNG                 7.59   0.4 89504e470d0a1a0a0000000d49484452
+ROSE.png                                                                     1537 PNG                 7.63  0.37 89504e470d0a1a0a0000000d49484452
+terrainDefault.png                                                           4568 PNG                 7.51  0.34 89504e470d0a1a0a0000000d49484452
+tracelinetexture.png                                                          334 PNG                 6.94  0.33 89504e470d0a1a0a0000000d49484452
+VIOLET.png                                                                   1529 PNG                 7.61  0.36 89504e470d0a1a0a0000000d49484452
+YELLOW.png                                                                   1507 PNG                 7.59  0.31 89504e470d0a1a0a0000000d49484452
+zoomin_pressed.png                                                            339 PNG                 6.57  0.37 89504e470d0a1a0a0000000d49484452
+zoomin_selected.png                                                           339 PNG                 6.53  0.34 89504e470d0a1a0a0000000d49484452
+zoomin_unselected.png                                                         305 PNG                 6.55  0.35 89504e470d0a1a0a0000000d49484452
+zoomout_pressed.png                                                           301 PNG                  6.3  0.37 89504e470d0a1a0a0000000d49484452
+zoomout_selected.png                                                          297 PNG                 6.36  0.34 89504e470d0a1a0a0000000d49484452
+zoomout_unselected.png                                                        252 PNG                 6.17  0.38 89504e470d0a1a0a0000000d49484452
+dexopt\baseline.prof                                                         7128                     7.89  0.37 70726f003031300007abc00100c71b00
+dexopt\baseline.profm                                                         764                     7.69  0.39 70726d00303032000700bf070000ea02
+libjiagu.so                                                                726556 ELF                 7.38   0.3 7f454c46010101000000000000000000
+libjiagu_a64.so                                                            908552 ELF                 7.27  0.32 7f454c46020101000000000000000000
+mlkit_pose\pose_landmark_detector_lite_f16_inf.tflite                     2813968                     7.61  0.44 2400000054464c330000000000000000
+mlkit_pose\pose_person_detector_f16.tflite                                2962288                     7.48  0.43 2800000054464c330000000000000000
+ae\GNaviConfig.xml                                                            176 XML                 4.77   1.0 3c3f786d6c2076657273696f6e3d2231
+ae\res.zip                                                                 344198 ZIP/JAR/APK          8.0  0.39 504b0304140008080800f7aee4520000
+
+
+=== EXTENSION HISTOGRAM ===
+.png            189
+.data           96
+.csv            18
+.json           8
+.binarypb       7
+.1              6
+.js             6
+(none)          5
+.glsl           5
+.jpg            4
+.bks            3
+.ms             3
+.html           2
+.jar            2
+.so             2
+.tflite         2
+.ck             1
+.czl            1
+.face-android   1
+.fnt            1
+.list           1
+.prof           1
+.profm          1
+.xml            1
+.zip            1

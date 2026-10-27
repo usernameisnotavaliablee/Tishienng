@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.tsn</groupId>
+    <artifactId>unidbg-harness</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <!-- ============================================================
+         体适能 libtsnsecret.so 纯PC模拟执行脚手架
+         目标: 无设备, 在Windows PC上用unidbg加载 arm64-v8a/libtsnsecret.so,
+               还原 aes_decrypt / rsa_decrypt / generateAuthInfo 算法。
+         合规: 仅本地静态/模拟分析, 不联网, 不打线上服务器。
+         ============================================================ -->
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- unidbg 最新稳定版 (JitPack), 已验证 2026/05 可解析 -->
+        <unidbg.version>0.9.9</unidbg.version>
+    </properties>
+
+    <repositories>
+        <!-- unidbg 只在 JitPack 发布, 不在 Maven Central -->
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <!-- unidbg-android 会传递引入 unidbg-api + unicorn 后端 -->
+        <dependency>
+            <groupId>com.github.zhkl0228.unidbg</groupId>
+            <artifactId>unidbg-android</artifactId>
+            <version>${unidbg.version}</version>
+        </dependency>
+
+        <!-- 可选: dynarmic 后端, 比默认 unicorn 在 OLLVM 重负载下更快更稳。
+             首次构建较慢(JitPack 现编)。不需要可注释掉。 -->
+        <dependency>
+            <groupId>com.github.zhkl0228.unidbg</groupId>
+            <artifactId>unidbg-dynarmic</artifactId>
+            <version>${unidbg.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+            </plugin>
+            <!-- 打 fat-jar 方便直接 java -jar 跑 (可选) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals><goal>shade</goal></goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.tsn.harness.TsnSecretHarness</mainClass>
+                                </transformer>
+                            </transformers>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

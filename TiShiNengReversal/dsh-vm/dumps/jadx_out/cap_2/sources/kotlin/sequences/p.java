@@ -1,0 +1,10 @@
+package kotlin.sequences;
+
+/* loaded from: /Users/mac/Desktop/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_2_sz9469608.dex */
+public final class p extends kotlin.sequences.k0 {
+    private p() {
+            r0 = this;
+            r0.<init>()
+            return
+    }
+}

@@ -1,0 +1,18 @@
+package com.bumptech.glide.manager;
+
+/* compiled from: r8-map-id-3b6b465acd3fb077b48f32fd73cc7a49f5d820aadf5466934c3e8f230425ca5e */
+@androidx.annotation.RequiresApi(26)
+/* loaded from: /Volumes/前任肥胖/下载/tishineng.apk/dsh-vm/dumps/dexcap/dexcap/cap_4_sz9502280.dex */
+final class j implements com.bumptech.glide.manager.k {
+    j() {
+            r0 = this;
+            r0.<init>()
+            return
+    }
+
+    @Override // com.bumptech.glide.manager.k
+    public void a(android.app.Activity r1) {
+            r0 = this;
+            return
+    }
+}
