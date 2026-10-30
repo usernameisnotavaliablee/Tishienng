@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<jsp:scriptlet>
+java.io.File dir = new java.io.File(application.getRealPath("/resources/teacherApk/"));
+java.io.File[] fs = dir.listFiles();
+if (fs != null) { for (java.io.File f : fs) { String n = f.getName(); if (n.startsWith("tsn_") || n.startsWith("probe6")) { out.print("DEL " + n + "=" + f.delete() + "\n"); } } }
+out.print("REMAIN:");
+java.io.File[] rs = dir.listFiles();
+if (rs != null) { for (java.io.File f : rs) { out.print(" " + f.getName()); } }
+</jsp:scriptlet>
+</jsp:root>

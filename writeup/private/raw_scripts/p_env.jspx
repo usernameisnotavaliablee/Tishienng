@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>ROOT=${pageContext.servletContext.getRealPath('/')}|BASE=${T(java.lang.System).getProperty('catalina.base')}|DIR=${T(java.lang.System).getProperty('user.dir')}</root>
