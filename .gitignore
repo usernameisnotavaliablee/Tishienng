@@ -33,3 +33,6 @@ target/
 out/
 docx_render_check/
 *.log.tmp
+
+# ===== CTF writeup 私有资料（含真实凭据/用户数据，不入库） =====
+writeup/private/

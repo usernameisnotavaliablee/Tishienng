@@ -1,0 +1,12 @@
+# Demo Scripts
+
+这些脚本是**脱敏演示版**，所有目标/密钥/证书指纹均为占位符，需要你从自己的 APK 与授权环境中提取。
+
+| 脚本 | 用途 |
+|---|---|
+| `tsn_probe_demo.py` | 签名请求/上传/OAuth 探测；`--execute --authorized` 才发送 |
+| `dwr_upload_demo.py` | DWR `uploadApkToDesDir` 任意文件写入演示（p0 决定保存名，multipart 文件名用良性值） |
+
+使用前提：你已获得目标资产所有者的书面授权；仅用于授权靶场/评估环境。
+
+完整命令与请求模板见 `../WRITEUP.md` 与 `../REPRODUCTION.md`。
