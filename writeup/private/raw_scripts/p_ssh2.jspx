@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-<jsp:scriptlet>
-String[] cmd = new String[]{"/usr/bin/id","/bin/hostname","/usr/bin/whoami","/bin/cat /etc/hostname"};
-java.util.Map m = com.boxin.util.LinuxStateForShell.runDistanceShell(cmd, "root", "10isp.com!", "10.1.1.118");
-out.print("ROOT=" + m);
-</jsp:scriptlet>
-</jsp:root>

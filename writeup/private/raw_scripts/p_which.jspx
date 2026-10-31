@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
-<jsp:scriptlet>
-java.util.Map m = com.boxin.util.LinuxStateForShell.runLocalShell(new String[]{"which sshpass","which ssh","which expect"});
-out.print("WHICH=" + m);
-</jsp:scriptlet>
-</jsp:root>

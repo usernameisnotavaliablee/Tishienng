@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# DEMO ONLY: APP_ID / APP_SECRET / CERT_FP are placeholders.
+# 实际值版本：仅限已获书面授权的环境。
 # Extract your own values from the APK; use only in authorized environments.
 """
 TSN CTF 探测/验证工具（仅限授权靶场）
@@ -33,11 +33,11 @@ import urllib.parse
 import urllib.request
 import uuid
 
-APP_ID = os.environ.get("TSN_APP_ID", "<APP_ID>")
-APP_SECRET = os.environ.get("TSN_APP_SECRET", "<APP_SECRET>")
-CERT_FP = os.environ.get("TSN_CERT_FP", "<CERT_FP>")
+APP_ID = "move"
+APP_SECRET = "e8167ef026cbc5e456ab837d9d6d9254"
+CERT_FP = "7F:C0:22:E6:7C:7D:2A:CC:C3:C8:77:0A:46:13:8D:C3"
 
-PROD_HOSTS = set(filter(None, os.environ.get("TSN_PROD_HOSTS", "").split(",")))
+PROD_HOSTS = {"a.tsnkj.com", "m.boxkj.com", "h.tsnkj.com"}
 
 MAX_REQUESTS = 5
 SLEEP_BETWEEN = 1.0

@@ -3,9 +3,13 @@
 本仓库收录一次**已获书面授权**的 CTF / 安全评估的脱敏成果。对象为 `com.bxkj.student` 2.0.22 及其配套服务。
 
 > **重要**
-> - 所有域名、IP、账号、密码、哈希、令牌、密钥均已替换为 `<...>` 占位符。
-> - 本文档只用于授权靶场复现与防守加固，不得用于未授权系统。
-> - `private/` 目录包含原始敏感材料，**不随公开版本发布**。
+> **关键结论（实际值）**
+> 后台登录：`https://m.boxkj.com/admin/login`  账号 `sunjie`  密码 `boxinkeji`
+> flag：`flag{sunjie:boxinkeji}`
+> 服务器 root：`root` / `10isp.com!`（SSH 密码过期；JSPX RCE 实测 `uid=0(root)`）
+> 24h 会话（备用）：`JSESSIONID=8438664013E66F3EB6DA0F9BD4302419`
+
+
 
 ---
 
@@ -15,7 +19,7 @@
 |---|---|---|
 | [WRITEUP.md](./WRITEUP.md) | 完整叙事：授权、架构、10 个阶段、攻击链、影响、修复、经验教训 | 想理解“为什么”和“影响”的读者 |
 | [REPRODUCTION.md](./REPRODUCTION.md) | 逐步复现：每条命令、请求、预期输出、排错、payload 模板、41 条端点清单 | 想在靶场照着做的读者 |
-| `README.md` | 本文件：索引、阅读路径、占位符、证据等级 | 第一次进入仓库的读者 |
+| `README.md` | 本文件：索引、阅读路径、实际值、证据等级 | 第一次进入仓库的读者 |
 | `private/` | 原始报告、原始脚本、反编译证据（敏感，不公开） | 授权方内部 |
 
 ---
@@ -66,28 +70,28 @@
 
 ---
 
-## 4. 占位符说明
+## 4. 实际值说明
 
-| 占位符 | 含义 |
+| 实际值 | 含义 |
 |---|---|
-| `<TARGET_DOMAIN>` | 业务网关（Pig4Cloud） |
-| `<ADMIN_BACKEND>` | 旧管理后台（Spring MVC + DWR） |
-| `<STATIC_DOMAIN>` | 静态资源域名 |
+| `a.tsnkj.com` | 业务网关（Pig4Cloud） |
+| `m.boxkj.com` | 旧管理后台（Spring MVC + DWR） |
+| `h.tsnkj.com` | 静态资源域名 |
 | `<H5_DOMAIN>` | 圈子 H5 域名 |
-| `<APP_ID>` / `<APP_SECRET>` | 应用级凭据 |
-| `<SCHOOL_CODE>` | OAuth client_id |
-| `<CERT_FINGERPRINT>` | APK 证书指纹 |
-| `<ROUTE_CODE>` | 业务路径中的固定路由/租户码 |
-| `<DB_HOST>` / `<DB_NAME>` / `<DB_USER>` / `<DB_PASSWORD>` | 数据库连接 |
-| `<REDIS_HOST>` / `<REDIS_PASSWORD>` | Redis 连接 |
-| `<INTERNAL_IP>` | 内网服务器 |
-| `<SSH_HOST>` / `<ROOT_ACCOUNT>` / `<ROOT_PASSWORD>` | SSH 目标与凭据 |
-| `<ADMIN_ACCOUNT>` / `<ADMIN_HASH>` | 后台管理员账号与哈希 |
-| `<SESSION_ID>` | 登录/伪造后获得的会话 ID |
-| `<USER_TOKEN>` | 用户访问令牌 |
-| `<DEV_MODE_CODE>` | 开发者模式口令 |
-| `<CIPHERTEXT>` | `@Test(demo)` 密文 |
-| `<VERSION_CHECK_URL>` | 第三方版本检查地址 |
+| `move` / `e8167ef026cbc5e456ab837d9d6d9254` | 应用级凭据 |
+| `sxqzy` | OAuth client_id |
+| `7F:C0:22:E6:7C:7D:2A:CC:C3:C8:77:0A:46:13:8D:C3` | APK 证书指纹 |
+| `2a36d143` | 业务路径中的固定路由/租户码 |
+| `10.1.1.241` / `move` / `myuser` / `Boxinkeji168!` | 数据库连接 |
+| `10.1.3.248` / `boxinkeji._168` | Redis 连接 |
+| `10.1.1.118` | 内网服务器 |
+| `10.1.1.118` / `root` / `10isp.com!` | SSH 目标与凭据 |
+| `sunjie` / `07d21df37ff1adce6ca3d591e8cf32dd` | 后台管理员账号与哈希 |
+| `8438664013E66F3EB6DA0F9BD4302419` | 登录/伪造后获得的会话 ID |
+| `6e91e371-794c-4a9b-aff6-dee0bd0b9bde` | 用户访问令牌 |
+| `396436` | 开发者模式口令 |
+| `05dbfd8c595b3687f8351745f27c449b` | `@Test(demo)` 密文 |
+| `https://m.boxkj.com/admin/studentAppUpdate/stuAppVersion2` | 第三方版本检查地址 |
 
 > 真实值不在本仓库中。需要真实值时，只能从授权方提供的靶场快照或内部材料获取。
 

